@@ -16,6 +16,7 @@ from datetime import datetime, timezone
 from urllib.parse import urlsplit
 
 from PIL import Image, ImageDraw, ImageFont
+from radio_browser import RadioBrowserClient
 
 ROOT = Path(__file__).resolve().parent.parent
 CATALOG = ROOT / 'stations.json'
@@ -24,11 +25,6 @@ M3U = ROOT / 'radio.m3u'
 HEALTH_LOG = ROOT / 'logs' / 'stream-health.jsonl'
 MAX_HEALTH_RUNS = 30
 DEFAULT_REPO = 'th3cyrus/Apple'
-RADIO_BROWSER = [
-    'https://de1.api.radio-browser.info',
-    'https://nl1.api.radio-browser.info',
-    'https://at1.api.radio-browser.info',
-]
 FONT = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 
 def font(size):
@@ -69,15 +65,53 @@ def simplify(s):
     return re.sub(r'[^a-z0-9]','',s.lower())
 
 def candidate_score(station,c):
-    if c.get('countrycode') not in (None,'US'): return -1
-    if not c.get('lastcheckok',True): return -1
-    key=simplify(station['search'].split()[0])
-    name=simplify(c.get('name',''))
+    """Find the correct broadcaster, not merely a similarly named station."""
+    if c.get('countrycode') != 'US': return -1
+    if c.get('lastcheckok') not in (1, True, '1'): return -1
+    words = re.findall(r'[a-z0-9]+', station['search'].lower())
+    meaningful = [w for w in words if w not in ('the','radio','fm')]
+    if not meaningful: return -1
+    key = meaningful[0]
+    name = simplify(str(c.get('name','')))
     if len(key)<3 or key not in name: return -1
+    # A different channel (jazz/classical) is NOT a replacement for this one.
+    variant = [v for v in ('jazz','classical') if v in station['name'].lower()]
+    if variant and not all(v in name for v in variant): return -1
     score=55 if name.startswith(key) else 40
     if site_match(station['homepage'],c.get('homepage','')): score+=45
-    score += min(10,max(0,int(c.get('votes',0) or 0))//20)
+    score+=min(10,max(0,int(c.get('votes',0) or 0))//20)
     return score
+
+
+def candidate_rejection_reasons(station, candidate, score):
+    """Strong guardrails before changing the maintained playlist."""
+    issues=[]
+    if not candidate or score < 90:
+        return ['no_high_confidence_candidate']
+    if not site_match(station['homepage'],candidate.get('homepage','')):
+        issues.append('homepage_mismatch')
+    if candidate.get('countrycode') != 'US':
+        issues.append('wrong_country')
+    if candidate.get('lastcheckok') not in (1,True,'1'):
+        issues.append('not_recently_working')
+    if candidate.get('ssl_error') not in (0,False,'0'):
+        issues.append('directory_ssl_error')
+    url=candidate.get('url_resolved','')
+    try:
+        parts=urlsplit(url)
+        if parts.scheme!='https' or not parts.hostname or parts.username or parts.password:
+            issues.append('unsafe_or_non_https_url')
+    except (TypeError,ValueError):
+        issues.append('invalid_candidate_url')
+    checked=candidate.get('lastchecktime_iso8601')
+    try:
+        check_time=datetime.fromisoformat(checked.replace('Z','+00:00'))
+        age=(datetime.now(timezone.utc)-check_time).total_seconds()
+        if age<0 or age>14*86400:
+            issues.append('stale_directory_health_check')
+    except (AttributeError,TypeError,ValueError):
+        issues.append('missing_directory_check_date')
+    return issues
 
 def safe_message(exc):
     """Retain diagnostic exception text but strip URL query parameters."""
@@ -90,37 +124,7 @@ def safe_url(url):
     except ValueError:
         return '[invalid URL]'
 
-def search_station(session,station):
-    """Try the configured Radio Browser mirrors and record every attempt."""
-    attempts=[]
-    for base in RADIO_BROWSER:
-        attempt={'server':base}
-        start=time.monotonic()
-        try:
-            res=session.get(base+'/json/stations/search',params={
-                'name':station['search'].split()[0], 'countrycode':'US',
-                'hidebroken':'true','limit':35,'order':'votes','reverse':'true',
-            },timeout=9,headers={'User-Agent':'PrimusePersonalRadioList/1.0'})
-            attempt['http_status']=res.status_code
-            res.raise_for_status()
-            records=res.json()
-            if not isinstance(records,list):
-                attempt.update(error_type='UnexpectedResponse',error='Non-list JSON returned')
-                continue
-            attempt['results']=len(records)
-            candidates=sorted(((candidate_score(station,x),x) for x in records),
-                              key=lambda x:x[0],reverse=True)
-            score=candidates[0][0] if candidates else 0
-            attempt['candidate_score']=score
-            if score>=55:
-                return score,candidates[0][1],attempts
-            return 0,None,attempts
-        except Exception as exc:
-            attempt.update(error_type=type(exc).__name__,error=safe_message(exc))
-        finally:
-            attempt['elapsed_ms']=round((time.monotonic()-start)*1000)
-            attempts.append(attempt)
-    return 0,None,attempts
+
 
 def stream_check(session,url):
     """Record exact HTTP, MIME, timeout or connection failure diagnostics."""
@@ -198,6 +202,7 @@ def main():
             'github_run_attempt':os.environ.get('GITHUB_RUN_ATTEMPT'),
             'stations':[],
         }
+        browser=None   # Discover the directory only when a stream is broken.
     for s in stations:
         path=LOGOS/(s['id']+'.png')
         if not path.exists():
@@ -208,22 +213,40 @@ def main():
             'original_stream':safe_url(s['stream']),
             'fail_count_before':int(s.get('fail_count',0)),
         }
-        score,candidate,attempts=search_station(session,s)
-        record['radio_browser']={'candidate_score':score,'attempts':attempts}
         check=stream_check(session,s['stream'])
         record['stream_check']=check
         good=check['ok']
         repaired=False
         if good:
             s['fail_count']=0
+            record['radio_browser']={'skipped':'stream_is_healthy'}
         else:
             s['fail_count']=min(20,int(s.get('fail_count',0))+1)
+            if browser is None:
+                browser=RadioBrowserClient(session)
+            score,candidate,attempts=browser.search(s,candidate_score)
+            record['radio_browser']={
+                'candidate_score':score,
+                'attempts':attempts,
+            }
+            if candidate:
+                record['radio_browser']['candidate']={
+                    'name':candidate.get('name'),
+                    'stationuuid':candidate.get('stationuuid'),
+                    'homepage':candidate.get('homepage'),
+                    'lastchecktime':candidate.get('lastchecktime_iso8601'),
+                }
+            reasons=candidate_rejection_reasons(s,candidate,score)
+            if s['fail_count']<3:
+                reasons.append('waiting_for_three_consecutive_failures')
+            if s.get('manual_lock'):
+                reasons.append('manual_lock_enabled')
             candidate_url=(candidate or {}).get('url_resolved','')
-            eligible=(s['fail_count']>=3 and not s.get('manual_lock') and
-                score>=90 and candidate is not None and
-                site_match(s['homepage'],candidate.get('homepage','')) and
-                candidate_url and candidate_url!=s['stream'])
-            if eligible:
+            if candidate_url==s['stream']:
+                reasons.append('candidate_same_as_current')
+            if reasons:
+                record['radio_browser']['replacement_blocked_by']=reasons
+            else:
                 replacement_check=stream_check(session,candidate_url)
                 record['replacement_check']=replacement_check
                 if replacement_check['ok']:
@@ -235,12 +258,18 @@ def main():
         record['fail_count_after']=s['fail_count']
         record['current_stream']=safe_url(s['stream'])
         report['stations'].append(record)
-        print(s['name'],record['status'],'candidate-score',score,
+        print(s['name'],record['status'],
               'error',check.get('error_type',''),check.get('error',''))
     if args.refresh:
         CATALOG.write_text(json.dumps(stations,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     generate(stations,repo)
     if args.refresh:
+        report['radio_browser']={
+            'discovery':browser.discovery if browser else [],
+            'servers':browser.servers if browser else [],
+            'failed_servers':sorted(browser.failed_servers) if browser else [],
+            'skipped':browser is None,
+        }
         report['summary']={
             'total':len(report['stations']),
             'healthy':sum(x['status']=='ok' for x in report['stations']),
