@@ -210,8 +210,8 @@ def main():
         if reporter:
             reporter.report['expected_total'] = len(stations)
             reporter.checkpoint()
-            if not shutil.which('ffprobe'):
-                raise RuntimeError('ffprobe is required; install FFmpeg before refreshing')
+            if not shutil.which('ffprobe') or not shutil.which('ffmpeg'):
+                raise RuntimeError('ffprobe and ffmpeg are required before refreshing')
             import requests
             session = requests.Session()
         def get_browser():
