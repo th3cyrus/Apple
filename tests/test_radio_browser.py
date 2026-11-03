@@ -35,9 +35,11 @@ class Session:
     def __init__(self, replies):
         self.replies = list(replies)
         self.urls = []
+        self.calls = []
 
     def get(self, url, **kwargs):
         self.urls.append(url)
+        self.calls.append((url, kwargs))
         if not self.replies:
             raise AssertionError(f'Unexpected request: {url}')
         reply = self.replies.pop(0)
@@ -148,10 +150,7 @@ class RadioBrowserTests(unittest.TestCase):
         }, update.candidate_score)
         self.assertEqual(len(session.urls), 2)
         # Explicitly avoid searching for the overly broad word "the".
-        self.assertEqual(
-            radio_browser.re.findall(r'[a-z0-9]+', 'The Current KCMP'.lower())[1],
-            'current',
-        )
+        self.assertEqual(session.calls[1][1]['params']['name'], 'current')
 
     def test_candidate_rejected_if_wrong_website_or_stale(self):
         candidate = dict(CANDIDATE, lastchecktime_iso8601=(
@@ -178,6 +177,10 @@ class RadioBrowserTests(unittest.TestCase):
             lastchecktime_iso8601=datetime.now(timezone.utc).isoformat(),
         )
         self.assertEqual(update.candidate_rejection_reasons(STATION, candidate, 110), [])
+
+    def test_malformed_catalog_fields_are_ignored_safely(self):
+        candidate = dict(CANDIDATE, votes='not-an-integer', homepage=123)
+        self.assertGreaterEqual(update.candidate_score(STATION, candidate), 55)
 
     def test_stream_check_logs_http_reason(self):
         session = Session([Response(status=403, mime='text/html')])
