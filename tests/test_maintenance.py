@@ -47,6 +47,20 @@ class MediaTests(unittest.TestCase):
         self.assertFalse(result['ok'])
         self.assertEqual(result['error_type'], 'EmptyStream')
 
+    def test_real_mp3_decodes_to_audible_pcm(self):
+        import subprocess
+        sample = subprocess.run(
+            ['ffmpeg', '-v', 'error', '-f', 'lavfi', '-i',
+             'sine=frequency=440:duration=2', '-b:a', '128k', '-f', 'mp3', 'pipe:1'],
+            capture_output=True, check=True, timeout=10).stdout
+        response = Response(mime='audio/mpeg')
+        response.raw = io.BytesIO(sample)
+        result = update.stream_check(Session([response]), 'https://example.org/test.mp3')
+        self.assertTrue(result['ok'], result)
+        self.assertEqual(result['codec'], 'mp3')
+        self.assertGreaterEqual(result['decoded_seconds'], 1)
+        self.assertGreater(result['rms_dbfs'], -60)
+
     def test_audio_header_with_non_audio_bytes_is_not_healthy(self):
         response = Response(mime='audio/mpeg')
         response.raw = io.BytesIO(b'this is not an audio stream')
