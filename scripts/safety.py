@@ -19,6 +19,14 @@ def valid_url(value):
         return False
 
 
+def unsupported_stream_suffix(value):
+    """Reject audio/playlist double-extensions such as .mp3.m3u."""
+    if not valid_url(value):
+        return False
+    path = urlsplit(value).path.lower()
+    return bool(re.search(r'\.(?:mp3|aac|m4a|ogg|opus|flac|wav)\.(?:m3u|m3u8|pls)$', path))
+
+
 def safe_url(value):
     if not valid_url(value):
         return '[invalid URL]'
