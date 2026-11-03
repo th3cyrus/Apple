@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-"""Regenerate Primuse radio playlists and self-hosted artwork.
+"""Regenerate Primuse radio playlists using custom, self-hosted artwork.
 
-Local mode produces an immediately importable M3U with external artwork URLs.
-Publish mode uses your GitHub repository URL for artwork, and may refresh
-artwork / cautiously repair stale stream links using Radio Browser data.
+Both local and published playlists reference the custom covers in logos/.
+Refresh mode may repair radio streams but never replaces custom artwork.
 """
 import argparse
 import hashlib
-import io
 import json
 import os
 from pathlib import Path
@@ -15,12 +13,13 @@ import re
 import sys
 from urllib.parse import urlsplit
 
-from PIL import Image, ImageDraw, ImageFont, ImageOps
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
 CATALOG = ROOT / 'stations.json'
 LOGOS = ROOT / 'logos'
 M3U = ROOT / 'radio.m3u'
+DEFAULT_REPO = 'th3cyrus/Apple'
 RADIO_BROWSER = [
     'https://de1.api.radio-browser.info',
     'https://nl1.api.radio-browser.info',
@@ -96,25 +95,6 @@ def search_station(session,station):
             continue
     return (0,None)
 
-def fetch_logo_url(session,url):
-    if not url.startswith('https://'): return None
-    try:
-        r=session.get(url,timeout=12,headers={'User-Agent':'Mozilla/5.0'},stream=True)
-        r.raise_for_status()
-        data=b''
-        for chunk in r.iter_content(32768):
-            data+=chunk
-            if len(data)>2_000_000: return None
-        im=Image.open(io.BytesIO(data))
-        if im.width < 64 or im.height < 64: return None
-        im=ImageOps.exif_transpose(im).convert('RGBA')
-        im.thumbnail((480,480),Image.Resampling.LANCZOS)
-        canvas=Image.new('RGBA',(512,512),'white')
-        canvas.alpha_composite(im,((512-im.width)//2,(512-im.height)//2))
-        return canvas.convert('RGB')
-    except Exception:
-        return None
-
 def stream_works(session,url):
     if not url.startswith('https://'): return False
     try:
@@ -134,17 +114,16 @@ def escape_attr(s):
     return str(s).replace('"','').replace('\n',' ').replace('\r',' ')
 
 def generate(stations,repo):
+    # Always use the project's custom station art, never broadcaster logos.
+    artwork_repo = repo or DEFAULT_REPO
     result=['#EXTM3U']
     for s in stations:
-        if repo:
-            logo=f'https://raw.githubusercontent.com/{repo}/main/logos/{s["id"]}.png'
-        else:
-            # This immediate-use copy has externally hosted cover URLs only where known.
-            logo=s.get('logo_source') or ''
-            if s['id']=='kexp-90-3':
-                logo='https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/KEXP_logo_%28black_on_orange%29.svg/500px-KEXP_logo_%28black_on_orange%29.svg.png'
-            if not logo:
-                logo='https://www.google.com/s2/favicons?domain='+hostname(s['homepage'])+'&sz=256'
+        artwork=f'logos/{s["id"]}.png'
+        if s.get('logo') != artwork:
+            raise ValueError(f'Invalid custom artwork path for {s["id"]}')
+        if not (ROOT / artwork).is_file():
+            raise FileNotFoundError(f'Missing custom artwork: {artwork}')
+        logo=f'https://raw.githubusercontent.com/{artwork_repo}/main/{artwork}'
         title=escape_attr(s['name'])
         group=escape_attr(s['group'])
         result.append(f'#EXTINF:-1 tvg-logo="{escape_attr(logo)}" logo="{escape_attr(logo)}" group-title="{group}",{title}')
@@ -154,7 +133,7 @@ def generate(stations,repo):
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--publish',action='store_true',help='Build absolute self-hosted artwork URLs using GITHUB_REPOSITORY')
-    parser.add_argument('--refresh',action='store_true',help='Look up station art and carefully repair links')
+    parser.add_argument('--refresh',action='store_true',help='Check streams and cautiously repair stale links')
     args=parser.parse_args()
     repo=os.environ.get('GITHUB_REPOSITORY','') if args.publish else ''
     if args.publish and (not re.fullmatch(r'[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+',repo)):
@@ -170,13 +149,7 @@ def main():
             artwork_placeholder(s).save(path,'PNG',optimize=True)
         if not args.refresh: continue
         score,candidate=search_station(session,s)
-        url = s.get('logo_source') if s.get('manual_lock') else ''
-        if not url and candidate and score>=55:
-            url=candidate.get('favicon','')
-        img = None  # Preserve custom artwork
-        if img is not None:
-            buf=io.BytesIO(); img.save(buf,'PNG',optimize=True)
-            if path.read_bytes()!=buf.getvalue(): path.write_bytes(buf.getvalue())
+        # Never download or overwrite custom station artwork.
         # Only switch link on repeated failure and a strongly verified directory
         # candidate with a matching official website and a working replacement.
         good=stream_works(session,s['stream'])
@@ -197,6 +170,6 @@ def main():
         CATALOG.write_text(json.dumps(stations,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     generate(stations,repo)
     count=sum(1 for line in M3U.read_text().splitlines() if line.startswith('#EXTINF:'))
-    print('Wrote',M3U,'stations:',count,'artwork:',len(list(LOGOS.glob('*.png'))),'github repo:',repo or 'none')
+    print('Wrote',M3U,'stations:',count,'artwork:',len(list(LOGOS.glob('*.png'))),'github repo:',repo or DEFAULT_REPO)
 
 if __name__=='__main__': main()
