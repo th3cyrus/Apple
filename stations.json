@@ -236,7 +236,7 @@
     "homepage": "https://www.thecurrent.org/",
     "search": "The Current KCMP",
     "manual_lock": false,
-    "fail_count": 1,
+    "fail_count": 2,
     "logo": "logos/the-current-89-3.png"
   },
   {
