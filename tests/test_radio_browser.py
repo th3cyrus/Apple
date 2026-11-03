@@ -12,11 +12,12 @@ import update
 
 
 class Response:
-    def __init__(self, payload=None, status=200, mime='application/json'):
+    def __init__(self, payload=None, status=200, mime='application/json', url=None):
         self.payload = payload
         self.status_code = status
         self.headers = {'Content-Type': mime}
         self.reason = 'Test response'
+        self.url = url
 
     def __enter__(self):
         return self
@@ -164,14 +165,30 @@ class RadioBrowserTests(unittest.TestCase):
         reasons = update.candidate_rejection_reasons(STATION, candidate, 110)
         self.assertIn('homepage_mismatch', reasons)
 
-    def test_candidate_rejected_if_http_or_ssl_invalid(self):
+    def test_https_candidate_with_tls_error_is_rejected(self):
         candidate = dict(CANDIDATE,
             lastchecktime_iso8601=datetime.now(timezone.utc).isoformat(),
-            ssl_error=1, url_resolved='http://example.com/unverified',
+            ssl_error=1, url_resolved='https://example.com/unverified',
         )
         reasons = update.candidate_rejection_reasons(STATION, candidate, 110)
         self.assertIn('directory_ssl_error', reasons)
-        self.assertIn('unsafe_or_non_https_url', reasons)
+
+    def test_http_candidate_is_permitted_when_other_checks_pass(self):
+        candidate = dict(CANDIDATE,
+            lastchecktime_iso8601=datetime.now(timezone.utc).isoformat(),
+            ssl_error=1, url_resolved='http://radio.example.org/live.mp3',
+        )
+        self.assertEqual(update.candidate_rejection_reasons(STATION, candidate, 110), [])
+
+    def test_invalid_candidate_schemes_and_credentials_are_rejected(self):
+        for address in ('ftp://example.com/live', 'file:///tmp/live.mp3',
+                        'http://user:password@example.org/live'):
+            with self.subTest(url=address):
+                candidate = dict(CANDIDATE,
+                    lastchecktime_iso8601=datetime.now(timezone.utc).isoformat(),
+                    url_resolved=address)
+                reasons = update.candidate_rejection_reasons(STATION, candidate, 110)
+                self.assertIn('invalid_candidate_url', reasons)
 
     def test_verified_candidate_meets_all_guards(self):
         candidate = dict(CANDIDATE,
@@ -244,6 +261,51 @@ class RadioBrowserTests(unittest.TestCase):
         self.assertEqual(len(result['attempts']), 3)
         self.assertEqual([a['attempt'] for a in result['attempts']], [1, 2, 3])
         self.assertEqual(sleep.call_count, 2)
+
+    def test_http_stream_is_accepted_and_logged(self):
+        session = Session([Response(mime='audio/mpeg')])
+        result = update.stream_check(session, 'http://radio.example.org/live.mp3')
+        self.assertTrue(result['ok'])
+        self.assertEqual(result['protocol'], 'HTTP')
+        self.assertTrue(result['http_used'])
+        self.assertEqual(result['security_warning'], 'unencrypted_http_audio')
+        self.assertTrue(result['attempts'][0]['http_used'])
+        self.assertEqual(result['attempts'][0]['final_protocol'], 'HTTP')
+        self.assertEqual(session.calls[0][0], 'http://radio.example.org/live.mp3')
+        self.assertEqual(len(result['attempts']), 1)
+
+    def test_https_stream_stays_preferred_without_http_warning(self):
+        session = Session([Response(mime='audio/aac')])
+        result = update.stream_check(session, 'https://radio.example.org/live.aac')
+        self.assertTrue(result['ok'])
+        self.assertEqual(result['protocol'], 'HTTPS')
+        self.assertFalse(result['http_used'])
+        self.assertNotIn('security_warning', result)
+
+    def test_https_redirected_to_http_is_reported(self):
+        session = Session([Response(mime='audio/aac',
+                                    url='http://radio.example.org/live.aac')])
+        result = update.stream_check(session, 'https://radio.example.org/listen')
+        self.assertTrue(result['ok'])
+        self.assertEqual(result['protocol'], 'HTTPS')
+        self.assertTrue(result['http_used'])
+        self.assertEqual(result['attempts'][0]['final_protocol'], 'HTTP')
+        self.assertEqual(result['security_warning'], 'unencrypted_http_audio')
+
+    def test_http_503_retries_and_remains_http(self):
+        session = Session([Response(status=503), Response(mime='audio/aac')])
+        with patch.object(update.time, 'sleep'):
+            result = update.stream_check(session, 'http://radio.example.org/live.aac')
+        self.assertTrue(result['ok'])
+        self.assertTrue(result['http_used'])
+        self.assertEqual(len(result['attempts']), 2)
+
+    def test_unsupported_stream_scheme_is_still_blocked(self):
+        session = Session([])
+        result = update.stream_check(session, 'ftp://example.org/live.aac')
+        self.assertFalse(result['ok'])
+        self.assertEqual(result['error_type'], 'InvalidURL')
+        self.assertEqual(session.calls, [])
 
     def test_stream_check_logs_http_reason(self):
         session = Session([Response(status=403, mime='text/html')])
