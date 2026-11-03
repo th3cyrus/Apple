@@ -82,6 +82,9 @@ To download the same log from the Actions interface, open the workflow run and d
 
 Temporary stream errors (connection/read timeouts and HTTP 408, 429, 500, 502, 503, 504) are retried at most **two** times after the initial request, with short 1- and 2-second delays. Connect timeout stays at 5 seconds; read timeout is 12 seconds per attempt. Permanent responses such as 403/404, unexpected content types, and TLS certificate errors are not retried. A complete probe counts as one station check and cannot increment `fail_count` more than once, no matter how many requests were attempted.
 
+**HTTP audio streams are permitted as a fallback.** HTTPS remains preferred: a working HTTPS stream is never replaced merely because an HTTP alternative exists. If an HTTP stream is currently configured or an eligible HTTP candidate is selected after the usual verification, the JSONL report records `stream_protocol: "HTTP"`, `http_in_use`, and `security_warning: "unencrypted_http_audio"`, and the Actions console prints a warning. The `stream_check` record also includes `protocol`, `http_used`, and per-attempt `final_protocol` so HTTPS-to-HTTP redirects are visible. The run summary contains `http_streams` and `http_used_in_checks`. Candidate HTTP links are labeled `unencrypted_http_candidate` even if they are not selected. HTTP carries unencrypted audio and can be intercepted or changed in transit; some players/platforms may reject HTTP despite this script allowing it.
+
+
 ### Radio Browser Reliability
 
 The script checks each stream **before** consulting Radio Browser. A healthy
@@ -94,9 +97,10 @@ redundancy.
 
 A replacement must meet all safeguards: a confident name match, the same
 broadcaster's website, U.S. station metadata, a recent (within 14 days)
-positive directory health check, no reported SSL error, HTTPS, three
-consecutive failed checks of the old URL, and a successful live check of the
-proposed URL. Manually locked streams are never automatically replaced.
+positive directory health check, an HTTP or HTTPS stream URL, no reported
+TLS error for HTTPS candidates, three consecutive failed checks of the old
+URL, and a successful live check of the proposed URL. Manually locked streams
+are never automatically replaced.
 Radio Browser is community maintained, so these checks reduce risk without
 guaranteeing correctness or availability.
 
