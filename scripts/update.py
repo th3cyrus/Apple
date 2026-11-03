@@ -173,7 +173,7 @@ def main():
         url = s.get('logo_source') if s.get('manual_lock') else ''
         if not url and candidate and score>=55:
             url=candidate.get('favicon','')
-        img=fetch_logo_url(session,url) if url else None
+        img = None  # Preserve custom artwork
         if img is not None:
             buf=io.BytesIO(); img.save(buf,'PNG',optimize=True)
             if path.read_bytes()!=buf.getvalue(): path.write_bytes(buf.getvalue())
