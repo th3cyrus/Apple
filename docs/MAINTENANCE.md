@@ -38,9 +38,11 @@ locked by Python requirements.
 
 The checked-in `main-ruleset.json` is the desired GitHub ruleset for `main`:
 active deletion and non-fast-forward protection, with no bypass actors. Normal
-fast-forward bot commits continue to work. Import/create it in repository
-Settings → Rules → Rulesets when administrative access is available. Keeping this
-file in Git does **not** activate the server-side setting; verify it in GitHub.
+fast-forward bot commits continue to work. It is active as
+[Ruleset 26472586](https://github.com/th3cyrus/Apple/rules/26472586), targeting
+`refs/heads/main`. If recreating the repository, import/create it in Settings →
+Rules → Rulesets. Keeping the JSON file in Git alone does **not** activate a
+server-side setting.
 
 The CI workflow runs on pull requests, but this ruleset deliberately does not
 require a PR or uncompleted status check on each generated data commit. Requiring
