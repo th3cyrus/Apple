@@ -59,7 +59,7 @@ GitHub Actions is configured to run every **Wednesday at 03:17 UTC**.
 
 Manual updates are also available:
 
-1. Open [Primuse Import and Refresh](https://github.com/th3cyrus/Apple/actions/workflows/import.yml).
+1. Open [Primuse Radio Refresh](https://github.com/th3cyrus/Apple/actions/workflows/import.yml).
 2. Select **Run workflow**.
 3. Keep the `main` branch selected.
 4. Confirm the workflow execution.
@@ -70,6 +70,7 @@ The maintenance script:
 - Cautiously repairs outdated stream URLs when suitable alternatives are verified.
 - Regenerates the M3U playlist.
 - Preserves existing custom station artwork.
+- Validates station records, cover files, and M3U playlist structure before committing.
 - Commits updated files when changes are detected.
 
 ### Manual Stream Repair
@@ -93,9 +94,10 @@ If a station stops working:
 | `radio.m3u` | Public M3U subscription playlist |
 | `logos/` | Original station cover artwork |
 | `scripts/update.py` | Stream and playlist maintenance script |
-| `.github/workflows/import.yml` | Import and automatic refresh workflow |
+| `.github/workflows/import.yml` | Scheduled and manual radio refresh workflow |
 | `README.md` | Project documentation |
 | `LICENSE` | MIT License for original project code |
+| `ARTWORK_LICENSE.md` | CC BY 4.0 terms and third-party rights for custom covers |
 
 ---
 
@@ -135,11 +137,11 @@ HTTPS certificate verification should remain enabled.
 
 Original project code and project-authored documentation are released under the [MIT License](LICENSE), subject to the terms in that file.
 
-Custom station covers are independently designed artwork. Their licensing is separate from the MIT license for the code unless explicitly stated otherwise.
+The original creative elements of the custom station covers are made available under [CC BY 4.0](ARTWORK_LICENSE.md), to the extent that the maintainer controls the relevant rights. Attribution is required under that license. AI-generated elements may not qualify for copyright protection in every jurisdiction.
 
 Station names, trademarks, broadcaster audio, and third-party content remain subject to their respective owners' rights.
 
-The MIT License does not grant permission to use third-party trademarks or redistribute copyrighted broadcasts.
+Neither license grants permission to use third-party trademarks or redistribute copyrighted broadcasts.
 
 ---
 
