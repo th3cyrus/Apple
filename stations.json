@@ -8,7 +8,7 @@
     "homepage": "https://www.935kday.com/",
     "search": "KDAY",
     "logo_source": "https://static.mytuner.mobi/media/tvos_radios/393/935-kday-fm.7307d53c.jpg",
-    "manual_lock": true,
+    "manual_lock": false,
     "fail_count": 0
   },
   {
@@ -140,7 +140,7 @@
     "homepage": "https://www.kexp.org/",
     "search": "KEXP",
     "logo_source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/KEXP_logo_%28black_on_orange%29.svg/500px-KEXP_logo_%28black_on_orange%29.svg.png",
-    "manual_lock": true,
+    "manual_lock": false,
     "fail_count": 0
   },
   {
