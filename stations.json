@@ -431,7 +431,7 @@
     "name": "WNXP 91.1",
     "description": "Indie",
     "group": "Independent & Eclectic",
-    "stream": "https://wpln.streamguys1.com/wnxpfm.mp3.m3u",
+    "stream": "https://wpln.streamguys1.com/wnxpfm.mp3",
     "homepage": "https://wnxp.org/",
     "search": "WNXP",
     "manual_lock": false,

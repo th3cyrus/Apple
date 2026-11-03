@@ -47,6 +47,20 @@ class MediaTests(unittest.TestCase):
         self.assertFalse(result['ok'])
         self.assertEqual(result['error_type'], 'EmptyStream')
 
+    def test_real_mp3_decodes_to_audible_pcm(self):
+        import subprocess
+        sample = subprocess.run(
+            ['ffmpeg', '-v', 'error', '-f', 'lavfi', '-i',
+             'sine=frequency=440:duration=2', '-b:a', '128k', '-f', 'mp3', 'pipe:1'],
+            capture_output=True, check=True, timeout=10).stdout
+        response = Response(mime='audio/mpeg')
+        response.raw = io.BytesIO(sample)
+        result = update.stream_check(Session([response]), 'https://example.org/test.mp3')
+        self.assertTrue(result['ok'], result)
+        self.assertEqual(result['codec'], 'mp3')
+        self.assertGreaterEqual(result['decoded_seconds'], 1)
+        self.assertGreater(result['rms_dbfs'], -60)
+
     def test_audio_header_with_non_audio_bytes_is_not_healthy(self):
         response = Response(mime='audio/mpeg')
         response.raw = io.BytesIO(b'this is not an audio stream')
@@ -59,6 +73,8 @@ class MediaTests(unittest.TestCase):
                                      'https://example.org/audio')
         self.assertTrue(result['ok'])
         self.assertGreater(result['audio_packets'], 0)
+        self.assertGreaterEqual(result['decoded_seconds'], 0.5)
+        self.assertGreater(result['peak_dbfs'], -60)
 
     def test_intermediate_http_redirect_is_logged(self):
         a, b = Response(status=302), Response(status=302)
@@ -159,8 +175,39 @@ class PlaylistServerTests(unittest.TestCase):
                 self.assertTrue(result['ok'])
                 self.assertEqual(len(result['attempts'][0]['requests']), 2)
 
-    def test_playlist_extension_with_actual_audio_is_verified_as_audio(self):
-        self.assertTrue(self.probe('/audio.m3u')['ok'])
+    def test_playlist_extension_with_actual_audio_is_rejected(self):
+        result = self.probe('/audio.m3u')
+        self.assertFalse(result['ok'])
+        self.assertEqual(result['error_type'], 'PlaylistContentMismatch')
+
+    def test_double_extension_is_rejected_without_network(self):
+        result = update.stream_check(Session([]), 'https://example.org/stream.mp3.m3u')
+        self.assertFalse(result['ok'])
+        self.assertEqual(result['error_type'], 'MisleadingStreamSuffix')
+        self.assertTrue(result['repairable'])
+
+    def test_silent_decodable_audio_is_not_healthy(self):
+        import wave
+        buf = io.BytesIO()
+        with wave.open(buf, 'wb') as handle:
+            handle.setnchannels(1)
+            handle.setsampwidth(2)
+            handle.setframerate(8000)
+            handle.writeframes(b'\x00\x00' * 8000)
+        response = Response(mime='audio/wav')
+        response.raw = io.BytesIO(buf.getvalue())
+        result = update.stream_check(Session([response]), 'https://example.org/silent.wav')
+        self.assertFalse(result['ok'])
+        self.assertEqual(result['error_type'], 'SilentAudio')
+
+    def test_catalog_disallows_double_extension(self):
+        with self.assertRaisesRegex(ValueError, 'Misleading audio/playlist'):
+            catalog.validate_catalog([station(stream='https://example.org/live.mp3.m3u')])
+
+    def test_directory_rejects_misleading_candidate(self):
+        reasons = update.candidate_rejection_reasons(
+            station(), candidate(url_resolved='https://example.org/live.mp3.m3u'), 100, NOW)
+        self.assertIn('misleading_stream_suffix', reasons)
 
     def test_hls_master_and_media_segment_are_verified(self):
         result = self.probe('/master.m3u8')

@@ -66,18 +66,22 @@ save diagnostics without publishing catalog, playlist or artwork changes.
 ### Audio Verification
 
 A successful HTTP response alone is not considered healthy. The checker reads a
-bounded sample and uses **FFprobe** (part of FFmpeg) to detect audio packets. It
+bounded sample, uses **FFprobe** to identify audio packets, and then uses **FFmpeg**
+to decode PCM and measure its signal level. Silent, undecodable or mislabeled
+audio is flagged instead of being marked healthy. Audio/playlist double-extension
+URLs (for example `.mp3.m3u`) are never accepted. The probe
 resolves M3U/PLS entries and HLS master/media playlists, checks a media segment,
 and supports HLS initialization segments. No station is removed for failing a check.
 
 The probe uses 5-second connect and 12-second read timeouts, a 45-second overall
 processing budget, up to 3 attempts with 1- and 2-second delays, at most 5 redirects
-per resource, 3 playlist levels, 64 KiB playlists and 32 KiB media samples.
+per resource, 3 playlist levels, 64 KiB playlists and up to 128 KiB media samples
+(with a separate 8-second streaming read cap).
 Socket/DNS behavior can exceed application time checks; the refresh job has a hard
 20-minute cap. The script stops starting station work after 15 minutes. A small
-verified sample does not prove continuous playback, audible content, broadcaster
-identity, or availability from every country/player. Encrypted or unrecognized
-media is reported for manual review.
+verified sample does not prove uninterrupted playback, the correct station identity,
+or compatibility with every device/player. Very quiet samples may need manual
+review; encrypted or unrecognized media also requires manual review.
 
 Transient timeouts, connection errors and HTTP 408/429/500/502/503/504 can be retried.
 403 responses, TLS errors and unverified media do not authorize automatic URL
