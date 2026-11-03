@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 import re
 from urllib.parse import urlsplit
 
-from safety import valid_url
+from safety import unsupported_stream_suffix, valid_url
 
 
 def hostname(url):
@@ -98,6 +98,8 @@ def candidate_rejection_reasons(station, candidate, score, now=None):
     if candidate.get('lastcheckok') not in (1, True, '1'):
         reasons.append('not_recently_working')
     url = candidate.get('url_resolved', '')
+    if unsupported_stream_suffix(url):
+        reasons.append('misleading_stream_suffix')
     if not valid_url(url):
         reasons.append('invalid_candidate_url')
     elif urlsplit(url).scheme == 'https' and candidate.get('ssl_error') not in (0, False, '0'):
