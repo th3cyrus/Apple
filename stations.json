@@ -9,7 +9,19 @@
     "search": "KDAY",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/93-5-kday.png"
+    "logo": "logos/93-5-kday.png",
+    "identity": {
+      "aliases": [
+        "93.5 KDAY"
+      ],
+      "callsigns": [
+        "KDAY"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KDAY",
+      "frequency": "93.5"
+    }
   },
   {
     "id": "power-106",
@@ -21,7 +33,18 @@
     "search": "Power 106 KPWR",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/power-106.png"
+    "logo": "logos/power-106.png",
+    "identity": {
+      "aliases": [
+        "Power 106"
+      ],
+      "callsigns": [
+        "KPWR"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "Power 106"
+    }
   },
   {
     "id": "hot-97",
@@ -33,7 +56,18 @@
     "search": "HOT 97 WQHT",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/hot-97.png"
+    "logo": "logos/hot-97.png",
+    "identity": {
+      "aliases": [
+        "HOT 97"
+      ],
+      "callsigns": [
+        "WQHT"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "HOT 97"
+    }
   },
   {
     "id": "107-5-wbls",
@@ -45,7 +79,19 @@
     "search": "WBLS",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/107-5-wbls.png"
+    "logo": "logos/107-5-wbls.png",
+    "identity": {
+      "aliases": [
+        "107.5 WBLS"
+      ],
+      "callsigns": [
+        "WBLS"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "WBLS",
+      "frequency": "107.5"
+    }
   },
   {
     "id": "hyfin",
@@ -57,7 +103,16 @@
     "search": "HYFIN",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/hyfin.png"
+    "logo": "logos/hyfin.png",
+    "identity": {
+      "aliases": [
+        "HYFIN"
+      ],
+      "callsigns": [],
+      "band": "FM",
+      "channel": "hyfin",
+      "search_term": "HYFIN"
+    }
   },
   {
     "id": "kroq-106-7",
@@ -69,7 +124,19 @@
     "search": "KROQ",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kroq-106-7.png"
+    "logo": "logos/kroq-106-7.png",
+    "identity": {
+      "aliases": [
+        "KROQ 106.7"
+      ],
+      "callsigns": [
+        "KROQ"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KROQ",
+      "frequency": "106.7"
+    }
   },
   {
     "id": "klos-95-5",
@@ -81,7 +148,19 @@
     "search": "KLOS",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/klos-95-5.png"
+    "logo": "logos/klos-95-5.png",
+    "identity": {
+      "aliases": [
+        "KLOS 95.5"
+      ],
+      "callsigns": [
+        "KLOS"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KLOS",
+      "frequency": "95.5"
+    }
   },
   {
     "id": "wmmr-93-3",
@@ -93,7 +172,19 @@
     "search": "WMMR",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wmmr-93-3.png"
+    "logo": "logos/wmmr-93-3.png",
+    "identity": {
+      "aliases": [
+        "WMMR 93.3"
+      ],
+      "callsigns": [
+        "WMMR"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "WMMR",
+      "frequency": "93.3"
+    }
   },
   {
     "id": "kisw-99-9",
@@ -105,7 +196,19 @@
     "search": "KISW",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kisw-99-9.png"
+    "logo": "logos/kisw-99-9.png",
+    "identity": {
+      "aliases": [
+        "KISW 99.9"
+      ],
+      "callsigns": [
+        "KISW"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KISW",
+      "frequency": "99.9"
+    }
   },
   {
     "id": "88-5-the-socal-sound",
@@ -117,7 +220,19 @@
     "search": "The SoCal Sound",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/88-5-the-socal-sound.png"
+    "logo": "logos/88-5-the-socal-sound.png",
+    "identity": {
+      "aliases": [
+        "88.5 The SoCal Sound",
+        "The SoCal Sound",
+        "SoCal Sound"
+      ],
+      "callsigns": [],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "SoCal Sound",
+      "frequency": "88.5"
+    }
   },
   {
     "id": "wxpn-88-5",
@@ -129,7 +244,19 @@
     "search": "WXPN",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wxpn-88-5.png"
+    "logo": "logos/wxpn-88-5.png",
+    "identity": {
+      "aliases": [
+        "WXPN 88.5"
+      ],
+      "callsigns": [
+        "WXPN"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "WXPN",
+      "frequency": "88.5"
+    }
   },
   {
     "id": "kexp-90-3",
@@ -141,7 +268,19 @@
     "search": "KEXP",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kexp-90-3.png"
+    "logo": "logos/kexp-90-3.png",
+    "identity": {
+      "aliases": [
+        "KEXP 90.3"
+      ],
+      "callsigns": [
+        "KEXP"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KEXP",
+      "frequency": "90.3"
+    }
   },
   {
     "id": "kcrw-89-9",
@@ -153,7 +292,19 @@
     "search": "KCRW",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kcrw-89-9.png"
+    "logo": "logos/kcrw-89-9.png",
+    "identity": {
+      "aliases": [
+        "KCRW 89.9"
+      ],
+      "callsigns": [
+        "KCRW"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KCRW",
+      "frequency": "89.9"
+    }
   },
   {
     "id": "kutx-98-9",
@@ -165,7 +316,19 @@
     "search": "KUTX",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kutx-98-9.png"
+    "logo": "logos/kutx-98-9.png",
+    "identity": {
+      "aliases": [
+        "KUTX 98.9"
+      ],
+      "callsigns": [
+        "KUTX"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KUTX",
+      "frequency": "98.9"
+    }
   },
   {
     "id": "kalx-90-7",
@@ -177,7 +340,19 @@
     "search": "KALX",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kalx-90-7.png"
+    "logo": "logos/kalx-90-7.png",
+    "identity": {
+      "aliases": [
+        "KALX 90.7"
+      ],
+      "callsigns": [
+        "KALX"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KALX",
+      "frequency": "90.7"
+    }
   },
   {
     "id": "wfuv-90-7",
@@ -189,7 +364,19 @@
     "search": "WFUV",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wfuv-90-7.png"
+    "logo": "logos/wfuv-90-7.png",
+    "identity": {
+      "aliases": [
+        "WFUV 90.7"
+      ],
+      "callsigns": [
+        "WFUV"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "WFUV",
+      "frequency": "90.7"
+    }
   },
   {
     "id": "wfmu-91-1",
@@ -201,7 +388,19 @@
     "search": "WFMU",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wfmu-91-1.png"
+    "logo": "logos/wfmu-91-1.png",
+    "identity": {
+      "aliases": [
+        "WFMU 91.1"
+      ],
+      "callsigns": [
+        "WFMU"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "WFMU",
+      "frequency": "91.1"
+    }
   },
   {
     "id": "kxt-91-7",
@@ -213,7 +412,19 @@
     "search": "KXT",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kxt-91-7.png"
+    "logo": "logos/kxt-91-7.png",
+    "identity": {
+      "aliases": [
+        "KXT 91.7"
+      ],
+      "callsigns": [
+        "KXT"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KXT",
+      "frequency": "91.7"
+    }
   },
   {
     "id": "wnxp-91-1",
@@ -225,7 +436,19 @@
     "search": "WNXP",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wnxp-91-1.png"
+    "logo": "logos/wnxp-91-1.png",
+    "identity": {
+      "aliases": [
+        "WNXP 91.1"
+      ],
+      "callsigns": [
+        "WNXP"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "WNXP",
+      "frequency": "91.1"
+    }
   },
   {
     "id": "the-current-89-3",
@@ -237,7 +460,21 @@
     "search": "The Current KCMP",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/the-current-89-3.png"
+    "logo": "logos/the-current-89-3.png",
+    "identity": {
+      "aliases": [
+        "The Current 89.3",
+        "The Current",
+        "MPR The Current"
+      ],
+      "callsigns": [
+        "KCMP"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "current",
+      "frequency": "89.3"
+    }
   },
   {
     "id": "88nine-radio-milwaukee",
@@ -249,7 +486,17 @@
     "search": "88Nine Radio Milwaukee",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/88nine-radio-milwaukee.png"
+    "logo": "logos/88nine-radio-milwaukee.png",
+    "identity": {
+      "aliases": [
+        "88Nine Radio Milwaukee",
+        "Radio Milwaukee 88Nine"
+      ],
+      "callsigns": [],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "88Nine Radio Milwaukee"
+    }
   },
   {
     "id": "wkcr-89-9",
@@ -261,7 +508,19 @@
     "search": "WKCR",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wkcr-89-9.png"
+    "logo": "logos/wkcr-89-9.png",
+    "identity": {
+      "aliases": [
+        "WKCR 89.9"
+      ],
+      "callsigns": [
+        "WKCR"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "WKCR",
+      "frequency": "89.9"
+    }
   },
   {
     "id": "wwoz-90-7",
@@ -273,7 +532,19 @@
     "search": "WWOZ",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wwoz-90-7.png"
+    "logo": "logos/wwoz-90-7.png",
+    "identity": {
+      "aliases": [
+        "WWOZ 90.7"
+      ],
+      "callsigns": [
+        "WWOZ"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "WWOZ",
+      "frequency": "90.7"
+    }
   },
   {
     "id": "kjazz-88-1",
@@ -285,7 +556,21 @@
     "search": "KJazz KKJZ",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kjazz-88-1.png"
+    "logo": "logos/kjazz-88-1.png",
+    "identity": {
+      "aliases": [
+        "KJazz 88.1",
+        "KJazz",
+        "KKJZ 88.1"
+      ],
+      "callsigns": [
+        "KKJZ"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KJazz",
+      "frequency": "88.1"
+    }
   },
   {
     "id": "wbgo-88-3",
@@ -297,7 +582,19 @@
     "search": "WBGO",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wbgo-88-3.png"
+    "logo": "logos/wbgo-88-3.png",
+    "identity": {
+      "aliases": [
+        "WBGO 88.3"
+      ],
+      "callsigns": [
+        "WBGO"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "WBGO",
+      "frequency": "88.3"
+    }
   },
   {
     "id": "knkx-88-5",
@@ -309,7 +606,19 @@
     "search": "KNKX",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/knkx-88-5.png"
+    "logo": "logos/knkx-88-5.png",
+    "identity": {
+      "aliases": [
+        "KNKX 88.5"
+      ],
+      "callsigns": [
+        "KNKX"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KNKX",
+      "frequency": "88.5"
+    }
   },
   {
     "id": "wrti-jazz",
@@ -321,7 +630,18 @@
     "search": "WRTI Jazz",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wrti-jazz.png"
+    "logo": "logos/wrti-jazz.png",
+    "identity": {
+      "aliases": [
+        "WRTI Jazz"
+      ],
+      "callsigns": [
+        "WRTI"
+      ],
+      "band": "FM",
+      "channel": "jazz",
+      "search_term": "WRTI"
+    }
   },
   {
     "id": "kcsm-jazz-91-1",
@@ -333,7 +653,20 @@
     "search": "KCSM",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kcsm-jazz-91-1.png"
+    "logo": "logos/kcsm-jazz-91-1.png",
+    "identity": {
+      "aliases": [
+        "KCSM Jazz 91.1",
+        "KCSM 91.1"
+      ],
+      "callsigns": [
+        "KCSM"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KCSM",
+      "frequency": "91.1"
+    }
   },
   {
     "id": "wrti-classical",
@@ -345,7 +678,18 @@
     "search": "WRTI Classical",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wrti-classical.png"
+    "logo": "logos/wrti-classical.png",
+    "identity": {
+      "aliases": [
+        "WRTI Classical"
+      ],
+      "callsigns": [
+        "WRTI"
+      ],
+      "band": "FM",
+      "channel": "classical",
+      "search_term": "WRTI"
+    }
   },
   {
     "id": "classical-kc-91-9",
@@ -357,7 +701,18 @@
     "search": "Classical KC",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/classical-kc-91-9.png"
+    "logo": "logos/classical-kc-91-9.png",
+    "identity": {
+      "aliases": [
+        "Classical KC 91.9",
+        "Classical KC"
+      ],
+      "callsigns": [],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "Classical KC",
+      "frequency": "91.9"
+    }
   },
   {
     "id": "kusc-91-5",
@@ -369,7 +724,19 @@
     "search": "KUSC",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kusc-91-5.png"
+    "logo": "logos/kusc-91-5.png",
+    "identity": {
+      "aliases": [
+        "KUSC 91.5"
+      ],
+      "callsigns": [
+        "KUSC"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KUSC",
+      "frequency": "91.5"
+    }
   },
   {
     "id": "wqxr-105-9",
@@ -381,7 +748,19 @@
     "search": "WQXR",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wqxr-105-9.png"
+    "logo": "logos/wqxr-105-9.png",
+    "identity": {
+      "aliases": [
+        "WQXR 105.9"
+      ],
+      "callsigns": [
+        "WQXR"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "WQXR",
+      "frequency": "105.9"
+    }
   },
   {
     "id": "wnyc-93-9",
@@ -393,7 +772,19 @@
     "search": "WNYC",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wnyc-93-9.png"
+    "logo": "logos/wnyc-93-9.png",
+    "identity": {
+      "aliases": [
+        "WNYC 93.9"
+      ],
+      "callsigns": [
+        "WNYC"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "WNYC",
+      "frequency": "93.9"
+    }
   },
   {
     "id": "laist-89-3",
@@ -405,7 +796,19 @@
     "search": "LAist KPCC",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/laist-89-3.png"
+    "logo": "logos/laist-89-3.png",
+    "identity": {
+      "aliases": [
+        "LAist 89.3"
+      ],
+      "callsigns": [
+        "KPCC"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KPCC",
+      "frequency": "89.3"
+    }
   },
   {
     "id": "kut-90-5",
@@ -417,6 +820,18 @@
     "search": "KUT",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kut-90-5.png"
+    "logo": "logos/kut-90-5.png",
+    "identity": {
+      "aliases": [
+        "KUT 90.5"
+      ],
+      "callsigns": [
+        "KUT"
+      ],
+      "band": "FM",
+      "channel": "main",
+      "search_term": "KUT",
+      "frequency": "90.5"
+    }
   }
 ]

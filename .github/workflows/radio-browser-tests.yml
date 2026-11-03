@@ -6,7 +6,21 @@ on:
     paths:
       - 'scripts/**'
       - 'tests/**'
-      - '.github/workflows/radio-browser-tests.yml'
+      - 'stations.json'
+      - 'radio.m3u'
+      - 'logos/**'
+      - 'requirements*.txt'
+      - '.github/workflows/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - 'stations.json'
+      - 'radio.m3u'
+      - 'logos/**'
+      - 'requirements*.txt'
+      - '.github/workflows/**'
   workflow_dispatch:
 
 permissions:
@@ -15,17 +29,30 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-26.04
+    timeout-minutes: 10
     steps:
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
-          python-version: '3.12'
+          python-version: '3.12.16'
 
-      - name: Install dependencies
-        run: python -m pip install -r requirements.txt
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --only-binary=:all: -r requirements.txt
 
-      - name: Run Radio Browser regression tests
-        run: python -m unittest discover -s tests -v
+      - name: Ensure media verification tools
+        run: |
+          if ! command -v ffprobe >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+
+      - name: Run regression tests and validate catalog, covers and playlist
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/validate.py

@@ -9,6 +9,8 @@ import re
 import socket
 import time
 
+from safety import safe_message
+
 DISCOVERY_URL = 'https://all.api.radio-browser.info/json/servers'
 DNS_DISCOVERY_HOST = 'all.api.radio-browser.info'
 FALLBACK_SERVERS = (
@@ -30,7 +32,7 @@ def clean_server_name(value):
 
 def safe_error(exc):
     """Avoid placing query-string credentials in public error reports."""
-    return re.sub(r'(https?://[^\s?]+)\?[^\s)]+', r'\1?[redacted]', str(exc))[:400]
+    return safe_message(exc)[:800]
 
 
 class RadioBrowserClient:
@@ -100,7 +102,7 @@ class RadioBrowserClient:
                 servers.append(fallback)
         return servers, attempts
 
-    def search(self, station, scorer):
+    def search_candidates(self, station, scorer):
         """Try healthy mirrors and quarantine failures for this run.
 
         A valid empty/no-match response is not an outage; trying mirrors in
@@ -109,7 +111,8 @@ class RadioBrowserClient:
         attempts = []
         words = re.findall(r'[a-z0-9]+', station['search'].lower())
         meaningful = [word for word in words if word not in ('the', 'radio', 'fm')]
-        search_term = meaningful[0] if meaningful else station['search']
+        search_term = station.get('identity', {}).get('search_term') or (
+            meaningful[0] if meaningful else station['search'])
         for base in list(self.servers):
             if base in self.failed_servers:
                 continue
@@ -141,9 +144,7 @@ class RadioBrowserClient:
                 # Prefer the last responsive mirror for subsequent lookups.
                 self.servers.remove(base)
                 self.servers.insert(0, base)
-                if score >= 55:
-                    return score, scored[0][1], attempts
-                return 0, None, attempts
+                return scored, attempts
             except Exception as exc:
                 attempt['error_type'] = type(exc).__name__
                 attempt['error'] = safe_error(exc)
@@ -156,4 +157,11 @@ class RadioBrowserClient:
                 'error_type': 'NoHealthyMirrors',
                 'error': 'All configured mirror hosts failed earlier in this run',
             })
+        return [], attempts
+
+    def search(self, station, scorer):
+        """Compatibility helper; maintenance evaluates every returned candidate."""
+        scored, attempts = self.search_candidates(station, scorer)
+        if scored and scored[0][0] >= 55:
+            return scored[0][0], scored[0][1], attempts
         return 0, None, attempts

@@ -1,5 +1,7 @@
 """Offline regression tests for Radio Browser discovery, failover and repairs."""
 import sys
+import io
+import wave
 import unittest
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -9,6 +11,17 @@ from requests.exceptions import ReadTimeout, SSLError
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import radio_browser
 import update
+import stream_probe
+
+
+def audio_sample():
+    buffer = io.BytesIO()
+    with wave.open(buffer, 'wb') as sample:
+        sample.setnchannels(1)
+        sample.setsampwidth(2)
+        sample.setframerate(8000)
+        sample.writeframes(b'\x00\x01' * 8000)
+    return buffer.getvalue()
 
 
 class Response:
@@ -18,6 +31,10 @@ class Response:
         self.headers = {'Content-Type': mime}
         self.reason = 'Test response'
         self.url = url
+        self.raw = io.BytesIO(audio_sample())
+
+    def close(self):
+        pass
 
     def __enter__(self):
         return self
@@ -206,7 +223,7 @@ class RadioBrowserTests(unittest.TestCase):
             ReadTimeout('second timeout'),
             Response(mime='audio/aac'),
         ])
-        with patch.object(update.time, 'sleep') as sleep:
+        with patch.object(stream_probe, 'sleep') as sleep:
             result = update.stream_check(session, 'https://example.org/radio.aac')
         self.assertTrue(result['ok'])
         self.assertEqual(result['http_status'], 200)
@@ -221,7 +238,7 @@ class RadioBrowserTests(unittest.TestCase):
 
     def test_stream_404_is_not_retried(self):
         session = Session([Response(status=404)])
-        with patch.object(update.time, 'sleep') as sleep:
+        with patch.object(stream_probe, 'sleep') as sleep:
             result = update.stream_check(session, 'https://example.org/missing')
         self.assertFalse(result['ok'])
         self.assertEqual(result['http_status'], 404)
@@ -234,7 +251,7 @@ class RadioBrowserTests(unittest.TestCase):
             Response(status=503),
             Response(mime='audio/aac'),
         ])
-        with patch.object(update.time, 'sleep') as sleep:
+        with patch.object(stream_probe, 'sleep') as sleep:
             result = update.stream_check(session, 'https://example.org/live.aac')
         self.assertTrue(result['ok'])
         self.assertEqual(len(result['attempts']), 2)
@@ -245,7 +262,7 @@ class RadioBrowserTests(unittest.TestCase):
 
     def test_stream_ssl_error_never_retries(self):
         session = Session([SSLError('certificate verify failed')])
-        with patch.object(update.time, 'sleep') as sleep:
+        with patch.object(stream_probe, 'sleep') as sleep:
             result = update.stream_check(session, 'https://example.org/live.aac')
         self.assertFalse(result['ok'])
         self.assertEqual(result['error_type'], 'SSLError')
@@ -254,7 +271,7 @@ class RadioBrowserTests(unittest.TestCase):
 
     def test_exhausted_timeouts_report_every_attempt(self):
         session = Session([ReadTimeout('no headers') for _ in range(3)])
-        with patch.object(update.time, 'sleep') as sleep:
+        with patch.object(stream_probe, 'sleep') as sleep:
             result = update.stream_check(session, 'https://example.org/live.aac')
         self.assertFalse(result['ok'])
         self.assertEqual(result['error_type'], 'ReadTimeout')
@@ -283,8 +300,9 @@ class RadioBrowserTests(unittest.TestCase):
         self.assertNotIn('security_warning', result)
 
     def test_https_redirected_to_http_is_reported(self):
-        session = Session([Response(mime='audio/aac',
-                                    url='http://radio.example.org/live.aac')])
+        redirect = Response(status=302)
+        redirect.headers['Location'] = 'http://radio.example.org/live.aac'
+        session = Session([redirect, Response(mime='audio/aac')])
         result = update.stream_check(session, 'https://radio.example.org/listen')
         self.assertTrue(result['ok'])
         self.assertEqual(result['protocol'], 'HTTPS')
@@ -294,7 +312,7 @@ class RadioBrowserTests(unittest.TestCase):
 
     def test_http_503_retries_and_remains_http(self):
         session = Session([Response(status=503), Response(mime='audio/aac')])
-        with patch.object(update.time, 'sleep'):
+        with patch.object(stream_probe, 'sleep'):
             result = update.stream_check(session, 'http://radio.example.org/live.aac')
         self.assertTrue(result['ok'])
         self.assertTrue(result['http_used'])

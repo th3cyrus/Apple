@@ -1,2 +1,7 @@
-requests>=2.32,<3
-Pillow>=10,<13
+# Tested on Python 3.12.16 / Ubuntu 26.04; transitive dependencies are pinned too.
+requests==2.34.2
+Pillow==12.3.0
+certifi==2026.10.23
+charset-normalizer==3.5.2
+idna==3.20
+urllib3==2.8.0

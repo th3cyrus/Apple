@@ -1,12 +1,25 @@
 name: Primuse Radio Refresh
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'stations.json'
+      - 'scripts/**'
+      - 'requirements.txt'
+      - '.github/workflows/import.yml'
   workflow_dispatch:
+    inputs:
+      report_only:
+        description: Check audio and save diagnostics without publishing changes
+        type: boolean
+        default: false
   schedule:
-    - cron: '17 3 * * 3'
+    # 06:17 Asia/Baghdad (UTC+03:00).
+    - cron: '17 3 * * *'
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: primuse-radio-refresh
@@ -14,126 +27,105 @@ concurrency:
 
 jobs:
   refresh:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-26.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
-          python-version: '3.12'
+          python-version: '3.12.16'
 
-      - name: Install dependencies
-        run: python -m pip install -r requirements.txt
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --only-binary=:all: -r requirements.txt
 
-      - name: Check Radio Browser logic before refreshing
-        run: python -m unittest discover -s tests -v
+      - name: Ensure media verification tools
+        run: |
+          if ! command -v ffprobe >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+          ffprobe -version | head -n 1
+
+      - name: Run regression tests and validate maintained files
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/validate.py
 
       - name: Refresh radio stations and playlist
+        id: refresh
         env:
-          GITHUB_REPOSITORY: ${{ github.repository }}
-        run: python scripts/update.py --publish --refresh
+          REPORT_ONLY: ${{ inputs.report_only }}
+          PYTHONUNBUFFERED: '1'
+        run: |
+          args=(--publish --refresh)
+          if [ "$REPORT_ONLY" = "true" ]; then
+            args+=(--report-only)
+          fi
+          python scripts/update.py "${args[@]}"
 
-      - name: Validate stations, covers, and playlist
+      - name: Validate published files and current-run diagnostics
+        run: python scripts/validate.py --report logs/current-run.json
+
+      - name: Summarize current diagnostics
+        if: always() && steps.refresh.outcome != 'skipped'
         run: |
           python - <<'PY'
           import json
+          import os
           from pathlib import Path
-          from urllib.parse import urlsplit
-          from PIL import Image
-
-          stations = json.loads(
-              Path('stations.json').read_text(encoding='utf-8')
-          )
-
-          if not isinstance(stations, list) or len(stations) < 35:
-              raise SystemExit('Station catalog is missing or incomplete')
-
-          ids = [station.get('id') for station in stations]
-
-          if any(not isinstance(id_, str) or not id_ for id_ in ids):
-              raise SystemExit('Invalid station ID')
-
-          if len(ids) != len(set(ids)):
-              raise SystemExit('Duplicate station IDs')
-
-          for station in stations:
-              url = station.get('stream')
-
-              if (
-                  not isinstance(url, str)
-                  or urlsplit(url).scheme not in ('http', 'https')
-                  or not urlsplit(url).hostname
-              ):
-                  raise SystemExit(
-                      f"Invalid stream URL for {station.get('name')}"
-                  )
-
-              cover = Path('logos') / f"{station['id']}.png"
-
-              if not cover.is_file():
-                  raise SystemExit(f'Missing cover: {cover}')
-
-              with Image.open(cover) as image:
-                  image.verify()
-
-          lines = [
-              line.strip()
-              for line in Path('radio.m3u').read_text(
-                  encoding='utf-8'
-              ).splitlines()
-              if line.strip()
-          ]
-
-          if not lines or lines[0] != '#EXTM3U':
-              raise SystemExit('Invalid M3U header')
-
-          if sum(
-              line.startswith('#EXTINF:') for line in lines
-          ) != len(stations):
-              raise SystemExit('Playlist station count mismatch')
-
-          urls = [
-              line for line in lines
-              if not line.startswith('#')
-          ]
-
-          if urls != [station['stream'] for station in stations]:
-              raise SystemExit(
-                  'Playlist URLs do not match stations.json'
-              )
-
-          health_log = Path('logs/stream-health.jsonl')
-          if not health_log.is_file():
-              raise SystemExit('Missing stream diagnostics report')
-          latest = json.loads(health_log.read_text(encoding='utf-8').splitlines()[-1])
-          if latest.get('summary', {}).get('total') != len(stations):
-              raise SystemExit('Stream diagnostics missing station results')
-
-          print(
-              f'Validated {len(stations)} stations, covers, playlist and diagnostics'
-          )
+          path = Path('logs/current-run.json')
+          if path.is_file():
+              report = json.loads(path.read_text(encoding='utf-8'))
+              if report.get('github_run_id') != os.environ['GITHUB_RUN_ID']:
+                  raise SystemExit('Refusing diagnostics from a different run')
+              with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as output:
+                  output.write('### Stream health\n\n')
+                  output.write('Run status: ' + report['status'] + '\n\n')
+                  output.write('| Result | Count |\n| --- | ---: |\n')
+                  for key, value in report['summary'].items():
+                      output.write(f'| {key} | {value} |\n')
           PY
 
-      - name: Upload stream health diagnostics
-        if: always()
-        uses: actions/upload-artifact@v7
+      - name: Upload this run's stream health diagnostics
+        if: always() && steps.refresh.outcome != 'skipped'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
-          name: stream-health-${{ github.run_id }}
-          path: logs/stream-health.jsonl
+          name: stream-health-${{ github.run_id }}-${{ github.run_attempt }}
+          path: logs/current-run.json
           if-no-files-found: warn
           retention-days: 90
 
       - name: Commit refreshed files if changed
+        if: inputs.report_only != true
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-
-          git add radio.m3u stations.json logos/ logs/
-
-          if ! git diff --cached --quiet; then
-            git commit -m 'Refresh radio playlist'
-            git push
+          git add radio.m3u stations.json logos/ logs/stream-health.jsonl
+          if git diff --cached --quiet; then
+            exit 0
           fi
+          git commit -m 'Refresh radio playlist'
+          # Credentials exist only in this publishing step, never in checkout config.
+          askpass="$RUNNER_TEMP/primuse-git-askpass"
+          cat > "$askpass" <<'SH'
+          #!/bin/sh
+          case "$1" in
+            *Username*) printf '%s\n' 'x-access-token' ;;
+            *Password*) printf '%s\n' "$GH_TOKEN" ;;
+          esac
+          SH
+          chmod 700 "$askpass"
+          trap 'rm -f "$askpass"' EXIT
+          GIT_ASKPASS="$askpass" GIT_TERMINAL_PROMPT=0 git push origin HEAD:main

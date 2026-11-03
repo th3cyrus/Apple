@@ -39,7 +39,7 @@ You can also tap **Update Now** to refresh the subscription manually.
 - Ready-to-use M3U subscription playlist
 - Stations organized by music genre
 - Editable station catalog and stream URLs
-- Automated weekly maintenance via GitHub Actions
+- Automated daily maintenance via GitHub Actions
 - Manual workflow execution when needed
 
 ### Radio Categories
@@ -55,59 +55,107 @@ You can also tap **Update Now** to refresh the subscription manually.
 
 ## Automatic Updates
 
-GitHub Actions is configured to run every **Wednesday at 03:17 UTC**.
+GitHub Actions checks the collection every **day at 03:17 UTC / 06:17 Iraq time**.
+Relevant changes to the catalog, maintenance code, dependencies or refresh workflow
+also trigger a refresh. Bot-generated data commits do not trigger another refresh.
 
-Manual updates are also available:
+To run manually, open [Primuse Radio Refresh](https://github.com/th3cyrus/Apple/actions/workflows/import.yml)
+and select **Run workflow** on `main`. Enable **report_only** to check streams and
+save diagnostics without publishing catalog, playlist or artwork changes.
 
-1. Open [Primuse Radio Refresh](https://github.com/th3cyrus/Apple/actions/workflows/import.yml).
-2. Select **Run workflow**.
-3. Keep the `main` branch selected.
-4. Confirm the workflow execution.
+### Audio Verification
 
-The maintenance script:
+A successful HTTP response alone is not considered healthy. The checker reads a
+bounded sample and uses **FFprobe** (part of FFmpeg) to detect audio packets. It
+resolves M3U/PLS entries and HLS master/media playlists, checks a media segment,
+and supports HLS initialization segments. No station is removed for failing a check.
 
-- Checks station stream availability and records HTTP status codes, timeouts, TLS, DNS and content-type failures.
-- Saves the latest 30 stream health reports in `logs/stream-health.jsonl` and uploads each refresh report as a GitHub Actions artifact for 90 days.
-- Cautiously repairs outdated stream URLs when suitable alternatives are verified.
-- Regenerates the M3U playlist.
-- Preserves existing custom station artwork.
-- Validates station records, cover files, and M3U playlist structure before committing.
-- Commits updated files when changes are detected.
+The probe uses 5-second connect and 12-second read timeouts, a 45-second overall
+processing budget, up to 3 attempts with 1- and 2-second delays, at most 5 redirects
+per resource, 3 playlist levels, 64 KiB playlists and 32 KiB media samples.
+Socket/DNS behavior can exceed application time checks; the refresh job has a hard
+20-minute cap. The script stops starting station work after 15 minutes. A small
+verified sample does not prove continuous playback, audible content, broadcaster
+identity, or availability from every country/player. Encrypted or unrecognized
+media is reported for manual review.
+
+Transient timeouts, connection errors and HTTP 408/429/500/502/503/504 can be retried.
+403 responses, TLS errors and unverified media do not authorize automatic URL
+replacement. Temporary or region-dependent failures require review.
+
+### Conservative Stream Repair
+
+Healthy or manually locked URLs never trigger a directory lookup. An eligible
+repair requires **three consecutive counted failures at least 24 hours apart**;
+multiple retries and manual runs on the same day cannot accelerate the counter.
+Successful checks reset it. Legacy counters without timestamps restart under this
+policy. With only daily runs, eligibility is normally reached about 48–72 hours
+after an outage starts; a valid replacement may still be unavailable.
+
+`stations.json` includes editable `identity` metadata: reviewed aliases, callsigns,
+frequency where explicit in the catalog, band and program channel. Directory
+names must match this identity and the broadcaster website; AM/FM, HD subchannels,
+frequency and WRTI Jazz/Classical conflicts block replacement. UUID allowlists are
+optional and must be independently verified; none are invented automatically.
+
+The Radio Browser client discovers mirrors, falls back to DNS/known hosts and
+quarantines failed mirrors for the current run. A valid empty response is not
+retried on other mirrors. Multiple hostnames can point to the same physical service.
+
+All returned candidates are filtered for identity, U.S. metadata, website, URL/TLS
+safety and a positive directory check within 14 days **before ranking**. Up to
+three HTTPS alternatives are checked live, with one additional HTTP fallback
+reserved if needed (or up to three HTTP options when no HTTPS is eligible). A rejected or unavailable first
+candidate does not hide the next one.
+
+**HTTPS is preferred; HTTP remains permitted as a fallback.** Secure candidates
+are checked before HTTP candidates. If an HTTPS URL traverses HTTP, that transport
+is also treated as a fallback while other secure candidates are considered. All
+request hops, including playlist/segment URLs, record protocol use. Public reports
+redact URL queries and credentials. HTTP is unencrypted and may be rejected by
+some players/platforms.
 
 ### Stream Health Diagnostics
 
-On every refresh, `logs/stream-health.jsonl` records one JSON object per run. Read the last line for the newest station checks, including failure type, HTTP status, content type, response time and each Radio Browser mirror attempt. For stream checks, the `stream_check.attempts` array also records each individual request, its timing, HTTP status or exception. Older runs are trimmed to the most recent 30.
+- `logs/current-run.json`: checkpointed results for this execution; ignored by Git.
+- `logs/stream-health.jsonl`: the latest 30 finalized complete or failed executions.
+- Actions artifact `stream-health-<run ID>-<attempt>`: only that execution's report,
+  retained for 90 days; it never packages an old history file as a fresh report.
 
-To download the same log from the Actions interface, open the workflow run and download its `stream-health-<run ID>` artifact (90-day retention). A single unreachable station is recorded as `needs_review` rather than failing the workflow.
+Reports identify the run, attempt, code commit, expected/checked station counts,
+per-request status/timing/bytes, detected codecs, candidate rejections and HTTP use.
+Results are saved before/after each station. Station-specific exceptions are
+recorded and processing continues. Fatal errors save available results and a
+sanitized traceback. Abrupt termination can leave a `running` checkpoint; it is
+explicitly partial. Validation checks report ownership and completeness before
+publication. Writes use temporary files and atomic replacement.
 
-Temporary stream errors (connection/read timeouts and HTTP 408, 429, 500, 502, 503, 504) are retried at most **two** times after the initial request, with short 1- and 2-second delays. Connect timeout stays at 5 seconds; read timeout is 12 seconds per attempt. Permanent responses such as 403/404, unexpected content types, and TLS certificate errors are not retried. A complete probe counts as one station check and cannot increment `fail_count` more than once, no matter how many requests were attempted.
+The Actions summary displays counts even when the refresh fails after starting.
+A successful workflow can include stations marked `needs_review`; read the summary
+and report instead of treating the green badge as an all-stations guarantee.
 
-**HTTP audio streams are permitted as a fallback.** HTTPS remains preferred: a working HTTPS stream is never replaced merely because an HTTP alternative exists. If an HTTP stream is currently configured or an eligible HTTP candidate is selected after the usual verification, the JSONL report records `stream_protocol: "HTTP"`, `http_in_use`, and `security_warning: "unencrypted_http_audio"`, and the Actions console prints a warning. The `stream_check` record also includes `protocol`, `http_used`, and per-attempt `final_protocol` so HTTPS-to-HTTP redirects are visible. The run summary contains `http_streams` and `http_used_in_checks`. Candidate HTTP links are labeled `unencrypted_http_candidate` even if they are not selected. HTTP carries unencrypted audio and can be intercepted or changed in transit; some players/platforms may reject HTTP despite this script allowing it.
+### Local Checks and Regression Tests
 
+Use Python 3.12 and install FFmpeg/FFprobe, then run:
 
-### Radio Browser Reliability
+```sh
+python -m pip install --only-binary=:all: -r requirements.txt
+python -m unittest discover -s tests -v
+python scripts/validate.py
+python scripts/update.py --refresh --report-only
+```
 
-The script checks each stream **before** consulting Radio Browser. A healthy
-stream remains unchanged and does not cause a catalog lookup. For a failed
-stream, the directory client obtains the available mirror list from Radio
-Browser and falls back to DNS discovery and known hosts if needed. Faulty
-mirrors are skipped for the remainder of that refresh run. Multiple DNS names
-may resolve to the **same** physical service and do not guarantee independent
-redundancy.
+Tests include real local HTTP responses and bounded audio samples, failed HLS
+segments, candidate ranking/identity, failure spacing, locked streams, per-station
+isolation, atomic writes and partial/fatal reports. They do not require public
+radio services. CI runs on relevant pushes and pull requests with read-only
+permissions, and validates the catalog, all covers and playlist ordering.
 
-A replacement must meet all safeguards: a confident name match, the same
-broadcaster's website, U.S. station metadata, a recent (within 14 days)
-positive directory health check, an HTTP or HTTPS stream URL, no reported
-TLS error for HTTPS candidates, three consecutive failed checks of the old
-URL, and a successful live check of the proposed URL. Manually locked streams
-are never automatically replaced.
-Radio Browser is community maintained, so these checks reduce risk without
-guaranteeing correctness or availability.
-
-Offline regression tests live in `tests/test_radio_browser.py` and are run
-on relevant pushes and before the scheduled refresh. Both workflows run on the
-pinned `ubuntu-26.04` image. Refresh diagnostics are uploaded with
-`actions/upload-artifact@v7`.
+Both workflows use `ubuntu-26.04`, Python `3.12.16`, exact Python dependency
+versions and verified commit SHAs for Actions (checkout v5, setup-python v6,
+upload-artifact v7). Refresh publication uses credentials only in its final step;
+concurrent runs are serialized and a conflicting push fails instead of overwriting
+someone else's changes.
 
 ### Manual Stream Repair
 
@@ -129,10 +177,17 @@ If a station stops working:
 | `stations.json` | Editable catalog of 35 radio stations |
 | `radio.m3u` | Public M3U subscription playlist |
 | `logos/` | Original station cover artwork |
-| `scripts/update.py` | Stream and playlist maintenance script |
+| `scripts/update.py` | Maintenance orchestration and atomic playlist generation |
+| `scripts/stream_probe.py` | Audio packets, playlists, retries and HTTP diagnostics |
+| `scripts/identity.py` | Broadcaster and program-channel matching |
+| `scripts/catalog.py` | Station schema validation before processing |
+| `scripts/health_report.py` | Per-run checkpoints and bounded history |
+| `scripts/validate.py` | Shared offline output/report validation |
 | `scripts/radio_browser.py` | Mirror discovery, failover and catalog search |
-| `tests/test_radio_browser.py` | Radio Browser regression tests |
-| `logs/stream-health.jsonl` | Last 30 detailed stream diagnostics (created on next refresh) |
+| `tests/` | Offline directory, media and maintenance regression tests |
+| `logs/stream-health.jsonl` | Last 30 finalized stream reports |
+| `logs/current-run.json` | Current execution checkpoint (not committed) |
+| `docs/MAINTENANCE.md` | Dependency updates, diagnostics and branch rules |
 | `.github/workflows/import.yml` | Scheduled and manual radio refresh workflow |
 | `README.md` | Project documentation |
 | `LICENSE` | MIT License for original project code |
