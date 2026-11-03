@@ -7,9 +7,9 @@
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/KDAYFMAAC.aac",
     "homepage": "https://www.935kday.com/",
     "search": "KDAY",
-    "logo_source": "https://static.mytuner.mobi/media/tvos_radios/393/935-kday-fm.7307d53c.jpg",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/93-5-kday.png"
   },
   {
     "id": "power-106",
@@ -19,9 +19,9 @@
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/KPWRAAC_SC",
     "homepage": "https://www.power106.com/",
     "search": "Power 106 KPWR",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/power-106.png"
   },
   {
     "id": "hot-97",
@@ -31,9 +31,9 @@
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/WQHTAAC.aac",
     "homepage": "https://www.hot97.com/",
     "search": "HOT 97 WQHT",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/hot-97.png"
   },
   {
     "id": "107-5-wbls",
@@ -43,9 +43,9 @@
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/WBLSFMAAC.aac",
     "homepage": "https://www.wbls.com/",
     "search": "WBLS",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/107-5-wbls.png"
   },
   {
     "id": "hyfin",
@@ -55,9 +55,9 @@
     "stream": "https://wyms.streamguys1.com/hyfin",
     "homepage": "https://hyfin.org/",
     "search": "HYFIN",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/hyfin.png"
   },
   {
     "id": "kroq-106-7",
@@ -67,9 +67,9 @@
     "stream": "https://live.amperwave.net/direct/audacy-kroqfmaac-imc",
     "homepage": "https://www.audacy.com/stations/kroq",
     "search": "KROQ",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/kroq-106-7.png"
   },
   {
     "id": "klos-95-5",
@@ -79,9 +79,9 @@
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/KLOSFMAAC.aac",
     "homepage": "https://www.955klos.com/",
     "search": "KLOS",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/klos-95-5.png"
   },
   {
     "id": "wmmr-93-3",
@@ -91,9 +91,9 @@
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/WMMRFMAACIHR.aac",
     "homepage": "https://wmmr.com/",
     "search": "WMMR",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/wmmr-93-3.png"
   },
   {
     "id": "kisw-99-9",
@@ -103,9 +103,9 @@
     "stream": "https://live.amperwave.net/manifest/audacy-kiswfmaac-hlsc.m3u8",
     "homepage": "https://www.audacy.com/kisw",
     "search": "KISW",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/kisw-99-9.png"
   },
   {
     "id": "88-5-the-socal-sound",
@@ -115,9 +115,9 @@
     "stream": "https://stream.revma.ihrhls.com/zc5523",
     "homepage": "https://www.thesocalsound.org/",
     "search": "The SoCal Sound",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/88-5-the-socal-sound.png"
   },
   {
     "id": "wxpn-88-5",
@@ -127,9 +127,9 @@
     "stream": "https://wxpn.xpn.org/xpnmp3hi",
     "homepage": "https://xpn.org/",
     "search": "WXPN",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/wxpn-88-5.png"
   },
   {
     "id": "kexp-90-3",
@@ -139,9 +139,9 @@
     "stream": "https://kexp.streamguys1.com/kexp160.aac",
     "homepage": "https://www.kexp.org/",
     "search": "KEXP",
-    "logo_source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/KEXP_logo_%28black_on_orange%29.svg/500px-KEXP_logo_%28black_on_orange%29.svg.png",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/kexp-90-3.png"
   },
   {
     "id": "kcrw-89-9",
@@ -151,9 +151,9 @@
     "stream": "https://streams.kcrw.com/kcrw_mp3",
     "homepage": "https://www.kcrw.com/",
     "search": "KCRW",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/kcrw-89-9.png"
   },
   {
     "id": "kutx-98-9",
@@ -163,9 +163,9 @@
     "stream": "https://streams.kut.org/4428_192.mp3?aw_0_1st.playerid=kutx-free",
     "homepage": "https://kutx.org/",
     "search": "KUTX",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/kutx-98-9.png"
   },
   {
     "id": "kalx-90-7",
@@ -175,9 +175,9 @@
     "stream": "https://stream.kalx.berkeley.edu:8443/kalx-320.aac",
     "homepage": "https://kalx.berkeley.edu/",
     "search": "KALX",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/kalx-90-7.png"
   },
   {
     "id": "wfuv-90-7",
@@ -187,9 +187,9 @@
     "stream": "https://onair.wfuv.org/onair-hi",
     "homepage": "https://wfuv.org/",
     "search": "WFUV",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/wfuv-90-7.png"
   },
   {
     "id": "wfmu-91-1",
@@ -199,9 +199,9 @@
     "stream": "https://stream0.wfmu.org/freeform-128k.mp3",
     "homepage": "https://wfmu.org/",
     "search": "WFMU",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/wfmu-91-1.png"
   },
   {
     "id": "kxt-91-7",
@@ -211,9 +211,9 @@
     "stream": "https://kera-ice.streamguys1.com/kxtlive128",
     "homepage": "https://kxt.org/",
     "search": "KXT",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/kxt-91-7.png"
   },
   {
     "id": "wnxp-91-1",
@@ -223,9 +223,9 @@
     "stream": "https://wpln.streamguys1.com/wnxpfm.mp3.m3u",
     "homepage": "https://wnxp.org/",
     "search": "WNXP",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/wnxp-91-1.png"
   },
   {
     "id": "the-current-89-3",
@@ -235,9 +235,9 @@
     "stream": "https://current.stream.publicradio.org/kcmp.mp3",
     "homepage": "https://www.thecurrent.org/",
     "search": "The Current KCMP",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 1
+    "fail_count": 1,
+    "logo": "logos/the-current-89-3.png"
   },
   {
     "id": "88nine-radio-milwaukee",
@@ -247,9 +247,9 @@
     "stream": "https://wyms.streamguys1.com/live?platform=88nine",
     "homepage": "https://radiomilwaukee.org/",
     "search": "88Nine Radio Milwaukee",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/88nine-radio-milwaukee.png"
   },
   {
     "id": "wkcr-89-9",
@@ -259,9 +259,9 @@
     "stream": "https://wkcr.streamguys1.com/live",
     "homepage": "https://www.cc-seas.columbia.edu/wkcr/",
     "search": "WKCR",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/wkcr-89-9.png"
   },
   {
     "id": "wwoz-90-7",
@@ -271,9 +271,9 @@
     "stream": "https://wwoz-sc.streamguys1.com/wwoz-hi.mp3",
     "homepage": "https://www.wwoz.org/",
     "search": "WWOZ",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/wwoz-90-7.png"
   },
   {
     "id": "kjazz-88-1",
@@ -283,9 +283,9 @@
     "stream": "https://streaming.live365.com/a49833",
     "homepage": "https://www.kkjz.org/",
     "search": "KJazz KKJZ",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/kjazz-88-1.png"
   },
   {
     "id": "wbgo-88-3",
@@ -295,9 +295,9 @@
     "stream": "https://ais-sa8.cdnstream1.com/3629_128.mp3",
     "homepage": "https://www.wbgo.org/",
     "search": "WBGO",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/wbgo-88-3.png"
   },
   {
     "id": "knkx-88-5",
@@ -307,9 +307,9 @@
     "stream": "https://knkx-live-a.edge.audiocdn.com/6284_256k",
     "homepage": "https://www.knkx.org/",
     "search": "KNKX",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/knkx-88-5.png"
   },
   {
     "id": "wrti-jazz",
@@ -319,9 +319,9 @@
     "stream": "https://wrti-live.streamguys1.com/jazz-mp3",
     "homepage": "https://www.wrti.org/",
     "search": "WRTI Jazz",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/wrti-jazz.png"
   },
   {
     "id": "kcsm-jazz-91-1",
@@ -331,9 +331,9 @@
     "stream": "https://ice5.securenetsystems.net/KCSM",
     "homepage": "https://www.kcsm.org/",
     "search": "KCSM",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/kcsm-jazz-91-1.png"
   },
   {
     "id": "wrti-classical",
@@ -343,9 +343,9 @@
     "stream": "https://wrti-live.streamguys1.com/classical-mp3",
     "homepage": "https://www.wrti.org/",
     "search": "WRTI Classical",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/wrti-classical.png"
   },
   {
     "id": "classical-kc-91-9",
@@ -355,9 +355,9 @@
     "stream": "https://kcur.streamguys1.com/classicalkc-website-icy",
     "homepage": "https://www.classicalkc.org/",
     "search": "Classical KC",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/classical-kc-91-9.png"
   },
   {
     "id": "kusc-91-5",
@@ -367,9 +367,9 @@
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/KUSCMP128.mp3",
     "homepage": "https://www.classicalcalifornia.org/",
     "search": "KUSC",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/kusc-91-5.png"
   },
   {
     "id": "wqxr-105-9",
@@ -379,9 +379,9 @@
     "stream": "https://stream.wqxr.org/wqxr",
     "homepage": "https://www.wqxr.org/",
     "search": "WQXR",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/wqxr-105-9.png"
   },
   {
     "id": "wnyc-93-9",
@@ -391,9 +391,9 @@
     "stream": "https://fm939.wnyc.org/wnycfm",
     "homepage": "https://www.wnyc.org/",
     "search": "WNYC",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/wnyc-93-9.png"
   },
   {
     "id": "laist-89-3",
@@ -403,9 +403,9 @@
     "stream": "https://laist.streamguys1.com/kpcc-icy?aw_0_1st.playerId=iheart",
     "homepage": "https://laist.com/",
     "search": "LAist KPCC",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/laist-89-3.png"
   },
   {
     "id": "kut-90-5",
@@ -415,8 +415,8 @@
     "stream": "https://streams.kut.org/4426_128.mp3?aw_0_1st.playerid=kut-free",
     "homepage": "https://www.kut.org/",
     "search": "KUT",
-    "logo_source": "",
     "manual_lock": false,
-    "fail_count": 0
+    "fail_count": 0,
+    "logo": "logos/kut-90-5.png"
   }
 ]
