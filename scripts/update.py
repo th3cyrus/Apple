@@ -55,7 +55,7 @@ def artwork_placeholder(station):
 
 def hostname(url):
     try: return (urlsplit(url).hostname or '').lower().removeprefix('www.')
-    except ValueError: return ''
+    except (ValueError, TypeError, AttributeError): return ''
 
 def site_match(a,b):
     a,b=hostname(a),hostname(b)
@@ -79,7 +79,11 @@ def candidate_score(station,c):
     if variant and not all(v in name for v in variant): return -1
     score=55 if name.startswith(key) else 40
     if site_match(station['homepage'],c.get('homepage','')): score+=45
-    score+=min(10,max(0,int(c.get('votes',0) or 0))//20)
+    try:
+        votes=max(0,int(c.get('votes',0) or 0))
+    except (TypeError,ValueError):
+        votes=0
+    score+=min(10,votes//20)
     return score
 
 
