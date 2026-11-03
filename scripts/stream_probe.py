@@ -6,6 +6,9 @@ the stream or that the broadcast is audible, uninterrupted, or the right station
 """
 import json
 import re
+import math
+import sys
+from array import array
 import shutil
 import subprocess
 import time
@@ -14,7 +17,7 @@ from urllib.parse import urljoin, urlsplit
 
 from requests.exceptions import ConnectionError, SSLError, Timeout
 from urllib3.exceptions import ProtocolError, ReadTimeoutError, SSLError as TransportSSLError
-from safety import safe_message, safe_url, valid_url
+from safety import safe_message, safe_url, unsupported_stream_suffix, valid_url
 
 CONNECT_TIMEOUT = 5
 READ_TIMEOUT = 12
@@ -25,7 +28,11 @@ PROBE_BUDGET = 45
 MAX_REDIRECTS = 5
 MAX_PLAYLIST_DEPTH = 3
 MAX_PLAYLIST_BYTES = 65536
-MAX_SAMPLE_BYTES = 32768
+MAX_SAMPLE_BYTES = 131072
+INITIAL_READ_BYTES = 4096
+MIN_DECODED_SECONDS = 0.5
+MIN_RMS_DBFS = -70
+MIN_PEAK_DBFS = -60
 
 
 class ProbeError(Exception):
@@ -36,28 +43,65 @@ class ProbeError(Exception):
         self.repairable = repairable
 
 
-def check_audio(sample, remaining=5):
+def check_audio(sample, remaining=10):
+    """Require decodable non-silent audio, not just recognizable packet headers."""
     if not sample:
         raise ProbeError('EmptyStream', 'Stream returned no media bytes', repairable=True)
-    if not shutil.which('ffprobe'):
-        raise ProbeError('MissingProbeTool', 'ffprobe is required to verify audio')
+    if not shutil.which('ffprobe') or not shutil.which('ffmpeg'):
+        raise ProbeError('MissingProbeTool', 'Both ffprobe and ffmpeg are required')
+    deadline = time.monotonic() + max(0.1, min(10, remaining))
     try:
         result = subprocess.run([
             'ffprobe', '-v', 'error', '-protocol_whitelist', 'pipe',
             '-probesize', str(MAX_SAMPLE_BYTES * 4), '-analyzeduration', '2000000',
             '-count_packets', '-show_entries', 'stream=codec_type,codec_name,nb_read_packets',
             '-of', 'json', '-i', 'pipe:0',
-        ], input=sample, capture_output=True, timeout=max(0.1, min(5, remaining)), check=False)
+        ], input=sample, capture_output=True, timeout=max(0.1, min(5, deadline - time.monotonic())),
+            check=False)
         data = json.loads(result.stdout or b'{}')
     except subprocess.TimeoutExpired as exc:
-        raise ProbeError('MediaProbeTimeout', 'Audio sample verification timed out') from exc
+        raise ProbeError('MediaProbeTimeout', 'Audio packet verification timed out') from exc
     except (OSError, ValueError) as exc:
         raise ProbeError('MediaProbeError', safe_message(exc)) from exc
-    for stream in data.get('streams', []):
-        packets = str(stream.get('nb_read_packets', '0'))
-        if stream.get('codec_type') == 'audio' and packets.isdigit() and int(packets) > 0:
-            return {'codec': stream.get('codec_name'), 'audio_packets': int(packets)}
-    raise ProbeError('UnverifiedMedia', 'No audio packets could be verified in bounded sample')
+
+    audio = next((stream for stream in data.get('streams', [])
+                  if stream.get('codec_type') == 'audio'
+                  and str(stream.get('nb_read_packets', '0')).isdigit()
+                  and int(stream['nb_read_packets']) > 0), None)
+    if audio is None:
+        raise ProbeError('UnverifiedMedia', 'No audio packets could be verified in sample')
+    codec = audio.get('codec_name')
+    if codec not in {'mp3', 'aac', 'flac', 'opus', 'vorbis', 'alac',
+                     'pcm_s16le', 'pcm_s24le', 'pcm_f32le', 'pcm_u8'}:
+        raise ProbeError('UnsupportedAudioCodec', 'Unsupported radio audio codec')
+    try:
+        decoded = subprocess.run([
+            'ffmpeg', '-v', 'error', '-nostdin',
+            '-probesize', str(MAX_SAMPLE_BYTES * 4), '-analyzeduration', '2000000',
+            '-i', 'pipe:0', '-map', '0:a:0', '-vn', '-sn', '-dn',
+            '-ac', '1', '-ar', '8000', '-f', 's16le', 'pipe:1',
+        ], input=sample, capture_output=True,
+            timeout=max(0.1, min(6, deadline - time.monotonic())), check=False)
+    except subprocess.TimeoutExpired as exc:
+        raise ProbeError('MediaDecodeTimeout', 'Audio decoder did not finish') from exc
+    except OSError as exc:
+        raise ProbeError('MediaDecodeError', safe_message(exc)) from exc
+    if decoded.returncode != 0 or len(decoded.stdout) < int(8000 * 2 * MIN_DECODED_SECONDS):
+        raise ProbeError('UndecodableAudio', 'Audio packets do not decode into enough PCM')
+    pcm = array('h')
+    pcm.frombytes(decoded.stdout[:len(decoded.stdout) // 2 * 2])
+    if sys.byteorder != 'little':
+        pcm.byteswap()
+    rms = math.sqrt(sum(int(v) * v for v in pcm) / len(pcm)) / 32768
+    peak = max(abs(int(v)) for v in pcm) / 32768
+    rms_dbfs = 20 * math.log10(max(rms, 1e-12))
+    peak_dbfs = 20 * math.log10(max(peak, 1e-12))
+    if rms_dbfs < MIN_RMS_DBFS or peak_dbfs < MIN_PEAK_DBFS:
+        # A quiet window needs manual review, not automatic replacement.
+        raise ProbeError('SilentAudio', 'Audio decoded but sample is effectively silent')
+    return {'codec': codec, 'audio_packets': int(audio['nb_read_packets']),
+            'decoded_seconds': round(len(pcm) / 8000, 2),
+            'rms_dbfs': round(rms_dbfs, 1), 'peak_dbfs': round(peak_dbfs, 1)}
 
 
 def _remaining(deadline):
@@ -118,6 +162,9 @@ def _playlist_target(body, base):
 def _fetch(session, url, attempt, deadline, visited, depth=0, *, initialization=False):
     if depth > MAX_PLAYLIST_DEPTH:
         raise ProbeError('PlaylistDepth', 'Playlist nesting limit reached')
+    if unsupported_stream_suffix(url):
+        raise ProbeError('MisleadingStreamSuffix', 'Audio/playlist double extension is prohibited',
+                         repairable=True)
     if not valid_url(url):
         raise ProbeError('InvalidURL', 'Invalid HTTP or HTTPS media URL', repairable=True)
     if url in visited:
@@ -128,6 +175,9 @@ def _fetch(session, url, attempt, deadline, visited, depth=0, *, initialization=
     for redirect in range(MAX_REDIRECTS + 1):
         if not valid_url(current):
             raise ProbeError('InvalidURL', 'Unsafe media redirect URL')
+        if unsupported_stream_suffix(current):
+            raise ProbeError('MisleadingStreamSuffix', 'Audio/playlist double extension is prohibited',
+                             repairable=True)
         left = _remaining(deadline)
         node = {'url': safe_url(current), 'protocol': urlsplit(current).scheme.upper()}
         attempt['requests'].append(node)
@@ -162,7 +212,7 @@ def _fetch(session, url, attempt, deadline, visited, depth=0, *, initialization=
         attempt.setdefault('content_type', mime)
         if mime in ('text/html', 'application/json'):
             raise ProbeError('UnexpectedContentType', f'Expected media, got {mime}')
-        content = _read(response, MAX_SAMPLE_BYTES, deadline)
+        content = _read(response, INITIAL_READ_BYTES, deadline)
         node['bytes_read'] = len(content)
         attempt['bytes_read'] += len(content)
         if initialization:
@@ -176,18 +226,28 @@ def _fetch(session, url, attempt, deadline, visited, depth=0, *, initialization=
         playlist = (stripped.startswith(b'#EXTM3U') or stripped.lower().startswith(b'[playlist]')
                     or stripped.startswith((b'http://', b'https://'))
                     or (playlist_hint and looks_text))
+        is_playlist_extension = urlsplit(current).path.lower().endswith(('.m3u', '.m3u8', '.pls'))
+        if is_playlist_extension and not playlist:
+            raise ProbeError('PlaylistContentMismatch',
+                             'Playlist extension returned raw audio instead of a playlist',
+                             repairable=True)
         if playlist:
-            if len(content) == MAX_SAMPLE_BYTES:
+            if len(content) == INITIAL_READ_BYTES:
                 extra = _read(response, MAX_PLAYLIST_BYTES - len(content) + 1, deadline)
                 content += extra
                 node['bytes_read'] += len(extra)
                 attempt['bytes_read'] += len(extra)
-                if len(content) > MAX_PLAYLIST_BYTES:
-                    raise ProbeError('PlaylistTooLarge', 'Playlist exceeds size limit')
+            if len(content) > MAX_PLAYLIST_BYTES:
+                raise ProbeError('PlaylistTooLarge', 'Playlist exceeds size limit')
             target, init = _playlist_target(content, current)
             prefix = _fetch(session, init, attempt, deadline, visited, depth + 1,
                             initialization=True) if init else b''
         else:
+            if len(content) == INITIAL_READ_BYTES:
+                extra = _read(response, MAX_SAMPLE_BYTES - len(content), deadline)
+                content += extra
+                node['bytes_read'] += len(extra)
+                attempt['bytes_read'] += len(extra)
             return content
     finally:
         response.close()
@@ -204,6 +264,11 @@ def stream_check(session, url):
                     elapsed_ms=0, repairable=True)
         return info
     info['protocol'] = urlsplit(url).scheme.upper()
+    if unsupported_stream_suffix(url):
+        info.update(error_type='MisleadingStreamSuffix',
+                    error='Audio/playlist double extension is prohibited',
+                    elapsed_ms=0, repairable=True)
+        return info
     for number in range(1, MAX_ATTEMPTS + 1):
         attempt = {'attempt': number, 'requests': [], 'bytes_read': 0, 'http_used': False}
         attempt_started = time.monotonic()
@@ -234,7 +299,8 @@ def stream_check(session, url):
             break
         sleep(delay)
     for field in ('http_status', 'content_type', 'error_type', 'error', 'final_url',
-                  'final_protocol', 'bytes_read', 'codec', 'audio_packets'):
+                  'final_protocol', 'bytes_read', 'codec', 'audio_packets',
+                  'decoded_seconds', 'rms_dbfs', 'peak_dbfs'):
         if field in info['attempts'][-1]:
             info[field] = info['attempts'][-1][field]
     if info['http_used']:
