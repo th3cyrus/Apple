@@ -1,6 +1,6 @@
 # Apple · USA Live Radio for Primuse 📻
 
-A curated collection of **35 live U.S. radio stations**, featuring original minimalist artwork, an M3U playlist, and automated maintenance through GitHub Actions.
+A curated collection of **36 live U.S. radio stations**, featuring original minimalist artwork, an M3U playlist, and automated maintenance through GitHub Actions.
 
 [**Listen / Subscribe**](https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u) · [Browse Stations](https://github.com/th3cyrus/Apple/blob/main/stations.json) · [Workflow Status](https://github.com/th3cyrus/Apple/actions/workflows/import.yml)
 
@@ -33,14 +33,28 @@ You can also tap **Update Now** to refresh the subscription manually.
 
 ## Features
 
-- **35 curated U.S. radio stations**
+- **36 curated U.S. radio stations**
 - Original minimalist frosted-glass-style station covers
-- Self-hosted artwork for all 35 stations
+- Self-hosted artwork for all 36 stations
 - Ready-to-use M3U subscription playlist
 - Stations organized by music genre
 - Editable station catalog and stream URLs
 - Automated daily maintenance via GitHub Actions
 - Manual workflow execution when needed
+
+### Region restrictions
+
+The collection features U.S. stations, but this does **not** mean that every
+stream is restricted to listeners in the United States. The WMMR 93.3 entry
+carries the user-requested label **پخش فقط درون آمریکا** following a listener's
+out-of-country permission-denied playback error. That does not independently
+prove a worldwide US-only policy. Other entries are not labeled without
+station-specific evidence; successful GitHub Actions stream tests do not prove
+playback availability in every country.
+
+Radio Paradise Rock Mix is an additional, independent American Internet music
+service, not a rebroadcast of WMMR. Its direct MP3 link is kept in the catalog
+without replacing WMMR.
 
 ### Radio Categories
 
@@ -178,7 +192,7 @@ If a station stops working:
 
 | Path | Description |
 | --- | --- |
-| `stations.json` | Editable catalog of 35 radio stations |
+| `stations.json` | Editable catalog of 36 radio stations |
 | `radio.m3u` | Public M3U subscription playlist |
 | `logos/` | Original station cover artwork |
 | `scripts/update.py` | Maintenance orchestration and atomic playlist generation |
@@ -201,7 +215,7 @@ If a station stops working:
 
 ## Station Artwork
 
-All 35 station covers feature a consistent, minimalist design inspired by frosted glass, soft gradients, and clean typography.
+All 36 station covers feature a consistent, minimalist design inspired by frosted glass, soft gradients, and clean typography.
 
 The artwork is hosted directly in this repository and is designed to provide a consistent appearance across the radio collection.
 
