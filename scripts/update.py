@@ -16,6 +16,11 @@ from datetime import datetime, timezone
 from urllib.parse import urlsplit
 
 from PIL import Image, ImageDraw, ImageFont
+from requests.exceptions import (
+    ConnectionError as RequestsConnectionError,
+    SSLError as RequestsSSLError,
+    Timeout as RequestsTimeout,
+)
 from radio_browser import RadioBrowserClient
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -24,6 +29,11 @@ LOGOS = ROOT / 'logos'
 M3U = ROOT / 'radio.m3u'
 HEALTH_LOG = ROOT / 'logs' / 'stream-health.jsonl'
 MAX_HEALTH_RUNS = 30
+STREAM_CONNECT_TIMEOUT = 5
+STREAM_READ_TIMEOUT = 12
+STREAM_MAX_ATTEMPTS = 3
+STREAM_RETRY_DELAYS = (1, 2)
+RETRYABLE_HTTP_STATUSES = {408, 429, 500, 502, 503, 504}
 DEFAULT_REPO = 'th3cyrus/Apple'
 FONT = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 
@@ -131,32 +141,75 @@ def safe_url(url):
 
 
 def stream_check(session,url):
-    """Record exact HTTP, MIME, timeout or connection failure diagnostics."""
-    info={'ok':False,'url':safe_url(url)}
+    """Probe a stream with bounded retries for temporary network failures.
+
+    A probe is a single station health-check even if the network is retried.
+    Detailed per-attempt results are persisted to the stream-health JSONL log.
+    """
+    info={'ok':False,'url':safe_url(url),'attempts':[]}
     started=time.monotonic()
-    try:
-        if not url.startswith('https://'):
-            info.update(error_type='InvalidURL',error='Stream URL must use HTTPS')
-            return info
-        with session.get(url,stream=True,timeout=(5,8),headers={
-            'User-Agent':'PrimusePersonalRadioList/1.0',
-            'Icy-MetaData':'0',
-        },allow_redirects=True) as res:
-            info['http_status']=res.status_code
-            mime=res.headers.get('Content-Type','').lower()
-            info['content_type']=mime
-            if res.status_code not in (200,206):
-                info.update(error_type='HTTPStatus',error=f'HTTP {res.status_code}: {res.reason}')
-            elif 'text/html' in mime or 'application/json' in mime:
-                info.update(error_type='UnexpectedContentType',error=f'Expected audio, got {mime}')
-            elif any(x in mime for x in ('audio','mpegurl','octet-stream','application/vnd.apple')) or urlsplit(url).path.endswith('.m3u8'):
-                info['ok']=True
-            else:
-                info.update(error_type='UnexpectedContentType',error=f'Unrecognized Content-Type: {mime or "missing"}')
-    except Exception as exc:
-        info.update(error_type=type(exc).__name__,error=safe_message(exc))
-    finally:
-        info['elapsed_ms']=round((time.monotonic()-started)*1000)
+    if not isinstance(url,str) or not url.startswith('https://'):
+        info.update(error_type='InvalidURL',
+                    error='Stream URL must use HTTPS',
+                    elapsed_ms=round((time.monotonic()-started)*1000))
+        return info
+
+    for number in range(1,STREAM_MAX_ATTEMPTS+1):
+        attempt={'attempt':number}
+        attempt_started=time.monotonic()
+        retryable=False
+        try:
+            with session.get(url,stream=True,
+                timeout=(STREAM_CONNECT_TIMEOUT,STREAM_READ_TIMEOUT),
+                headers={
+                    'User-Agent':'PrimusePersonalRadioList/1.0',
+                    'Icy-MetaData':'0',
+                },allow_redirects=True) as response:
+                attempt['http_status']=response.status_code
+                mime=response.headers.get('Content-Type','').lower()
+                attempt['content_type']=mime
+                if response.status_code not in (200,206):
+                    attempt.update(error_type='HTTPStatus',
+                        error=f'HTTP {response.status_code}: {response.reason}')
+                    retryable=response.status_code in RETRYABLE_HTTP_STATUSES
+                elif 'text/html' in mime or 'application/json' in mime:
+                    attempt.update(error_type='UnexpectedContentType',
+                        error=f'Expected audio, got {mime}')
+                elif any(x in mime for x in (
+                    'audio','mpegurl','octet-stream','application/vnd.apple',
+                )) or urlsplit(url).path.endswith('.m3u8'):
+                    attempt['ok']=True
+                else:
+                    attempt.update(error_type='UnexpectedContentType',
+                        error=f'Unrecognized Content-Type: {mime or "missing"}')
+        except RequestsSSLError as exc:
+            # Certificate verification failures need investigation, not retries.
+            attempt.update(error_type=type(exc).__name__,
+                           error=safe_message(exc))
+        except (RequestsTimeout,RequestsConnectionError) as exc:
+            attempt.update(error_type=type(exc).__name__,
+                           error=safe_message(exc))
+            retryable=True
+        except Exception as exc:
+            attempt.update(error_type=type(exc).__name__,
+                           error=safe_message(exc))
+        finally:
+            attempt['elapsed_ms']=round((time.monotonic()-attempt_started)*1000)
+            info['attempts'].append(attempt)
+
+        if attempt.get('ok'):
+            info['ok']=True
+            break
+        if not retryable or number==STREAM_MAX_ATTEMPTS:
+            break
+        time.sleep(STREAM_RETRY_DELAYS[number-1])
+
+    # Final result remains backward-compatible for summary/report consumers.
+    last=info['attempts'][-1]
+    for field in ('http_status','content_type','error_type','error'):
+        if field in last:
+            info[field]=last[field]
+    info['elapsed_ms']=round((time.monotonic()-started)*1000)
     return info
 
 def save_health_report(report):
