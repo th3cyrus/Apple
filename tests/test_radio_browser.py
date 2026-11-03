@@ -4,6 +4,7 @@ import unittest
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from unittest.mock import patch
+from requests.exceptions import ReadTimeout, SSLError
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import radio_browser
@@ -181,6 +182,68 @@ class RadioBrowserTests(unittest.TestCase):
     def test_malformed_catalog_fields_are_ignored_safely(self):
         candidate = dict(CANDIDATE, votes='not-an-integer', homepage=123)
         self.assertGreaterEqual(update.candidate_score(STATION, candidate), 55)
+
+    def test_stream_read_timeout_retries_then_recovers(self):
+        session = Session([
+            ReadTimeout('first timeout'),
+            ReadTimeout('second timeout'),
+            Response(mime='audio/aac'),
+        ])
+        with patch.object(update.time, 'sleep') as sleep:
+            result = update.stream_check(session, 'https://example.org/radio.aac')
+        self.assertTrue(result['ok'])
+        self.assertEqual(result['http_status'], 200)
+        self.assertEqual(len(result['attempts']), 3)
+        self.assertEqual([x['error_type'] for x in result['attempts'][:2]],
+                         ['ReadTimeout', 'ReadTimeout'])
+        self.assertEqual([call[1]['timeout'] for call in session.calls],
+                         [(5, 12)] * 3)
+        self.assertEqual(sleep.call_count, 2)
+        self.assertEqual([call.args[0] for call in sleep.call_args_list],
+                         [1, 2])
+
+    def test_stream_404_is_not_retried(self):
+        session = Session([Response(status=404)])
+        with patch.object(update.time, 'sleep') as sleep:
+            result = update.stream_check(session, 'https://example.org/missing')
+        self.assertFalse(result['ok'])
+        self.assertEqual(result['http_status'], 404)
+        self.assertEqual(len(result['attempts']), 1)
+        self.assertEqual(len(session.calls), 1)
+        sleep.assert_not_called()
+
+    def test_stream_503_retries_once_then_recovers(self):
+        session = Session([
+            Response(status=503),
+            Response(mime='audio/aac'),
+        ])
+        with patch.object(update.time, 'sleep') as sleep:
+            result = update.stream_check(session, 'https://example.org/live.aac')
+        self.assertTrue(result['ok'])
+        self.assertEqual(len(result['attempts']), 2)
+        self.assertEqual(result['attempts'][0]['http_status'], 503)
+        self.assertEqual(result['http_status'], 200)
+        self.assertNotIn('error_type', result)
+        sleep.assert_called_once_with(1)
+
+    def test_stream_ssl_error_never_retries(self):
+        session = Session([SSLError('certificate verify failed')])
+        with patch.object(update.time, 'sleep') as sleep:
+            result = update.stream_check(session, 'https://example.org/live.aac')
+        self.assertFalse(result['ok'])
+        self.assertEqual(result['error_type'], 'SSLError')
+        self.assertEqual(len(session.calls), 1)
+        sleep.assert_not_called()
+
+    def test_exhausted_timeouts_report_every_attempt(self):
+        session = Session([ReadTimeout('no headers') for _ in range(3)])
+        with patch.object(update.time, 'sleep') as sleep:
+            result = update.stream_check(session, 'https://example.org/live.aac')
+        self.assertFalse(result['ok'])
+        self.assertEqual(result['error_type'], 'ReadTimeout')
+        self.assertEqual(len(result['attempts']), 3)
+        self.assertEqual([a['attempt'] for a in result['attempts']], [1, 2, 3])
+        self.assertEqual(sleep.call_count, 2)
 
     def test_stream_check_logs_http_reason(self):
         session = Session([Response(status=403, mime='text/html')])
