@@ -1,9 +1,7 @@
-name: Primuse Import and Refresh
+
+name: Primuse Radio Refresh
 
 on:
-  push:
-    paths:
-      - 'Primuse_Apple_Import.zip'
   workflow_dispatch:
   schedule:
     - cron: '17 3 * * 3'
@@ -11,62 +9,113 @@ on:
 permissions:
   contents: write
 
-jobs:
-  import:
-    if: github.event_name == 'push'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - name: Extract project in repository root
-        run: |
-          python - <<'PYTHON'
-          from pathlib import Path, PurePosixPath
-          from zipfile import ZipFile
-          archive = Path('Primuse_Apple_Import.zip')
-          with ZipFile(archive) as bundle:
-              for member in bundle.infolist():
-                  path = PurePosixPath(member.filename)
-                  if path.is_absolute() or '..' in path.parts:
-                      raise ValueError(f'Unsafe ZIP path: {member.filename}')
-              bundle.extractall('.')
-          archive.unlink()
-          PYTHON
-      - name: Install Python dependencies
-        run: python -m pip install -r requirements.txt
-      - name: Publish station artwork URLs
-        env:
-          GITHUB_REPOSITORY: ${{ github.repository }}
-        run: python scripts/update.py --publish
-      - name: Commit imported project
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A
-          if ! git diff --cached --quiet; then
-            git commit -m 'Import Primuse project'
-            git push
-          fi
+concurrency:
+  group: primuse-radio-refresh
+  cancel-in-progress: false
 
+jobs:
   refresh:
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v6
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - name: Install Python dependencies
+
+      - name: Install dependencies
         run: python -m pip install -r requirements.txt
-      - name: Refresh radio station playlist and covers
+
+      - name: Refresh radio stations and playlist
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python scripts/update.py --publish --refresh
-      - name: Commit updated files
+
+      - name: Validate stations, covers, and playlist
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from urllib.parse import urlsplit
+          from PIL import Image
+
+          stations = json.loads(
+              Path('stations.json').read_text(encoding='utf-8')
+          )
+
+          if not isinstance(stations, list) or len(stations) < 35:
+              raise SystemExit('Station catalog is missing or incomplete')
+
+          ids = [station.get('id') for station in stations]
+
+          if any(not isinstance(id_, str) or not id_ for id_ in ids):
+              raise SystemExit('Invalid station ID')
+
+          if len(ids) != len(set(ids)):
+              raise SystemExit('Duplicate station IDs')
+
+          for station in stations:
+              url = station.get('stream')
+
+              if (
+                  not isinstance(url, str)
+                  or urlsplit(url).scheme not in ('http', 'https')
+                  or not urlsplit(url).hostname
+              ):
+                  raise SystemExit(
+                      f"Invalid stream URL for {station.get('name')}"
+                  )
+
+              cover = Path('logos') / f"{station['id']}.png"
+
+              if not cover.is_file():
+                  raise SystemExit(f'Missing cover: {cover}')
+
+              with Image.open(cover) as image:
+                  image.verify()
+
+          lines = [
+              line.strip()
+              for line in Path('radio.m3u').read_text(
+                  encoding='utf-8'
+              ).splitlines()
+              if line.strip()
+          ]
+
+          if not lines or lines[0] != '#EXTM3U':
+              raise SystemExit('Invalid M3U header')
+
+          if sum(
+              line.startswith('#EXTINF:') for line in lines
+          ) != len(stations):
+              raise SystemExit('Playlist station count mismatch')
+
+          urls = [
+              line for line in lines
+              if not line.startswith('#')
+          ]
+
+          if urls != [station['stream'] for station in stations]:
+              raise SystemExit(
+                  'Playlist URLs do not match stations.json'
+              )
+
+          print(
+              f'Validated {len(stations)} stations, covers and playlist'
+          )
+          PY
+
+      - name: Commit refreshed files if changed
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
           git add radio.m3u stations.json logos/
+
           if ! git diff --cached --quiet; then
-            git commit -m 'Auto-refresh radio playlist and artwork'
+            git commit -m 'Refresh radio playlist'
             git push
           fi
