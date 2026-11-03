@@ -108,13 +108,15 @@ def candidate_rejection_reasons(station, candidate, score):
         issues.append('wrong_country')
     if candidate.get('lastcheckok') not in (1,True,'1'):
         issues.append('not_recently_working')
-    if candidate.get('ssl_error') not in (0,False,'0'):
-        issues.append('directory_ssl_error')
     url=candidate.get('url_resolved','')
     try:
         parts=urlsplit(url)
-        if parts.scheme!='https' or not parts.hostname or parts.username or parts.password:
-            issues.append('unsafe_or_non_https_url')
+        if (parts.scheme not in ('http','https') or not parts.hostname
+                or parts.username or parts.password):
+            issues.append('invalid_candidate_url')
+        # SSL errors only describe HTTPS: an HTTP fallback does not use TLS.
+        if parts.scheme=='https' and candidate.get('ssl_error') not in (0,False,'0'):
+            issues.append('directory_ssl_error')
     except (TypeError,ValueError):
         issues.append('invalid_candidate_url')
     checked=candidate.get('lastchecktime_iso8601')
@@ -146,13 +148,23 @@ def stream_check(session,url):
     A probe is a single station health-check even if the network is retried.
     Detailed per-attempt results are persisted to the stream-health JSONL log.
     """
-    info={'ok':False,'url':safe_url(url),'attempts':[]}
+    info={'ok':False,'url':safe_url(url),'attempts':[], 'http_used':False}
     started=time.monotonic()
-    if not isinstance(url,str) or not url.startswith('https://'):
+    try:
+        parts=urlsplit(url)
+        valid=(isinstance(url,str) and parts.scheme in ('http','https')
+               and bool(parts.hostname) and not parts.username and not parts.password)
+    except (ValueError,TypeError,AttributeError):
+        valid=False
+    if not valid:
         info.update(error_type='InvalidURL',
-                    error='Stream URL must use HTTPS',
+                    error='Stream URL must be a valid HTTP or HTTPS address',
                     elapsed_ms=round((time.monotonic()-started)*1000))
         return info
+    info['protocol']=parts.scheme.upper()
+    if parts.scheme=='http':
+        info['http_used']=True
+        info['security_warning']='unencrypted_http_audio'
 
     for number in range(1,STREAM_MAX_ATTEMPTS+1):
         attempt={'attempt':number}
@@ -166,6 +178,14 @@ def stream_check(session,url):
                     'Icy-MetaData':'0',
                 },allow_redirects=True) as response:
                 attempt['http_status']=response.status_code
+                # Requests follows redirects; record if HTTPS downgrades to HTTP.
+                final_url=getattr(response,'url',url) or url
+                final_scheme=urlsplit(final_url).scheme.lower()
+                attempt['final_protocol']=final_scheme.upper()
+                attempt['http_used']=(parts.scheme=='http' or final_scheme=='http')
+                if attempt['http_used']:
+                    info['http_used']=True
+                    info['security_warning']='unencrypted_http_audio'
                 mime=response.headers.get('Content-Type','').lower()
                 attempt['content_type']=mime
                 if response.status_code not in (200,206):
@@ -287,12 +307,17 @@ def main():
                 'attempts':attempts,
             }
             if candidate:
+                candidate_url=candidate.get('url_resolved','')
+                candidate_protocol=urlsplit(candidate_url).scheme.upper() if isinstance(candidate_url,str) else ''
                 record['radio_browser']['candidate']={
                     'name':candidate.get('name'),
                     'stationuuid':candidate.get('stationuuid'),
                     'homepage':candidate.get('homepage'),
                     'lastchecktime':candidate.get('lastchecktime_iso8601'),
+                    'stream_protocol':candidate_protocol,
                 }
+                if candidate_protocol=='HTTP':
+                    record['radio_browser']['candidate']['security_warning']='unencrypted_http_candidate'
             reasons=candidate_rejection_reasons(s,candidate,score)
             if s['fail_count']<3:
                 reasons.append('waiting_for_three_consecutive_failures')
@@ -314,6 +339,15 @@ def main():
         record['status']='repaired' if repaired else ('ok' if good else 'needs_review')
         record['fail_count_after']=s['fail_count']
         record['current_stream']=safe_url(s['stream'])
+        record['stream_protocol']=urlsplit(s['stream']).scheme.upper()
+        record['http_in_use']=record['stream_protocol']=='HTTP'
+        if record['http_in_use']:
+            record['security_warning']='unencrypted_http_audio'
+            print('WARNING: Unencrypted HTTP audio in use for',s['name'])
+        elif check.get('http_used'):
+            # An HTTPS URL may redirect to an HTTP endpoint.
+            record['security_warning']='stream_check_used_http'
+            print('WARNING: Stream check used HTTP for',s['name'])
         report['stations'].append(record)
         print(s['name'],record['status'],
               'error',check.get('error_type',''),check.get('error',''))
@@ -332,6 +366,9 @@ def main():
             'healthy':sum(x['status']=='ok' for x in report['stations']),
             'needs_review':sum(x['status']=='needs_review' for x in report['stations']),
             'repaired':sum(x['status']=='repaired' for x in report['stations']),
+            'http_streams':sum(x['http_in_use'] for x in report['stations']),
+            'http_used_in_checks':sum(x['stream_check'].get('http_used',False)
+                                      for x in report['stations']),
         }
         save_health_report(report)
         session.close()
