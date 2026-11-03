@@ -46,7 +46,7 @@ You can also tap **Update Now** to refresh the subscription manually.
 
 The collection features U.S. stations, but this does **not** mean that every
 stream is restricted to listeners in the United States. The WMMR 93.3 entry
-carries the user-requested label **پخش فقط درون آمریکا** following a listener's
+carries the user-requested label **US Only** following a listener's
 out-of-country permission-denied playback error. That does not independently
 prove a worldwide US-only policy. Other entries are not labeled without
 station-specific evidence; successful GitHub Actions stream tests do not prove
