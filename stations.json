@@ -164,8 +164,8 @@
   },
   {
     "id": "wmmr-93-3",
-    "name": "WMMR 93.3",
-    "description": "Rock",
+    "name": "WMMR 93.3 (پخش فقط درون آمریکا)",
+    "description": "Rock • پخش فقط درون آمریکا",
     "group": "Rock & Alternative",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/WMMRFMAACIHR.aac",
     "homepage": "https://wmmr.com/",
@@ -184,6 +184,30 @@
       "channel": "main",
       "search_term": "WMMR",
       "frequency": "93.3"
+    },
+    "access_note": "Listener-reported restriction outside the United States; not independently verified from every country"
+  },
+  {
+    "id": "radio-paradise-rock-mix",
+    "name": "Radio Paradise Rock Mix",
+    "description": "Rock & Alternative • 192 kbps MP3",
+    "group": "Rock & Alternative",
+    "stream": "https://stream.radioparadise.com/rock-192",
+    "homepage": "https://radioparadise.com/",
+    "search": "Radio Paradise Rock Mix",
+    "manual_lock": true,
+    "fail_count": 0,
+    "logo": "logos/radio-paradise-rock-mix.png",
+    "identity": {
+      "aliases": [
+        "Radio Paradise Rock Mix",
+        "RP Rock Mix",
+        "Radio Paradise RockIt"
+      ],
+      "callsigns": [],
+      "band": "internet",
+      "channel": "rock",
+      "search_term": "Radio Paradise Rock Mix"
     }
   },
   {
