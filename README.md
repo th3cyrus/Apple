@@ -76,9 +76,11 @@ The maintenance script:
 
 ### Stream Health Diagnostics
 
-On every refresh, `logs/stream-health.jsonl` records one JSON object per run. Read the last line for the newest station checks, including failure type, HTTP status, content type, response time and each Radio Browser mirror attempt. Older runs are trimmed to the most recent 30.
+On every refresh, `logs/stream-health.jsonl` records one JSON object per run. Read the last line for the newest station checks, including failure type, HTTP status, content type, response time and each Radio Browser mirror attempt. For stream checks, the `stream_check.attempts` array also records each individual request, its timing, HTTP status or exception. Older runs are trimmed to the most recent 30.
 
 To download the same log from the Actions interface, open the workflow run and download its `stream-health-<run ID>` artifact (90-day retention). A single unreachable station is recorded as `needs_review` rather than failing the workflow.
+
+Temporary stream errors (connection/read timeouts and HTTP 408, 429, 500, 502, 503, 504) are retried at most **two** times after the initial request, with short 1- and 2-second delays. Connect timeout stays at 5 seconds; read timeout is 12 seconds per attempt. Permanent responses such as 403/404, unexpected content types, and TLS certificate errors are not retried. A complete probe counts as one station check and cannot increment `fail_count` more than once, no matter how many requests were attempted.
 
 ### Radio Browser Reliability
 
@@ -99,7 +101,9 @@ Radio Browser is community maintained, so these checks reduce risk without
 guaranteeing correctness or availability.
 
 Offline regression tests live in `tests/test_radio_browser.py` and are run
-on relevant pushes and before the scheduled refresh.
+on relevant pushes and before the scheduled refresh. Both workflows run on the
+pinned `ubuntu-26.04` image. Refresh diagnostics are uploaded with
+`actions/upload-artifact@v7`.
 
 ### Manual Stream Repair
 
