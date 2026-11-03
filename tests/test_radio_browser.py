@@ -17,6 +17,12 @@ class Response:
         self.headers = {'Content-Type': mime}
         self.reason = 'Test response'
 
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc, tb):
+        return False
+
     def raise_for_status(self):
         if self.status_code >= 400:
             raise RuntimeError(f'HTTP {self.status_code}')
