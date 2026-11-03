@@ -66,12 +66,19 @@ Manual updates are also available:
 
 The maintenance script:
 
-- Checks station stream availability.
+- Checks station stream availability and records HTTP status codes, timeouts, TLS, DNS and content-type failures.
+- Saves the latest 30 stream health reports in `logs/stream-health.jsonl` and uploads each refresh report as a GitHub Actions artifact for 90 days.
 - Cautiously repairs outdated stream URLs when suitable alternatives are verified.
 - Regenerates the M3U playlist.
 - Preserves existing custom station artwork.
 - Validates station records, cover files, and M3U playlist structure before committing.
 - Commits updated files when changes are detected.
+
+### Stream Health Diagnostics
+
+On every refresh, `logs/stream-health.jsonl` records one JSON object per run. Read the last line for the newest station checks, including failure type, HTTP status, content type, response time and each Radio Browser mirror attempt. Older runs are trimmed to the most recent 30.
+
+To download the same log from the Actions interface, open the workflow run and download its `stream-health-<run ID>` artifact (90-day retention). A single unreachable station is recorded as `needs_review` rather than failing the workflow.
 
 ### Manual Stream Repair
 
@@ -94,6 +101,7 @@ If a station stops working:
 | `radio.m3u` | Public M3U subscription playlist |
 | `logos/` | Original station cover artwork |
 | `scripts/update.py` | Stream and playlist maintenance script |
+| `logs/stream-health.jsonl` | Last 30 detailed stream diagnostics (created on next refresh) |
 | `.github/workflows/import.yml` | Scheduled and manual radio refresh workflow |
 | `README.md` | Project documentation |
 | `LICENSE` | MIT License for original project code |
