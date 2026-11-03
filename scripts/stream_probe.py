@@ -111,12 +111,15 @@ def _remaining(deadline):
     return left
 
 
-def _read(response, limit, deadline):
+def _read(response, limit, deadline, *, sample_seconds=None):
+    started = time.monotonic()
     data = bytearray()
     # read1 returns available bytes instead of waiting for a whole large chunk.
     reader = getattr(response.raw, 'read1', response.raw.read)
     while len(data) < limit:
         _remaining(deadline)
+        if sample_seconds is not None and data and time.monotonic() - started >= sample_seconds:
+            break
         chunk = reader(min(4096, limit - len(data)))
         if not chunk:
             break
@@ -244,7 +247,7 @@ def _fetch(session, url, attempt, deadline, visited, depth=0, *, initialization=
                             initialization=True) if init else b''
         else:
             if len(content) == INITIAL_READ_BYTES:
-                extra = _read(response, MAX_SAMPLE_BYTES - len(content), deadline)
+                extra = _read(response, MAX_SAMPLE_BYTES - len(content), deadline, sample_seconds=8)
                 content += extra
                 node['bytes_read'] += len(extra)
                 attempt['bytes_read'] += len(extra)
