@@ -80,6 +80,27 @@ On every refresh, `logs/stream-health.jsonl` records one JSON object per run. Re
 
 To download the same log from the Actions interface, open the workflow run and download its `stream-health-<run ID>` artifact (90-day retention). A single unreachable station is recorded as `needs_review` rather than failing the workflow.
 
+### Radio Browser Reliability
+
+The script checks each stream **before** consulting Radio Browser. A healthy
+stream remains unchanged and does not cause a catalog lookup. For a failed
+stream, the directory client obtains the available mirror list from Radio
+Browser and falls back to DNS discovery and known hosts if needed. Faulty
+mirrors are skipped for the remainder of that refresh run. Multiple DNS names
+may resolve to the **same** physical service and do not guarantee independent
+redundancy.
+
+A replacement must meet all safeguards: a confident name match, the same
+broadcaster's website, U.S. station metadata, a recent (within 14 days)
+positive directory health check, no reported SSL error, HTTPS, three
+consecutive failed checks of the old URL, and a successful live check of the
+proposed URL. Manually locked streams are never automatically replaced.
+Radio Browser is community maintained, so these checks reduce risk without
+guaranteeing correctness or availability.
+
+Offline regression tests live in `tests/test_radio_browser.py` and are run
+on relevant pushes and before the scheduled refresh.
+
 ### Manual Stream Repair
 
 If a station stops working:
@@ -101,6 +122,8 @@ If a station stops working:
 | `radio.m3u` | Public M3U subscription playlist |
 | `logos/` | Original station cover artwork |
 | `scripts/update.py` | Stream and playlist maintenance script |
+| `scripts/radio_browser.py` | Mirror discovery, failover and catalog search |
+| `tests/test_radio_browser.py` | Radio Browser regression tests |
 | `logs/stream-health.jsonl` | Last 30 detailed stream diagnostics (created on next refresh) |
 | `.github/workflows/import.yml` | Scheduled and manual radio refresh workflow |
 | `README.md` | Project documentation |
