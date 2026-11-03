@@ -232,11 +232,11 @@
     "name": "The Current 89.3",
     "description": "Indie",
     "group": "Independent & Eclectic",
-    "stream": "https://current.stream.publicradio.org/kcmp.mp3",
+    "stream": "https://current.stream.publicradio.org/current.aac?srcid=iheart",
     "homepage": "https://www.thecurrent.org/",
     "search": "The Current KCMP",
     "manual_lock": false,
-    "fail_count": 2,
+    "fail_count": 0,
     "logo": "logos/the-current-89-3.png"
   },
   {
