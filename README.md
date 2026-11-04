@@ -8,11 +8,11 @@ Choose from **three separate M3U collections**: a carefully maintained U.S. sele
 | --- | ---: | --- | --- |
 | **[U.S. Curated Radio](stations.json)** | **36 stations** | Handpicked broadcasters, matching custom covers, and decoded-audio health checks | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u)** |
 | **[U.S. Radio Directory](us-directory/README.md)** | **[Live station count](us-directory/index.json)** | Broad American coverage via Radio Browser, split into **12 M3U playlists** to respect Primuse's per-subscription limit | **[Choose playlists](us-directory/README.md)** |
-| **[World Radio Select](world-radio/README.md)** | **72 stations · 44 countries/regions** | International music, news and culture; matching station covers; 72/72 decoded-audio samples passed **November 4, 2026** | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u)** |
+| **[World Radio Select](world-radio/README.md)** | **72 stations · 44 countries/regions** | International music, news and culture; matching station covers and automated audio checks | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u)** |
 
 **How to add a collection:** In Primuse, go to **Radio → + → Add Subscription → Fetch → Subscribe**. Choose **Update Now** to see changes made to an existing subscription.
 
-**Editorial content:** Stations devoted to Quranic or Islamic religious programming are excluded from the curated world and U.S. directory collections. Two nonreligious music streams replace the removed U.S. directory entries; Dubai Eye 103.8 replaces the removed world station.
+**Editorial scope:** Quranic and Islamic religious programming is excluded from the World Radio Select and U.S. Directory collections.
 
 **Playback and coverage:** The U.S. directory is community-sourced and is **not individually audio-tested**; its station count changes with [weekly refreshes](us-directory/index.json). The curated and world collections use audio-decoding checks, but even a successful test cannot guarantee access from every country or compatibility with every player. This repository hosts playlists and artwork, **not radio audio**.
 
@@ -53,7 +53,7 @@ subscribe to the parts you want **one at a time**. These lists are separate from
 the curated collection: refreshing the curated subscription will **not** add them.
 
 Primuse processes at most **1,000 entries per subscription**; the directory is
-split into 12 smaller files (currently 357–402 entries each). Each has a stable
+split into 12 files below the per-subscription limit. Each has a stable
 subscription URL for updates. An additional [featured HTTPS preview](us-directory/featured.m3u)
 contains a smaller, directory-derived selection.
 
@@ -65,7 +65,7 @@ These directory covers are not verified official broadcaster trademarks.
 
 ### Option C — World Radio Select (72 stations)
 
-Import the [worldwide editorial selection](world-radio/README.md) as a **separate subscription**. Every station now has a cover; the 72-stream sample audit passed on November 4, 2026. These results are server-side and do not guarantee playback or international accessibility inside Primuse.
+Import [World Radio Select](world-radio/README.md) as a **separate subscription**. Every station has a matching cover; current audio-check reports are available in [GitHub Actions](https://github.com/th3cyrus/Apple/actions/workflows/world-radio.yml).
 
 ```text
 https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u
@@ -91,21 +91,18 @@ https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u
 - Automatic weekly rebuilding, a JSON index of counts, and a smaller
   [featured playlist](us-directory/featured.m3u).
 - **No per-station FFmpeg playback guarantee**; Radio Browser's recent
-  check is metadata, not proof of playable audio on your device.
+  check is directory metadata, not an independent audio-decoding test.
 
 ### Regional access and station identity
 
 American broadcaster origin is **not** the same as U.S.-only access. The
-curated station **WMMR 93.3 (US Only)** carries a listener-reported access
-warning, which is not a definitive test of every region. Other stations are
+curated station **WMMR 93.3 (US Only)** has a regional-access label. Other stations are
 not marked U.S.-only without station-specific evidence.
 
 **Radio Paradise Rock Mix** is a separate U.S. Internet music service, not a
 rebroadcast of WMMR. It remains in the curated Rock & Alternative group.
 
-The expanded directory may also include streams restricted by country, provider,
-player or network. A successful GitHub Actions check from a server does not
-guarantee playback from Iraq or any other location.
+Stream access may vary by network, provider, region and playback client.
 
 ### Expanded directory automation
 
@@ -113,8 +110,7 @@ The expanded lists are generated from **Radio Browser** and published to
 [`us-directory/`](us-directory/README.md). Each currently has fewer than 1,000
 entries, avoiding Primuse's per-subscription import limit. The
 [`U.S. Radio Directory Refresh`](https://github.com/th3cyrus/Apple/actions/workflows/us-directory.yml)
-workflow runs **weekly on Monday at 04:31 UTC (07:31 Iraq time)** and can
-also be run manually.
+workflow runs **weekly on Monday at 04:31 UTC** and can also be run manually.
 
 If a directory fetch is incomplete or unexpectedly small, generation fails
 rather than replacing published lists with truncated output. The curated
@@ -131,8 +127,8 @@ rather than replacing published lists with truncated output. The curated
 
 ## Automatic Updates
 
-The **curated playlist** is checked every **day at 03:17 UTC / 06:17 Iraq time**.
-The **expanded U.S. directory** is rebuilt every **Monday at 04:31 UTC / 07:31 Iraq time**.
+The **curated playlist** is checked daily at **03:17 UTC**.
+The **expanded U.S. directory** is rebuilt every Monday at **04:31 UTC**.
 Both are managed by separate GitHub Actions workflows and separate M3U files.
 Relevant changes to the catalog, maintenance code, dependencies or refresh workflow
 also trigger a refresh. Bot-generated data commits do not trigger another refresh.
@@ -337,7 +333,7 @@ Neither license grants permission to use third-party trademarks or redistribute 
 
 ## Disclaimer
 
-**Apple · USA Live Radio for Primuse** is an independent, community-maintained radio playlist project.
+**Apple · Radio Collections for Primuse** is an independent, community-maintained radio playlist project.
 
 It is not affiliated with, sponsored by, or endorsed by:
 

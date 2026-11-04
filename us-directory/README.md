@@ -1,10 +1,10 @@
 # U.S. Radio Directory for Primuse
 
-4,452 distinct U.S. stations from Radio Browser, split into 12 independent subscriptions. Import each desired M3U URL into Primuse.
+4,452 U.S. stream entries across 12 independent M3U subscriptions. Import each selected playlist into Primuse.
 
-**Important:** These are crowd-sourced directory links and NOT individually verified audio streams. Radio Browser's check is not a playback test from Iraq or a guarantee against geo-blocking. The original 36-station [curated playlist](../radio.m3u) remains separate.
+Sources include Radio Browser and selected broadcaster streams. Directory entries are not individually audio-decoded. The [curated U.S. playlist](../radio.m3u) is maintained separately.
 
-Explicitly Islamic or Quran-oriented radio streams are excluded by station metadata and stream identity; two nonreligious broadcaster links are pinned as replacements. Only HTTPS entries with acceptable URL structure and no signed/token query parameters, last checked within 30 days, are normally included. Streams reporting SSL errors, broken health or misleading playlists are excluded. Missing/unsafe favicons use the project's own shared fallback cover. The two pinned replacements use broadcaster-published direct URLs, rather than Radio Browser's recent-check metadata. No worldwide playback guarantee.
+Quranic and Islamic religious programming is excluded. The generator filters signed links, stale health records, reported SSL errors and invalid playlists. Missing station artwork uses a shared fallback cover.
 
 | Subscription | Stations |
 |---|---:|
