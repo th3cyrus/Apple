@@ -676,7 +676,7 @@
     "homepage": "https://www.kcsm.org/",
     "search": "KCSM",
     "manual_lock": false,
-    "fail_count": 0,
+    "fail_count": 1,
     "logo": "logos/kcsm-jazz-91-1.png",
     "identity": {
       "aliases": [
@@ -690,7 +690,8 @@
       "channel": "main",
       "search_term": "KCSM",
       "frequency": "91.1"
-    }
+    },
+    "last_failure_counted_at": "2026-11-04T06:06:12+00:00"
   },
   {
     "id": "wrti-classical",
