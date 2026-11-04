@@ -33,13 +33,13 @@
     "verification": "Pending independent playback audit"
   },
   {
-    "id": "dk-dr-p6-beat",
-    "name": "DR P6 Beat",
+    "id": "dk-nova-fm-denmark",
+    "name": "NOVA FM Denmark",
     "country": "Denmark",
     "country_code": "DK",
     "region": "Europe",
-    "genre": "Alternative & Indie",
-    "stream": "https://drliveradio1.akamaized.net/hls/live/2097651/p6beat/masterab.m3u8",
+    "genre": "Pop & Contemporary",
+    "stream": "https://live-bauerdk.sharp-stream.com/nova_dk_mp3",
     "logo": "",
     "verification": "Pending independent playback audit"
   },
@@ -583,13 +583,13 @@
     "verification": "Pending independent playback audit"
   },
   {
-    "id": "in-air-fm-gold-delhi",
-    "name": "AIR FM Gold Delhi",
+    "id": "in-radio-mirchi-hindi",
+    "name": "Radio Mirchi Hindi",
     "country": "India",
     "country_code": "IN",
     "region": "Asia & Middle East",
-    "genre": "Classic Hits",
-    "stream": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio005/hlspbaudio00564kbps.m3u8",
+    "genre": "Hindi Pop & Bollywood",
+    "stream": "https://eu8.fastcast4u.com/proxy/clyedupq/stream",
     "logo": "",
     "verification": "Pending independent playback audit"
   },

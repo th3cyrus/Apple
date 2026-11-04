@@ -5,8 +5,8 @@ https://orf-live.ors-shoutcast.at/fm4-q2a
 https://radios.rtbf.be/classic21-128.mp3
 #EXTINF:-1 group-title="Europe" tvg-country="BE",RTBF Musiq3 (BE)
 https://radios.rtbf.be/musiq3-128.aac
-#EXTINF:-1 group-title="Europe" tvg-country="DK",DR P6 Beat (DK)
-https://drliveradio1.akamaized.net/hls/live/2097651/p6beat/masterab.m3u8
+#EXTINF:-1 group-title="Europe" tvg-country="DK",NOVA FM Denmark (DK)
+https://live-bauerdk.sharp-stream.com/nova_dk_mp3
 #EXTINF:-1 group-title="Europe" tvg-country="FR",FIP (FR)
 https://icecast.radiofrance.fr/fip-midfi.mp3?id=radiofrance
 #EXTINF:-1 group-title="Europe" tvg-country="FR",FIP Jazz (FR)
@@ -105,8 +105,8 @@ https://playerservices.streamtheworld.com/api/livestream-redirect/5FMAAC.aac
 https://edge.iono.fm/xice/82_medium.aac
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="HK",RTHK Radio 3 (HK)
 https://rthkradio3-live.akamaized.net/hls/live/2040079/radio3/master.m3u8
-#EXTINF:-1 group-title="Asia & Middle East" tvg-country="IN",AIR FM Gold Delhi (IN)
-https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio005/hlspbaudio00564kbps.m3u8
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="IN",Radio Mirchi Hindi (IN)
+https://eu8.fastcast4u.com/proxy/clyedupq/stream
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="ID",RRI Voice of Indonesia (ID)
 https://stream-node0.rri.co.id/streaming/25/9125/voi.mp3
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="IQ",Kurdistan 24 Radio (IQ)

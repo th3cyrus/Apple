@@ -27,7 +27,7 @@ The four shared U.S. stations reuse this project's original custom cover artwork
 | FM4 | Austria | Alternative & Electronic |
 | RTBF Classic 21 | Belgium | Classic Rock |
 | RTBF Musiq3 | Belgium | Classical & Culture |
-| DR P6 Beat | Denmark | Alternative & Indie |
+| NOVA FM Denmark | Denmark | Pop & Contemporary |
 | FIP | France | Eclectic & Jazz |
 | FIP Jazz | France | Jazz |
 | France Inter | France | News & Culture |
@@ -102,7 +102,7 @@ The four shared U.S. stations reuse this project's original custom cover artwork
 | Station | Country | Focus |
 | --- | --- | --- |
 | RTHK Radio 3 | Hong Kong | News & Culture |
-| AIR FM Gold Delhi | India | Classic Hits |
+| Radio Mirchi Hindi | India | Hindi Pop & Bollywood |
 | RRI Voice of Indonesia | Indonesia | International & World |
 | Kurdistan 24 Radio | Iraq | News & Talk |
 | Gensokyo Radio | Japan | Japanese Game & Anime |
