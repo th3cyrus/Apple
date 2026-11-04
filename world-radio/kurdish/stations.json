@@ -1,0 +1,65 @@
+[
+  {
+    "id": "iq-kurdistan-24-radio",
+    "name": "Kurdistan 24 Radio",
+    "language": "Kurdish",
+    "country_code": "IQ",
+    "genre": "Kurdish News",
+    "stream": "https://audio-edge-3mayu.fra.h.radiomast.io/04b1ce4c-24f2-4172-b756-065832ef78bf",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/iq-kurdistan-24-radio.png"
+  },
+  {
+    "id": "iq-radio-duhok-fm",
+    "name": "Radio Duhok FM",
+    "language": "Kurdish",
+    "country_code": "IQ",
+    "genre": "Regional & Culture",
+    "stream": "https://stream-149.zeno.fm/unwq3jdyhmbuv",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/iq-radio-duhok-fm.png"
+  },
+  {
+    "id": "tr-trt-radyo-kurdi",
+    "name": "TRT Radyo Kurdî",
+    "language": "Kurdish",
+    "country_code": "TR",
+    "genre": "Kurdish Public Radio",
+    "stream": "https://radio-trtradyo6.medya.trt.com.tr/master.m3u8",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/tr-trt-radyo-kurdi.png"
+  },
+  {
+    "id": "tr-kurd1-fm",
+    "name": "Kurd1 FM",
+    "language": "Kurdish",
+    "country_code": "TR",
+    "genre": "Kurdish Music",
+    "stream": "https://listen.radioking.com/radio/119251/stream/158701",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/tr-kurd1-fm.png"
+  },
+  {
+    "id": "tr-axa-rojava",
+    "name": "Axa Rojava",
+    "language": "Kurdish",
+    "country_code": "TR",
+    "genre": "Kurdish Music & Culture",
+    "stream": "https://stream.zeno.fm/h6mn2c8ha8zuv",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/tr-axa-rojava.png"
+  },
+  {
+    "id": "sy-denge-qamishlo",
+    "name": "Denge Qamishlo",
+    "language": "Kurdish",
+    "country_code": "SY",
+    "genre": "Kurdish Community Radio",
+    "stream": "https://dengeqamishlo.stream.laut.fm/dengeqamishlo",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/sy-denge-qamishlo.png"
+  },
+  {
+    "id": "sy-denge-cudi",
+    "name": "Denge Cudi",
+    "language": "Kurdish",
+    "country_code": "SY",
+    "genre": "Kurdish Music & Community",
+    "stream": "https://denge-cudi.stream.laut.fm/denge-cudi?pl=m3u",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/sy-denge-cudi.png"
+  }
+]

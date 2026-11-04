@@ -1,0 +1,128 @@
+[
+  {
+    "id": "tr-trt-fm",
+    "name": "TRT FM",
+    "language": "Turkish",
+    "country_code": "TR",
+    "genre": "Turkish Pop & Culture",
+    "stream": "https://trt.radyotvonline.net/trtfm",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-trt-fm.png"
+  },
+  {
+    "id": "tr-trt-turku",
+    "name": "TRT Türkü",
+    "language": "Turkish",
+    "country_code": "TR",
+    "genre": "Turkish Folk",
+    "stream": "https://rd-trtturku.medya.trt.com.tr/master_128.m3u8",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-trt-turku.png"
+  },
+  {
+    "id": "tr-powerturk",
+    "name": "PowerTürk",
+    "language": "Turkish",
+    "country_code": "TR",
+    "genre": "Turkish Pop",
+    "stream": "https://live.powerapp.com.tr/powerturk/abr/playlist.m3u8",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-powerturk.png"
+  },
+  {
+    "id": "tr-fenomen-turk",
+    "name": "Fenomen Türk",
+    "language": "Turkish",
+    "country_code": "TR",
+    "genre": "Turkish Hits",
+    "stream": "https://live.radyofenomen.com/fenomenturk/256/chunks.m3u8",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-fenomen-turk.png"
+  },
+  {
+    "id": "tr-slow-turk",
+    "name": "Slow Türk",
+    "language": "Turkish",
+    "country_code": "TR",
+    "genre": "Turkish Slow Pop",
+    "stream": "https://radyo.duhnet.tv/ak_dtvh_slowturk",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-slow-turk.png"
+  },
+  {
+    "id": "tr-kafa-radyo",
+    "name": "Kafa Radyo",
+    "language": "Turkish",
+    "country_code": "TR",
+    "genre": "Culture & Talk",
+    "stream": "https://moondigitalmaster.radyotvonline.net/kafaradyo/playlist.m3u8",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-kafa-radyo.png"
+  },
+  {
+    "id": "tr-radyo-fenomen",
+    "name": "Radyo Fenomen",
+    "language": "Turkish",
+    "country_code": "TR",
+    "genre": "Pop & Dance",
+    "stream": "https://live.radyofenomen.com/fenomen/128/icecast.audio",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-radyo-fenomen.png"
+  },
+  {
+    "id": "tr-haberturk-radyo",
+    "name": "Habertürk Radyo",
+    "language": "Turkish",
+    "country_code": "TR",
+    "genre": "News & Talk",
+    "stream": "https://haberturkradyo.radyotvonline.net/haberturkradyo",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-haberturk-radyo.png"
+  },
+  {
+    "id": "tr-radyo-alaturka",
+    "name": "Radyo Alaturka",
+    "language": "Turkish",
+    "country_code": "TR",
+    "genre": "Turkish Classical & Oldies",
+    "stream": "https://yayin.jumboserver.net:9100/stream",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-radyo-alaturka.png"
+  },
+  {
+    "id": "tr-alem-fm",
+    "name": "Alem FM",
+    "language": "Turkish",
+    "country_code": "TR",
+    "genre": "Turkish Pop",
+    "stream": "https://turkmedya.radyotvonline.net/alemfmaac",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-alem-fm.png"
+  },
+  {
+    "id": "tr-radyo-seymen",
+    "name": "Radyo Seymen",
+    "language": "Turkish",
+    "country_code": "TR",
+    "genre": "Turkish Folk",
+    "stream": "https://yayin.radyoseymen.com.tr:1070/stream",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-radyo-seymen.png"
+  },
+  {
+    "id": "tr-metro-fm-turkiye",
+    "name": "Metro FM Türkiye",
+    "language": "Turkish",
+    "country_code": "TR",
+    "genre": "Contemporary Hits",
+    "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/METRO_FM_SC",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-metro-fm-turkiye.png"
+  },
+  {
+    "id": "iq-turkmen-fm",
+    "name": "Turkmen FM",
+    "language": "Turkish",
+    "country_code": "IQ",
+    "genre": "Turkmen/Turkish Music",
+    "stream": "https://radyo1.radyo-dinle.tc/8284/stream;",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/iq-turkmen-fm.png"
+  },
+  {
+    "id": "ae-turkish-love-radio",
+    "name": "Turkish Love Radio",
+    "language": "Turkish",
+    "country_code": "AE",
+    "genre": "Turkish Love Songs",
+    "stream": "https://drive.uber.radio/uber/lrturkish/icecast.audio",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/ae-turkish-love-radio.png"
+  }
+]
