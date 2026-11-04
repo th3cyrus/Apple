@@ -34,11 +34,11 @@ https://ice2.somafm.com/poptron-128-mp3
 https://icecast.walmradio.com:8443/otr_opus
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/indiepop-400.jpg",SomaFM Indie Pop Rocks! (128k AAC)
 https://ice6.somafm.com/indiepop-128-aac
-#EXTINF:-1 group-title="U.S. Directory",181.FM - Highway 181
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - Highway 181
 https://listen.181fm.com/181-highway_128k.mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/seventies400.jpg",SomaFM Left Coast 70s (320k MP3)
 https://ice2.somafm.com/seventies-320-mp3
-#EXTINF:-1 group-title="U.S. Directory",FUNKY RADIO - Only Funk Music (60's 70's)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",FUNKY RADIO - Only Funk Music (60's 70's)
 https://funkyradio.streamingmedia.it/play.mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://cdn-elements.radiostreamlive.com/v1/images/favicon.ico",Miami Beach Radio
 https://streaming.radiostreamlive.com/miamibeachradio_devices
@@ -52,15 +52,15 @@ https://ice2.somafm.com/lush-128-mp3
 https://liveaudio.lamusica.com/MIA_WCMQ_icy
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://static.foxnews.com/radio.foxnews.com/content/uploads/2017/10/default_logo-150x150.png",Fox News Radio
 https://live.amperwave.net/direct/foxnewsradio-foxnewsradioaac-imc?source=fnr.web
-#EXTINF:-1 group-title="U.S. Directory",70s 80s Disco Funk ModernSoul Boogie
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",70s 80s Disco Funk ModernSoul Boogie
 https://discofunk.streamingmedia.it/usa
-#EXTINF:-1 group-title="U.S. Directory",metal rock radio
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",metal rock radio
 https://kathy.torontocast.com:2800/;
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/metal-400.png",SomaFM Metal Detector (128k AAC)
 https://ice5.somafm.com/metal-128-aac
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://www.smoothjazz.com/sites/default/files/theme/sj-circle-logo.png",SmoothJazz.com 128k mp3
 https://smoothjazz.cdnstream1.com/2585_128.mp3
-#EXTINF:-1 group-title="U.S. Directory",VOA Learning English
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",VOA Learning English
 https://voa-ingest.akamaized.net/hls/live/2035234/160_342L/playlist.m3u8
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/favicon-96x96.png",MSNBC
 https://tunein.cdnstream1.com/3511_96.mp3
@@ -74,23 +74,23 @@ https://stream3.megarockradio.net:80/
 https://ice5.somafm.com/reggae-256-mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://cdn-elements.radiostreamlive.com/v1/images/favicon.ico",Radio Love Live New York
 https://streaming.radiostreamlive.com/radiolovelive_devices
-#EXTINF:-1 group-title="U.S. Directory",181.FM - The Eagle (Classic)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - The Eagle (Classic)
 https://listen.181fm.com/181-eagle_128k.mp3
-#EXTINF:-1 group-title="U.S. Directory",181.FM - 80's HairBand
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - 80's HairBand
 https://listen.181fm.com/181-hairband_128k.mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://bluegrasscountry.org/favicon.ico",Bluegrass Country
 https://ice24.securenetsystems.net/WAMU
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/dronezone-400.jpg",SomaFM Drone Zone (128k MP3)
 https://ice2.somafm.com/dronezone-128-mp3
-#EXTINF:-1 group-title="U.S. Directory",181.FM - Awesome 80's
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - Awesome 80's
 https://listen.181fm.com/181-awesome80s_128k.mp3
-#EXTINF:-1 group-title="U.S. Directory",181.FM - Real Country
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - Real Country
 https://listen.181fm.com/181-realcountry_128k.mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://kpfa.org/favicon.ico",KPFA
 https://streams.kpfa.org:8443/kpfa
-#EXTINF:-1 group-title="U.S. Directory",TRAP RADIO TRAP.radio
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",TRAP RADIO TRAP.radio
 https://trapradio.streamingmedia.it/play
-#EXTINF:-1 group-title="U.S. Directory",美国之音
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",美国之音
 https://voa-ingest.akamaized.net/hls/live/2035206/151_124L/playlist.m3u8
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://radiostorm.com/wp-content/uploads/2018/01/cropped-imgpsh_fullsize2-180x180.png",Comedy 104 - Radiostorm
 https://ais-sa5.cdnstream1.com/b42761_64mp3
@@ -102,23 +102,23 @@ https://stream.radioparadise.com/rock-flac
 https://ice6.somafm.com/secretagent-32-aac
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://marinifamily.files.wordpress.com/2015/08/favicon.png",America's Country
 https://ais-sa2.cdnstream1.com/1976_128.mp3
-#EXTINF:-1 group-title="U.S. Directory",#1 HITS 80s
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",#1 HITS 80s
 https://makri.cdnstream.com/1898_128
-#EXTINF:-1 group-title="U.S. Directory",102.7 KIIS FM
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",102.7 KIIS FM
 https://stream.revma.ihrhls.com/zc185
-#EXTINF:-1 group-title="U.S. Directory",FUNKY RADIO - Only Funk Music (60's & 70's)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",FUNKY RADIO - Only Funk Music (60's & 70's)
 https://funkyradio.streamingmedia.it/audio.aac
-#EXTINF:-1 group-title="U.S. Directory",SomaFM Deep Space One (32k AAC)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",SomaFM Deep Space One (32k AAC)
 https://ice6.somafm.com/deepspaceone-32-aac
-#EXTINF:-1 group-title="U.S. Directory",Christian Life Radio
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",Christian Life Radio
 https://ice64.securenetsystems.net/CLR1MP3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/seventies400.jpg",SomaFM Left Coast 70s (128k MP3)
 https://ice2.somafm.com/seventies-128-mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/bootliquor-400.jpg",SomaFM Boot Liquor (320k MP3)
 https://ice6.somafm.com/bootliquor-320-mp3
-#EXTINF:-1 group-title="U.S. Directory",_Funky Corner Radio (USA)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",_Funky Corner Radio (USA)
 https://ais-sa2.cdnstream1.com/2447_192.mp3
-#EXTINF:-1 group-title="U.S. Directory",.100 Hip hop and RNB FM
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",.100 Hip hop and RNB FM
 https://ice64.securenetsystems.net/LFTM
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/sonicuniverse-400.jpg",SomaFM Sonic Universe (128k MP3)
 https://ice5.somafm.com/sonicuniverse-128-mp3
@@ -130,13 +130,13 @@ https://listen.christianrock.net/stream/13/
 https://ice5.somafm.com/suburbsofgoa-128-aac
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/beatblender-400.jpg",SomaFM Beat Blender (128k MP3)
 https://ice5.somafm.com/beatblender-128-mp3
-#EXTINF:-1 group-title="U.S. Directory",181.FM - Classical Guitar
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - Classical Guitar
 https://listen.181fm.com/181-classicalguitar_128k.mp3
-#EXTINF:-1 group-title="U.S. Directory",The Independent FM
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",The Independent FM
 https://listen.radioking.com/radio/293701/stream/340084
-#EXTINF:-1 group-title="U.S. Directory",1460 ESPN Deportes
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",1460 ESPN Deportes
 https://playerservices.streamtheworld.com/api/livestream-redirect/KENOAMAAC.aac
-#EXTINF:-1 group-title="U.S. Directory",181.FM - Soul
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - Soul
 https://listen.181fm.com/181-soul_128k.mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/groovesalad-400.jpg",SomaFM Groove Salad (128k AAC)
 https://ice5.somafm.com/groovesalad-128-aac
@@ -146,15 +146,15 @@ https://playerservices.streamtheworld.com/api/livestream-redirect/WBBRDCAAC.aac
 https://tunein.cdnstream1.com/3519_96.aac
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://redstatetalkradio.com/wp-content/uploads/2021/03/cropped-rstr588x588-180x180.png",Red State Talk Radio
 https://s2.radio.co/s572ad25f7/listen
-#EXTINF:-1 group-title="U.S. Directory",181.FM - The Mix
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - The Mix
 https://listen.181fm.com/181-themix_128k.mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://radioparadise.com/apple-touch-icon.png",Radio Paradise Main Mix FLAC
 https://stream.radioparadise.com/flac
-#EXTINF:-1 group-title="U.S. Directory",chilltrax
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",chilltrax
 https://streamssl.chilltrax.com/
-#EXTINF:-1 group-title="U.S. Directory",DnB&EDM
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",DnB&EDM
 https://edmdnb.com:448/radio/8000/radio.mp3
-#EXTINF:-1 group-title="U.S. Directory",181.FM - Fusion Jazz
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - Fusion Jazz
 https://listen.181fm.com/181-fusionjazz_128k.mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/7soul-400.jpg",SomaFM Seven Inch Soul (128k MP3)
 https://ice6.somafm.com/7soul-128-mp3
@@ -166,29 +166,29 @@ https://ice5.somafm.com/folkfwd-128-mp3
 https://streams.abidingradio.com/instrumental
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/defcon400.png",SomaFM DEF CON Radio (128k AAC)
 https://ice2.somafm.com/defcon-128-aac
-#EXTINF:-1 group-title="U.S. Directory",Tu 94.9
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",Tu 94.9
 https://stream.revma.ihrhls.com/zc577
-#EXTINF:-1 group-title="U.S. Directory",Fox News
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",Fox News
 https://247preview.foxnews.com/hls/live/2020027/fncv3preview/primary.m3u8
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://radioparadise.com/apple-touch-icon.png",Radio Paradise World/Etc Mix 320k AAC
 https://stream.radioparadise.com/world-etc-320
-#EXTINF:-1 group-title="U.S. Directory",181.FM - Power 181 (Top 40)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - Power 181 (Top 40)
 https://listen.181fm.com/181-power_128k.mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/u80s-400.png",SomaFM Underground 80s (256k MP3)
 https://ice6.somafm.com/u80s-256-mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://cdn-elements.radiostreamlive.com/v1/images/favicon.ico",Radio New York Live
 https://streaming.radiostreamlive.com/radionylive_devices
-#EXTINF:-1 group-title="U.S. Directory",Mega 96.3 (Los Angeles) - 96.3 FM - KXOL-FM - Spanish Broadcasting System - Los Angeles, California
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",Mega 96.3 (Los Angeles) - 96.3 FM - KXOL-FM - Spanish Broadcasting System - Los Angeles, California
 https://liveaudio.lamusica.com/LA_KXOL_icy
-#EXTINF:-1 group-title="U.S. Directory",181.FM - Rock 181
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - Rock 181
 https://listen.181fm.com/181-rock_128k.mp3
-#EXTINF:-1 group-title="U.S. Directory",181.FM - Christmas Classics
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - Christmas Classics
 https://listen.181fm.com/181-xtraditional_128k.mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/groovesalad-400.jpg",SomaFM Groove Salad (HLS FLAC)
 https://hls.somafm.com/hls/groovesalad/FLAC/program.m3u8
-#EXTINF:-1 group-title="U.S. Directory",WSKQ Mega 97.9
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",WSKQ Mega 97.9
 https://liveaudio.lamusica.com/NY_WSKQ_icy?listenerid=94d1ac3bf877b65e4e17cd7e9bfec132&awparams=companionAds%3Atrue&aw_0_1st.version=1.1.12%3Ahtml5&aw_0_1st.playerid=lamusica.web.mobile&aw_0_1st.skey=1690194521&sw_bp=1
-#EXTINF:-1 group-title="U.S. Directory",181.FM - UK top 40
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - UK top 40
 https://listen.181fm.com/181-uktop40_128k.mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/groovesalad-400.png",Soma FM Groove Salad 320K AAC HLS
 https://hls.somafm.com/hls/groovesalad/320k/program.m3u8
@@ -200,29 +200,29 @@ https://listen.christianrock.net/stream/11/
 https://maiban00.radioca.st/stream
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/gsclassic400.jpg",SomaFM Groove Salad Classic (128k MP3)
 https://ice5.somafm.com/gsclassic-128-mp3
-#EXTINF:-1 group-title="U.S. Directory",CBS News
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",CBS News
 https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8
-#EXTINF:-1 group-title="U.S. Directory",Begoodradio.com 80s metal
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",Begoodradio.com 80s metal
 https://bigrradio.cdnstream1.com/5212_128
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://werave.com.br/wp-content/uploads/cropped-weravemusic-180x180.png",WeRave Music Radio 01 - Dark and Underground
 https://stream.zeno.fm/pjktyby8dn5tv
-#EXTINF:-1 group-title="U.S. Directory",181.FM - Techno Club
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",181.FM - Techno Club
 https://listen.181fm.com/181-technoclub_128k.mp3
-#EXTINF:-1 group-title="U.S. Directory",Red State Talk Radio Encore
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",Red State Talk Radio Encore
 https://s2.radio.co/sf03a6a4b2/listen
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://www.iheart.com/favicon.ico",24/7 Comedy
 https://stream.revma.ihrhls.com/zc4902
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://cdn-elements.radiostreamlive.com/v1/images/favicon.ico",Radio Rock On
 https://streaming.radiostreamlive.com/radiorockon_devices
-#EXTINF:-1 group-title="U.S. Directory",Fox Sports 1260
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",Fox Sports 1260
 https://stream.revma.ihrhls.com/zc905
-#EXTINF:-1 group-title="U.S. Directory",CHICAGO HOUSE
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",CHICAGO HOUSE
 https://stream.radio.co/sae989fe39/listen
-#EXTINF:-1 group-title="U.S. Directory",EROTICA LOUNGE
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",EROTICA LOUNGE
 https://stream.zeno.fm/89asra0sfa0uv
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://media.ruralradio.co/nrr/uploads/sites/12/2021/02/cropped-ktmx-2-180x180.png",104.9 Max Country
 https://ais-sa1.streamon.fm/7246_48k.aac
-#EXTINF:-1 group-title="U.S. Directory",SOUL RADIO Classics
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",SOUL RADIO Classics
 https://listen.soulradio.us/us
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/dubstep-400.jpg",SomaFM Dub Step Beyond (128k MP3)
 https://ice5.somafm.com/dubstep-128-mp3
@@ -234,25 +234,25 @@ https://playerservices.streamtheworld.com/api/livestream-redirect/WRCAAMAAC.aac
 https://stream.frisky.friskyradio.com/mp3_low
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://radioparadise.com/apple-touch-icon.png",Radio Paradise Mellow Mix 64k AAC
 https://stream.radioparadise.com/mellow-64
-#EXTINF:-1 group-title="U.S. Directory",Non-Stop Oldies
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",Non-Stop Oldies
 https://ais-sa2.cdnstream1.com/2383_128.mp3
-#EXTINF:-1 group-title="U.S. Directory",Your Classical Chamber Music
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",Your Classical Chamber Music
 https://chambermusic.stream.publicradio.org/chambermusic.mp3
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://static2.mytuner.mobi/media/tvos_radios/904/country-music-radio-00s-country.5f83bb9f.png",2000's Country Music Radio
 https://2.mystreaming.net/uber/cmr00scountry/icecast.audio
-#EXTINF:-1 group-title="U.S. Directory",104.5 Latino Hits
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",104.5 Latino Hits
 https://stream.revma.ihrhls.com/zc4051
-#EXTINF:-1 group-title="U.S. Directory",ROCK FM Classic Rock
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",ROCK FM Classic Rock
 https://audiotainment-sw.streamabc.net/atsw-classicrock-mp3-128-2538548?
-#EXTINF:-1 group-title="U.S. Directory",The Blaze radio
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",The Blaze radio
 https://playerservices.streamtheworld.com/api/livestream-redirect/BLZE_1.mp3
-#EXTINF:-1 group-title="U.S. Directory",Conyers Old Time Radio
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",Conyers Old Time Radio
 https://s8.yesstreaming.net:17011/stream
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://radioparadise.com/apple-touch-icon.png",Radio Paradise World/Etc Mix FLAC
 https://stream.radioparadise.com/world-etc-flac
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/illstreet-400.jpg",SomaFM Illinois Street Lounge (128k MP3)
 https://ice5.somafm.com/illstreet-128-mp3
-#EXTINF:-1 group-title="U.S. Directory",La Mega 105.7
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png" group-title="U.S. Directory",La Mega 105.7
 https://ice41.securenetsystems.net/WEMG
 #EXTINF:-1 group-title="U.S. Directory" tvg-logo="https://somafm.com/img3/vaporwaves400.png",SomaFM Vaporwaves (128k AAC)
 https://ice5.somafm.com/vaporwaves-128-aac
