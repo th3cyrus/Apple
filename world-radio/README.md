@@ -115,7 +115,7 @@ These are editorial selections, **not an objective world ranking**. We favor est
 | Bangkok Community Radio | Thailand | Electronic & Discovery |
 | Radyo Eksen | Türkiye | Rock & Alternative |
 | TRT FM | Türkiye | Pop & Culture |
-| Sharjah Quran Radio | United Arab Emirates | Culture & Religious |
+| Dubai Eye 103.8 | United Arab Emirates | News, Talk & Sports |
 
 ### Oceania (5)
 

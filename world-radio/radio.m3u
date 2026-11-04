@@ -131,8 +131,8 @@ https://bcr.radiocult.fm/stream
 https://dygedge.radyotvonline.net/radyoeksen/playlist.m3u8
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="TR" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tr-trt-fm.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tr-trt-fm.png",TRT FM (TR)
 https://trt.radyotvonline.net/trtfm
-#EXTINF:-1 group-title="Asia & Middle East" tvg-country="AE" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ae-sharjah-quran-radio.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ae-sharjah-quran-radio.png",Sharjah Quran Radio (AE)
-https://l3.itworkscdn.net/smcquranlive/quranradiolive/icecast.audio
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="AE" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ae-dubai-eye-103-8.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ae-dubai-eye-103-8.png",Dubai Eye 103.8 (AE)
+https://gbradio.cdn.tibus.net/U105?aw_0_1st.playerId=wireless-website&_=477645
 #EXTINF:-1 group-title="Oceania" tvg-country="AU" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-4zzz.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-4zzz.png",4ZZZ (AU)
 https://iheart.4zzz.org.au/live
 #EXTINF:-1 group-title="Oceania" tvg-country="AU" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-abc-jazz.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-abc-jazz.png",ABC Jazz (AU)

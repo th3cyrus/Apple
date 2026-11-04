@@ -12,6 +12,8 @@ Choose from **three separate M3U collections**: a carefully maintained U.S. sele
 
 **How to add a collection:** In Primuse, go to **Radio → + → Add Subscription → Fetch → Subscribe**. Choose **Update Now** to see changes made to an existing subscription.
 
+**Editorial content:** Stations devoted to Quranic or Islamic religious programming are excluded from the curated world and U.S. directory collections. Two nonreligious music streams replace the removed U.S. directory entries; Dubai Eye 103.8 replaces the removed world station.
+
 **Playback and coverage:** The U.S. directory is community-sourced and is **not individually audio-tested**; its station count changes with [weekly refreshes](us-directory/index.json). The curated and world collections use audio-decoding checks, but even a successful test cannot guarantee access from every country or compatibility with every player. This repository hosts playlists and artwork, **not radio audio**.
 
 [Explore station data](stations.json) · [World station list](world-radio/stations.json) · [U.S. maintenance status](https://github.com/th3cyrus/Apple/actions/workflows/import.yml) · [World audio audit](https://github.com/th3cyrus/Apple/actions/workflows/world-radio.yml)
