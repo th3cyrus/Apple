@@ -4,6 +4,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from datetime import datetime, timedelta, timezone
 from unittest.mock import Mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
@@ -15,6 +16,8 @@ def record(name, url, uuid="uuid-1", **fields):
         "stationuuid": uuid, "name": name, "countrycode": "US",
         "lastcheckok": 1, "url_resolved": url, "url": url,
         "tags": "rock", "votes": 12, "favicon": "",
+        "ssl_error": 0,
+        "lastchecktime_iso8601": datetime.now(timezone.utc).isoformat(),
     }
     data.update(fields)
     return data
@@ -33,6 +36,7 @@ class DirectoryTests(unittest.TestCase):
         ])
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0]["group"], "Rock & Alternative")
+        self.assertEqual(results[0]["logo"], directory.FALLBACK_ARTWORK)
 
     def test_rejects_private_and_invalid_urls(self):
         for url in ("https://127.0.0.1/live", "https://10.0.0.1/stream",
@@ -40,6 +44,44 @@ class DirectoryTests(unittest.TestCase):
                     "https://[::1]/live", "ftp://example.com/live"):
             with self.subTest(url=url):
                 self.assertFalse(directory.public_https(url))
+
+    def test_stale_ssl_error_and_signed_urls_are_excluded(self):
+        cases = [
+            record("Stale", "https://old.example.org/live",
+                   lastchecktime_iso8601=(datetime.now(timezone.utc)
+                                           - timedelta(days=45)).isoformat()),
+            record("SSL", "https://ssl.example.org/live", ssl_error=1),
+            record("Token", "https://token.example.org/live?token=123"),
+            record("Zeno", "https://zeno.example.org/live?zt=123"),
+            record("Key", "https://key.example.org/live?key=123"),
+            record("Missing date", "https://missing.example.org/live",
+                   lastchecktime_iso8601=""),
+        ]
+        self.assertEqual(directory.catalog(cases), [])
+
+    def test_bad_vote_count_is_not_a_build_error(self):
+        items = directory.catalog([record("Station", "https://station.example.org/live",
+                                          votes="invalid")])
+        self.assertEqual(items[0]["votes"], 0)
+
+    def test_mass_deletion_is_prevented(self):
+        with tempfile.TemporaryDirectory() as temp:
+            directory_path = Path(temp) / "us-directory"
+            directory_path.mkdir()
+            (directory_path / "index.json").write_text(json.dumps({"station_count": 5000}))
+            curated = Path(temp) / "stations.json"
+            curated.write_text(json.dumps([{"stream": "https://old.example.org/stream"}]))
+            response = Mock()
+            response.json.return_value = [
+                record(f"Station {i}", f"https://radio{i}.example.org/live", f"uuid{i}")
+                for i in range(600)
+            ]
+            session = Mock()
+            session.get.return_value = response
+            with self.assertRaisesRegex(ValueError, "shrank unexpectedly"):
+                directory.build(session, output=directory_path, curated_path=curated)
+            self.assertEqual(json.loads((directory_path / "index.json").read_text())
+                             ["station_count"], 5000)
 
     def test_dedupe_curated_stream(self):
         records = [record("A", "https://radio.example.org/live")]

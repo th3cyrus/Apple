@@ -16,7 +16,7 @@ These are editorial selections, **not an objective world ranking**. We favor est
 
 **First complete live audio audit — November 4, 2026: 72/72 stations returned decoded non-silent audio** in GitHub Actions. This establishes server-side sample audibility, **not** confirmed playback inside Primuse or availability from Iraq. A stream can later change or be region-restricted. The [World Radio Select Audit](https://github.com/th3cyrus/Apple/actions/workflows/world-radio.yml) runs on changes and weekly using FFprobe/FFmpeg; review the latest report for current results. Failed or silent streams are flagged without automatically deleting curated stations.
 
-The four shared U.S. stations reuse this project's original custom cover artwork; other stations have no custom matching artwork yet. Do not mistake these streams for rebroadcast audio hosted by this repository.
+**All 72 stations have illustrated covers:** four shared U.S. stations reuse the main collection's existing optimized artwork; the other 68 have unique, reproducible 512×512 PNG tiles in [`logos/`](logos/) with the same frosted-glass design language. The covers display station names and country codes but do not impersonate official broadcaster logos. Missing covers are generated using [`scripts/generate_world_covers.py`](../scripts/generate_world_covers.py), and existing artwork is preserved. The repository links to broadcaster streams without rebroadcasting the audio.
 
 ## Selected stations
 
@@ -130,6 +130,7 @@ The four shared U.S. stations reuse this project's original custom cover artwork
 ## Files
 
 - [`radio.m3u`](radio.m3u): standalone Primuse-compatible M3U subscription.
+- [`logos/`](logos/): 68 project-style custom station covers (other four are shared with the main collection).
 - [`stations.json`](stations.json): editable titles, streams, countries, regions and genres.
 - [World radio health checker](../scripts/check_world_radio.py): validates the independent playlist and can audit decoded audio.
 - [Main curated U.S. collection](../radio.m3u) and [expanded U.S. directory](../us-directory/README.md) remain independent.

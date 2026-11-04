@@ -117,6 +117,10 @@ jobs:
             exit 0
           fi
           git commit -m 'Refresh radio playlist'
+          # Rebase on the latest main to avoid failing on concurrent directory/docs commits.
+          # Conflicting edits fail safely; never force-push generated data.
+          git fetch origin main
+          git rebase origin/main
           # Credentials exist only in this publishing step, never in checkout config.
           askpass="$RUNNER_TEMP/primuse-git-askpass"
           cat > "$askpass" <<'SH'
@@ -128,4 +132,19 @@ jobs:
           SH
           chmod 700 "$askpass"
           trap 'rm -f "$askpass"' EXIT
-          GIT_ASKPASS="$askpass" GIT_TERMINAL_PROMPT=0 git push origin HEAD:main
+          for attempt in 1 2 3; do
+            if GIT_ASKPASS="$askpass" GIT_TERMINAL_PROMPT=0 git push origin HEAD:main; then
+              exit 0
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo 'Failed to publish radio data after three concurrent-update attempts'
+              exit 1
+            fi
+            git fetch origin main
+            git rebase origin/main
+            sleep "$attempt"
+          done
+
+      - name: Enforce healthy playback after publishing diagnostics
+        if: always() && steps.refresh.outcome == 'success'
+        run: python scripts/validate.py --report-only --report logs/current-run.json --require-healthy

@@ -7,8 +7,8 @@ Choose from **three separate M3U collections**: a carefully maintained U.S. sele
 | Collection | Stations / Streams | What makes it different | Subscription |
 | --- | ---: | --- | --- |
 | **[U.S. Curated Radio](stations.json)** | **36 stations** | Handpicked broadcasters, matching custom covers, and decoded-audio health checks | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u)** |
-| **[U.S. Radio Directory](us-directory/README.md)** | **4,534 entries** | Broad American coverage via Radio Browser, split into **12 M3U playlists** to respect Primuse's per-subscription limit | **[Choose playlists](us-directory/README.md)** |
-| **[World Radio Select](world-radio/README.md)** | **72 stations · 44 countries/regions** | International music, news and cultural picks; each stream passed a decoded, non-silent audio sample test on **November 4, 2026** | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u)** |
+| **[U.S. Radio Directory](us-directory/README.md)** | **[Live station count](us-directory/index.json)** | Broad American coverage via Radio Browser, split into **12 M3U playlists** to respect Primuse's per-subscription limit | **[Choose playlists](us-directory/README.md)** |
+| **[World Radio Select](world-radio/README.md)** | **72 stations · 44 countries/regions** | International music, news and culture; matching station covers; 72/72 decoded-audio samples passed **November 4, 2026** | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u)** |
 
 **How to add a collection:** In Primuse, go to **Radio → + → Add Subscription → Fetch → Subscribe**. Choose **Update Now** to see changes made to an existing subscription.
 
@@ -44,7 +44,7 @@ and all 36 manually maintained station identities.
 https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u
 ```
 
-### Option B — Expanded U.S. directory (4,534 entries in 12 playlists)
+### Option B — Expanded U.S. directory (12 playlists; [live count](us-directory/index.json))
 
 Open **[U.S. Directory — 12 subscription URLs](us-directory/README.md)** and
 subscribe to the parts you want **one at a time**. These lists are separate from
@@ -57,13 +57,13 @@ contains a smaller, directory-derived selection.
 
 The directory lists **candidates**, not individually playback-tested stations.
 Some streams may be offline, silent, incompatible, region-restricted or duplicated
-under different directory identities. The expanded lists do not have the
-collection-wide original cover design: artwork, when present, comes from the
-station directory or broadcasters.
+under different directory identities. The expanded lists use station favicons when safe HTTPS artwork is provided;
+otherwise they use a project-owned fallback cover in the same visual style.
+These directory covers are not verified official broadcaster trademarks.
 
 ### Option C — World Radio Select (72 stations)
 
-Import the [worldwide editorial selection](world-radio/README.md) as a **separate subscription**. The sources are documented and directory-listed HTTPS streams, but international availability and audio playback are not yet independently guaranteed.
+Import the [worldwide editorial selection](world-radio/README.md) as a **separate subscription**. Every station now has a cover; the 72-stream sample audit passed on November 4, 2026. These results are server-side and do not guarantee playback or international accessibility inside Primuse.
 
 ```text
 https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u
@@ -82,8 +82,8 @@ https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u
 
 **Expanded U.S. directory**
 
-- 4,534 directory-listed U.S. HTTPS streams in 12 independent M3U playlists
-  (snapshot: November 4, 2026).
+- Thousands of U.S. HTTPS streams in 12 independent M3U playlists; the
+  [live index](us-directory/index.json) has the current station count.
 - Radio Browser-based discovery, filtering of known-bad entries and unsafe
   or misleading URL patterns, plus de-duplication by exact stream URL.
 - Automatic weekly rebuilding, a JSON index of counts, and a smaller
@@ -256,7 +256,9 @@ If a station stops working:
 | --- | --- |
 | `stations.json` | Editable catalog of 36 radio stations |
 | `radio.m3u` | Main curated M3U subscription (36 stations) |
-| `world-radio/` | Standalone world playlist, editorial selection and station catalog |
+| `world-radio/` | Standalone world playlist, country catalog and station covers |
+| `scripts/generate_world_covers.py` | Reproducible project-style cover generation for world stations |
+| `.github/workflows/world-artwork.yml` | Automatically fill in missing world station cover PNGs |
 | `us-directory/us-01.m3u` … `us-12.m3u` | Twelve expanded U.S. directory subscriptions |
 | `us-directory/index.json` | Current directory totals and per-playlist counts |
 | `us-directory/README.md` | All expanded directory subscription URLs |

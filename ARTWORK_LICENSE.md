@@ -2,7 +2,7 @@
 
 ## Scope
 
-This notice applies to the custom-designed station covers in the `logos/` directory of the Apple · USA Live Radio for Primuse project.
+This notice applies to project-designed station covers in `logos/` and `world-radio/logos/` of the Apple · Radio Collections for Primuse project.
 
 ## License
 

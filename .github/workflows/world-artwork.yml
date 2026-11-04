@@ -1,0 +1,80 @@
+name: World Radio Artwork
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**'
+      - 'fix/**'
+    paths:
+      - 'world-radio/stations.json'
+      - 'world-radio/radio.m3u'
+      - 'scripts/generate_world_covers.py'
+      - '.github/workflows/world-artwork.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: world-artwork-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  covers:
+    runs-on: ubuntu-26.04
+    timeout-minutes: 12
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+
+      - name: Setup Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12.16'
+
+      - name: Install image dependencies
+        run: |
+          python -m pip install --only-binary=:all: -r requirements.txt
+
+      - name: Render and validate station cover artwork
+        run: python scripts/generate_world_covers.py
+
+      - name: Publish missing station artwork
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_REF: ${{ github.ref_name }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add world-radio/logos/ us-directory/directory-cover.png
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'Generate missing World Radio Select covers'
+          askpass="$RUNNER_TEMP/world-artwork-askpass"
+          cat > "$askpass" <<'SH'
+          #!/bin/sh
+          case "$1" in
+            *Username*) printf '%s\n' 'x-access-token' ;;
+            *Password*) printf '%s\n' "$GH_TOKEN" ;;
+          esac
+          SH
+          chmod 700 "$askpass"
+          trap 'rm -f "$askpass"' EXIT
+          for attempt in 1 2 3; do
+            git fetch origin "$TARGET_REF"
+            git rebase "origin/$TARGET_REF"
+            if GIT_ASKPASS="$askpass" GIT_TERMINAL_PROMPT=0 git push origin "HEAD:$TARGET_REF"; then
+              exit 0
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo 'Artwork publication conflicted after three attempts'
+              exit 1
+            fi
+            sleep "$attempt"
+          done
