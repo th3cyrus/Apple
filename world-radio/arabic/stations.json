@@ -27,22 +27,22 @@
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/iq-radio-shanasheel.png"
   },
   {
-    "id": "sy-sham-fm",
-    "name": "Sham FM",
+    "id": "sy-asima-online-radio",
+    "name": "Asima Online Radio",
     "language": "Arabic",
     "country_code": "SY",
-    "genre": "Music & News",
-    "stream": "https://radioshamfm.grtvstream.com:8400/;",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-sham-fm.png"
+    "genre": "Culture & Contemporary",
+    "stream": "https://asima.out.airtime.pro/asima_a",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-asima-online-radio.png?v=2"
   },
   {
-    "id": "sy-syria-tv-radio",
-    "name": "Syria TV Radio",
+    "id": "sy-radio-nasaem-syria",
+    "name": "Radio Nasaem Syria",
     "language": "Arabic",
     "country_code": "SY",
-    "genre": "News & Talk",
-    "stream": "https://stream2.syria.fm/syriatv1live/syriatv_audio/icecast.audio",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-syria-tv-radio.png"
+    "genre": "Music & Community",
+    "stream": "https://stream.zeno.fm/u1wbm3k7gxquv",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-radio-nasaem-syria.png?v=2"
   },
   {
     "id": "lb-radio-liban",
@@ -108,13 +108,13 @@
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/jo-radio-dahab.png"
   },
   {
-    "id": "jo-radio-hala",
-    "name": "Radio Hala",
+    "id": "lb-voice-of-lebanon",
+    "name": "Voice of Lebanon",
     "language": "Arabic",
-    "country_code": "JO",
-    "genre": "News & Talk",
-    "stream": "https://hala-alrayamedia.radioca.st/;",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/jo-radio-hala.png"
+    "country_code": "LB",
+    "genre": "News & Culture",
+    "stream": "https://l3.itworkscdn.net/itwaudio/9054/stream",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-voice-of-lebanon.png?v=2"
   },
   {
     "id": "sa-al-arabiya-fm",

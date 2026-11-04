@@ -630,14 +630,14 @@
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tw-icrt.png?v=2"
   },
   {
-    "id": "th-bangkok-community-radio",
-    "name": "Bangkok Community Radio",
+    "id": "th-chula-radio-plus",
+    "name": "Chula Radio Plus",
     "country": "Thailand",
     "country_code": "TH",
     "region": "Asia & Middle East",
-    "genre": "Electronic & Discovery",
-    "stream": "https://bcr.radiocult.fm/stream",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/th-bangkok-community-radio.png?v=2"
+    "genre": "University & Culture",
+    "stream": "https://media.curadio.chula.ac.th/live/liveradio128/playlist.m3u8",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/th-chula-radio-plus.png?v=2"
   },
   {
     "id": "tr-radyo-eksen",

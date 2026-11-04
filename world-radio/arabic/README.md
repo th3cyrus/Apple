@@ -15,8 +15,8 @@ Station country codes identify broadcaster listings; they do not restrict langua
 | Sumer FM | IQ | Music & Culture |
 | Shafaq Radio | IQ | News & Talk |
 | Radio Shanasheel | IQ | Iraqi Music |
-| Sham FM | SY | Music & News |
-| Syria TV Radio | SY | News & Talk |
+| Asima Online Radio | SY | Culture & Contemporary |
+| Radio Nasaem Syria | SY | Music & Community |
 | Radio Liban | LB | Culture & Talk |
 | Beirut Nights | LB | Arabic Music |
 | Aghani Aghani | LB | Arabic Pop |
@@ -24,7 +24,7 @@ Station country codes identify broadcaster listings; they do not restrict langua
 | Radio Hits Cairo | EG | Arabic Hits |
 | Mazaj FM | JO | Pop & Culture |
 | Radio Dahab | JO | Arabic Music |
-| Radio Hala | JO | News & Talk |
+| Voice of Lebanon | LB | News & Culture |
 | Al Arabiya FM | SA | News & Talk |
 
 Catalog: [stations.json](stations.json) · Playlist: [radio.m3u](radio.m3u). Current decoded-audio audit results are maintained in GitHub Actions.

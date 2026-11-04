@@ -5,10 +5,10 @@ https://l3.itworkscdn.net/itwaudio/9012/stream
 https://radio.shafaq.com/radio
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/iq-radio-shanasheel.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/iq-radio-shanasheel.png" group-title="Arabic Radio",Radio Shanasheel (IQ)
 https://stream-152.zeno.fm/a33ka0d94p8uv
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-sham-fm.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-sham-fm.png" group-title="Arabic Radio",Sham FM (SY)
-https://radioshamfm.grtvstream.com:8400/;
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-syria-tv-radio.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-syria-tv-radio.png" group-title="Arabic Radio",Syria TV Radio (SY)
-https://stream2.syria.fm/syriatv1live/syriatv_audio/icecast.audio
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-asima-online-radio.png?v=2" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-asima-online-radio.png?v=2" group-title="Arabic Radio",Asima Online Radio (SY)
+https://asima.out.airtime.pro/asima_a
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-radio-nasaem-syria.png?v=2" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-radio-nasaem-syria.png?v=2" group-title="Arabic Radio",Radio Nasaem Syria (SY)
+https://stream.zeno.fm/u1wbm3k7gxquv
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-radio-liban.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-radio-liban.png" group-title="Arabic Radio",Radio Liban (LB)
 https://media2.streambrothers.com:2020/stream/8194
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-beirut-nights.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-beirut-nights.png" group-title="Arabic Radio",Beirut Nights (LB)
@@ -23,7 +23,7 @@ https://radiohits882.radioca.st/;
 https://mazajfm.ice.infomaniak.ch/mazajfm-192.mp3
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/jo-radio-dahab.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/jo-radio-dahab.png" group-title="Arabic Radio",Radio Dahab (JO)
 https://dahab.ice.infomaniak.ch/dahab-192.mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/jo-radio-hala.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/jo-radio-hala.png" group-title="Arabic Radio",Radio Hala (JO)
-https://hala-alrayamedia.radioca.st/;
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-voice-of-lebanon.png?v=2" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-voice-of-lebanon.png?v=2" group-title="Arabic Radio",Voice of Lebanon (LB)
+https://l3.itworkscdn.net/itwaudio/9054/stream
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sa-al-arabiya-fm.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sa-al-arabiya-fm.png" group-title="Arabic Radio",Al Arabiya FM (SA)
 https://fm.alarabiya.net/fm/myStream/playlist.m3u8

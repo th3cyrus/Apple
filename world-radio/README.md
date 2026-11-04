@@ -128,7 +128,7 @@ Language-based subscriptions are separate from the 72-station international sele
 | Easy Rock Manila | Philippines | Easy Listening |
 | CNA938 | Singapore | News & Talk |
 | ICRT | Taiwan | English Pop & Talk |
-| Bangkok Community Radio | Thailand | Electronic & Discovery |
+| Chula Radio Plus | Thailand | University & Culture |
 | Radyo Eksen | Türkiye | Rock & Alternative |
 | TRT FM | Türkiye | Pop & Culture |
 | Dubai Eye 103.8 | United Arab Emirates | News, Talk & Sports |

@@ -125,8 +125,8 @@ https://azura.easyrock.com.ph/listen/easy_rock_manila/radio.mp3
 https://playerservices.streamtheworld.com/api/livestream-redirect/938NOW_PREM.aac
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="TW" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tw-icrt.png?v=2" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tw-icrt.png?v=2",ICRT (TW)
 https://n27a-eu.rcs.revma.com/nkdfurztxp3vv
-#EXTINF:-1 group-title="Asia & Middle East" tvg-country="TH" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/th-bangkok-community-radio.png?v=2" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/th-bangkok-community-radio.png?v=2",Bangkok Community Radio (TH)
-https://bcr.radiocult.fm/stream
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="TH" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/th-chula-radio-plus.png?v=2" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/th-chula-radio-plus.png?v=2",Chula Radio Plus (TH)
+https://media.curadio.chula.ac.th/live/liveradio128/playlist.m3u8
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="TR" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tr-radyo-eksen.png?v=2" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tr-radyo-eksen.png?v=2",Radyo Eksen (TR)
 https://dygedge.radyotvonline.net/radyoeksen/playlist.m3u8
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="TR" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tr-trt-fm.png?v=2" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tr-trt-fm.png?v=2",TRT FM (TR)
