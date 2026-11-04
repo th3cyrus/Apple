@@ -1,6 +1,6 @@
 # Persian Radio
 
-An independent, language-based selection of **10 nonreligious radio stations** from multiple countries and streaming platforms.
+An independent, language-based selection of **11 nonreligious radio stations** from multiple countries and streaming platforms.
 
 **Primuse subscription:**
 
@@ -14,6 +14,7 @@ Station country codes identify broadcaster listings; they do not restrict langua
 | --- | --- | --- |
 | Iran International | IR | News & Talk |
 | Radio Farda | IR | News & Culture |
+| Voice of America Persian | US | News & Talk |
 | Radio Simorgh | IR | Persian Music |
 | Radio Faaz | IR | Persian Music & Culture |
 | Radio Yar | IR | Persian Music |

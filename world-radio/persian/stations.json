@@ -18,6 +18,15 @@
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-farda.png"
   },
   {
+    "id": "us-voa-persian",
+    "name": "Voice of America Persian",
+    "language": "Persian",
+    "country_code": "US",
+    "genre": "News & Talk",
+    "stream": "https://voa-ingest.akamaized.net/hls/live/2035210/152_135L/playlist.m3u8",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-voa-persian.png"
+  },
+  {
     "id": "ir-radio-simorgh",
     "name": "Radio Simorgh",
     "language": "Persian",

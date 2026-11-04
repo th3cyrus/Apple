@@ -3,6 +3,8 @@
 https://stream.radiojar.com/iintl_c
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-farda.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-farda.png" group-title="Persian Radio",Radio Farda (IR)
 https://stream.radiojar.com/cp13r2cpn3quv
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-voa-persian.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-voa-persian.png" group-title="Persian Radio",Voice of America Persian (US)
+https://voa-ingest.akamaized.net/hls/live/2035210/152_135L/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-simorgh.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-simorgh.png" group-title="Persian Radio",Radio Simorgh (IR)
 https://stream.zeno.fm/9svfnobkrxrvv
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-faaz.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-faaz.png" group-title="Persian Radio",Radio Faaz (IR)
