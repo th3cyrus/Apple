@@ -1,0 +1,72 @@
+name: Language Radio Integrity and Audio Audit
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'world-radio/*/stations.json'
+      - 'world-radio/*/radio.m3u'
+      - 'world-radio/languages.json'
+      - 'scripts/check_language_radio.py'
+      - 'scripts/content_filters.py'
+      - 'tests/test_language_radio.py'
+      - '.github/workflows/language-radio.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'world-radio/*/stations.json'
+      - 'world-radio/*/radio.m3u'
+      - 'world-radio/languages.json'
+      - 'scripts/check_language_radio.py'
+      - '.github/workflows/language-radio.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '15 6 * * 5'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: language-radio-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validation-and-audio:
+    runs-on: ubuntu-26.04
+    timeout-minutes: 24
+    steps:
+      - name: Checkout
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12.16'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --only-binary=:all: -r requirements.txt
+
+      - name: Ensure FFmpeg
+        run: |
+          if ! command -v ffprobe >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+
+      - name: Offline regression tests
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/check_language_radio.py
+
+      - name: Audit every language station's decoded audio
+        run: python scripts/check_language_radio.py --audit --require-healthy --workers 12
+
+      - name: Upload detailed audio results
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: language-radio-audit-${{ github.run_id }}-${{ github.run_attempt }}
+          path: logs/language-radio-audit.json
+          if-no-files-found: warn
+          retention-days: 30
