@@ -1,0 +1,47 @@
+[
+  {
+    "id": "fr-fip",
+    "name": "FIP",
+    "language": "French",
+    "country_code": "FR",
+    "genre": "Eclectic & Jazz",
+    "stream": "https://icecast.radiofrance.fr/fip-midfi.mp3?id=radiofrance",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-fip.png"
+  },
+  {
+    "id": "fr-fip-jazz",
+    "name": "FIP Jazz",
+    "language": "French",
+    "country_code": "FR",
+    "genre": "Jazz",
+    "stream": "https://stream.radiofrance.fr/fipjazz/fipjazz_hifi.m3u8",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-fip-jazz.png"
+  },
+  {
+    "id": "fr-france-inter",
+    "name": "France Inter",
+    "language": "French",
+    "country_code": "FR",
+    "genre": "News & Culture",
+    "stream": "https://stream.radiofrance.fr/franceinter/franceinter_hifi.m3u8?id=radiofrance",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-france-inter.png"
+  },
+  {
+    "id": "be-rtbf-classic-21",
+    "name": "RTBF Classic 21",
+    "language": "French",
+    "country_code": "BE",
+    "genre": "Classic Rock",
+    "stream": "https://radios.rtbf.be/classic21-128.mp3",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/be-rtbf-classic-21.png"
+  },
+  {
+    "id": "be-rtbf-musiq3",
+    "name": "RTBF Musiq3",
+    "language": "French",
+    "country_code": "BE",
+    "genre": "Classical & Culture",
+    "stream": "https://radios.rtbf.be/musiq3-128.aac",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/be-rtbf-musiq3.png"
+  }
+]

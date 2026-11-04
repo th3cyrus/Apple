@@ -1,0 +1,56 @@
+[
+  {
+    "id": "kurdish",
+    "name": "Kurdish",
+    "count": 7,
+    "playlist": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/radio.m3u"
+  },
+  {
+    "id": "persian",
+    "name": "Persian",
+    "count": 9,
+    "playlist": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/radio.m3u"
+  },
+  {
+    "id": "arabic",
+    "name": "Arabic",
+    "count": 14,
+    "playlist": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/radio.m3u"
+  },
+  {
+    "id": "turkish",
+    "name": "Turkish",
+    "count": 14,
+    "playlist": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/radio.m3u"
+  },
+  {
+    "id": "russian",
+    "name": "Russian",
+    "count": 13,
+    "playlist": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/radio.m3u"
+  },
+  {
+    "id": "english",
+    "name": "English",
+    "count": 10,
+    "playlist": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/radio.m3u"
+  },
+  {
+    "id": "french",
+    "name": "French",
+    "count": 5,
+    "playlist": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/radio.m3u"
+  },
+  {
+    "id": "german",
+    "name": "German",
+    "count": 5,
+    "playlist": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/radio.m3u"
+  },
+  {
+    "id": "spanish",
+    "name": "Spanish",
+    "count": 6,
+    "playlist": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/radio.m3u"
+  }
+]

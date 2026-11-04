@@ -18,6 +18,22 @@ Audio streams are sampled with FFprobe/FFmpeg on playlist changes and during a w
 
 **All 72 stations have illustrated covers:** four shared U.S. stations reuse the main collection's existing optimized artwork; the other 68 have unique, reproducible 512×512 PNG tiles in [`logos/`](logos/) with the same frosted-glass design language. The covers display station names and country codes but do not impersonate official broadcaster logos. Missing covers are generated using [`scripts/generate_world_covers.py`](../scripts/generate_world_covers.py), and existing artwork is preserved. The repository links to broadcaster streams without rebroadcasting the audio.
 
+## Radio by language
+
+Language-based subscriptions are separate from the 72-station international selection. Each contains nonreligious broadcasters from relevant countries and services.
+
+| Language | Stations | Subscription |
+| --- | ---: | --- |
+| [Kurdish](kurdish/README.md) | 7 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/radio.m3u) |
+| [Persian](persian/README.md) | 9 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/radio.m3u) |
+| [Arabic](arabic/README.md) | 14 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/radio.m3u) |
+| [Turkish](turkish/README.md) | 14 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/radio.m3u) |
+| [Russian](russian/README.md) | 13 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/radio.m3u) |
+| [English](english/README.md) | 10 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/radio.m3u) |
+| [French](french/README.md) | 5 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/radio.m3u) |
+| [German](german/README.md) | 5 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/radio.m3u) |
+| [Spanish](spanish/README.md) | 6 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/radio.m3u) |
+
 ## Selected stations
 
 ### Europe (31)
@@ -112,7 +128,7 @@ Audio streams are sampled with FFprobe/FFmpeg on playlist changes and during a w
 | Easy Rock Manila | Philippines | Easy Listening |
 | CNA938 | Singapore | News & Talk |
 | ICRT | Taiwan | English Pop & Talk |
-| Bangkok Community Radio | Thailand | Electronic & Discovery |
+| Chula Radio Plus | Thailand | University & Culture |
 | Radyo Eksen | Türkiye | Rock & Alternative |
 | TRT FM | Türkiye | Pop & Culture |
 | Dubai Eye 103.8 | United Arab Emirates | News, Talk & Sports |

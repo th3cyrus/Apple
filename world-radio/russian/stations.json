@@ -1,0 +1,119 @@
+[
+  {
+    "id": "ru-russkoe-radio",
+    "name": "Russkoe Radio",
+    "language": "Russian",
+    "country_code": "RU",
+    "genre": "Russian Pop",
+    "stream": "https://rusradio.hostingradio.ru/rusradio128.mp3",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/logos/ru-russkoe-radio.png"
+  },
+  {
+    "id": "ru-russian-rock",
+    "name": "Russian Rock",
+    "language": "Russian",
+    "country_code": "RU",
+    "genre": "Rock & Alternative",
+    "stream": "https://rr-russkijrok.hostingradio.ru/russkijrok96.aacp",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/logos/ru-russian-rock.png"
+  },
+  {
+    "id": "ru-radio-record-russian-mix",
+    "name": "Radio Record Russian Mix",
+    "language": "Russian",
+    "country_code": "RU",
+    "genre": "Electronic & Dance",
+    "stream": "https://radiorecord.hostingradio.ru/rus96.aacp",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/logos/ru-radio-record-russian-mix.png"
+  },
+  {
+    "id": "ru-radio-record-russian-gold",
+    "name": "Radio Record Russian Gold",
+    "language": "Russian",
+    "country_code": "RU",
+    "genre": "Russian Classics",
+    "stream": "https://radiorecord.hostingradio.ru/russiangold96.aacp",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/logos/ru-radio-record-russian-gold.png"
+  },
+  {
+    "id": "ru-dfm-russian-dance",
+    "name": "DFM Russian Dance",
+    "language": "Russian",
+    "country_code": "RU",
+    "genre": "Dance & Pop",
+    "stream": "https://dfm-dfmrusdance.hostingradio.ru/dfmrusdance96.aacp",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/logos/ru-dfm-russian-dance.png"
+  },
+  {
+    "id": "ru-radio-maximum",
+    "name": "Radio Maximum",
+    "language": "Russian",
+    "country_code": "RU",
+    "genre": "Rock & Alternative",
+    "stream": "https://maximum.hostingradio.ru/maximum128.mp3",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/logos/ru-radio-maximum.png"
+  },
+  {
+    "id": "ru-business-fm-russia",
+    "name": "Business FM Russia",
+    "language": "Russian",
+    "country_code": "RU",
+    "genre": "News & Business",
+    "stream": "https://bfm.hostingradio.ru:9075/fm",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/logos/ru-business-fm-russia.png"
+  },
+  {
+    "id": "ru-radio-mayak",
+    "name": "Radio Mayak",
+    "language": "Russian",
+    "country_code": "RU",
+    "genre": "Culture & Talk",
+    "stream": "https://icecast-vgtrk.cdnvideo.ru/mayakfm",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/logos/ru-radio-mayak.png"
+  },
+  {
+    "id": "ru-radio-monte-carlo-russia",
+    "name": "Radio Monte Carlo Russia",
+    "language": "Russian",
+    "country_code": "RU",
+    "genre": "Contemporary Hits",
+    "stream": "https://montecarlo.hostingradio.ru/montecarlo128.mp3",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/logos/ru-radio-monte-carlo-russia.png"
+  },
+  {
+    "id": "ru-marusya-fm",
+    "name": "Marusya FM",
+    "language": "Russian",
+    "country_code": "RU",
+    "genre": "Russian Pop",
+    "stream": "https://listen.vdfm.ru:8000/marusya",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/logos/ru-marusya-fm.png"
+  },
+  {
+    "id": "by-novoe-radio-belarus",
+    "name": "Novoe Radio Belarus",
+    "language": "Russian",
+    "country_code": "BY",
+    "genre": "Contemporary Hits",
+    "stream": "https://live.novoeradio.by:444/live/novoeradio_aac128/icecast.audio",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/logos/by-novoe-radio-belarus.png"
+  },
+  {
+    "id": "by-russkoe-radio-minsk",
+    "name": "Russkoe Radio Minsk",
+    "language": "Russian",
+    "country_code": "BY",
+    "genre": "Russian Pop",
+    "stream": "https://stream.rusradio.by:8443/live128",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/logos/by-russkoe-radio-minsk.png"
+  },
+  {
+    "id": "kz-russian-dance-radio-kazakhstan",
+    "name": "Russian Dance Radio Kazakhstan",
+    "language": "Russian",
+    "country_code": "KZ",
+    "genre": "Russian Dance",
+    "stream": "https://lux-radio.com:8015/stream",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/logos/kz-russian-dance-radio-kazakhstan.png"
+  }
+]

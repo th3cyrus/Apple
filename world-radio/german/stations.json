@@ -1,0 +1,47 @@
+[
+  {
+    "id": "de-bytefm",
+    "name": "ByteFM",
+    "language": "German",
+    "country_code": "DE",
+    "genre": "Music Discovery",
+    "stream": "https://bytefm.cast.addradio.de/bytefm/main/high/stream",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-bytefm.png"
+  },
+  {
+    "id": "de-deutschlandfunk",
+    "name": "Deutschlandfunk",
+    "language": "German",
+    "country_code": "DE",
+    "genre": "News & Culture",
+    "stream": "https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-deutschlandfunk.png"
+  },
+  {
+    "id": "de-deutschlandfunk-kultur",
+    "name": "Deutschlandfunk Kultur",
+    "language": "German",
+    "country_code": "DE",
+    "genre": "Culture & Talk",
+    "stream": "https://st02.sslstream.dlf.de/dlf/02/128/mp3/stream.mp3",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-deutschlandfunk-kultur.png"
+  },
+  {
+    "id": "de-jazzradio-berlin",
+    "name": "JazzRadio Berlin",
+    "language": "German",
+    "country_code": "DE",
+    "genre": "Jazz",
+    "stream": "https://streaming.radio.co/s774887f7b/listen",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-jazzradio-berlin.png"
+  },
+  {
+    "id": "at-fm4",
+    "name": "FM4",
+    "language": "German",
+    "country_code": "AT",
+    "genre": "Alternative & Electronic",
+    "stream": "https://orf-live.ors-shoutcast.at/fm4-q2a",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/at-fm4.png"
+  }
+]

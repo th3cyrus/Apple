@@ -2,13 +2,14 @@
 
 **Curated radio from the United States and around the world — ready to subscribe in [Primuse](https://github.com/chenqi92/primuse).**
 
-Choose from **three separate M3U collections**: a carefully maintained U.S. selection with matching artwork, a large searchable-by-list U.S. directory, and an editorially selected international playlist. Subscribe to each collection independently; updating one does not import the others.
+Choose from **three principal M3U collections plus language-based subscriptions**: a carefully maintained U.S. selection with matching artwork, a large searchable-by-list U.S. directory, and an editorially selected international playlist. Subscribe to each collection independently; updating one does not import the others.
 
 | Collection | Stations / Streams | What makes it different | Subscription |
 | --- | ---: | --- | --- |
 | **[U.S. Curated Radio](stations.json)** | **36 stations** | Handpicked broadcasters, matching custom covers, and decoded-audio health checks | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u)** |
 | **[U.S. Radio Directory](us-directory/README.md)** | **[Live station count](us-directory/index.json)** | Broad American coverage via Radio Browser, split into **12 M3U playlists** to respect Primuse's per-subscription limit | **[Choose playlists](us-directory/README.md)** |
 | **[World Radio Select](world-radio/README.md)** | **72 stations · 44 countries/regions** | International music, news and culture; matching station covers and automated audio checks | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u)** |
+| **[World Languages](world-radio/README.md#radio-by-language)** | **9 independent lists** | Kurdish, Persian, Arabic, Turkish, Russian, English, French, German and Spanish broadcasts | **[Choose language](world-radio/README.md#radio-by-language)** |
 
 **How to add a collection:** In Primuse, go to **Radio → + → Add Subscription → Fetch → Subscribe**. Choose **Update Now** to see changes made to an existing subscription.
 
@@ -70,6 +71,10 @@ Import [World Radio Select](world-radio/README.md) as a **separate subscription*
 ```text
 https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u
 ```
+
+### Option D — Radio by language
+
+Browse the [language collections](world-radio/README.md#radio-by-language) for independent M3U subscriptions in Kurdish, Persian, Arabic, Turkish, Russian, English, French, German and Spanish. Each list is organized by broadcast language, not by the country of transmission; explicitly religious programming is excluded.
 
 ## Features
 

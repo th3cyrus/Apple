@@ -9,6 +9,10 @@ on:
     paths:
       - 'world-radio/stations.json'
       - 'world-radio/radio.m3u'
+      - 'world-radio/*/stations.json'
+      - 'world-radio/*/radio.m3u'
+      - 'world-radio/languages.json'
+      - 'scripts/radio_artwork.py'
       - 'scripts/generate_world_covers.py'
       - '.github/workflows/world-artwork.yml'
   workflow_dispatch:
@@ -42,7 +46,7 @@ jobs:
           python -m pip install --only-binary=:all: -r requirements.txt
 
       - name: Render and validate station cover artwork
-        run: python scripts/generate_world_covers.py
+        run: python scripts/generate_world_covers.py --restyle
 
       - name: Publish missing station artwork
         env:
@@ -51,7 +55,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add world-radio/logos/ us-directory/directory-cover.png
+          git add world-radio/logos/ world-radio/*/logos/ us-directory/directory-cover.png
           if git diff --cached --quiet; then
             exit 0
           fi

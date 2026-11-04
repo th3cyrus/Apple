@@ -1,0 +1,29 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-trt-fm.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-trt-fm.png" group-title="Turkish Radio",TRT FM (TR)
+https://trt.radyotvonline.net/trtfm
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-trt-turku.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-trt-turku.png" group-title="Turkish Radio",TRT Türkü (TR)
+https://rd-trtturku.medya.trt.com.tr/master_128.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-powerturk.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-powerturk.png" group-title="Turkish Radio",PowerTürk (TR)
+https://live.powerapp.com.tr/powerturk/abr/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-fenomen-turk.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-fenomen-turk.png" group-title="Turkish Radio",Fenomen Türk (TR)
+https://live.radyofenomen.com/fenomenturk/256/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-slow-turk.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-slow-turk.png" group-title="Turkish Radio",Slow Türk (TR)
+https://radyo.duhnet.tv/ak_dtvh_slowturk
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-kafa-radyo.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-kafa-radyo.png" group-title="Turkish Radio",Kafa Radyo (TR)
+https://moondigitalmaster.radyotvonline.net/kafaradyo/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-radyo-fenomen.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-radyo-fenomen.png" group-title="Turkish Radio",Radyo Fenomen (TR)
+https://live.radyofenomen.com/fenomen/128/icecast.audio
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-haberturk-radyo.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-haberturk-radyo.png" group-title="Turkish Radio",Habertürk Radyo (TR)
+https://haberturkradyo.radyotvonline.net/haberturkradyo
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-radyo-alaturka.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-radyo-alaturka.png" group-title="Turkish Radio",Radyo Alaturka (TR)
+https://yayin.jumboserver.net:9100/stream
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-alem-fm.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-alem-fm.png" group-title="Turkish Radio",Alem FM (TR)
+https://turkmedya.radyotvonline.net/alemfmaac
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-radyo-seymen.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-radyo-seymen.png" group-title="Turkish Radio",Radyo Seymen (TR)
+https://yayin.radyoseymen.com.tr:1070/stream
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-metro-fm-turkiye.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-metro-fm-turkiye.png" group-title="Turkish Radio",Metro FM Türkiye (TR)
+https://playerservices.streamtheworld.com/api/livestream-redirect/METRO_FM_SC
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/iq-turkmen-fm.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/iq-turkmen-fm.png" group-title="Turkish Radio",Turkmen FM (IQ)
+https://radyo1.radyo-dinle.tc/8284/stream;
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/ae-turkish-love-radio.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/ae-turkish-love-radio.png" group-title="Turkish Radio",Turkish Love Radio (AE)
+https://drive.uber.radio/uber/lrturkish/icecast.audio

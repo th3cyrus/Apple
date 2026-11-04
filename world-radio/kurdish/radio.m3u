@@ -1,0 +1,15 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/iq-kurdistan-24-radio.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/iq-kurdistan-24-radio.png" group-title="Kurdish Radio",Kurdistan 24 Radio (IQ)
+https://audio-edge-3mayu.fra.h.radiomast.io/04b1ce4c-24f2-4172-b756-065832ef78bf
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/iq-radio-duhok-fm.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/iq-radio-duhok-fm.png" group-title="Kurdish Radio",Radio Duhok FM (IQ)
+https://stream-149.zeno.fm/unwq3jdyhmbuv
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/tr-trt-radyo-kurdi.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/tr-trt-radyo-kurdi.png" group-title="Kurdish Radio",TRT Radyo Kurdî (TR)
+https://radio-trtradyo6.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/tr-kurd1-fm.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/tr-kurd1-fm.png" group-title="Kurdish Radio",Kurd1 FM (TR)
+https://listen.radioking.com/radio/119251/stream/158701
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/tr-axa-rojava.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/tr-axa-rojava.png" group-title="Kurdish Radio",Axa Rojava (TR)
+https://stream.zeno.fm/h6mn2c8ha8zuv
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/sy-denge-qamishlo.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/sy-denge-qamishlo.png" group-title="Kurdish Radio",Denge Qamishlo (SY)
+https://dengeqamishlo.stream.laut.fm/dengeqamishlo
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/sy-denge-cudi.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/sy-denge-cudi.png" group-title="Kurdish Radio",Denge Cudi (SY)
+https://denge-cudi.stream.laut.fm/denge-cudi?pl=m3u

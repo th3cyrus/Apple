@@ -1,0 +1,83 @@
+[
+  {
+    "id": "ir-iran-international",
+    "name": "Iran International",
+    "language": "Persian",
+    "country_code": "IR",
+    "genre": "News & Talk",
+    "stream": "https://stream.radiojar.com/iintl_c",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-iran-international.png"
+  },
+  {
+    "id": "ir-radio-farda",
+    "name": "Radio Farda",
+    "language": "Persian",
+    "country_code": "IR",
+    "genre": "News & Culture",
+    "stream": "https://stream.radiojar.com/cp13r2cpn3quv",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-farda.png"
+  },
+  {
+    "id": "ir-radio-simorgh",
+    "name": "Radio Simorgh",
+    "language": "Persian",
+    "country_code": "IR",
+    "genre": "Persian Music",
+    "stream": "https://stream.zeno.fm/9svfnobkrxrvv",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-simorgh.png"
+  },
+  {
+    "id": "ir-radio-faaz",
+    "name": "Radio Faaz",
+    "language": "Persian",
+    "country_code": "IR",
+    "genre": "Persian Music & Culture",
+    "stream": "https://free.rcast.net/230792",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-faaz.png"
+  },
+  {
+    "id": "ir-radio-yar",
+    "name": "Radio Yar",
+    "language": "Persian",
+    "country_code": "IR",
+    "genre": "Persian Music",
+    "stream": "https://shoutcast.glwiz.com/RadioYAR.mp3",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-yar.png"
+  },
+  {
+    "id": "ir-radio-gachsaran",
+    "name": "Radio Gachsaran",
+    "language": "Persian",
+    "country_code": "IR",
+    "genre": "Local & Music",
+    "stream": "https://radio.gachsaran.org/gach",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-gachsaran.png"
+  },
+  {
+    "id": "ir-radio-zza",
+    "name": "Radio ZZA",
+    "language": "Persian",
+    "country_code": "IR",
+    "genre": "Independent Talk",
+    "stream": "https://listen.radioking.com/radio/526993/stream/585379",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-zza.png"
+  },
+  {
+    "id": "af-radio-srood",
+    "name": "Radio Srood",
+    "language": "Persian",
+    "country_code": "AF",
+    "genre": "Dari Music",
+    "stream": "https://stream.radiosrood.com/",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/af-radio-srood.png"
+  },
+  {
+    "id": "lb-anghamy-persian",
+    "name": "Anghamy Persian",
+    "language": "Persian",
+    "country_code": "LB",
+    "genre": "Persian Music",
+    "stream": "https://radio.avazfarsi.com:8010/radio.mp3",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/lb-anghamy-persian.png"
+  }
+]
