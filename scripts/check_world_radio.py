@@ -20,7 +20,7 @@ import requests
 ROOT = Path(__file__).resolve().parents[1]
 WORLD = ROOT / "world-radio"
 sys.path.insert(0, str(ROOT / "scripts"))
-from safety import valid_url, unsupported_stream_suffix
+from safety import valid_url, unsupported_stream_suffix, safe_message
 from stream_probe import stream_check
 
 REGIONS = {"Europe", "North America", "Caribbean", "South America",
@@ -86,7 +86,7 @@ def probe_one(station):
             result = stream_check(session, station["stream"])
     except Exception as exc:
         result = {"ok": False, "error_type": type(exc).__name__,
-                  "error": str(exc)[:150]}
+                  "error": safe_message(exc)[:150]}
     return {
         "id": station["id"], "name": station["name"],
         "country_code": station["country_code"],
@@ -131,9 +131,19 @@ def audit(catalog, output, workers=12):
     return document
 
 
+def require_audible(document):
+    """Raise only after the audit report is persisted for troubleshooting."""
+    if document['needs_review']:
+        failed = [entry['id'] for entry in document['stations'] if not entry['ok']]
+        raise ValueError(f'World radio audio degraded: {len(failed)} failed: '
+                         + ', '.join(failed[:12]))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--audit", action="store_true")
+    parser.add_argument("--require-healthy", action="store_true",
+                        help="Fail the workflow after persisting all stream diagnostics")
     parser.add_argument("--output", type=Path, default=ROOT / "logs" / "world-radio-audit.json")
     parser.add_argument("--workers", type=int, default=12)
     args = parser.parse_args()
@@ -141,8 +151,12 @@ def main():
         parser.error("--workers must be between 1 and 16")
     stations = load_and_validate()
     print("Validated World Radio Select", len(stations), "stations")
+    if args.require_healthy and not args.audit:
+        parser.error('--require-healthy requires --audit')
     if args.audit:
-        audit(stations, args.output, args.workers)
+        result = audit(stations, args.output, args.workers)
+        if args.require_healthy:
+            require_audible(result)
 
 
 if __name__ == "__main__":

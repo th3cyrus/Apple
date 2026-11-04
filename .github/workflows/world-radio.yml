@@ -55,8 +55,8 @@ jobs:
           python -m unittest discover -s tests -v
           python scripts/check_world_radio.py
 
-      - name: Audit decoded live audio
-        run: python scripts/check_world_radio.py --audit --output logs/world-radio-audit.json --workers 12
+      - name: Audit decoded live audio (fail on unhealthy station)
+        run: python scripts/check_world_radio.py --audit --require-healthy --output logs/world-radio-audit.json --workers 12
 
       - name: Upload world audit report
         if: always()
