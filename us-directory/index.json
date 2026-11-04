@@ -2,56 +2,58 @@
   "source": "Radio Browser: countrycode=US, lastcheckok=1",
   "scope": "Directory candidates, not individual audio playback verified",
   "transport": "HTTPS only",
-  "station_count": 4534,
+  "station_count": 4452,
+  "health_policy": "checked within 30 days, no reported SSL error; unsigned HTTPS",
+  "generated_at_utc": "2026-11-04T01:11:40+00:00",
   "shard_count": 12,
   "shards": [
     {
       "file": "us-01.m3u",
-      "stations": 375
+      "stations": 366
     },
     {
       "file": "us-02.m3u",
-      "stations": 374
+      "stations": 365
     },
     {
       "file": "us-03.m3u",
-      "stations": 391
+      "stations": 384
     },
     {
       "file": "us-04.m3u",
-      "stations": 364
+      "stations": 356
     },
     {
       "file": "us-05.m3u",
-      "stations": 394
+      "stations": 387
     },
     {
       "file": "us-06.m3u",
-      "stations": 389
+      "stations": 385
     },
     {
       "file": "us-07.m3u",
-      "stations": 375
+      "stations": 369
     },
     {
       "file": "us-08.m3u",
-      "stations": 364
+      "stations": 355
     },
     {
       "file": "us-09.m3u",
-      "stations": 357
+      "stations": 352
     },
     {
       "file": "us-10.m3u",
-      "stations": 375
+      "stations": 368
     },
     {
       "file": "us-11.m3u",
-      "stations": 374
+      "stations": 368
     },
     {
       "file": "us-12.m3u",
-      "stations": 402
+      "stations": 397
     }
   ]
 }
