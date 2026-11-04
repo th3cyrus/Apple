@@ -6,6 +6,11 @@ on:
     paths:
       - 'scripts/build_us_directory.py'
       - '.github/workflows/us-directory.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/build_us_directory.py'
+      - '.github/workflows/us-directory.yml'
   workflow_dispatch:
   schedule:
     - cron: '31 4 * * 1'
@@ -20,7 +25,7 @@ concurrency:
 
 jobs:
   build:
-    if: github.ref == 'refs/heads/main'
+    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
     runs-on: ubuntu-26.04
     timeout-minutes: 15
     permissions:
@@ -48,6 +53,7 @@ jobs:
         run: python scripts/build_us_directory.py
 
       - name: Publish directory if changed
+        if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
