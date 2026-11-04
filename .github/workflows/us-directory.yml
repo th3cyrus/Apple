@@ -5,11 +5,13 @@ on:
     branches: [main]
     paths:
       - 'scripts/build_us_directory.py'
+      - 'scripts/content_filters.py'
       - '.github/workflows/us-directory.yml'
   pull_request:
     branches: [main]
     paths:
       - 'scripts/build_us_directory.py'
+      - 'scripts/content_filters.py'
       - '.github/workflows/us-directory.yml'
   workflow_dispatch:
   schedule:

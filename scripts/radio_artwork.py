@@ -66,11 +66,12 @@ def fitted_title(draw, title):
 
 
 def fitted_subtitle(draw, subtitle):
-    subtitle = str(subtitle or "Live Radio").strip()
-    face = font(21, bold=False)
-    while subtitle and width(draw, subtitle, face) > 362:
-        subtitle = subtitle[:-1]
-    return (subtitle.rstrip() + "…") if len(subtitle) < len(str(subtitle or "")) else subtitle, face
+    original = str(subtitle or "Live Radio").strip()
+    face = font(20, bold=False)
+    value = original
+    while value and width(draw, value, face) > 355:
+        value = value[:-1]
+    return (value.rstrip() + "…" if value != original else value), face
 
 
 def cover(station):
@@ -125,10 +126,7 @@ def cover(station):
         draw.text((256, round(top + i * line_height)), line,
                   font=face, anchor="mm", fill=(255, 255, 255, 255))
 
-    subtitle = station.get("genre", "Live Radio")
-    subtitle_face = font(20, bold=False)
-    while subtitle and width(draw, subtitle, subtitle_face) > 355:
-        subtitle = subtitle[:-1]
+    subtitle, subtitle_face = fitted_subtitle(draw, station.get("genre", "Live Radio"))
     draw.text((256, 341), subtitle.rstrip(), anchor="mm",
               font=subtitle_face, fill=(224, 236, 255, 242))
     code = str(station.get("country_code", "")).upper() or "RADIO"

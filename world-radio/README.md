@@ -24,15 +24,15 @@ Language-based subscriptions are separate from the 72-station international sele
 
 | Language | Stations | Subscription |
 | --- | ---: | --- |
-| [Kurdish](kurdish/README.md) | 7 | [M3U](kurdish/radio.m3u) |
-| [Persian](persian/README.md) | 9 | [M3U](persian/radio.m3u) |
-| [Arabic](arabic/README.md) | 14 | [M3U](arabic/radio.m3u) |
-| [Turkish](turkish/README.md) | 14 | [M3U](turkish/radio.m3u) |
-| [Russian](russian/README.md) | 13 | [M3U](russian/radio.m3u) |
-| [English](english/README.md) | 10 | [M3U](english/radio.m3u) |
-| [French](french/README.md) | 5 | [M3U](french/radio.m3u) |
-| [German](german/README.md) | 5 | [M3U](german/radio.m3u) |
-| [Spanish](spanish/README.md) | 6 | [M3U](spanish/radio.m3u) |
+| [Kurdish](kurdish/README.md) | 7 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/radio.m3u) |
+| [Persian](persian/README.md) | 9 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/radio.m3u) |
+| [Arabic](arabic/README.md) | 14 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/radio.m3u) |
+| [Turkish](turkish/README.md) | 14 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/radio.m3u) |
+| [Russian](russian/README.md) | 13 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/radio.m3u) |
+| [English](english/README.md) | 10 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/radio.m3u) |
+| [French](french/README.md) | 5 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/radio.m3u) |
+| [German](german/README.md) | 5 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/radio.m3u) |
+| [Spanish](spanish/README.md) | 6 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/radio.m3u) |
 
 ## Selected stations
 

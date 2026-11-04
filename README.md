@@ -64,10 +64,6 @@ under different directory identities. The expanded lists use station favicons wh
 otherwise they use a project-owned fallback cover in the same visual style.
 These directory covers are not verified official broadcaster trademarks.
 
-### Option D — Radio by language
-
-Browse the [language collections](world-radio/README.md#radio-by-language) for separate M3U subscriptions in Kurdish, Persian, Arabic, Turkish, Russian, English, French, German and Spanish. These are selected by broadcast language and explicitly exclude religious programming.
-
 ### Option C — World Radio Select (72 stations)
 
 Import [World Radio Select](world-radio/README.md) as a **separate subscription**. Every station has a matching cover; current audio-check reports are available in [GitHub Actions](https://github.com/th3cyrus/Apple/actions/workflows/world-radio.yml).
@@ -75,6 +71,10 @@ Import [World Radio Select](world-radio/README.md) as a **separate subscription*
 ```text
 https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u
 ```
+
+### Option D — Radio by language
+
+Browse the [language collections](world-radio/README.md#radio-by-language) for independent M3U subscriptions in Kurdish, Persian, Arabic, Turkish, Russian, English, French, German and Spanish. Each list is organized by broadcast language, not by the country of transmission; explicitly religious programming is excluded.
 
 ## Features
 
