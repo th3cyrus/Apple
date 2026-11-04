@@ -8,7 +8,7 @@ Choose from **three separate M3U collections**: a carefully maintained U.S. sele
 | --- | ---: | --- | --- |
 | **[U.S. Curated Radio](stations.json)** | **36 stations** | Handpicked broadcasters, matching custom covers, and decoded-audio health checks | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u)** |
 | **[U.S. Radio Directory](us-directory/README.md)** | **[Live station count](us-directory/index.json)** | Broad American coverage via Radio Browser, split into **12 M3U playlists** to respect Primuse's per-subscription limit | **[Choose playlists](us-directory/README.md)** |
-| **[World Radio Select](world-radio/README.md)** | **72 stations · 44 countries/regions** | International music, news and cultural picks; each stream passed a decoded, non-silent audio sample test on **November 4, 2026** | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u)** |
+| **[World Radio Select](world-radio/README.md)** | **72 stations · 44 countries/regions** | International music, news and culture; matching station covers; 72/72 decoded-audio samples passed **November 4, 2026** | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u)** |
 
 **How to add a collection:** In Primuse, go to **Radio → + → Add Subscription → Fetch → Subscribe**. Choose **Update Now** to see changes made to an existing subscription.
 
@@ -63,7 +63,7 @@ station directory or broadcasters.
 
 ### Option C — World Radio Select (72 stations)
 
-Import the [worldwide editorial selection](world-radio/README.md) as a **separate subscription**. The sources are documented and directory-listed HTTPS streams, but international availability and audio playback are not yet independently guaranteed.
+Import the [worldwide editorial selection](world-radio/README.md) as a **separate subscription**. Every station now has a cover; the 72-stream sample audit passed on November 4, 2026. These results are server-side and do not guarantee playback or international accessibility inside Primuse.
 
 ```text
 https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u
@@ -256,7 +256,9 @@ If a station stops working:
 | --- | --- |
 | `stations.json` | Editable catalog of 36 radio stations |
 | `radio.m3u` | Main curated M3U subscription (36 stations) |
-| `world-radio/` | Standalone world playlist, editorial selection and station catalog |
+| `world-radio/` | Standalone world playlist, country catalog and station covers |
+| `scripts/generate_world_covers.py` | Reproducible project-style cover generation for world stations |
+| `.github/workflows/world-artwork.yml` | Automatically fill in missing world station cover PNGs |
 | `us-directory/us-01.m3u` … `us-12.m3u` | Twelve expanded U.S. directory subscriptions |
 | `us-directory/index.json` | Current directory totals and per-playlist counts |
 | `us-directory/README.md` | All expanded directory subscription URLs |

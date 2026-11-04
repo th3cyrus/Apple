@@ -8,7 +8,6 @@ import argparse
 import hashlib
 from pathlib import Path
 import json
-import math
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 

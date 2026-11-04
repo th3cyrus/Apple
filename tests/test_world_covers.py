@@ -18,11 +18,6 @@ class WorldCoverTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             location = Path(temp)
             self.assertEqual(covers.generate([first, second], location), 2)
-            covers.verify([first, second] + [
-                {"id": "test-" + str(i), "name": "Other",
-                 "country_code": "GB", "logo": covers.PREFIX + "test-" + str(i) + ".png"}
-                for i in range(60)
-            ], location) if False else None  # Verify the real full collection in CI.
             with Image.open(location / "logos" / "fr-fip.png") as a:
                 self.assertEqual(a.size, (512, 512))
                 self.assertEqual(a.format, "PNG")
