@@ -36,7 +36,7 @@ class DirectoryTests(unittest.TestCase):
         ])
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0]["group"], "Rock & Alternative")
-        self.assertEqual(results[0]["logo"], directory.FALLBACK_ARTWORK)
+        self.assertEqual(results[0]["logo"], directory.directory_genre_logo("Rock & Alternative"))
 
     def test_rejects_private_and_invalid_urls(self):
         for url in ("https://127.0.0.1/live", "https://10.0.0.1/stream",
