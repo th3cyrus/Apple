@@ -14,7 +14,7 @@ Open **Primuse → Radio → + → Add Subscription → Fetch → Subscribe**. A
 
 These are editorial selections, **not an objective world ranking**. We favor established national and independent stations, regional diversity, and HTTPS streaming paths without misleading `.mp3.m3u` extensions or short-lived tokens. Candidate URLs were cross-referenced with broadcasters and the [Radio Browser-derived country playlists](https://github.com/AlonDrilich/radio-playlists). Official source documentation is available for [NTS](https://ntslive.freshdesk.com/support/solutions/articles/77000587257-tunein), [FIP](https://www.radiofrance.fr/fip), and [Radio Swiss Jazz](https://www.radioswissjazz.ch/en/reception/internet).
 
-**Verification is pending:** these are documented or directory-listed streams, not 72 streams individually proven audible in Primuse. Playback can fail by region, outage, codec or client; tests from GitHub cannot verify availability from Iraq. The original 36-station U.S. checker does not automatically validate this separate collection. A separate audit is planned so individual stations can be reviewed without silently removing them on transient failures.
+**Verification is pending:** these are documented or directory-listed streams, not 72 streams individually proven audible in Primuse. Playback can fail by region, outage, codec or client; tests from GitHub cannot verify availability from Iraq. The original 36-station U.S. checker does not automatically validate this separate collection. The [World Radio Select Audit](https://github.com/th3cyrus/Apple/actions/workflows/world-radio.yml) now runs automatically on changes and weekly, using FFprobe/FFmpeg to check decoded non-silent audio. It publishes an audit report without removing stations on transient failures.
 
 The four shared U.S. stations reuse this project's original custom cover artwork; other stations have no custom matching artwork yet. Do not mistake these streams for rebroadcast audio hosted by this repository.
 
@@ -131,4 +131,5 @@ The four shared U.S. stations reuse this project's original custom cover artwork
 
 - [`radio.m3u`](radio.m3u): standalone Primuse-compatible M3U subscription.
 - [`stations.json`](stations.json): editable titles, streams, countries, regions and genres.
+- [World radio health checker](../scripts/check_world_radio.py): validates the independent playlist and can audit decoded audio.
 - [Main curated U.S. collection](../radio.m3u) and [expanded U.S. directory](../us-directory/README.md) remain independent.
