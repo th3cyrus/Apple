@@ -1,0 +1,145 @@
+#EXTM3U
+#EXTINF:-1 group-title="Europe" tvg-country="AT",FM4 (AT)
+https://orf-live.ors-shoutcast.at/fm4-q2a
+#EXTINF:-1 group-title="Europe" tvg-country="BE",RTBF Classic 21 (BE)
+https://radios.rtbf.be/classic21-128.mp3
+#EXTINF:-1 group-title="Europe" tvg-country="BE",RTBF Musiq3 (BE)
+https://radios.rtbf.be/musiq3-128.aac
+#EXTINF:-1 group-title="Europe" tvg-country="DK",NOVA FM Denmark (DK)
+https://live-bauerdk.sharp-stream.com/nova_dk_mp3
+#EXTINF:-1 group-title="Europe" tvg-country="FR",FIP (FR)
+https://icecast.radiofrance.fr/fip-midfi.mp3?id=radiofrance
+#EXTINF:-1 group-title="Europe" tvg-country="FR",FIP Jazz (FR)
+https://stream.radiofrance.fr/fipjazz/fipjazz_hifi.m3u8
+#EXTINF:-1 group-title="Europe" tvg-country="FR",France Inter (FR)
+https://stream.radiofrance.fr/franceinter/franceinter_hifi.m3u8?id=radiofrance
+#EXTINF:-1 group-title="Europe" tvg-country="DE",ByteFM (DE)
+https://bytefm.cast.addradio.de/bytefm/main/high/stream
+#EXTINF:-1 group-title="Europe" tvg-country="DE",Deutschlandfunk (DE)
+https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3
+#EXTINF:-1 group-title="Europe" tvg-country="DE",Deutschlandfunk Kultur (DE)
+https://st02.sslstream.dlf.de/dlf/02/128/mp3/stream.mp3
+#EXTINF:-1 group-title="Europe" tvg-country="DE",JazzRadio Berlin (DE)
+https://streaming.radio.co/s774887f7b/listen
+#EXTINF:-1 group-title="Europe" tvg-country="GR",Pepper 96.6 (GR)
+https://stream.radiojar.com/pepper
+#EXTINF:-1 group-title="Europe" tvg-country="IE",RTÉ Radio 1 (IE)
+https://liveaudio.rte.ie/hls-radio/radio1/chunklist.m3u8
+#EXTINF:-1 group-title="Europe" tvg-country="IT",Radio Capital (IT)
+https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiocapital/radiocapital/master_ma.m3u8
+#EXTINF:-1 group-title="Europe" tvg-country="IT",Radio Deejay (IT)
+https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiodeejay/radiodeejay/master_ma.m3u8
+#EXTINF:-1 group-title="Europe" tvg-country="NL",NPO 3FM (NL)
+https://icecast.omroep.nl/3fm-bb-mp3
+#EXTINF:-1 group-title="Europe" tvg-country="NL",NPO Radio 2 (NL)
+https://icecast.omroep.nl/radio2-bb-aac
+#EXTINF:-1 group-title="Europe" tvg-country="NL",Sublime (NL)
+https://playerservices.streamtheworld.com/api/livestream-redirect/SUBLIME.mp3
+#EXTINF:-1 group-title="Europe" tvg-country="NO",NRK Klassisk (NO)
+https://cdn0-47115-liveicecast0.dna.contentdelivery.net/klassisk_mp3_h
+#EXTINF:-1 group-title="Europe" tvg-country="NO",NRK P3 (NO)
+https://cdn0-47115-liveicecast0.dna.contentdelivery.net/p3_mp3_h
+#EXTINF:-1 group-title="Europe" tvg-country="PL",Radio Nowy Świat (PL)
+https://go-audio.toya.net.pl/63214
+#EXTINF:-1 group-title="Europe" tvg-country="PT",RTP Antena 3 (PT)
+https://radiocast.rtp.pt/antena380a.mp3
+#EXTINF:-1 group-title="Europe" tvg-country="PT",TSF Rádio Notícias (PT)
+https://directo.tsf.pt/tsfdirecto.mp3
+#EXTINF:-1 group-title="Europe" tvg-country="ES",LOS40 Classic (ES)
+https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CLASSIC.mp3
+#EXTINF:-1 group-title="Europe" tvg-country="ES",RNE Radio 3 (ES)
+https://rtvelivestream.rtve.es/rtvesec/rne/rne_r3_main.m3u8
+#EXTINF:-1 group-title="Europe" tvg-country="SE",Sveriges Radio P3 (SE)
+https://edge1.sr.se/p3-aac-320
+#EXTINF:-1 group-title="Europe" tvg-country="CH",Radio Swiss Jazz (CH)
+https://stream.srg-ssr.ch/srgssr/rsj/mp3/128
+#EXTINF:-1 group-title="Europe" tvg-country="GB",BBC Radio 6 Music (GB)
+https://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d128000.norewind.m3u8
+#EXTINF:-1 group-title="Europe" tvg-country="GB",BBC World Service (GB)
+https://stream.live.vc.bbcmedia.co.uk/bbc_world_service
+#EXTINF:-1 group-title="Europe" tvg-country="GB",NTS Radio 1 (GB)
+https://stream-relay-geo.ntslive.net/stream?client=direct
+#EXTINF:-1 group-title="Europe" tvg-country="GB",NTS Radio 2 (GB)
+https://stream-relay-geo.ntslive.net/stream2?client=direct
+#EXTINF:-1 group-title="North America" tvg-country="CA",CBC Music (CA)
+https://22983.live.streamtheworld.com/CBLFM_CBC_SC
+#EXTINF:-1 group-title="North America" tvg-country="CA",CKUA (CA)
+https://ais-sa1.streamon.fm/7000_48k.aac
+#EXTINF:-1 group-title="North America" tvg-country="MX",Horizonte 107.9 (MX)
+https://s2.mexside.net/8014/stream
+#EXTINF:-1 group-title="North America" tvg-country="US" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kcrw-89-9.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kcrw-89-9.png",KCRW (US)
+https://streams.kcrw.com/kcrw_mp3
+#EXTINF:-1 group-title="North America" tvg-country="US" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kexp-90-3.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kexp-90-3.png",KEXP (US)
+https://kexp.streamguys1.com/kexp160.aac
+#EXTINF:-1 group-title="North America" tvg-country="US",Radio Paradise Main Mix (US)
+https://stream.radioparadise.com/mp3-192
+#EXTINF:-1 group-title="North America" tvg-country="US",SomaFM Groove Salad (US)
+https://ice2.somafm.com/groovesalad-128-mp3
+#EXTINF:-1 group-title="North America" tvg-country="US" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wfmu-91-1.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wfmu-91-1.png",WFMU (US)
+https://stream0.wfmu.org/freeform-128k.mp3
+#EXTINF:-1 group-title="North America" tvg-country="US" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wwoz-90-7.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wwoz-90-7.png",WWOZ (US)
+https://wwoz-sc.streamguys1.com/wwoz-hi.mp3
+#EXTINF:-1 group-title="Caribbean" tvg-country="JM",Irie FM (JM)
+https://stream.iriefm.net:8008/stream
+#EXTINF:-1 group-title="South America" tvg-country="AR",Rock & Pop 95.9 (AR)
+https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOP.mp3
+#EXTINF:-1 group-title="South America" tvg-country="BR",CBN São Paulo (BR)
+https://playerservices.streamtheworld.com/api/livestream-redirect/CBN_SPAAC.aac
+#EXTINF:-1 group-title="South America" tvg-country="CL",Radio Cooperativa (CL)
+https://unlimited3-cl.dps.live/cooperativafm/mp3/icecast.audio
+#EXTINF:-1 group-title="South America" tvg-country="CO",Radio Nacional de Colombia (CO)
+https://streaming.rtvc.gov.co/Radio_Radionacional/Radionacional.stream/playlist.m3u8
+#EXTINF:-1 group-title="Africa" tvg-country="GH",Happy FM Ghana (GH)
+https://atunwadigital.streamguys1.com/happyfm989accra
+#EXTINF:-1 group-title="Africa" tvg-country="KE",Capital FM Kenya (KE)
+https://atunwadigital.streamguys1.com/capitalfm
+#EXTINF:-1 group-title="Africa" tvg-country="MA",Hit Radio Morocco (MA)
+https://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3
+#EXTINF:-1 group-title="Africa" tvg-country="NG",Cool FM Lagos (NG)
+https://coolfmlagos969-atunwadigital.streamguys1.com/coolfmlagos969
+#EXTINF:-1 group-title="Africa" tvg-country="NG",Nigeria Info Lagos (NG)
+https://nigeriainfofmlagos993-atunwadigital.streamguys1.com/nigeriainfofmlagos993
+#EXTINF:-1 group-title="Africa" tvg-country="ZA",5FM (ZA)
+https://playerservices.streamtheworld.com/api/livestream-redirect/5FMAAC.aac
+#EXTINF:-1 group-title="Africa" tvg-country="ZA",Kaya FM (ZA)
+https://edge.iono.fm/xice/82_medium.aac
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="HK",RTHK Radio 3 (HK)
+https://rthkradio3-live.akamaized.net/hls/live/2040079/radio3/master.m3u8
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="IN",Radio Mirchi Hindi (IN)
+https://eu8.fastcast4u.com/proxy/clyedupq/stream
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="ID",RRI Voice of Indonesia (ID)
+https://stream-node0.rri.co.id/streaming/25/9125/voi.mp3
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="IQ",Kurdistan 24 Radio (IQ)
+https://audio-edge-3mayu.fra.h.radiomast.io/04b1ce4c-24f2-4172-b756-065832ef78bf
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="JP",Gensokyo Radio (JP)
+https://stream.gensokyoradio.net/1
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="JP",NHK World Radio (JP)
+https://nhkworld-radio.nhkworld.jp/hls/live/nhkworld-radio-media2/index.m3u8
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="LB",Radio Liban (LB)
+https://media2.streambrothers.com:2020/stream/8194
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="PS",Radio alHara (PS)
+https://stream.radioalhara.net/ra
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="PH",Easy Rock Manila (PH)
+https://azura.easyrock.com.ph/listen/easy_rock_manila/radio.mp3
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="SG",CNA938 (SG)
+https://playerservices.streamtheworld.com/api/livestream-redirect/938NOW_PREM.aac
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="TW",ICRT (TW)
+https://n27a-eu.rcs.revma.com/nkdfurztxp3vv
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="TH",Bangkok Community Radio (TH)
+https://bcr.radiocult.fm/stream
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="TR",Radyo Eksen (TR)
+https://dygedge.radyotvonline.net/radyoeksen/playlist.m3u8
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="TR",TRT FM (TR)
+https://trt.radyotvonline.net/trtfm
+#EXTINF:-1 group-title="Asia & Middle East" tvg-country="AE",Sharjah Quran Radio (AE)
+https://l3.itworkscdn.net/smcquranlive/quranradiolive/icecast.audio
+#EXTINF:-1 group-title="Oceania" tvg-country="AU",4ZZZ (AU)
+https://iheart.4zzz.org.au/4zzz
+#EXTINF:-1 group-title="Oceania" tvg-country="AU",ABC Jazz (AU)
+https://mediaserviceslive.akamaized.net/hls/live/2038319/abcjazz/index.m3u8
+#EXTINF:-1 group-title="Oceania" tvg-country="AU",triple j (AU)
+https://mediaserviceslive.akamaized.net/hls/live/2038308/triplejnsw/master.m3u8
+#EXTINF:-1 group-title="Oceania" tvg-country="NZ",95bFM (NZ)
+https://streams.95bfm.com/stream95
+#EXTINF:-1 group-title="Oceania" tvg-country="NZ",George FM (NZ)
+https://mediaworks.streamguys1.com/george_net_icy

@@ -1,13 +1,12 @@
-# Apple · USA Live Radio for Primuse 📻
+# Apple · Live Radio for Primuse 📻
 
-**Two complementary U.S. radio collections, built for [Primuse](https://github.com/chenqi92/primuse):**
-a hand-curated, consistently illustrated playlist and a broader, automatically refreshed
-directory of American radio streams. Both use standard M3U subscriptions.
+**Three radio collections for [Primuse](https://github.com/chenqi92/primuse):** a curated U.S. playlist with matching artwork, a larger U.S. directory, and a separate world selection. All use M3U subscriptions.
 
 | Collection | Current size | What's included | Subscribe |
 | --- | ---: | --- | --- |
 | **Curated U.S. Radio** | **36 stations** | Original matching covers, reviewed broadcaster identity, and FFmpeg audio checks | [Main M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u) |
 | **U.S. Radio Directory** | **4,534 directory entries** | Crowdsourced HTTPS station URLs, grouped into **12** Primuse-friendly M3U subscriptions | [All 12 links](us-directory/README.md) |
+| **World Radio Select** | **72 selected stations** | 44 countries and regions; international music, news and cultural radio | [World M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u) |
 
 *Directory snapshot: November 4, 2026. The count can change with the weekly refresh;
 see the [live directory index](us-directory/index.json) for the latest totals.
@@ -62,6 +61,14 @@ Some streams may be offline, silent, incompatible, region-restricted or duplicat
 under different directory identities. The expanded lists do not have the
 collection-wide original cover design: artwork, when present, comes from the
 station directory or broadcasters.
+
+### Option C — World Radio Select (72 stations)
+
+Import the [worldwide editorial selection](world-radio/README.md) as a **separate subscription**. The sources are documented and directory-listed HTTPS streams, but international availability and audio playback are not yet independently guaranteed.
+
+```text
+https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u
+```
 
 ## Features
 
@@ -250,6 +257,7 @@ If a station stops working:
 | --- | --- |
 | `stations.json` | Editable catalog of 36 radio stations |
 | `radio.m3u` | Main curated M3U subscription (36 stations) |
+| `world-radio/` | Standalone world playlist, editorial selection and station catalog |
 | `us-directory/us-01.m3u` … `us-12.m3u` | Twelve expanded U.S. directory subscriptions |
 | `us-directory/index.json` | Current directory totals and per-playlist counts |
 | `us-directory/README.md` | All expanded directory subscription URLs |
