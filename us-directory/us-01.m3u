@@ -1,10 +1,6 @@
 #EXTM3U
 #EXTINF:-1 group-title="Classical" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",KDFC Great Escape
 https://16643.live.streamtheworld.com/CC4_S01AAC_96_SC
-#EXTINF:-1 group-title="Classical" tvg-logo="https://www.kusc.org/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F8usdt07j8s00%2F5npLnrC7hFU89FH5Dmbjf4%2F4d2efd93dcd0de52f2d4874761e8f18a%2FChristmas_comp.png&w=1440&q=75",KUSC A Classical California Christmas
-https://playerservices.streamtheworld.com/api/livestream-redirect/CC2_S01AAC_96.aac
-#EXTINF:-1 group-title="Classical" tvg-logo="https://www.internet-radio.com/favicon.ico",Sunny 105 - Feel Good Christmas Variety
-https://www.internet-radio.com/servers/tools/playlistgenerator/?u=http://us5.internet-radio.com:8121/listen.pls&t=.pls
 #EXTINF:-1 group-title="Classical" tvg-logo="https://www.phonostar.de/images/auto_created/WCLV2184x184.png",WCLV Ideastream Public Media
 https://live.ideastream.org/wclv.aac
 #EXTINF:-1 group-title="Classical" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",WDAV 89.9 Classical Public Radio Charlotte, NC
@@ -267,8 +263,6 @@ https://streaming.live365.com/a15419
 https://radio1.streamserver.link:8040/hra-aac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://hot1047fm.com/favicon-32x32.png",Hot 104.7
 https://ice9.securenetsystems.net/KHTN
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://www.iheart.com/favicon.ico",iHeart Radio Christmas R&B
-https://stream.revma.ihrhls.com/zc6136/hls.m3u8
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://nebula.wsimg.com/10c264c6cf5ff2b4b75cdefd33994707?AccessKeyId=7C8E0C8F4B35EB625E4D&disposition=0&alloworigin=1",Jesús Es El Camino
 https://panel.lifestreammedia.net:8178/stream
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://www.kalx.berkeley.edu/wp-content/uploads/2023/07/kalx-logo.png",KALX 90.7FM Berkeley
@@ -397,8 +391,6 @@ https://ice2.somafm.com/cliqhop-128-aac
 https://ice6.somafm.com/gsclassic-64-aac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://somafm.com/img3/thistle-400.jpg",SomaFM ThistleRadio (128k AAC)
 https://ice2.somafm.com/thistle-128-aac
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://somafm.com/img3/xmasinfrisko-400.jpg",SomaFM Xmas in Frisco (32k AAC)
-https://ice2.somafm.com/xmasinfrisko-32-aac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Sounds of Broadway
 https://streamer.radio.co/s5cd7204e5/listen
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://www.space101fm.org/wp-content/uploads/2024/04/space101fm-logo-lg.jpg",Space 101.1 FM
@@ -417,8 +409,6 @@ https://stuyradio.org/radio.mp3
 https://live.amperwave.net/manifest/bristolbroad-wfhgfmaac-ibc2
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Synthwave Radio
 https://stream.synthwaveradio.eu/listen/synthwaveradio.eu/radio.mp3
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://townsquare.media/site/574/files/2021/11/attachment-christmasfm-square.jpg?w=144&h=144",The Christmas Channel
-https://live.amperwave.net/manifest/townsquare-tsmchristmasaac-ibc3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",The Lighthouse Stream
 https://listen.radioking.com/radio/940571/stream/1011996
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",The Offspring

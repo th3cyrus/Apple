@@ -3,8 +3,6 @@
 https://listen.181fm.com/181-classicalguitar_128k.mp3
 #EXTINF:-1 group-title="Classical" tvg-logo="https://www.cpr.org/icons/apple-touch-icon.png",CPR Classical AAC 128
 https://stream1.cprnetwork.org/2110_128.aac
-#EXTINF:-1 group-title="Classical" tvg-logo="https://www.classicalwcrb.org/apple-touch-icon.png",CRB - Holiday Party Soundtrack
-https://wgbh-live.streamguys1.com/holiday1.aac
 #EXTINF:-1 group-title="Classical" tvg-logo="https://khfm.org/favicon.ico",KHFM Classical Public Radio
 https://live.amperwave.net/direct/agmedia28-khfmfmaac-ibc3
 #EXTINF:-1 group-title="Classical" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",KMFA
@@ -287,8 +285,6 @@ https://tbfmonli.radioca.st/;
 https://playerservices.streamtheworld.com/api/livestream-redirect/KPRSFMAAC.aac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://thumbnailer.mixcloud.com/unsafe/640x640/profile/8/2/b/b/7a03-6a4b-42b6-b035-39a3ab66a2bd",Ice House Radio
 https://stream-hls.castr.net/69a87581465ed67ea8a47382/live_a543bb10351911f19e688901000c2909/tracks-a1/index.m3u8
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://www.iheart.com/static/assets/favicon.ico",iHeartRadio Christmas Jazz
-https://stream.revma.ihrhls.com/zc7251/hls.m3u8
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Instrumental Hop Radio
 https://cheetah.streemlion.com:2670/stream
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://i.iheart.com/v3/re/assets.brands/c560977aab0f190a5d00dd7417be24c6?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",Jam'n 95.7

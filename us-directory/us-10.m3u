@@ -23,8 +23,6 @@ https://pixelplot.stream.publicradio.org/pixelplot.mp3
 https://blackhistory.stream.publicradio.org/blackhistory.mp3
 #EXTINF:-1 group-title="Country" tvg-logo="https://i.iheart.com/v3/re/assets.brands/5c1fa57eae945fd496f97253?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",102.1 WDRM - Decatur/Huntsville, AL
 https://stream.revma.ihrhls.com/zc13
-#EXTINF:-1 group-title="Country" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.FM - Christmas Kountry
-https://listen.181fm.com/181-xkkountry_128k.mp3
 #EXTINF:-1 group-title="Country" tvg-logo="https://i.iheart.com/v3/re/assets.brands/317a256502b58fdb3644027fa5bae357?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",98.1 KVET
 https://stream.revma.ihrhls.com/zc2185
 #EXTINF:-1 group-title="Country" tvg-logo="https://media-cdn.socastsrm.com/wordpress/wp-content/blogs.dir/3940/files/2025/11/wfre-vector-web.png",99.9 WFRE Free Country
@@ -225,8 +223,6 @@ https://xfiniteradio.online/listen/90s_forever_free/radio.mp3
 https://audio-edge-vqwx4.yyz.g.radiomast.io/0786c562-432d-4d2b-a4b6-fda1a2f60cf7
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",93.7 The Eagle
 https://klbbfm.streamon.fm/ais/klbbfm.aac
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",93.9 WLIT Lite FM
-https://cloud.revma.ihrhls.com/zc853?rj-org=n02b-e2&rj-ttl=5&rj-tok=AAABmp0u27AAed5U3BzGRhqpCg
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",97.5 WOKQ
 https://live.amperwave.net/manifest/townsquare-wokqfmaac-ibc3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",97.9 & 107.3 The Bull

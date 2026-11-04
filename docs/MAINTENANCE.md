@@ -72,5 +72,16 @@ surviving streams unexpectedly drops. Directory links remain less thoroughly
 verified than the curated and world playlists; CI observations describe the
 runner environment only.
 
+Every directory build also regenerates the 100-entry featured preview from the
+same filtered candidates. Offline validation checks shard counts, duplicate URLs,
+HTTPS/editorial policy and exact preview membership. All collection data and cover
+changes trigger the offline integrity workflow; shared probe, filter and dependency
+changes also trigger the relevant live audits. World/language reports preserve the
+full probe diagnostics, including redirect hops, transport and decoded audio levels.
+
+Scheduled artwork generation fills missing covers without restyling existing ones.
+Use `--restyle` only for an intentional visual update. `--verify` is read-only;
+`--directory` selects both the input world catalog and its output artwork directory.
+
 For current visual coverage and administrative limitations, also read
 [Repository Settings](REPOSITORY_SETTINGS.md).

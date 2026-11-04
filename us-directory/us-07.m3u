@@ -219,8 +219,8 @@ https://prod-52-91-75-207.amperwave.net/telesouth-wxykfmmp3-ibc1?session-id=5a0a
 https://stream.revma.ihrhls.com/zc841
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/2227/2020/10/12160146/keno-logo.png",1460 AM Deportes Vegas
 https://playerservices.streamtheworld.com/api/livestream-redirect/KENOAM.mp3
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.FM - Christmas Soundtracks
-https://listen.181fm.com/181-xsoundtrax_128k.mp3
+#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.fm
+https://listen.181fm.com/181-xoldies_128k.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.fm 90's Alternative
 https://listen.181fm.com/181-90salt_128k.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.fm good time oldies
@@ -273,8 +273,6 @@ https://streaming.live365.com/a01456
 https://live.amperwave.net/manifest/townsquare-wpurfmaac-ibc3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://www.liveradio.ie/files/images/120326/resized/180x172c/cayman_chill_lounge.jpg",Chill Mode Radio
 https://tunein-ondemand.cdnstream1.com/multi_bump_sonic_pre_pre.mp3?aw_0_1st.playerid=LogitechSqueeze&aw_0_1st.skey=1793530343&aw_0_1st.abtest=&partnerId=LogitechSqueeze&aw_0_1st.stationId=s301460&aw_0_1st.premium=false&source=TuneIn&aw_0_req.gdpr=true&aw_0_1st.platform=tunein&aw_0_1st.genre_id=g2759&aw_0_1st.class=music&aw_0_1st.ads_partner_alias=ce.LogitechSqueezebox&aw_0_azn.planguage=en&aw_0_1st.is_ondemand=false&aw_0_1st.topicId=na&aw_0_1st.affiliateIds=a40207&aw_0_1st.bandId=16&delivery=1
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",ChristianCountryGospel.Net
-https://listen.christianrock.net/stream/18/
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://cityparkradio.com/wp-content/uploads/2018/08/CityParkRadioLogo.png",City Park Radio
 https://playerservices.streamtheworld.com/api/livestream-redirect/7LTNAAC.aac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://www.dance895.org/wp-content/uploads/2024/08/cropped-DANCE895_SiteIcon-1.png",DANCE 89.5
@@ -421,10 +419,6 @@ https://radio-brennpunkt.radiocult.fm/stream
 https://stream.radioparadise.com/flac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://media-cdn.socastsrm.com/wordpress/wp-content/blogs.dir/3316/files/2025/01/xrock-web-logo-1.png",Rapid City 101.1 Xrock
 https://ais-sa1.streamon.fm/7771_64k.mp3
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://www.saintrose.org/uploads/images/wsrrlogo.jpg",Saint Rose Radio
-https://ice26.securenetsystems.net/WSRRLP
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://santateresitaradio.com/favicon.ico",Santa Teresita Radio
-https://s39.myradiostream.com/12936/;?type=http&nocache=1716905878?0.8810534898247708
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Savage Radio
 https://ais-edge103-live365-dal02.cdnstream.com/a68405
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://scratchvision.com/appatar.png",ScratchVision Radio
@@ -457,8 +451,6 @@ https://streaming.live365.com/a48978
 https://radio.theforbiddencoconut.com/stream.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",The Light FM
 https://ais-sa8.cdnstream1.com/2815_96.aac?listenerId=esTrackblock070396&aw_0_1st.playerid=esPlayer-mobile&aw_0_1st.skey=1714717770
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://www.themillerlights.com/wp-content/uploads/2016/09/rsz_c7-led-red-christmas-light-bulbs-813-300x300.jpg",The Miller Lights Radio
-https://radio.themillerlights.com/listen/themillerlights/radio.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://stupidpotato.com/night-shift-late-show/brand/cover-600.jpg",The Night Shift: The Late Show | Stupid Potato
 https://stupidpotato.com/night-shift-late-show/live
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://stupidpotato.com/variety-hour/brand/cover-600.jpg",The Variety Hour (radio) | Stupid Potato

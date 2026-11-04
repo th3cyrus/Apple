@@ -15,8 +15,6 @@ https://ice-1.streamhoster.com/lv_wqed--concert
 https://ice-1.streamhoster.com/lv_wqed--893
 #EXTINF:-1 group-title="Classical" tvg-logo="https://media.wnyc.org/i/500/500/c/80/1/wqxr_1_1.png",WQXR 105.9 FM
 https://stream.wqxr.org/wqxr-web?nyprBrowserId=32c67956bf1d5600
-#EXTINF:-1 group-title="Classical" tvg-logo="https://www.yourclassical.org/apple-touch-icon.png",Your Classical - Holiday
-https://holiday.stream.publicradio.org/holiday_yc.mp3?cb=8282040137
 #EXTINF:-1 group-title="Country" tvg-logo="https://i.iheart.com/v3/re/assets.brands/5e5fda8706150c0a7e7e6440?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",101.1 WNOE
 https://stream.revma.ihrhls.com/zc1045
 #EXTINF:-1 group-title="Country" tvg-logo="https://i.iheart.com/v3/re/assets.brands/10c656d3e4bc165b04d9fcf41c490e60?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",99.9 Kiss Country
@@ -73,8 +71,6 @@ https://listen.nobexradio.com/station_thenetworkradio?ref=radiobrowser
 https://streaming.radio.co/sced7c0e79/listen
 #EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",West Coast – G-Funk & Hip-Hop
 https://r.bgp.rodeo/listen/west_coast/radio.mp3
-#EXTINF:-1 group-title="Jazz & Blues" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.FM - Christmas Swing
-https://listen.181fm.com/181-xswing_128k.mp3
 #EXTINF:-1 group-title="Jazz & Blues" tvg-logo="https://www.boisestatepublicradio.org/apple-touch-icon.png",BSPR Music (Jazz)
 https://boisestate.streamguys1.com/Jazz-aac-256k-icy.aac
 #EXTINF:-1 group-title="Jazz & Blues" tvg-logo="https://www.jazz88.fm/wp-content/uploads/2017/04/jazz-icon.jpg",Jazz 88 Minneapolis KBEM
@@ -193,8 +189,6 @@ https://audio-edge-5r6yd.cdg.o.radiomast.io/b91617ff-71d6-495a-bba0-7256662a37ab
 https://stream.revma.ihrhls.com/zc8403/hls.m3u8
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.FM - Awesome 80's
 https://listen.181fm.com/181-awesome80s_128k.mp3
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.FM - Christmas Classics
-https://listen.181fm.com/181-xtraditional_128k.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://thewind.radio/sites/wind/images/logos/wind_2020_logo_128x128.png",88.3 The Wind
 https://rtn.cdnstream1.com/2571_96.aac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",89.5 WPHX-DB The Phoenix

@@ -263,8 +263,6 @@ https://cc141.cir.st/BAYROCK
 https://streams.radiomast.io/844b0a81-f4b9-485e-adaa-aab8d3ea9f7f
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://bembaradiony.com/wp-content/uploads/2024/06/bembalogo.png",Bemba Radio
 https://radiohd2.streaminghd.co:7466/stream
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",CBN Radio Christmas
-https://streams.cbnradio.com/christmas-128K?%20Title1=CBN%20Christmas
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/da/2Day_FM_Cranbrook_Logo.png",CFSM 107.5 2Day FM
 https://vistaradio.streamb.live/SB00075?=&&___cb=345070541361411
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Chabad.org Jewish Music
@@ -415,8 +413,6 @@ https://liveaudio.lamusica.com/MIA_WRMA_icy?
 https://streaming.live365.com/a24499
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://russianbards.com/wp-content/uploads/2026/07/guitar-512-1.png",Russian Bards (Русские Барды)
 https://russianbards.com/stream
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Sacred Turntable
-https://ais-edge09-live365-dal02.cdnstream.com/a73313
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://stupidpotato.com/saturday-mornings/brand/cover-600.jpg",Saturday Mornings | Stupid Potato
 https://stupidpotato.com/saturday-mornings/live
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Set Apart Radio
@@ -537,8 +533,6 @@ https://ice10.securenetsystems.net/KURR
 https://ice24.securenetsystems.net/WFDLAM?&playSessionID=797937C8-FCF5-342C-87990F68DDABEC5D
 #EXTINF:-1 group-title="Pop & Hits" tvg-logo="https://top-radio.ru/assets/image/radio/180/radio-euro-disco.png",Radio Euro Disco
 https://broadcast.miami/proxy/eurodisco?mp=/stream/;
-#EXTINF:-1 group-title="Pop & Hits" tvg-logo="https://stupidpotato.com/north-pole-radio/brand/cover-600.jpg",Santa's North Pole Radio | Stupid Potato
-https://stupidpotato.com/north-pole-radio/live
 #EXTINF:-1 group-title="Pop & Hits" tvg-logo="https://i.iheart.com/v3/re/assets.brands/0c11ac0b63df9659379648d16ba73d0a?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",Star 104.3
 https://stream.revma.ihrhls.com/zc1585
 #EXTINF:-1 group-title="Pop & Hits" tvg-logo="https://www.star943.com/favicon.ico",STAR 94.3

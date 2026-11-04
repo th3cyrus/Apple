@@ -9,8 +9,6 @@ https://playerservices.streamtheworld.com/api/livestream-redirect/CC1_S01AAC_96.
 https://cms.stream.publicradio.org/cms.aac
 #EXTINF:-1 group-title="Classical" tvg-logo="https://www.classicalwcrb.org/apple-touch-icon.png",CRB - Boston Early Music
 https://wgbh-live.streamguys1.com/BostonEarlyMusic-8112-aac
-#EXTINF:-1 group-title="Classical" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",KDFC Classical Christmas
-https://19273.live.streamtheworld.com/CC2_S01AAC_96_SC
 #EXTINF:-1 group-title="Classical" tvg-logo="https://www.kpbs.org/apple-touch-icon.png",KPBS Classical San Diego AAC 256
 https://kpbs-classical.streamguys1.com/kpbs-classical-itunes-256k.aac
 #EXTINF:-1 group-title="Classical" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",WMPB HD2 - MPB Music Radio
@@ -291,8 +289,6 @@ https://radio.hearme.fm:8230/stream
 https://stream.revma.ihrhls.com/zc4902/hls.m3u8
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",iHeart Country
 https://stream.revma.ihrhls.com/zc4418/hls.m3u8?streamid=4418&zip=60629&clientType=web&host=webapp.US&modTime=1706531123554&profileid=8166296424&terminalid=159&territory=US&us_privacy=1-N-&callLetters=CTYM-FL&devicename=web-desktop&stationid=4418&dist=iheart&subscription_type=free&partnertok=eyJraWQiOiJpaGVhcnQiLCJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJ0ZCIsInN1YiI6IjgxNjYyOTY0MjQiLCJjb3BwYSI6MCwicHJvdmlkZXJJZCI6MjUsImlzcyI6ImloZWFydCIsInVzX3ByaXZhY3kiOiIxWU5OIiwiZGlzdCI6ImloZWFydCIsImV4cCI6MTcwNjYxNzUyNiwiaWF0IjoxNzA2NTMxMTI2LCJvbWlkIjowfQ.NV914fs--xr_VJ5N6xSPVNokmxaRhJLMt4ovZz8BY-U&country=US&locale=en-US&site-url=https%3A%2F%2Fwww.iheart.com%2Flive%2Fiheartcountry-4418%2F
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://i.iheart.com/v3/re/new_assets/d1c4a881-ba95-4efe-87f6-a03491b29155",iHeart Radio Sacred Christmas
-https://stream.revma.ihrhls.com/zc7444/hls.m3u8
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",iHeart Radio Smells Like the 90s
 https://stream.revma.ihrhls.com/zc6437
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",In Touch Radio Network
@@ -413,8 +409,6 @@ https://azura12.instainternet.com/listen/royal_dynasty_radio/radio.mp3
 https://stream.rhythm86.net/stream/RHYTHM86
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://sensimedia.net/images/logo/favicon.png#joomlaimage://local-images/logo/favicon.png?width=64&height=64",Sensimedia Roots Reggae Radio
 https://sensiroots.radioca.st/stream
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Sfliny Christmas
-https://ec4.yesstreaming.net:3790/
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://smokymountainradio.org/wp-content/uploads/2024/02/62319507_617126122120745_74801644348375040_n.jpg",Smoky Mountain Radio
 https://streaming.live365.com/a23459
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://somafm.com/logos/400/bossa-400.jpg",Soma Bosa Nova

@@ -207,10 +207,6 @@ https://streaming.live365.com/a83090
 https://usa19.fastcast4u.com/burbujaradio
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://riverbendmediagroup.com/wp-content/uploads/2024/03/Cannon-Ball-Logo.png",CannonBall 101
 https://ice25.securenetsystems.net/KCVI3
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://marvel-b1-cdn.bc0a.com/f00000000039764/www2.cbn.com/sites/default/files/styles/545x150_scale/public/images/CBNRadio-Logo.png?itok=uJQHqNZl",CBN Christmas Radio
-https://streams.cbnradio.com/christmas-128K?app=cbnplayer
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Christus Radio
-https://christusradio.com/radio.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/1108/2022/10/22131738/ClassicalKING_Streaming_Main_125x125rnd.png",Classical KING FM
 https://classicalking.streamguys1.com/king-fm-aac-128k
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Classy KMGR 99.1 and 102.7 FM
@@ -353,8 +349,6 @@ https://s2.reliastream.com/proxy/nick1?mp=/stream
 https://stream.pcradio.ru/Nirvana-hi
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://wxradio.bobc.io/noaa.png",NOAA Weather Radio KHB60 Seattle
 https://wxradio.bobc.io/stream/KHB60
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://stupidpotato.com/north-pole-specials/brand/cover-600.jpg",North Pole Radio: Holiday Specials | Stupid Potato
-https://stupidpotato.com/north-pole-specials/live
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://stupidpotato.com/opening-night/brand/cover-600.jpg",Opening Night: Old-Time Radio Theatre | Stupid Potato
 https://stupidpotato.com/opening-night/live
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://panafricanallstarsradio.com/mobile/assets/img/icon/android-launchericon-192-192.png",Pan African Allstars Radio
@@ -427,8 +421,6 @@ https://stupidpotato.com/signal-from-tomorrow/live
 https://streaming.live365.com/a37678
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",SO REAL 2 RAW RADIO
 https://stream.zeno.fm/3a8785wzsupvv
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://somafm.com/img3/deptstore400.jpg",SomaFM Department Store Christmas
-https://ice6.somafm.com/deptstore-128-aac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://somafm.com/img3/dronezone-400.jpg",SomaFM Drone Zone (128k MP3)
 https://ice2.somafm.com/dronezone-128-mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://somafm.com/img3/dronezone-400.png",SomaFM Drone Zone (256k MP3)
@@ -609,8 +601,6 @@ https://stream.revma.ihrhls.com/zc3383
 https://stream.revma.ihrhls.com/zc697
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://altradio.org/templates/yootheme/cache/76/altradio-logo-mobile-76200caa.webp",AltRadio
 https://stationaltradio.whro.org/128.mp3
-#EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Atomic Radio
-https://a7.asurahosting.com/listen/atomic_radio/radio.mp3
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://chirpradio.org/_/files/ads/Screenshot_2024-01-15_at_5.01.14%E2%80%AFPM.png",CHIRP Radio (WCXP-LP)
 https://peridot.streamguys1.com:5185/live
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Got Radio Soft Rock Café

@@ -12,12 +12,12 @@ import json
 import re
 import sys
 from pathlib import Path
-from urllib.parse import parse_qsl, urlsplit
+from urllib.parse import urlsplit
 
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from safety import valid_url, unsupported_stream_suffix
+from safety import atomic_write, has_expiring_query, valid_url, unsupported_stream_suffix
 from content_filters import is_excluded_program
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,9 +32,9 @@ MAX_PAGES = 8
 SHARDS = 12
 SHARD_MAX = 900  # Primuse hard limit is 1000 entries per subscription.
 MIN_RESULTS = 500
+FEATURED_MAX = 100
 MAX_HEALTH_AGE_DAYS = 30
 MAX_DIRECTORY_SHRINK_RATIO = 0.65
-BLOCKED_AUTH_PARAMS = {'token', 'zt', 'signature', 'policy', 'expires', 'key'}
 FALLBACK_ARTWORK = "https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png"
 # Editorial nonreligious additions replacing identified religious directory streams.
 # These come from public broadcaster direct-stream listings, not Radio Browser votes.
@@ -81,8 +81,7 @@ def public_https(value):
             return False
     except ValueError:
         pass
-    if any(key.lower() in BLOCKED_AUTH_PARAMS for key, _ in parse_qsl(parts.query,
-                                                                    keep_blank_values=True)):
+    if has_expiring_query(value):
         return False
     return not unsupported_stream_suffix(value) and not BAD_AUDIO_PLAYLIST.search(parts.path)
 
@@ -186,7 +185,9 @@ def m3u(items):
     for item in items:
         attrs = [f'group-title="{clean_text(item["group"], 60)}"']
         if item["logo"]:
-            attrs.append(f'tvg-logo="{clean_text(item["logo"], 500)}"')
+            if not public_https(item["logo"]):
+                raise ValueError("Unsafe directory artwork URL")
+            attrs.append(f'tvg-logo="{item["logo"]}"')
         rows.append(f'#EXTINF:-1 {" ".join(attrs)},{clean_text(item["name"])}')
         rows.append(item["url"])
     return "\n".join(rows) + "\n"
@@ -222,6 +223,59 @@ def get_records(session):
     raise RuntimeError("Unable to fetch full U.S. station directory") from error
 
 
+def validate_outputs(output=OUTPUT):
+    """Check every published shard and the featured preview without network access."""
+    output = Path(output)
+    index = json.loads((output / "index.json").read_text(encoding="utf-8"))
+    expected_files = [f"us-{number:02d}.m3u" for number in range(1, SHARDS + 1)]
+    shards = index.get("shards", [])
+    if (index.get("shard_count") != SHARDS or not isinstance(shards, list)
+            or len(shards) != SHARDS
+            or any(not isinstance(item, dict) for item in shards)
+            or [item.get("file") for item in shards] != expected_files):
+        raise ValueError("Invalid directory shard index")
+
+    def read_playlist(filename):
+        lines = (output / filename).read_text(encoding="utf-8").splitlines()
+        if not lines or lines[0] != "#EXTM3U" or len(lines) % 2 != 1:
+            raise ValueError("Invalid directory M3U structure: " + filename)
+        entries = []
+        urls = set()
+        for metadata, url in zip(lines[1::2], lines[2::2]):
+            match = re.fullmatch(
+                r'#EXTINF:-1 group-title="([^"]+)"(?: tvg-logo="([^"]+)")?,(.+)', metadata)
+            if not match or not public_https(url) or urlsplit(url).path.lower().endswith((".m3u", ".pls")):
+                raise ValueError("Unsafe directory entry in " + filename)
+            group, logo, name = match.groups()
+            if (clean_text(group, 60) != group or clean_text(name) != name
+                    or (logo and not public_https(logo))
+                    or is_excluded_program(name, group, url)):
+                raise ValueError("Invalid directory metadata/policy in " + filename)
+            if url in urls:
+                raise ValueError("Duplicate directory stream in " + filename)
+            urls.add(url)
+            entries.append((metadata, url))
+        return entries
+
+    all_entries = []
+    for shard in shards:
+        entries = read_playlist(shard["file"])
+        if (type(shard.get("stations")) is not int
+                or shard["stations"] != len(entries) or len(entries) > SHARD_MAX):
+            raise ValueError("Directory shard count mismatch: " + shard["file"])
+        all_entries.extend(entries)
+    if (type(index.get("station_count")) is not int
+            or index["station_count"] != len(all_entries)
+            or len(all_entries) < MIN_RESULTS
+            or len({url for _, url in all_entries}) != len(all_entries)):
+        raise ValueError("Directory total/unique stream count mismatch")
+    featured = read_playlist("featured.m3u")
+    if (len(featured) != min(FEATURED_MAX, len(all_entries))
+            or not set(featured).issubset(set(all_entries))):
+        raise ValueError("Featured preview differs from published directory")
+    return index
+
+
 def build(session, output=OUTPUT, curated_path=ROOT / "stations.json"):
     curated = json.loads(Path(curated_path).read_text(encoding="utf-8"))
     existing = [station["stream"] for station in curated]
@@ -242,6 +296,8 @@ def build(session, output=OUTPUT, curated_path=ROOT / "stations.json"):
     files = {}
     for index, stations in enumerate(shards, 1):
         files[f"us-{index:02d}.m3u"] = m3u(stations)
+    featured = sorted(items, key=lambda s: (-s["votes"], s["name"].casefold(), s["id"]))[:FEATURED_MAX]
+    files["featured.m3u"] = m3u(featured)
     files["index.json"] = json.dumps({
         "source": "Radio Browser: countrycode=US, lastcheckok=1",
         "scope": "Directory candidates, not individual audio playback verified",
@@ -263,7 +319,7 @@ def build(session, output=OUTPUT, curated_path=ROOT / "stations.json"):
         "Directory entries are not individually audio-decoded. "
         "The [curated U.S. playlist](../radio.m3u) is maintained separately.",
         "",
-        "Quranic and Islamic religious programming is excluded. "
+        "Dedicated religious programming is excluded across all faiths. "
         "The generator filters signed links, stale health records, reported SSL errors "
         "and invalid playlists. Missing station artwork uses a shared fallback cover.",
         "",
@@ -279,7 +335,8 @@ def build(session, output=OUTPUT, curated_path=ROOT / "stations.json"):
     output.mkdir(parents=True, exist_ok=True)
     # GitHub Action stages changes only if the whole build succeeds.
     for name, contents in files.items():
-        (output / name).write_text(contents, encoding="utf-8")
+        atomic_write(output / name, contents)
+    validate_outputs(output)
     print(f"Built {len(items)} U.S. stations in {SHARDS} Primuse-safe playlists")
     return files
 
@@ -287,7 +344,12 @@ def build(session, output=OUTPUT, curated_path=ROOT / "stations.json"):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=OUTPUT)
+    parser.add_argument("--validate", action="store_true", help="Validate published files offline")
     args = parser.parse_args()
+    if args.validate:
+        index = validate_outputs(args.output)
+        print("Validated", index["station_count"], "directory streams and featured preview")
+        return
     with requests.Session() as session:
         build(session, output=args.output)
 

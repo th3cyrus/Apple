@@ -6,9 +6,13 @@ on:
     paths:
       - 'world-radio/*/stations.json'
       - 'world-radio/*/radio.m3u'
+      - 'world-radio/*/logos/**'
       - 'world-radio/languages.json'
       - 'scripts/check_language_radio.py'
       - 'scripts/content_filters.py'
+      - 'scripts/stream_probe.py'
+      - 'scripts/safety.py'
+      - 'requirements.txt'
       - 'tests/test_language_radio.py'
       - '.github/workflows/language-radio.yml'
   push:
@@ -16,8 +20,14 @@ on:
     paths:
       - 'world-radio/*/stations.json'
       - 'world-radio/*/radio.m3u'
+      - 'world-radio/*/logos/**'
       - 'world-radio/languages.json'
       - 'scripts/check_language_radio.py'
+      - 'scripts/content_filters.py'
+      - 'scripts/stream_probe.py'
+      - 'scripts/safety.py'
+      - 'tests/test_language_radio.py'
+      - 'requirements.txt'
       - '.github/workflows/language-radio.yml'
   workflow_dispatch:
   schedule:

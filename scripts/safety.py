@@ -4,11 +4,16 @@ import os
 from pathlib import Path
 import re
 import tempfile
-from urllib.parse import urlsplit
+from urllib.parse import parse_qsl, urlsplit
+
+SIGNED_PARAMETERS = {
+    'token', 'zt', 'signature', 'policy', 'expires', 'key', 'sig',
+    'access_token', 'auth_token', 'hdnts', 'hdnea', 'key-pair-id', 'awsaccesskeyid',
+}
 
 
 def valid_url(value):
-    if not isinstance(value, str) or not value or re.search(r'[\s\x00-\x1f\x7f]', value):
+    if not isinstance(value, str) or not value or re.search(r'[\s\x00-\x1f\x7f"<>\\]', value):
         return False
     try:
         parts = urlsplit(value)
@@ -17,6 +22,13 @@ def valid_url(value):
                     and (parts.port is None or 0 < parts.port < 65536))
     except (ValueError, TypeError, AttributeError):
         return False
+
+
+def has_expiring_query(value):
+    """Reject signed/temporary links, including parameters with empty values."""
+    return any(key.lower() in SIGNED_PARAMETERS
+               or key.lower().startswith(('x-amz-', 'x-goog-'))
+               for key, _ in parse_qsl(urlsplit(value).query, keep_blank_values=True))
 
 
 def unsupported_stream_suffix(value):

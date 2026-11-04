@@ -118,15 +118,15 @@ def main():
     parser.add_argument("--verify", action="store_true")
     parser.add_argument("--directory", type=Path, default=WORLD)
     args = parser.parse_args()
-    stations = json.loads((WORLD / "stations.json").read_text(encoding="utf-8"))
+    stations = json.loads((args.directory / "stations.json").read_text(encoding="utf-8"))
     if not args.verify:
         rebuild = args.restyle or args.force
         generate(stations, args.directory, force=rebuild)
         generate_languages(args.directory, force=rebuild)
-        directory_cover(force=rebuild)
+        directory_cover(root=args.directory.parent, force=rebuild)
     verify(stations, args.directory)
     verify_languages(args.directory)
-    directory_cover()
+    verify_png(args.directory.parent / "us-directory" / "directory-cover.png")
 
 
 if __name__ == "__main__":

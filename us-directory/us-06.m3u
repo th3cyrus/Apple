@@ -5,8 +5,6 @@ https://playerservices.streamtheworld.com/api/livestream-redirect/CC7_S01AAC_96.
 https://playerservices.streamtheworld.com/api/livestream-redirect/KUSCMP256.mp3
 #EXTINF:-1 group-title="Classical" tvg-logo="https://cdn.audioaddict.com/classicalradio.com/assets/apple-touch-icon-120x120-7922555f3bb73e6e492c46abda410434ea8ca2dd3349ce116a1511dde6f4f584.png",Classical Radio Essential
 https://drive.uber.radio/uber-app/cressentialclassics/icecast.audio
-#EXTINF:-1 group-title="Classical" tvg-logo="https://www.classicalwcrb.org/apple-touch-icon.png",CRB - Holiday Classics
-https://wgbh-live.streamguys1.com/holiday3.aac
 #EXTINF:-1 group-title="Classical" tvg-logo="https://www.classicalwcrb.org/apple-touch-icon.png",CRB Classical 99.5 HLS
 https://wgbh-hls.streamguys1.com/wcrb_hls/playlist.m3u8
 #EXTINF:-1 group-title="Classical" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",IPR Classical
@@ -245,8 +243,6 @@ https://a9.asurahosting.com/listen/bloghaus_radio/radio.mp3
 https://live.amperwave.net/direct/wncpr-wcqshd1mp3128-ibc4?source=manual
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Bone Island Radio
 https://eagle.streemlion.com/proxy/boneisl1?mp=/stream
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://bransonchristmas.info/wp-content/uploads/2014/11/christmas-radio-header-720x392.png",Branson Christmas Radio
-https://stream.radiojar.com/22habbgmb.m4a?1703429674
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://static.wixstatic.com/media/50801a_a97acf99c058415dadc0aebe35c76b14~mv2.png/v1/fill/w_247,h_247,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/BumbleBee%20Radio%20Logo%20(transparent).png",BumbleBee Radio
 https://streaming.live365.com/a26354
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://cdn-profiles.tunein.com/s259239/images/logod.jpg?t=638354465690000000",Classic Videogames Radio
