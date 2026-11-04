@@ -20,7 +20,8 @@ import requests
 ROOT = Path(__file__).resolve().parents[1]
 WORLD = ROOT / "world-radio"
 sys.path.insert(0, str(ROOT / "scripts"))
-from safety import valid_url, unsupported_stream_suffix, safe_message
+from safety import (atomic_json, has_expiring_query, valid_url,
+                    unsupported_stream_suffix, safe_message)
 from content_filters import is_excluded_program
 from stream_probe import stream_check
 
@@ -43,8 +44,11 @@ def load_and_validate(root=WORLD):
         if "verification" in station:
             raise ValueError("Station audit status belongs in workflow reports, not stations.json")
         if any(not isinstance(station[key], str) or not station[key].strip()
-               for key in ("id", "name", "country", "country_code", "region", "genre", "stream")):
+               for key in FIELDS):
             raise ValueError(f"Entry {position} contains blank/invalid fields")
+        if any(re.search(r'[\x00-\x1f\x7f"<>]', station[key])
+               for key in ("name", "country", "genre")):
+            raise ValueError(f"Unsafe station metadata at entry {position}")
         if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", station["id"]):
             raise ValueError("Unsafe station ID: " + station["id"])
         if station["region"] not in REGIONS:
@@ -59,8 +63,7 @@ def load_and_validate(root=WORLD):
                 or unsupported_stream_suffix(url)
                 or parts.path.lower().endswith(BAD_TEXT_EXT)):
             raise ValueError("Invalid or misleading station stream for " + station["id"])
-        if any(key.lower() in {"token", "policy", "key", "zt"}
-               for key in __import__("urllib.parse", fromlist=["parse_qsl"]).parse_qs(parts.query)):
+        if has_expiring_query(url):
             raise ValueError("Potentially expiring stream token for " + station["id"])
         logo = station["logo"]
         if not isinstance(logo, str) or (logo and
@@ -75,11 +78,11 @@ def load_and_validate(root=WORLD):
         raise ValueError("World M3U header / length mismatch")
     for i, station in enumerate(catalog):
         inf = lines[1 + 2*i]
-        if (not inf.startswith("#EXTINF:-1 ") or
-            f'group-title="{station["region"]}"' not in inf or
-            f'tvg-country="{station["country_code"]}"' not in inf or
-            not inf.endswith("," + station["name"] + " (" + station["country_code"] + ")") or
-            lines[2 + 2*i] != station["stream"]):
+        expected = (f'#EXTINF:-1 group-title="{station["region"]}" '
+                    f'tvg-country="{station["country_code"]}" '
+                    f'tvg-logo="{station["logo"]}" logo="{station["logo"]}",'
+                    f'{station["name"]} ({station["country_code"]})')
+        if inf != expected or lines[2 + 2*i] != station["stream"]:
             raise ValueError("Playlist/stations.json mismatch at " + station["id"])
     return catalog
 
@@ -100,6 +103,7 @@ def probe_one(station):
         "rms_dbfs": result.get("rms_dbfs"),
         "http_status": result.get("http_status"),
         "error_type": result.get("error_type"), "error": result.get("error"),
+        "probe": result,
         "elapsed_seconds": round(time.monotonic()-began, 2)
     }
 
@@ -124,8 +128,7 @@ def audit(catalog, output, workers=12):
         "stations": results,
     }
     output = Path(output)
-    output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(document, ensure_ascii=False, indent=2)+"\n",encoding="utf-8")
+    atomic_json(output, document)
     summary = (f"World Radio Select: {passed}/{len(results)} decoded non-silent audio; "
                f"{len(results)-passed} require review.")
     print(summary, flush=True)

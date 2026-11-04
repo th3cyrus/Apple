@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 import re
 import sys
-from urllib.parse import parse_qsl, urlsplit
+from urllib.parse import urlsplit
 
 import requests
 
@@ -19,13 +19,13 @@ ROOT = Path(__file__).resolve().parents[1]
 WORLD = ROOT / "world-radio"
 sys.path.insert(0, str(ROOT / "scripts"))
 from content_filters import is_excluded_program
-from safety import valid_url, unsupported_stream_suffix, safe_message
+from safety import (atomic_json, has_expiring_query, valid_url,
+                    unsupported_stream_suffix, safe_message)
 from stream_probe import stream_check
 
 MAX_PER_LANGUAGE = 900
 CONTENT_FIELDS = {"id", "name", "language", "country_code",
                   "genre", "stream", "logo"}
-SIGNED_PARAMETERS = {"token", "policy", "signature", "expires", "zt", "key"}
 
 
 def check_language(path, entry):
@@ -58,14 +58,14 @@ def check_language(path, entry):
                 or unsupported_stream_suffix(url)
                 or parts.path.lower().endswith((".m3u", ".pls"))):
             raise ValueError("Invalid HTTPS stream: " + station["id"])
-        if any(k.lower() in SIGNED_PARAMETERS for k, _ in parse_qsl(parts.query)):
+        if has_expiring_query(url):
             raise ValueError("Expiring URL parameter for: " + station["id"])
         if url in stream_urls or station["id"] in station_ids:
             raise ValueError("Duplicate station ID or URL in " + path.name)
         stream_urls.add(url)
         station_ids.add(station["id"])
         logo_parts = urlsplit(station["logo"])
-        if logo_parts.scheme != "https" or not logo_parts.path.endswith(
+        if not valid_url(station["logo"]) or logo_parts.scheme != "https" or not logo_parts.path.endswith(
                 "/world-radio/" + path.name + "/logos/" + station["id"] + ".png"):
             raise ValueError("Incorrect station artwork URL: " + station["id"])
 
@@ -119,6 +119,7 @@ def probe_one(station):
         "error_type": result.get("error_type"),
         "http_status": result.get("http_status"),
         "error": result.get("error"),
+        "probe": result,
     }
 
 
@@ -142,9 +143,7 @@ def audit(stations, output, workers=10):
         "needs_review": len(items) - passing, "stations": items,
     }
     output = Path(output)
-    output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n",
-                      encoding="utf-8")
+    atomic_json(output, summary)
     print(f"Language Radio: {passing}/{len(items)} decoded-audio checks passed", flush=True)
     return summary
 

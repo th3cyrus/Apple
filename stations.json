@@ -672,11 +672,11 @@
     "name": "KCSM Jazz 91.1",
     "description": "Jazz",
     "group": "Jazz & Blues",
-    "stream": "https://ice5.securenetsystems.net/KCSM",
+    "stream": "https://ice7.securenetsystems.net/KCSM2",
     "homepage": "https://www.kcsm.org/",
     "search": "KCSM",
     "manual_lock": false,
-    "fail_count": 1,
+    "fail_count": 0,
     "logo": "logos/kcsm-jazz-91-1.png",
     "identity": {
       "aliases": [
@@ -690,8 +690,7 @@
       "channel": "main",
       "search_term": "KCSM",
       "frequency": "91.1"
-    },
-    "last_failure_counted_at": "2026-11-04T06:06:12+00:00"
+    }
   },
   {
     "id": "wrti-classical",

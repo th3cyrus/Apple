@@ -8,6 +8,10 @@ on:
       - 'world-radio/radio.m3u'
       - 'world-radio/logos/**'
       - 'scripts/check_world_radio.py'
+      - 'scripts/content_filters.py'
+      - 'scripts/stream_probe.py'
+      - 'scripts/safety.py'
+      - 'requirements.txt'
       - 'tests/test_world_radio.py'
       - '.github/workflows/world-radio.yml'
   push:
@@ -15,6 +19,10 @@ on:
     paths:
       - 'world-radio/**'
       - 'scripts/check_world_radio.py'
+      - 'scripts/content_filters.py'
+      - 'scripts/stream_probe.py'
+      - 'scripts/safety.py'
+      - 'requirements.txt'
       - '.github/workflows/world-radio.yml'
   workflow_dispatch:
   schedule:

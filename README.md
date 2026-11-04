@@ -13,7 +13,7 @@ Choose from **three principal M3U collections plus language-based subscriptions*
 
 **How to add a collection:** In Primuse, go to **Radio → + → Add Subscription → Fetch → Subscribe**. Choose **Update Now** to see changes made to an existing subscription.
 
-**Editorial scope:** Quranic and Islamic religious programming is excluded from the World Radio Select and U.S. Directory collections.
+**Editorial scope:** Dedicated religious programming across all faiths is excluded from World Radio Select, every language playlist and the U.S. Directory.
 
 **Playback and coverage:** The U.S. directory is community-sourced and is **not individually audio-tested**; its station count changes with [weekly refreshes](us-directory/index.json). The curated and world collections use audio-decoding checks, but even a successful test cannot guarantee access from every country or compatibility with every player. This repository hosts playlists and artwork, **not radio audio**.
 
@@ -156,6 +156,8 @@ The probe uses 5-second connect and 12-second read timeouts, a 45-second overall
 processing budget, up to 3 attempts with 1- and 2-second delays, at most 5 redirects
 per resource, 3 playlist levels, 64 KiB playlists and up to 128 KiB media samples
 (with a separate 8-second streaming read cap).
+The decoder is restricted to the downloaded bytes and emits at most 8 seconds of
+PCM audio; it cannot open extra network or local-file inputs.
 Socket/DNS behavior can exceed application time checks; the refresh job has a hard
 20-minute cap. The script stops starting station work after 15 minutes. A small
 verified sample does not prove uninterrupted playback, the correct station identity,
@@ -214,8 +216,9 @@ explicitly partial. Validation checks report ownership and completeness before
 publication. Writes use temporary files and atomic replacement.
 
 The Actions summary displays counts even when the refresh fails after starting.
-A successful workflow can include stations marked `needs_review`; read the summary
-and report instead of treating the green badge as an all-stations guarantee.
+The final live-health gate fails the workflow when any station is marked
+`needs_review`, after saving diagnostics and repair counters. A passing run describes
+the runner's bounded sample at that time; read the report for individual results.
 
 ### Local Checks and Regression Tests
 
@@ -225,6 +228,10 @@ Use Python 3.12 and install FFmpeg/FFprobe, then run:
 python -m pip install --only-binary=:all: -r requirements.txt
 python -m unittest discover -s tests -v
 python scripts/validate.py
+python scripts/check_world_radio.py
+python scripts/check_language_radio.py
+python scripts/build_us_directory.py --validate
+python scripts/generate_world_covers.py --verify
 python scripts/update.py --refresh --report-only
 ```
 

@@ -1,6 +1,4 @@
 #EXTM3U
-#EXTINF:-1 group-title="Classical" tvg-logo="https://www.classicalwcrb.org/apple-touch-icon.png",CRB - Holiday Classical Mix
-https://wgbh-live.streamguys1.com/holiday2.aac
 #EXTINF:-1 group-title="Classical" tvg-logo="https://www.classicalwcrb.org/apple-touch-icon.png",CRB Classical 99.5 AAC 256
 https://wgbh-live.streamguys1.com/wcrb-itunes-256k
 #EXTINF:-1 group-title="Classical" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",WHIL HD2 - APR Classical
@@ -27,8 +25,6 @@ https://ice26.securenetsystems.net/WCMPAM
 https://ice24.securenetsystems.net/WAMU
 #EXTINF:-1 group-title="Country" tvg-logo="https://i.iheart.com/v3/re/assets.brands/3e4367cb5fe014ebc7654bead10d28a7?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",Buckeye Country 94.3
 https://stream.revma.ihrhls.com/zc3973
-#EXTINF:-1 group-title="Country" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",CBN Cross Country Christmas
-https://streams.cbnradio.com/christmas-128K?%20Title1=CBN%20Cross%20Country%20Christmas
 #EXTINF:-1 group-title="Country" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Cruisin Country 93.5
 https://stream.radio.co/s4867e9e93/listen
 #EXTINF:-1 group-title="Country" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Eden Underground Radio
@@ -61,8 +57,6 @@ https://a2.asurahosting.com:7520/radio.mp3
 https://live.amperwave.net/manifest/monroecounty-wdkxfmaac-ibc1
 #EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://1051thebounce.com/wp-content/uploads/sites/31/2016/07/cropped-siteicon.jpg?w=180",105.1 The Bounce
 https://playerservices.streamtheworld.com/api/livestream-redirect/WMGCFMAAC.aac
-#EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.FM - Christmas R&B
-https://listen.181fm.com/181-xtrue_128k.mp3
 #EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://kumu.com/wp-content/uploads/sites/14/KUMU-Web-Logo-180x115-1.png",94.7 KUMU
 https://pacificmedia.cdnstream1.com/2783_64.aac
 #EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://abusiaradio.com/wp-content/uploads/2024/06/cropped-abusia-radio_new-site-logo_pro-radio-180x180.png",Abusia Radio
@@ -211,8 +205,6 @@ https://ice10.securenetsystems.net/KOWZ
 https://streaming.live365.com/a28429
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://static.wixstatic.com/media/143966_f8372bd698884501ba44ba96c53c8ade~mv2.jpg",113.FM Big Kickin Country
 https://113fm-atunwadigital.streamguys1.com/1004
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.FM - Christmas Blender
-https://listen.181fm.com/181-xblender_128k.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.FM - Smooth AC
 https://listen.181fm.com/181-smoothac_128k.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.FM Energy 93 Euro EDM
@@ -261,8 +253,6 @@ https://streaming.live365.com/a85470
 https://quincy.torontocast.com:2100/
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://static.wixstatic.com/media/2f87a5_deb4f0b3fc404e7a875e505221d49565~mv2.png/v1/fill/w_175,h_175,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/CS_BlackLetters_White_Background_101823_(5kx5k)_stretched%232.png",Club Sabroso Radio Network
 https://s5.radio.co/s688b80b65/low
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Conyers Old Time Radio
-https://s8.yesstreaming.net:17011/stream
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Documentaries
 https://bananavision.tv:8443/brain.ogg
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Emocore
@@ -369,8 +359,6 @@ https://radio.aleluya.cloud/radio/8000/stream
 https://radio.wbfm.us/listen/wbfm/radio.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://cdn-elements.radiostreamlive.com/v1/images/favicon.ico",Radio Love Live New York
 https://streaming.radiostreamlive.com/radiolovelive_devices
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://cdn-elements.radiostreamlive.com/v1/images/favicon.ico",Radio North Pole
-https://streaming.radiostreamlive.com/radionorthpole_devices
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://radioparadise.com/apple-touch-icon.png",Radio Paradise Main Mix 320k AAC
 https://stream.radioparadise.com/ti-main-320
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Rebel Spinner AM
@@ -387,10 +375,6 @@ https://radiocustoms.cdnstream1.com/shaqfu
 https://vip2.fastcast4u.com/proxy/wnua?mp=/1
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://somafm.com/img3/deepspaceone-400.png",SomaFM - Deep Space One (128 kb/s AAC)
 https://ice6.somafm.com/deepspaceone-128-aac
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://somafm.com/img3/christmas-400.jpg",SomaFM Christmas Lounge 256k
-https://ice2.somafm.com/christmas-256-mp3
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://somafm.com/img3/christmas-400.jpg",SomaFM Christmas Lounge 64k
-https://ice5.somafm.com/christmas-64-aac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://somafm.com/img3/cliqhop-400.jpg",SomaFM CliqHop IDM (256k MP3)
 https://ice2.somafm.com/cliqhop-256-mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://somafm.com/img3/suburbsofgoa-400.png",SomaFM Suburbs of Goa (64k AAC)
@@ -485,8 +469,6 @@ https://crosstown.streamguys1.com:80/live
 https://s36.myradiostream.com/21972/;?type=http&nocache=1724304982?0.11771160321318064
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://xcsb.live/static/uploads/xcsb-cleveland/album_art.1771733868.jpg",XCSB Alternative Media Cleveland
 https://xcsb.live:8000/xcsb.aac
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://img.apmcdn.org/a62aa4e4c1451de143af2e2173505f2ffcfcfe28/square/6a6e66-20210225-holiday-stream-400.jpg",YourClassical Holiday
-https://holiday.stream.publicradio.org/holiday_yc.aac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://img.apmcdn.org/858831cc9e09b0336578b1e7c401a7b15231c9cf/square/04543b-20240327-yourclassical-streams-04-webp400.webp",YourClassical Sleep
 https://lullabies.stream.publicradio.org/lullabies.aac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",z103.com -- Over 7 decades of Great Music!

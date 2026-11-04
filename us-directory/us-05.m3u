@@ -235,8 +235,6 @@ https://live.amperwave.net/manifest/townsquare-wozifmaac-ibc3
 https://ais-sa8.cdnstream1.com/2815_96.aac?listenerId=esTrackblock0202518&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1700590934
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://www.iheart.com/favicon.ico",1200 WOAI Talk Radio
 https://stream.revma.ihrhls.com/zc2361/hls.m3u8
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.FM - Christmas Standards
-https://listen.181fm.com/181-xstandards_128k.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://300liveniagararadio.com/wp-content/uploads/2021/10/300LiveNiagaraRadio_100x100_transparent.png",300 Live! Niagara Radio
 https://streaming.live365.com/a60417
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://www.streamvortex.com:8444/s/10520",57 WLLE
@@ -479,8 +477,6 @@ https://streaming.live365.com/a47555
 https://rfcm.streamguys1.com/tailgate-mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://townsquare.media/site/38/files/2013/07/talkradio960am.png",Talk Radio 960am
 https://live.amperwave.net/manifest/townsquare-krofamaac-ibc3
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",That Christmas Channel
-https://streaming.live365.com/a37180?listenerId=Live365-AdBlock
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://stupidpotato.com/burns-and-allen/brand/cover-600.jpg",The Burns and Allen Show (radio) | Stupid Potato
 https://stupidpotato.com/burns-and-allen/live
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",The Current Holiday Stream
@@ -561,8 +557,6 @@ https://stream.revma.ihrhls.com/zc689/hls.m3u8
 https://stream.radiojar.com/q04ksted22quv
 #EXTINF:-1 group-title="Pop & Hits" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",106.9 KROC FM
 https://prod-52-55-242-202.amperwave.net/townsquare-krocfmaac-hlsc3.m3u8?
-#EXTINF:-1 group-title="Pop & Hits" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",181.FM - Christmas Oldies
-https://listen.181fm.com/181-xoldies_128k.mp3
 #EXTINF:-1 group-title="Pop & Hits" tvg-logo="https://www.westminster.edu/about/news/images/titan_radio_logo.gif",88.9 Titan Radio - New Wilmington, PA
 https://ice64.securenetsystems.net/WWNW
 #EXTINF:-1 group-title="Pop & Hits" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",93.9 WLIT-FM LITE FM

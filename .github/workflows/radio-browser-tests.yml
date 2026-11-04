@@ -9,6 +9,8 @@ on:
       - 'stations.json'
       - 'radio.m3u'
       - 'logos/**'
+      - 'world-radio/**'
+      - 'us-directory/**'
       - 'requirements*.txt'
       - '.github/workflows/**'
   pull_request:
@@ -19,6 +21,8 @@ on:
       - 'stations.json'
       - 'radio.m3u'
       - 'logos/**'
+      - 'world-radio/**'
+      - 'us-directory/**'
       - 'requirements*.txt'
       - '.github/workflows/**'
   workflow_dispatch:
@@ -56,3 +60,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -v
           python scripts/validate.py
+          python scripts/check_world_radio.py
+          python scripts/check_language_radio.py
+          python scripts/build_us_directory.py --validate
+          python scripts/generate_world_covers.py --verify

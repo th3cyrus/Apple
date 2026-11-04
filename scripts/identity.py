@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 import re
 from urllib.parse import urlsplit
 
-from safety import unsupported_stream_suffix, valid_url
+from safety import has_expiring_query, unsupported_stream_suffix, valid_url
 
 
 def hostname(url):
@@ -102,6 +102,8 @@ def candidate_rejection_reasons(station, candidate, score, now=None):
         reasons.append('misleading_stream_suffix')
     if not valid_url(url):
         reasons.append('invalid_candidate_url')
+    elif has_expiring_query(url):
+        reasons.append('expiring_candidate_url')
     elif urlsplit(url).scheme == 'https' and candidate.get('ssl_error') not in (0, False, '0'):
         reasons.append('directory_ssl_error')
     try:

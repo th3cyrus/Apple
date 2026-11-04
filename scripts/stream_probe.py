@@ -33,6 +33,7 @@ INITIAL_READ_BYTES = 4096
 MIN_DECODED_SECONDS = 0.5
 MIN_RMS_DBFS = -70
 MIN_PEAK_DBFS = -60
+MAX_DECODED_SECONDS = 8
 
 
 class ProbeError(Exception):
@@ -76,9 +77,10 @@ def check_audio(sample, remaining=10):
         raise ProbeError('UnsupportedAudioCodec', 'Unsupported radio audio codec')
     try:
         decoded = subprocess.run([
-            'ffmpeg', '-v', 'error', '-nostdin',
+            'ffmpeg', '-v', 'error', '-nostdin', '-protocol_whitelist', 'pipe',
             '-probesize', str(MAX_SAMPLE_BYTES * 4), '-analyzeduration', '2000000',
             '-i', 'pipe:0', '-map', '0:a:0', '-vn', '-sn', '-dn',
+            '-t', str(MAX_DECODED_SECONDS),
             '-ac', '1', '-ar', '8000', '-f', 's16le', 'pipe:1',
         ], input=sample, capture_output=True,
             timeout=max(0.1, min(6, deadline - time.monotonic())), check=False)

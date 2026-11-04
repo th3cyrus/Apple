@@ -46,7 +46,7 @@ jobs:
           python -m pip install --only-binary=:all: -r requirements.txt
 
       - name: Render and validate station cover artwork
-        run: python scripts/generate_world_covers.py --restyle
+        run: python scripts/generate_world_covers.py
 
       - name: Publish missing station artwork
         env:

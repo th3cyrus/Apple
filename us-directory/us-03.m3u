@@ -31,8 +31,6 @@ https://stream.revma.ihrhls.com/zc1345
 https://a10.asurahosting.com:8560/radio.mp3
 #EXTINF:-1 group-title="Country" tvg-logo="https://i.iheart.com/v3/re/assets.brands/9274387d8a2c3ba7dc3f66e976e8ebe8?ops=gravity(%22center%22),contain(32,32),quality(65)",Gator 107.9
 https://stream.revma.ihrhls.com/zc6855
-#EXTINF:-1 group-title="Country" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",HPR-3 Heartland Christmas
-https://us2.maindigitalstream.com/ssl/7791
 #EXTINF:-1 group-title="Country" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",KBOW
 https://butte.leanstream.co/KBOWAM
 #EXTINF:-1 group-title="Country" tvg-logo="https://static.wixstatic.com/media/e3ae8d_f7494e6b2d2a41b584b1c302610f7017~mv2.png/v1/crop/x_367,y_395,w_1967,h_1922/fill/w_454,h_443,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/kgnbglow.png",KGNB AM 1420 New Braunfels
@@ -279,6 +277,8 @@ https://stream.rekt.network/chillsynth.ogg
 https://n1db-e2.revma.ihrhls.com/zc4342/29_1ffnkz9luadbf02/playlist.m3u8?streamid=4342&zip=&aw_0_1st.playerid=iHeartRadioWebPlayer&aw_0_1st.skey=11942172447&clientType=web&companionAds=false&deviceName=web-mobile&dist=iheart&host=webapp.US&listenerId=610ef79a28d5ede41f20cf242de2bff1&playedFrom=157&pname=live_profile&profileId=11942172447&stationid=4342&terminalId=159&territory=US
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Classic Rock Florida
 https://streaming.live365.com/a06375
+#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://player.yesstreaming.com/uploads/logos/1657394553_2a60c766d829113ee8f7.png",Conyers Georgia Old Time Radio
+https://s8.yesstreaming.net:17011/stream
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Conyers Old Time Radio 2nd Stream
 https://s6.yesstreaming.net:17082/stream
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://cool1017online.com/wp-content/uploads/2020/05/cropped-sunglasses-512-192x192.png",COOL 101.7 WMVL-FM
@@ -345,8 +345,6 @@ https://ice8.securenetsystems.net/KCSC
 https://streamer.radio.co/s69ad365c4/listen
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",KDRS Jack FM 107.1
 https://ice23.securenetsystems.net/KDRS?playSessionID=C9DD6E38-BE06-8345-4F082D23B48148CC
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",King FM Christmas Channel
-https://classicalking.streamguys1.com/christmas-aac-128k
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://kirtangpirateradio.com/wp-content/uploads/2022/04/Website_Logo_Mini.png",Kirtang Pirate Radio
 https://server.kirtangpirateradio.com:8000/radiohq.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",KLHI-FM Hi92
@@ -463,8 +461,6 @@ https://ice2.somafm.com/cliqhop-128-mp3
 https://ice5.somafm.com/live-128-mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://somafm.com/img/darkzone-400.jpg",SomaFM The Dark Zone (256k MP3)
 https://ice6.somafm.com/darkzone-256-mp3
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://somafm.com/img3/xmasinfrisko-400.jpg",SomaFM Xmas in Frisco (64k AAC)
-https://ice6.somafm.com/xmasinfrisko-64-aac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://static.wixstatic.com/media/726ed5_3cb5f6ca052d48e7bed3744dc4fbae2b~mv2.png/v1/crop/x_0,y_83,w_1331,h_1165/fill/w_431,h_338,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Spice-Groove-Radio-International-wht-text.png",Spice Groove Radio International
 https://s5.radio.co/s663878913/low
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",SPOTLIGHT Radio Network

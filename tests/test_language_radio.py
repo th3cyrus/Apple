@@ -52,6 +52,7 @@ class LanguageRadioTests(unittest.TestCase):
             "إذاعة القرآن الكريم", "Quran Talk", "Christian Gospel FM",
             "Diyanet Radyo", "Радио Православное", "رادیو مسیحی",
             "Ancient Faith Talk", "Sufi Devotional Radio",
+            "ChristianCountryGospel.Net", "Sacred Christmas Radio",
             "Kurdish Quran Radio", "German Worship FM",
         )
         self.assertTrue(all(is_excluded_program(name) for name in phrases))

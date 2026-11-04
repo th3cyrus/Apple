@@ -6,12 +6,16 @@ on:
     paths:
       - 'scripts/build_us_directory.py'
       - 'scripts/content_filters.py'
+      - 'scripts/safety.py'
+      - 'requirements.txt'
       - '.github/workflows/us-directory.yml'
   pull_request:
     branches: [main]
     paths:
       - 'scripts/build_us_directory.py'
       - 'scripts/content_filters.py'
+      - 'scripts/safety.py'
+      - 'requirements.txt'
       - '.github/workflows/us-directory.yml'
   workflow_dispatch:
   schedule:
