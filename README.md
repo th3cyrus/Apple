@@ -1,21 +1,20 @@
-# Apple · Live Radio for Primuse 📻
+# Apple · Radio Collections for Primuse 📻
 
-**Three radio collections for [Primuse](https://github.com/chenqi92/primuse):** a curated U.S. playlist with matching artwork, a larger U.S. directory, and a separate world selection. All use M3U subscriptions.
+**Curated radio from the United States and around the world — ready to subscribe in [Primuse](https://github.com/chenqi92/primuse).**
 
-| Collection | Current size | What's included | Subscribe |
+Choose from **three separate M3U collections**: a carefully maintained U.S. selection with matching artwork, a large searchable-by-list U.S. directory, and an editorially selected international playlist. Subscribe to each collection independently; updating one does not import the others.
+
+| Collection | Stations / Streams | What makes it different | Subscription |
 | --- | ---: | --- | --- |
-| **Curated U.S. Radio** | **36 stations** | Original matching covers, reviewed broadcaster identity, and FFmpeg audio checks | [Main M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u) |
-| **U.S. Radio Directory** | **4,534 directory entries** | Crowdsourced HTTPS station URLs, grouped into **12** Primuse-friendly M3U subscriptions | [All 12 links](us-directory/README.md) |
-| **World Radio Select** | **72 selected stations** | 44 countries and regions; international music, news and cultural radio | [World M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u) |
+| **[U.S. Curated Radio](stations.json)** | **36 stations** | Handpicked broadcasters, matching custom covers, and decoded-audio health checks | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u)** |
+| **[U.S. Radio Directory](us-directory/README.md)** | **4,534 entries** | Broad American coverage via Radio Browser, split into **12 M3U playlists** to respect Primuse's per-subscription limit | **[Choose playlists](us-directory/README.md)** |
+| **[World Radio Select](world-radio/README.md)** | **72 stations · 44 countries/regions** | International music, news and cultural picks; each stream passed a decoded, non-silent audio sample test on **November 4, 2026** | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u)** |
 
-*Directory snapshot: November 4, 2026. The count can change with the weekly refresh;
-see the [live directory index](us-directory/index.json) for the latest totals.
-These are stream-directory entries, not a claim that every U.S. broadcast station is included
-or that every entry is playable internationally.*
+**How to add a collection:** In Primuse, go to **Radio → + → Add Subscription → Fetch → Subscribe**. Choose **Update Now** to see changes made to an existing subscription.
 
-[Browse curated stations](stations.json) ·
-[Curated stream-health workflow](https://github.com/th3cyrus/Apple/actions/workflows/import.yml) ·
-[U.S. directory refresh workflow](https://github.com/th3cyrus/Apple/actions/workflows/us-directory.yml)
+**Playback and coverage:** The U.S. directory is community-sourced and is **not individually audio-tested**; its station count changes with [weekly refreshes](us-directory/index.json). The curated and world collections use audio-decoding checks, but even a successful test cannot guarantee access from every country or compatibility with every player. This repository hosts playlists and artwork, **not radio audio**.
+
+[Explore station data](stations.json) · [World station list](world-radio/stations.json) · [U.S. maintenance status](https://github.com/th3cyrus/Apple/actions/workflows/import.yml) · [World audio audit](https://github.com/th3cyrus/Apple/actions/workflows/world-radio.yml)
 
 ---
 
