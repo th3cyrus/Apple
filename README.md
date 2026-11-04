@@ -1,8 +1,22 @@
 # Apple · USA Live Radio for Primuse 📻
 
-A curated collection of **36 live U.S. radio stations**, featuring original minimalist artwork, an M3U playlist, and automated maintenance through GitHub Actions.
+**Two complementary U.S. radio collections, built for [Primuse](https://github.com/chenqi92/primuse):**
+a hand-curated, consistently illustrated playlist and a broader, automatically refreshed
+directory of American radio streams. Both use standard M3U subscriptions.
 
-[**Listen / Subscribe**](https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u) · [Browse Stations](https://github.com/th3cyrus/Apple/blob/main/stations.json) · [Workflow Status](https://github.com/th3cyrus/Apple/actions/workflows/import.yml)
+| Collection | Current size | What's included | Subscribe |
+| --- | ---: | --- | --- |
+| **Curated U.S. Radio** | **36 stations** | Original matching covers, reviewed broadcaster identity, and FFmpeg audio checks | [Main M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u) |
+| **U.S. Radio Directory** | **4,534 directory entries** | Crowdsourced HTTPS station URLs, grouped into **12** Primuse-friendly M3U subscriptions | [All 12 links](us-directory/README.md) |
+
+*Directory snapshot: November 4, 2026. The count can change with the weekly refresh;
+see the [live directory index](us-directory/index.json) for the latest totals.
+These are stream-directory entries, not a claim that every U.S. broadcast station is included
+or that every entry is playable internationally.*
+
+[Browse curated stations](stations.json) ·
+[Curated stream-health workflow](https://github.com/th3cyrus/Apple/actions/workflows/import.yml) ·
+[U.S. directory refresh workflow](https://github.com/th3cyrus/Apple/actions/workflows/us-directory.yml)
 
 ---
 
@@ -17,64 +31,88 @@ The M3U playlist may also work with other compatible radio players.
 
 ---
 
-## Subscribe
+## Subscribe in Primuse
 
-1. Open **Primuse → Radio → + → Add Subscription**.
-2. Paste the following URL:
+Open **Primuse → Radio → + → Add Subscription**, paste an M3U URL, tap **Fetch**
+and **Subscribe**. You can enable **Update Automatically**, or choose
+**Update Now** when changes in the GitHub files do not appear immediately in the app.
 
-   `https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u`
+### Option A — Curated collection (36 stations)
 
-3. Tap **Fetch**, then **Subscribe**.
-4. Enable **Update Automatically** to keep the station list synchronized.
+Use the single subscription URL below. It includes the custom frosted-glass covers
+and all 36 manually maintained station identities.
 
-You can also tap **Update Now** to refresh the subscription manually.
+```text
+https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u
+```
 
----
+### Option B — Expanded U.S. directory (4,534 entries in 12 playlists)
+
+Open **[U.S. Directory — 12 subscription URLs](us-directory/README.md)** and
+subscribe to the parts you want **one at a time**. These lists are separate from
+the curated collection: refreshing the curated subscription will **not** add them.
+
+Primuse processes at most **1,000 entries per subscription**; the directory is
+split into 12 smaller files (currently 357–402 entries each). Each has a stable
+subscription URL for updates. An additional [featured HTTPS preview](us-directory/featured.m3u)
+contains a smaller, directory-derived selection.
+
+The directory lists **candidates**, not individually playback-tested stations.
+Some streams may be offline, silent, incompatible, region-restricted or duplicated
+under different directory identities. The expanded lists do not have the
+collection-wide original cover design: artwork, when present, comes from the
+station directory or broadcasters.
 
 ## Features
 
-- **36 curated U.S. radio stations**
-- Original minimalist frosted-glass-style station covers
-- Self-hosted artwork for all 36 stations
-- Ready-to-use M3U subscription playlist
-- Stations organized by music genre
-- Editable station catalog and stream URLs
-- Automated daily maintenance via GitHub Actions
-- Manual workflow execution when needed
+**Curated collection**
 
-### Region restrictions
+- 36 selected U.S. live radio stations, including Radio Paradise Rock Mix.
+- Consistent custom frosted-glass cover artwork stored in `logos/`.
+- Genre-organized M3U playlist with direct station stream URLs.
+- Daily checks using FFprobe/FFmpeg to decode audio and flag silent or
+  mislabelled streams, with conservative repair and diagnostics.
+- Curated identity checks, manual locks, and original artwork preservation.
 
-The collection features U.S. stations, but this does **not** mean that every
-stream is restricted to listeners in the United States. The WMMR 93.3 entry
-carries the user-requested label **US Only** following a listener's
-out-of-country permission-denied playback error. That does not independently
-prove a worldwide US-only policy. Other entries are not labeled without
-station-specific evidence; successful GitHub Actions stream tests do not prove
-playback availability in every country.
+**Expanded U.S. directory**
 
-Radio Paradise Rock Mix is an additional, independent American Internet music
-service, not a rebroadcast of WMMR. Its direct MP3 link is kept in the catalog
-without replacing WMMR.
+- 4,534 directory-listed U.S. HTTPS streams in 12 independent M3U playlists
+  (snapshot: November 4, 2026).
+- Radio Browser-based discovery, filtering of known-bad entries and unsafe
+  or misleading URL patterns, plus de-duplication by exact stream URL.
+- Automatic weekly rebuilding, a JSON index of counts, and a smaller
+  [featured playlist](us-directory/featured.m3u).
+- **No per-station FFmpeg playback guarantee**; Radio Browser's recent
+  check is metadata, not proof of playable audio on your device.
 
+### Regional access and station identity
 
-## Expanded U.S. radio directory
+American broadcaster origin is **not** the same as U.S.-only access. The
+curated station **WMMR 93.3 (US Only)** carries a listener-reported access
+warning, which is not a definitive test of every region. Other stations are
+not marked U.S.-only without station-specific evidence.
 
-The original **36 curated stations** stay in [radio.m3u](radio.m3u), with their
-custom covers and live-audio health checks. American radio directories list
-thousands more, beyond Primuse's **1,000-stations-per-subscription** limit.
+**Radio Paradise Rock Mix** is a separate U.S. Internet music service, not a
+rebroadcast of WMMR. It remains in the curated Rock & Alternative group.
 
-[**Subscribe to the U.S. directory playlists**](us-directory/README.md) for
-12 separate, stable, smaller subscriptions generated from Radio Browser.
-The directory is refreshed weekly and filters broken metadata, unsupported
-URL patterns, and HTTP-only sources. **Directory links are not individually
-FFmpeg-verified; availability outside the United States is not guaranteed.**
+The expanded directory may also include streams restricted by country, provider,
+player or network. A successful GitHub Actions check from a server does not
+guarantee playback from Iraq or any other location.
 
-A [featured HTTPS preview](us-directory/featured.m3u) is also available
-immediately. It is based on [AlonDrilich/radio-playlists](https://github.com/AlonDrilich/radio-playlists)
-(public-domain Radio Browser directory data), and is not a substitute for
-individually verified curated stations.
+### Expanded directory automation
 
-### Radio Categories
+The expanded lists are generated from **Radio Browser** and published to
+[`us-directory/`](us-directory/README.md). Each currently has fewer than 1,000
+entries, avoiding Primuse's per-subscription import limit. The
+[`U.S. Radio Directory Refresh`](https://github.com/th3cyrus/Apple/actions/workflows/us-directory.yml)
+workflow runs **weekly on Monday at 04:31 UTC (07:31 Iraq time)** and can
+also be run manually.
+
+If a directory fetch is incomplete or unexpectedly small, generation fails
+rather than replacing published lists with truncated output. The curated
+36-station playlist is never overwritten by the directory generator.
+
+### Curated radio categories
 
 - Hip-Hop & R&B
 - Rock & Alternative
@@ -83,11 +121,11 @@ individually verified curated stations.
 - Classical
 - News & Talk
 
----
-
 ## Automatic Updates
 
-GitHub Actions checks the collection every **day at 03:17 UTC / 06:17 Iraq time**.
+The **curated playlist** is checked every **day at 03:17 UTC / 06:17 Iraq time**.
+The **expanded U.S. directory** is rebuilt every **Monday at 04:31 UTC / 07:31 Iraq time**.
+Both are managed by separate GitHub Actions workflows and separate M3U files.
 Relevant changes to the catalog, maintenance code, dependencies or refresh workflow
 also trigger a refresh. Bot-generated data commits do not trigger another refresh.
 
@@ -211,16 +249,22 @@ If a station stops working:
 | Path | Description |
 | --- | --- |
 | `stations.json` | Editable catalog of 36 radio stations |
-| `radio.m3u` | Public M3U subscription playlist |
+| `radio.m3u` | Main curated M3U subscription (36 stations) |
+| `us-directory/us-01.m3u` … `us-12.m3u` | Twelve expanded U.S. directory subscriptions |
+| `us-directory/index.json` | Current directory totals and per-playlist counts |
+| `us-directory/README.md` | All expanded directory subscription URLs |
+| `us-directory/featured.m3u` | Small featured HTTPS directory preview |
+| `scripts/build_us_directory.py` | Filter, deduplicate and split the expanded U.S. directory |
+| `.github/workflows/us-directory.yml` | Weekly/manual directory regeneration and publishing |
 | `logos/` | Original station cover artwork |
 | `scripts/update.py` | Maintenance orchestration and atomic playlist generation |
-| `scripts/stream_probe.py` | Audio packets, playlists, retries and HTTP diagnostics |
+| `scripts/stream_probe.py` | Decoded audio, silence detection, playlist handling, retries and HTTP diagnostics |
 | `scripts/identity.py` | Broadcaster and program-channel matching |
 | `scripts/catalog.py` | Station schema validation before processing |
 | `scripts/health_report.py` | Per-run checkpoints and bounded history |
 | `scripts/validate.py` | Shared offline output/report validation |
 | `scripts/radio_browser.py` | Mirror discovery, failover and catalog search |
-| `tests/` | Offline directory, media and maintenance regression tests |
+| `tests/` | Offline directory builder, media and maintenance regression tests |
 | `logs/stream-health.jsonl` | Last 30 finalized stream reports |
 | `logs/current-run.json` | Current execution checkpoint (not committed) |
 | `docs/MAINTENANCE.md` | Dependency updates, diagnostics and branch rules |
@@ -233,7 +277,12 @@ If a station stops working:
 
 ## Station Artwork
 
-All 36 station covers feature a consistent, minimalist design inspired by frosted glass, soft gradients, and clean typography.
+All **36 curated station covers** feature a consistent, minimalist design inspired
+by frosted glass, soft gradients, and clean typography. This includes the updated
+Radio Paradise Rock Mix artwork.
+
+The **expanded directory** uses third-party favicon links when available; those
+thousands of stations are not covered by this custom visual design.
 
 The artwork is hosted directly in this repository and is designed to provide a consistent appearance across the radio collection.
 
@@ -285,7 +334,9 @@ It is not affiliated with, sponsored by, or endorsed by:
 - Primuse or its developers
 - Any featured radio station or broadcaster
 
-This repository provides playlist metadata and links to publicly accessible radio streams. It does not host or redistribute the broadcast audio.
+This repository provides station metadata and links to broadcaster or third-party
+audio streams. It does not host or rebroadcast the audio, and does not promise
+that directory-listed streams are available in every country.
 
 ---
 
