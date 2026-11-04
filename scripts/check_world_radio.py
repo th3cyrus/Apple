@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WORLD = ROOT / "world-radio"
 sys.path.insert(0, str(ROOT / "scripts"))
 from safety import valid_url, unsupported_stream_suffix, safe_message
+from content_filters import is_excluded_program
 from stream_probe import stream_check
 
 REGIONS = {"Europe", "North America", "Caribbean", "South America",
@@ -49,6 +50,8 @@ def load_and_validate(root=WORLD):
         if not re.fullmatch(r"[A-Z]{2}", station["country_code"]):
             raise ValueError("Invalid country code")
         url = station["stream"]
+        if is_excluded_program(station["name"], station.get("genre"), url):
+            raise ValueError("Religious radio station excluded: " + station["id"])
         parts = urlsplit(url)
         if (not valid_url(url) or parts.scheme != "https"
                 or unsupported_stream_suffix(url)

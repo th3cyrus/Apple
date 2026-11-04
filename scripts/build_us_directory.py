@@ -18,6 +18,7 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from safety import valid_url, unsupported_stream_suffix
+from content_filters import is_excluded_program
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "us-directory"
@@ -35,6 +36,16 @@ MAX_HEALTH_AGE_DAYS = 30
 MAX_DIRECTORY_SHRINK_RATIO = 0.65
 BLOCKED_AUTH_PARAMS = {'token', 'zt', 'signature', 'policy', 'expires', 'key'}
 FALLBACK_ARTWORK = "https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png"
+# Editorial nonreligious additions replacing identified religious directory streams.
+# These come from public broadcaster direct-stream listings, not Radio Browser votes.
+PINNED_NONRELIGIOUS = (
+    {"id": "us-radio-paradise-beyond", "name": "Radio Paradise Beyond Mix",
+     "url": "https://stream.radioparadise.com/beyond-192", "group": "Rock & Alternative",
+     "logo": FALLBACK_ARTWORK, "votes": 0},
+    {"id": "us-somafm-boot-liquor", "name": "SomaFM Boot Liquor (128k MP3)",
+     "url": "https://ice5.somafm.com/bootliquor-128-mp3", "group": "Country",
+     "logo": FALLBACK_ARTWORK, "votes": 0},
+)
 ATTR_CLEAN = re.compile(r'[\x00-\x1f\x7f-\x9f\u200b-\u200f\u202a-\u202e\u2066-\u2069"<>]')
 BAD_AUDIO_PLAYLIST = re.compile(
     r'\.(?:mp3|aac|m4a|ogg|opus|flac|wav)\.(?:m3u|m3u8|pls)$', re.I)
@@ -101,7 +112,9 @@ def normalize(record):
     except (KeyError, ValueError, TypeError, AttributeError):
         return None
     name = clean_text(record.get("name"), 100)
-    if len(name) < 2:
+    if len(name) < 2 or is_excluded_program(
+            name, record.get("tags"), record.get("homepage"),
+            record.get("url_resolved"), record.get("url")):
         return None
     stream = record.get("url_resolved") or record.get("url")
     if not public_https(stream):
@@ -140,6 +153,20 @@ def catalog(records, curated_urls=()):
         if previous is None or station["votes"] > previous["votes"]:
             selected[station["url"]] = station
     items = list(selected.values())
+    items.sort(key=lambda s: (s["group"], s["name"].casefold(), s["id"]))
+    return items
+
+
+def add_nonreligious_replacements(items, curated_urls=()):
+    """Preserve two distinct vetted nonreligious choices after source filtering."""
+    excluded = set(curated_urls)
+    present = {station["url"] for station in items}
+    for station in PINNED_NONRELIGIOUS:
+        if (station["url"] not in present and station["url"] not in excluded
+                and public_https(station["url"])
+                and not is_excluded_program(station["name"], station["url"])):
+            items.append(dict(station))
+            present.add(station["url"])
     items.sort(key=lambda s: (s["group"], s["name"].casefold(), s["id"]))
     return items
 
@@ -198,7 +225,7 @@ def get_records(session):
 def build(session, output=OUTPUT, curated_path=ROOT / "stations.json"):
     curated = json.loads(Path(curated_path).read_text(encoding="utf-8"))
     existing = [station["stream"] for station in curated]
-    items = catalog(get_records(session), existing)
+    items = add_nonreligious_replacements(catalog(get_records(session), existing), existing)
     if len(items) < MIN_RESULTS:
         raise ValueError("Not enough compatible U.S. streams; existing lists unchanged")
     existing_index = Path(output) / "index.json"
@@ -237,11 +264,14 @@ def build(session, output=OUTPUT, curated_path=ROOT / "stations.json"):
         "Iraq or a guarantee against geo-blocking. The original 36-station "
         "[curated playlist](../radio.m3u) remains separate.",
         "",
+        "Explicitly Islamic or Quran-oriented radio streams are excluded by station metadata "
+        "and stream identity; two nonreligious broadcaster links are pinned as replacements. "
         "Only HTTPS entries with acceptable URL structure and no signed/token query "
-        f"parameters, last checked within {MAX_HEALTH_AGE_DAYS} days, are included. "
+        f"parameters, last checked within {MAX_HEALTH_AGE_DAYS} days, are normally included. "
         "Streams reporting SSL errors, broken health or misleading playlists are excluded. "
-        "Missing/unsafe station favicons use the project's own shared fallback cover. "
-        "This is not proof of audible media or international accessibility.",
+        "Missing/unsafe favicons use the project's own shared fallback cover. "
+        "The two pinned replacements use broadcaster-published direct URLs, rather than "
+        "Radio Browser's recent-check metadata. No worldwide playback guarantee.",
         "",
         "| Subscription | Stations |",
         "|---|---:|",

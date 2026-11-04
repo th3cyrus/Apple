@@ -1,6 +1,6 @@
 # U.S. Radio Directory for Primuse
 
-4,452 distinct U.S. stations from Radio Browser, split into 12 independent subscriptions. Import each desired M3U URL into Primuse.
+4,452 U.S. streams (Radio Browser plus two editorial nonreligious replacements), split into 12 independent subscriptions. Import each desired M3U URL into Primuse.
 
 **Important:** These are crowd-sourced directory links and NOT individually verified audio streams. Radio Browser's check is not a playback test from Iraq or a guarantee against geo-blocking. The original 36-station [curated playlist](../radio.m3u) remains separate.
 

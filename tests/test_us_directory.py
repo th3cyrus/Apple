@@ -83,6 +83,26 @@ class DirectoryTests(unittest.TestCase):
             self.assertEqual(json.loads((directory_path / "index.json").read_text())
                              ["station_count"], 5000)
 
+    def test_islamic_and_quran_stations_are_filtered(self):
+        records = [
+            record("Quran for the Soul", "https://islamicbulletin.site:8102/stream"),
+            record("Islamic Music Radio", "https://audio.islamicmusicradio.com/imr"),
+            record("إذاعة القرآن الكريم", "https://audio.example.org/stream"),
+            record("Neutral Music FM", "https://radio.example.org/live",
+                   tags="arabic pop, islamic teachings"),
+            record("Arabic Music FM", "https://music.example.org/stream",
+                   tags="arabic pop, hits"),
+        ]
+        found = directory.catalog(records)
+        self.assertEqual([s["name"] for s in found], ["Arabic Music FM"])
+
+    def test_pinned_nonreligious_replacements(self):
+        entries = directory.add_nonreligious_replacements([])
+        self.assertEqual(len(entries), 2)
+        self.assertTrue(all(s["url"].startswith("https://") for s in entries))
+        self.assertTrue(all(not directory.is_excluded_program(s["name"], s["url"])
+                            for s in entries))
+
     def test_dedupe_curated_stream(self):
         records = [record("A", "https://radio.example.org/live")]
         self.assertEqual(directory.catalog(records, ["https://radio.example.org/live"]), [])
