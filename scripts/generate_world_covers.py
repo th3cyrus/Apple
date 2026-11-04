@@ -43,8 +43,12 @@ def language_targets(root=WORLD):
             yield station, Path(root) / language / "logos" / (station["id"] + ".png")
 
 
+# Radio NIC uses artwork supplied by its owner. Never re-render it.
+PROTECTED_ARTWORK_IDS = frozenset({"ir-radio-nic"})
+
+
 def write_cover(station, path, force=False):
-    if path.is_file() and not force:
+    if path.is_file() and (not force or station["id"] in PROTECTED_ARTWORK_IDS):
         return False
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_name("." + path.name + ".tmp")
@@ -74,7 +78,10 @@ def verify_png(path):
     if not path.is_file():
         raise ValueError("Missing radio artwork: " + str(path))
     with Image.open(path) as image:
-        if image.format != "PNG" or image.size != (SIZE, SIZE):
+        # Preserve owner-supplied original artwork, including its native size.
+        protected = path.stem in PROTECTED_ARTWORK_IDS
+        valid_size = (image.width >= SIZE and image.height >= SIZE) if protected else image.size == (SIZE, SIZE)
+        if image.format != "PNG" or not valid_size:
             raise ValueError("Invalid radio artwork: " + str(path))
         image.verify()
 
