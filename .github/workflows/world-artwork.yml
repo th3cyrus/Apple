@@ -46,9 +46,9 @@ jobs:
           python -m pip install --only-binary=:all: -r requirements.txt
 
       - name: Render and validate station cover artwork
-        run: python scripts/generate_world_covers.py
+        run: python scripts/generate_world_covers.py --restyle
 
-      - name: Publish missing station artwork
+      - name: Publish restyled station artwork
         env:
           GH_TOKEN: ${{ github.token }}
           TARGET_REF: ${{ github.ref_name }}
@@ -59,7 +59,7 @@ jobs:
           if git diff --cached --quiet; then
             exit 0
           fi
-          git commit -m 'Generate missing World Radio Select covers'
+          git commit -m 'Unify World Radio and language station covers (preserve Radio NIC)'
           askpass="$RUNNER_TEMP/world-artwork-askpass"
           cat > "$askpass" <<'SH'
           #!/bin/sh
