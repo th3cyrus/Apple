@@ -106,6 +106,25 @@ def verify_languages(root=WORLD):
     print("Verified language radio covers:", counts, flush=True)
 
 
+DIRECTORY_GENRES = (
+    "Hip-Hop & R&B", "Rock & Alternative", "Country",
+    "Jazz & Blues", "Classical", "News & Talk",
+    "Electronic & Dance", "Latin & Spanish",
+    "Christian & Gospel", "Pop & Hits", "Other U.S. Radio",
+)
+
+
+def directory_genre_covers(root=ROOT, *, force=False):
+    directory = Path(root) / "us-directory" / "genre-logos"
+    for genre in DIRECTORY_GENRES:
+        slug = "-".join(part.lower() for part in __import__("re").findall(r"[a-z0-9]+", genre.lower()))
+        filename = directory / (slug + ".png")
+        write_cover({"id": "us-directory-" + slug, "name": genre,
+                     "country_code": "US", "genre": "USA Radio Directory"},
+                    filename, force=force)
+        verify_png(filename)
+
+
 def directory_cover(root=ROOT, *, force=False):
     filename = Path(root) / "us-directory" / "directory-cover.png"
     if not filename.is_file() or force:
@@ -131,9 +150,13 @@ def main():
         generate(stations, args.directory, force=rebuild)
         generate_languages(args.directory, force=rebuild)
         directory_cover(root=args.directory.parent, force=rebuild)
+        directory_genre_covers(root=args.directory.parent, force=rebuild)
     verify(stations, args.directory)
     verify_languages(args.directory)
     verify_png(args.directory.parent / "us-directory" / "directory-cover.png")
+    for genre in DIRECTORY_GENRES:
+        slug = "-".join(part.lower() for part in __import__("re").findall(r"[a-z0-9]+", genre.lower()))
+        verify_png(args.directory.parent / "us-directory" / "genre-logos" / (slug + ".png"))
 
 
 if __name__ == "__main__":
