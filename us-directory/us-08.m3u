@@ -425,8 +425,6 @@ https://tunein.cdnstream1.com/4068_96.mp3?aw_0_1st.playerid=qZjjnm85&aw_0_1st.sk
 https://radio.unheardglobal.com/listen/unheard-one/radio.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://static-assets.strikinglycdn.com/images/favicon.ico",Unholy Radio
 https://c15.radioboss.fm:8089/stream
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",UP (Undignified Praise)
-https://stream.radio.co/s4f895f59a/listen
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://i0.wp.com/www.vcy.org/wp-content/uploads/2018/10/cropped-tower-34981_960_720.png?fit=180%2c180&#038;quality=80&#038;ssl=1",VCY America (national)
 https://playerservices.streamtheworld.com/api/livestream-redirect/VCY_SACRED_STYLINGS_S01.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",WAHS 89.5 Avondale Community Radio

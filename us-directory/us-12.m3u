@@ -329,8 +329,6 @@ https://eu2.fastcast4u.com/proxy/julpar00?mp=/;
 https://stream.korcfm.com:8443/listen
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",KTAL-LP
 https://ktal.broadcasttool.stream/stream
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",KWPZ Praise 106.5
-https://crista-kwpz.streamguys1.com/kwpzaacp?starttime=1686170143
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",KWVE
 https://playerservices.streamtheworld.com/api/livestream-redirect/KWAVEFMAAC_SC
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/924/2025/02/01192021/kxsulogo_fixed.png",KXSU

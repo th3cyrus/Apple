@@ -411,16 +411,12 @@ https://wxradio.org/GA-Athens-WXK56
 https://ice41.securenetsystems.net/WITGLP
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Opihi 107.7
 https://ais-sa1.streamon.fm/7936_96k.aac
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://orthodoxsentinelradio.com/wp-content/uploads/2021/04/cropped-cropped-logo-new-version-2-180x180.jpg",Orthodox Sentinel
-https://s4.radio.co/s36b8a688f/low
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://cdn.onlineradiobox.com/img/l/4/128654.v5.png",OSDM Radio
 https://tuneintoradio1.com:8060/radio.flac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",PINOYRADIO
 https://usa5.fastcast4u.com/proxy/mcbnprc?mp=/1
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://i.iheart.com/v3/re/assets.brands/593f129c04f04dd9141a0b46?ops=gravity(%22center%22),contain(32,32),quality(65)",Power 99
 https://stream.revma.ihrhls.com/zc2009
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://static.wixstatic.com/media/141d42_75dd381b48c942cd9d40ac8a3c8c71a6~mv2.jpg/v1/fill/w_148,h_84,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_auto/141d42_75dd381b48c942cd9d40ac8a3c8c71a6~mv2.jpg",Praise Radio 592
-https://c6.radioboss.fm/stream/250
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://progulus.com/favicon.ico",Progulus - Online Progressive Rock Radio
 https://centova.radioservers.biz/proxy/klemmer/stream
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://i.iheart.com/v3/re/assets.brands/5aea24caf353582cf23a0ad2?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",Q93.3
@@ -521,8 +517,6 @@ https://das-edge14-live365-dal02.cdnstream.com/a39711
 https://usa8.fastcast4u.com/proxy/live?mp=/1
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://wcwm.wm.edu/wp-content/uploads/2023/12/wcwm_website_headerlogo-1.svg",WCWM
 https://wcwm.broadcasttool.stream/wcwm-onair
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://images.squarespace-cdn.com/content/v1/6097c5e728407357e7248b13/76a561cf-1fa2-4431-b7a9-4e5e47f82256/web_95.7+-+WDEK+REVISED+Radio+logo.jpg?format=1500w",WDEK Columbia's Praise
-https://s8.yesstreaming.net:17224/stream
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://images.squarespace-cdn.com/content/v1/6604ad6acc29650a21ab7dd9/4ebf3bb4-1253-44ae-ae54-84ba10c27463/village+radio+logo+wip+11.21.24.png?format=1500w",WEIE 99.7 Village Radio Elk Rapids, Michigan
 https://listen997fm.pacificaservice.org/
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://i0.wp.com/jazzradiowetf.org/wp-content/uploads/2021/02/logo-trans.png?w=288&ssl=1",WETF-LP FM 105.7 South Bend, IN

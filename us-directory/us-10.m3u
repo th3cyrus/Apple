@@ -297,8 +297,6 @@ https://pureplay.cdnstream1.com/6009_64.aac
 https://stream.revma.ihrhls.com/zc7001/hls.m3u8?streamid=7001
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Halloween Radio Movies
 https://radio1.streamserver.link/radio/8050/hrs-aac
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://www.hisradiopraise.com/sites/hrp/images/station-logos/hrp-icon128.png",HIS Radio Praise
-https://rtn.cdnstream1.com/2568_96.aac?rand=77965
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Hit City Radio
 https://streaming.live365.com/a78287
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://i.iheart.com/v3/re/assets.brands/6543fc2a5d549f1d0cf6ea2b?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",HOT 100 Columbus
