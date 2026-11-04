@@ -701,6 +701,8 @@ https://centova.radioservers.biz/proxy/progrock/stream
 https://radio3.radio-calico.com:8443/calico
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://radiomutation.com/apple-touch-icon.png",Radio Mutation
 https://fm.radiomutation.com/stream
+#EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Radio Paradise Beyond Mix
+https://stream.radioparadise.com/beyond-192
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://somafm.com/img3/folkfwd-400.jpg",SomaFM Folk Forward (64k AAC)
 https://ice6.somafm.com/folkfwd-64-aac
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://somafm.com/img3/indiepop-400.jpg",SomaFM Indie Pop Rocks! (64k AAC)

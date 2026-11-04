@@ -105,6 +105,8 @@ https://streaming.live365.com/a40335
 https://ais-sa1.streamon.fm/7282_48k.aac
 #EXTINF:-1 group-title="Country" tvg-logo="https://a10.asurahosting.com/static/uploads/country_93.9_kzbq/album_art.1730488272.png",KZBQ 93.9 - East Idaho's Favorite Country
 https://a10.asurahosting.com:8580/radio.mp3
+#EXTINF:-1 group-title="Country" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",SomaFM Boot Liquor (128k MP3)
+https://ice5.somafm.com/bootliquor-128-mp3
 #EXTINF:-1 group-title="Country" tvg-logo="https://river101.com/wp-content/uploads/sites/41/logo-wbbv-400px.png",WBBV River 101.3
 https://ice42.securenetsystems.net/WBBV
 #EXTINF:-1 group-title="Country" tvg-logo="https://i.iheart.com/v3/re/assets.brands/641b4a9ade66c5274866b3fc?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",WCHI-HD2 Big 95.5 FM - Chicago, IL

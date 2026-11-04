@@ -355,8 +355,6 @@ https://stream-hls.castr.net/69a87581465ed67ea8a47382/live_a543bb10351911f19e688
 https://stream.revma.ihrhls.com/zc7251/hls.m3u8
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Instrumental Hop Radio
 https://cheetah.streemlion.com:2670/stream
-#EXTINF:-1 group-title="Country" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",SomaFM Boot Liquor (128k MP3)
-https://ice5.somafm.com/bootliquor-128-mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://i.iheart.com/v3/re/assets.brands/c560977aab0f190a5d00dd7417be24c6?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",Jam'n 95.7
 https://stream.revma.ihrhls.com/zc261
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Jazzmix95
