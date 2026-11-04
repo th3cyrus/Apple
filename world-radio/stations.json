@@ -732,9 +732,9 @@
     "country_code": "AE",
     "region": "Asia & Middle East",
     "genre": "News, Talk & Sports",
-    "stream": "https://stream.radiojar.com/shcthrfbsxquv",
+    "stream": "https://gbradio.cdn.tibus.net/U105?aw_0_1st.playerId=wireless-website&_=477645",
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ae-dubai-eye-103-8.png",
-    "verification": "2026-11-04 replacement; new decoded-audio audit pending"
+    "verification": "2026-11-04 direct broadcaster CDN stream; GitHub audio retest pending"
   },
   {
     "id": "au-4zzz",
