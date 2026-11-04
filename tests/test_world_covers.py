@@ -7,6 +7,7 @@ from pathlib import Path
 from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import generate_world_covers as covers
+from radio_artwork import fitted_title, font
 
 
 class WorldCoverTests(unittest.TestCase):
@@ -26,6 +27,14 @@ class WorldCoverTests(unittest.TestCase):
                 self.assertEqual(b.size, (512, 512))
                 self.assertNotEqual(first_pixels, b.tobytes())
             self.assertEqual(covers.generate([first, second], location), 0)
+
+    def test_text_appears_on_dark_glass_not_opaque_white(self):
+        sample = {"id": "test-contrast", "name": "Radio Mirchi Hindi",
+                  "country_code": "IN", "genre": "Hindi Pop & Bollywood"}
+        tile = covers.cover(sample)
+        # The center pane MUST be dark enough to contrast with white titles.
+        px = tile.getpixel((425, 245))
+        self.assertLess(sum(px) / 3, 120)
 
     def test_title_can_wrap_without_failing(self):
         station = {"id": "test-long", "name": "Very Long International National Radio Broadcasting Service",
