@@ -1,50 +1,4 @@
 #EXTM3U
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",88.5 WJIE
-https://ice7.securenetsystems.net/WJIE
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",90.5 FM Truth Radio
-https://shout2.brnstream.com/proxy/wtgf2?mp=/stream
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",CBN Christian Contemporary
-https://streams.cbnradio.com/contemporary-128K
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://www.christianhits.net/apple-touch-icon.png",CRnet Hits (32)
-https://shoutcast.christianrock.net/stream/6/
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",DCLM Radio - Ewe
-https://airtime.dclm.org/radio/8140/ewe
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://i.iheart.com/v3/re/assets.brands/59512153b6367f47504e2ec6?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",Hallelujah 940
-https://stream.revma.ihrhls.com/zc3964
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://i.iheart.com/v3/re/assets.brands/7ad88f809a3d76f25ab3f210cba8b617?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",Heaven 600
-https://stream.revma.ihrhls.com/zc1069
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Heaven 88.7
-https://ice7.securenetsystems.net/KFBN887
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://truth-fm.s3.amazonaws.com/wp-content/uploads/2024/04/24084751/Farsi-Radio-Hope-For-Tomorrow-Radio-Square.png",Hope for Tomorrow
-https://radio.truth.fm:8000/pipfa
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Joy FM
-https://positivealtradio.streamguys1.com/wxrimp3
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://truth-fm.s3.amazonaws.com/wp-content/uploads/2018/08/24084810/beaconchurchofchrist.png",KCXB-LP 102.5 West Monroe, Louisiana
-https://radio.truth.fm:8000/kcxb
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://www.lighthouse.radio/wp-content/themes/lighthouse-christian-radio/assets/images/lighthouse-logo-20261006.webp",Lighthouse Christian Radio - Preaching Channel
-https://lighthouseradio.network/proxy/preaching/stream
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Living Worship .Radio
-https://ice.zradio.org/w/high.aac
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",PHCC Gospel Radio
-https://c25.radioboss.fm:8130/4rm8tzo7qirtv
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://bbn1.bbnradio.org/favicon.ico",Radio Mast Japanese
-https://streams.radiomast.io/a622d414-52a6-4426-b3b8-ed2a4dbb704b
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Spirit 105.3
-https://crista-kcms.streamguys1.com/kcmsmp3
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://pub-469122e2e5904a7f95fc65d54d4fe0ea.r2.dev/art/quiet-hour/quiet-hour-titled-1200.png",The Quiet Hour — Biblical Tools (Bible Ministries International)
-https://stream.biblicaltools.org/quiet
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://truth-fm.s3.amazonaws.com/wp-content/uploads/2026/03/24084657/TruthFM-Albania-Udha-e-Verteta-dhe-Jeta-with-flag-podcast-logo-scaled-1.png",Truth FM Albania
-https://radio.truth.fm:8000/tfmal
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/42/2e/7d/422e7d49-ea0b-8f93-c4c1-8021c3c7dc01/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x600wa.png",WBNH 88.5 FM Good News Radio
-https://20603.live.streamtheworld.com/WBNHFM.mp3
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://wbofradio.com/wp-content/uploads/2018/02/cropped-BOF-Logo-1.png",WBOF 105.9 Beacon Of Faith Fort Pierce, Florida
-https://sh.fl-us.audio-stream.com/proxy/mschne02?mp=/stream
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://www.lighthouse.radio/wp-content/themes/lighthouse-christian-radio/assets/images/lighthouse-logo-20261006.webp",WILR 90.1 Lighthouse Christian Radio Milwaukee, Wisconsin
-https://lighthouseradio.network/proxy/mainchannel/stream
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://stream.lentzsystems.net/thepointfm.png",WVRS/WVRX - 90.1/104.9
-https://stream.lentzsystems.net/WVRS
-#EXTINF:-1 group-title="Christian & Gospel" tvg-logo="https://wwsaradio.com/wp-content/uploads/2025/01/cropped-WWSA-FM-Retro-300x300.png",WWSA 96.9 Retro Radio St. Alban's, West Virginia
-https://s8.yesstreaming.net:7134//stream
 #EXTINF:-1 group-title="Classical" tvg-logo="https://www.allclassical.org/wp-content/themes/acp-theme/img/acp_logo_600x600.jpg",All Classical Portland
 https://allclassical.streamguys1.com/ac96k
 #EXTINF:-1 group-title="Classical" tvg-logo="https://classicalcalifornia.org/apple-touch-icon.png",CC - The Great Escape
@@ -89,8 +43,6 @@ https://crystalout.surfernetwork.com:8001/KILJ_MP3
 https://ice66.securenetsystems.net/WKCNFM
 #EXTINF:-1 group-title="Country" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Texas Rebel Radio
 https://ice41.securenetsystems.net/KNAF?playSessionID=6CC4A665-B891-1B7E-1922BD6BD5D4109F
-#EXTINF:-1 group-title="Country" tvg-logo="https://i.ibb.co/7Js8KYDV/61989f89-43c4-46ec-baed-ebdf9e0dc2e2.webp",Truckers Chapel Radio
-https://streaming.live365.com/a12234
 #EXTINF:-1 group-title="Country" tvg-logo="https://birthplaceofcountrymusic.org/wp-content/uploads/2021/05/logo_radio-bristol-dark.png",WBCM 100.1 FM Bristol, Virginia
 https://bocm.streamguys1.com/wbcm.mp3
 #EXTINF:-1 group-title="Country" tvg-logo="https://cdnrf.securenetsystems.net/file_radio/stations_large/WSHF/v5/logo.png",WSHF - THE BEE - 92.7FM HALEYVILLE
@@ -133,8 +85,6 @@ https://streaming.live365.com/a81915
 https://live.amperwave.net/manifest/malkan-kzfmfmaac-hlsc3.m3u8
 #EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://newtownradio.flywheelstaging.com/wp-content/uploads/2019/07/favicon.ico",Newtown Radio
 https://streaming.radio.co/s0d090ee43/listen
-#EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",NGEN Radio
-https://ais-sa8.cdnstream1.com/3334_64.aac
 #EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://www.thecurrent.org/favicon.ico",Purple Current
 https://purplecurrent.stream.publicradio.org/purplecurrent.mp3
 #EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://qsl.net/w4xtc/deltafoxmedia/logo/Radio252Logo2-Rect.png",Radio 252
@@ -239,14 +189,10 @@ https://stream.revma.ihrhls.com/zc5168
 https://stream.revma.ihrhls.com/zc2661
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Northwest Public Broadcasting - News
 https://nwpb.streamguys1.com/nwprnews-aac-128-icy
-#EXTINF:-1 group-title="News & Talk" tvg-logo="https://images.squarespace-cdn.com/content/v1/52498bd2e4b0240948a7a448/1555097222516-FJZDULJSAQGY3639M53Z/static1.squarespace.jpg?format=750w",OCABS Radio
-https://ec1.yesstreaming.net:2765/stream
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://i.iheart.com/v3/re/assets.brands/641b4511de66c5274866b3e4?ops=new(),flood(%22white%22),swap(),merge(%22over%22),gravity(%22center%22),contain(167,167),quality(80),format(%22png%22)",Talk Radio 1080
 https://stream.revma.ihrhls.com/zc4908
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://i.iheart.com/v3/re/assets.brands/9b2473c277a06bf9ee69139dab0f80d6?ops=gravity(%22center%22),contain(32,32),quality(65)",Talk Radio 1190
 https://stream.revma.ihrhls.com/zc4276
-#EXTINF:-1 group-title="News & Talk" tvg-logo="https://goforth.org/wp-content/uploads/2026/09/840-logo.png",WBHY AM Christian 840 Mobile, Alabama
-https://s4.radio.co/sd333348f5/listen
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",WDAY 970 AM
 https://ice2.securenetsystems.net/WDAY
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://www.wgauradio.com/pf/resources/images/sites/cmg-rd-20015/favicon.ico?d=819",WGAU
@@ -307,16 +253,18 @@ https://stream.revma.ihrhls.com/zc6563
 https://streams.radio.co/s22a35bf51/listen
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Altrok Radio WBJB, NJ
 https://ice.wbjb.net/ALT-MP3-High
+#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Ancient Faith Music
+https://ancientfaith.streamguys1.com/music
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://listenonlineradio.com/wp-content/uploads/cropped-icon-180x180.png",AnimeNfo Radio
 https://stream.zenolive.com/xwa8ckz7mzzuv
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",Antenna Radio
 https://stream.antenna.one:8296/stream
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://bayrockbaltimore.com/assets/images/theme/br-logo.webp",Bay Rock
 https://cc141.cir.st/BAYROCK
+#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://bbn1.bbnradio.org/english/wp-content/uploads/sites/2/2015/04/bbnfavicon32x32.png",BBN English
+https://streams.radiomast.io/844b0a81-f4b9-485e-adaa-aab8d3ea9f7f
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://bembaradiony.com/wp-content/uploads/2024/06/bembalogo.png",Bemba Radio
 https://radiohd2.streaminghd.co:7466/stream
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://img.ecatholic.com/5083/pictures/2021/4/WEBSITE%20HEADER_Transparent%201050x246.PNG?t=1619552068000",Billings Catholic Radio
-https://ssl-2.stream.miriamtech.net/agnusdeicommunications/kjcr-fm
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",CBN Radio Christmas
 https://streams.cbnradio.com/christmas-128K?%20Title1=CBN%20Christmas
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/da/2Day_FM_Cranbrook_Logo.png",CFSM 107.5 2Day FM
@@ -349,6 +297,8 @@ https://ais-edge101-live365-dal02.cdnstream.com/a78844
 https://live.amperwave.net/direct/saga-wnorfmmp3-ibc1
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://s3.amazonaws.com/media.friskyradio.com/favicon.png",Frisky Radio
 https://stream.frisky.friskyradio.com/mp3_low
+#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://mifuzion.com/wp-content/uploads/2024/10/Fuzion_ETX_SHV_600x600.png",Fuzión East Texas & Shreveport
+https://emg.streamguys1.com/fuzion-website
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://www.gameoverse.com/content/images/2024/12/GameOverse_Logo_Tiny.png",Gameoverse Radio
 https://radio.gameoverse.com/listen/gameoverse_radio/radio.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://ggrradio.net/favicon.ico",Gethsemane Global Radio
@@ -385,10 +335,6 @@ https://kchung-radio-01e54a81.radiocult.fm/stream
 https://a6.asurahosting.com:8480/radio.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",KFM Radio
 https://s2.radio.co/s367e90f45/listen
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",KHCB Radio
-https://khcb.streamguys1.com/live-128k-mp3
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.wcYkKV13xMuZPTuont_oNgAAAA%26pid%3DApi&f=1&ipt=1a380ed57ee85d667d21d2a299bae3cdef74571cd2a79ca7284195b8bb8e5d05&ipo=images",KHOY 88.1
-https://www.streamcontrol.net:8444/s/14060
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",KIMOA Radio Network
 https://servidor16.brlogic.com:7054/live
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",KINZ
@@ -491,8 +437,6 @@ https://c3.radioboss.fm:8090/stream
 https://stream-177.surfernetwork.com/716zqgn0uk8uv
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://stupidpotato.com/texas-rangers/brand/cover-600.jpg",Tales of the Texas Rangers (radio) | Stupid Potato
 https://stupidpotato.com/texas-rangers/live
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://www.thegospelstation.com/uploads/1/2/6/0/126078000/google-tv-1024x500_orig.png",The Gospel Station Network
-https://thegospelstation.streamguys1.com/live?rand=86958
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://stupidpotato.com/great-gildersleeve/brand/cover-600.jpg",The Great Gildersleeve (radio) | Stupid Potato
 https://stupidpotato.com/great-gildersleeve/live
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png",This Is Where It's At FM
@@ -521,8 +465,6 @@ https://streaming.live365.com/a67895
 https://wgbh-live.streamguys1.com/classical-hi
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://wcrsfm.org/assets/img/logo.png",WCRS-LP 92.7 Columbus Community Radio Columbus, Ohio
 https://listenwcrs.pacificaservice.org/wcrs
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://a3.asurahosting.com/api/station/epic_radio_103.5fm/art/c7e66db36f113c3c7c5e9276",WFNE 103.5 EPIC Radio Wake Forest, North Carolina
-https://a3.asurahosting.com/listen/epic_radio_103.5fm/radio.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://wgbbradio.com/wp-content/uploads/2020/11/WGBBlogo_500wnew3.png",WGBB Radio – 95.9FM | 1240AM
 https://cast4.servcast.net/proxy/wgbb/wgbb.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://wgrpradio.com/wp-content/uploads/2024/07/cropped-microphone-icon-01-192x192.jpg",WGRP
