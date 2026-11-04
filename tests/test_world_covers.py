@@ -28,6 +28,16 @@ class WorldCoverTests(unittest.TestCase):
                 self.assertNotEqual(first_pixels, b.tobytes())
             self.assertEqual(covers.generate([first, second], location), 0)
 
+    def test_radio_nic_custom_cover_is_not_restyled(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "ir-radio-nic.png"
+            Image.new("RGB", (1254, 1254), "#162248").save(path)
+            before = path.read_bytes()
+            station = {"id": "ir-radio-nic", "name": "Radio NIC"}
+            self.assertFalse(covers.write_cover(station, path, force=True))
+            self.assertEqual(path.read_bytes(), before)
+            covers.verify_png(path)
+
     def test_text_appears_on_dark_glass_not_opaque_white(self):
         sample = {"id": "test-contrast", "name": "Radio Mirchi Hindi",
                   "country_code": "IN", "genre": "Hindi Pop & Bollywood"}
