@@ -56,6 +56,24 @@ Radio Paradise Rock Mix is an additional, independent American Internet music
 service, not a rebroadcast of WMMR. Its direct MP3 link is kept in the catalog
 without replacing WMMR.
 
+
+## Expanded U.S. radio directory
+
+The original **36 curated stations** stay in [radio.m3u](radio.m3u), with their
+custom covers and live-audio health checks. American radio directories list
+thousands more, beyond Primuse's **1,000-stations-per-subscription** limit.
+
+[**Subscribe to the U.S. directory playlists**](us-directory/README.md) for
+12 separate, stable, smaller subscriptions generated from Radio Browser.
+The directory is refreshed weekly and filters broken metadata, unsupported
+URL patterns, and HTTP-only sources. **Directory links are not individually
+FFmpeg-verified; availability outside the United States is not guaranteed.**
+
+A [featured HTTPS preview](us-directory/featured.m3u) is also available
+immediately. It is based on [AlonDrilich/radio-playlists](https://github.com/AlonDrilich/radio-playlists)
+(public-domain Radio Browser directory data), and is not a substitute for
+individually verified curated stations.
+
 ### Radio Categories
 
 - Hip-Hop & R&B
