@@ -60,8 +60,8 @@ contains a smaller, directory-derived selection.
 
 The directory lists **candidates**, not individually playback-tested stations.
 Some streams may be offline, silent, incompatible, region-restricted or duplicated
-under different directory identities. The expanded lists use station favicons when safe HTTPS artwork is provided;
-otherwise they use a project-owned fallback cover in the same visual style.
+under different directory identities. The expanded lists use project-owned genre-specific frosted-glass artwork in a shared
+visual style; individual stations within a genre share a cover.
 These directory covers are not verified official broadcaster trademarks.
 
 ### Option C — World Radio Select (72 stations)
@@ -300,8 +300,9 @@ All **36 curated station covers** feature a consistent, minimalist design inspir
 by frosted glass, soft gradients, and clean typography. This includes the updated
 Radio Paradise Rock Mix artwork.
 
-The **expanded directory** uses third-party favicon links when available; those
-thousands of stations are not covered by this custom visual design.
+The **expanded directory** uses self-hosted genre-based covers in the same visual
+language; these thousands of listings share artwork by genre rather than getting
+individual, station-specific covers.
 
 The artwork is hosted directly in this repository and is designed to provide a consistent appearance across the radio collection.
 
