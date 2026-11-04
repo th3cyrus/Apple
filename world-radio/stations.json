@@ -8,7 +8,7 @@
     "genre": "Alternative & Electronic",
     "stream": "https://orf-live.ors-shoutcast.at/fm4-q2a",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "be-rtbf-classic-21",
@@ -19,7 +19,7 @@
     "genre": "Classic Rock",
     "stream": "https://radios.rtbf.be/classic21-128.mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "be-rtbf-musiq3",
@@ -30,7 +30,7 @@
     "genre": "Classical & Culture",
     "stream": "https://radios.rtbf.be/musiq3-128.aac",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "dk-nova-fm-denmark",
@@ -41,7 +41,7 @@
     "genre": "Pop & Contemporary",
     "stream": "https://live-bauerdk.sharp-stream.com/nova_dk_mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "fr-fip",
@@ -52,7 +52,7 @@
     "genre": "Eclectic & Jazz",
     "stream": "https://icecast.radiofrance.fr/fip-midfi.mp3?id=radiofrance",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "fr-fip-jazz",
@@ -63,7 +63,7 @@
     "genre": "Jazz",
     "stream": "https://stream.radiofrance.fr/fipjazz/fipjazz_hifi.m3u8",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "fr-france-inter",
@@ -74,7 +74,7 @@
     "genre": "News & Culture",
     "stream": "https://stream.radiofrance.fr/franceinter/franceinter_hifi.m3u8?id=radiofrance",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "de-bytefm",
@@ -85,7 +85,7 @@
     "genre": "Music Discovery",
     "stream": "https://bytefm.cast.addradio.de/bytefm/main/high/stream",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "de-deutschlandfunk",
@@ -96,7 +96,7 @@
     "genre": "News & Culture",
     "stream": "https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "de-deutschlandfunk-kultur",
@@ -107,7 +107,7 @@
     "genre": "Culture & Talk",
     "stream": "https://st02.sslstream.dlf.de/dlf/02/128/mp3/stream.mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "de-jazzradio-berlin",
@@ -118,7 +118,7 @@
     "genre": "Jazz",
     "stream": "https://streaming.radio.co/s774887f7b/listen",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "gr-pepper-96-6",
@@ -129,7 +129,7 @@
     "genre": "Eclectic & Chill",
     "stream": "https://stream.radiojar.com/pepper",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "ie-rte-radio-1",
@@ -140,7 +140,7 @@
     "genre": "News & Culture",
     "stream": "https://liveaudio.rte.ie/hls-radio/radio1/chunklist.m3u8",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "it-radio-capital",
@@ -151,7 +151,7 @@
     "genre": "Classic Hits",
     "stream": "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiocapital/radiocapital/master_ma.m3u8",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "it-radio-deejay",
@@ -162,7 +162,7 @@
     "genre": "Pop & Entertainment",
     "stream": "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiodeejay/radiodeejay/master_ma.m3u8",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "nl-npo-3fm",
@@ -173,7 +173,7 @@
     "genre": "Alternative & Pop",
     "stream": "https://icecast.omroep.nl/3fm-bb-mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "nl-npo-radio-2",
@@ -184,7 +184,7 @@
     "genre": "Pop & Culture",
     "stream": "https://icecast.omroep.nl/radio2-bb-aac",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "nl-sublime",
@@ -195,7 +195,7 @@
     "genre": "Soul & Jazz",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/SUBLIME.mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "no-nrk-klassisk",
@@ -206,7 +206,7 @@
     "genre": "Classical",
     "stream": "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/klassisk_mp3_h",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "no-nrk-p3",
@@ -217,7 +217,7 @@
     "genre": "Pop & Culture",
     "stream": "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/p3_mp3_h",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "pl-radio-nowy-swiat",
@@ -228,7 +228,7 @@
     "genre": "Independent & Talk",
     "stream": "https://go-audio.toya.net.pl/63214",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "pt-rtp-antena-3",
@@ -239,7 +239,7 @@
     "genre": "Alternative & Pop",
     "stream": "https://radiocast.rtp.pt/antena380a.mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "pt-tsf-radio-noticias",
@@ -250,7 +250,7 @@
     "genre": "News & Talk",
     "stream": "https://directo.tsf.pt/tsfdirecto.mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "es-los40-classic",
@@ -261,7 +261,7 @@
     "genre": "Classic Hits",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CLASSIC.mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "es-rne-radio-3",
@@ -272,7 +272,7 @@
     "genre": "Alternative & Culture",
     "stream": "https://rtvelivestream.rtve.es/rtvesec/rne/rne_r3_main.m3u8",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "se-sveriges-radio-p3",
@@ -283,7 +283,7 @@
     "genre": "Pop & Culture",
     "stream": "https://edge1.sr.se/p3-aac-320",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "ch-radio-swiss-jazz",
@@ -294,7 +294,7 @@
     "genre": "Jazz & Blues",
     "stream": "https://stream.srg-ssr.ch/srgssr/rsj/mp3/128",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "gb-bbc-radio-6-music",
@@ -305,7 +305,7 @@
     "genre": "Alternative & Discovery",
     "stream": "https://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d128000.norewind.m3u8",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "gb-bbc-world-service",
@@ -316,7 +316,7 @@
     "genre": "International News",
     "stream": "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "gb-nts-radio-1",
@@ -327,7 +327,7 @@
     "genre": "Underground & Eclectic",
     "stream": "https://stream-relay-geo.ntslive.net/stream?client=direct",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "gb-nts-radio-2",
@@ -338,7 +338,7 @@
     "genre": "Underground & Eclectic",
     "stream": "https://stream-relay-geo.ntslive.net/stream2?client=direct",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "ca-cbc-music",
@@ -349,7 +349,7 @@
     "genre": "Music & Culture",
     "stream": "https://22983.live.streamtheworld.com/CBLFM_CBC_SC",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "ca-ckua",
@@ -360,7 +360,7 @@
     "genre": "Music Discovery",
     "stream": "https://ais-sa1.streamon.fm/7000_48k.aac",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "mx-horizonte-107-9",
@@ -371,7 +371,7 @@
     "genre": "Jazz & Culture",
     "stream": "https://s2.mexside.net/8014/stream",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "us-kcrw",
@@ -382,7 +382,7 @@
     "genre": "Eclectic & Culture",
     "stream": "https://streams.kcrw.com/kcrw_mp3",
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kcrw-89-9.png",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "us-kexp",
@@ -393,7 +393,7 @@
     "genre": "Alternative & Discovery",
     "stream": "https://kexp.streamguys1.com/kexp160.aac",
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kexp-90-3.png",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "us-radio-paradise-main-mix",
@@ -404,7 +404,7 @@
     "genre": "Eclectic & Rock",
     "stream": "https://stream.radioparadise.com/mp3-192",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "us-somafm-groove-salad",
@@ -415,7 +415,7 @@
     "genre": "Downtempo & Chill",
     "stream": "https://ice2.somafm.com/groovesalad-128-mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "us-wfmu",
@@ -426,7 +426,7 @@
     "genre": "Freeform & Independent",
     "stream": "https://stream0.wfmu.org/freeform-128k.mp3",
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wfmu-91-1.png",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "us-wwoz",
@@ -437,7 +437,7 @@
     "genre": "Jazz & Roots",
     "stream": "https://wwoz-sc.streamguys1.com/wwoz-hi.mp3",
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wwoz-90-7.png",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "jm-irie-fm",
@@ -448,7 +448,7 @@
     "genre": "Reggae",
     "stream": "https://stream.iriefm.net:8008/stream",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "ar-rock-pop-95-9",
@@ -459,7 +459,7 @@
     "genre": "Rock & Alternative",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOP.mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "br-cbn-sao-paulo",
@@ -470,7 +470,7 @@
     "genre": "News & Talk",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/CBN_SPAAC.aac",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "cl-radio-cooperativa",
@@ -481,7 +481,7 @@
     "genre": "News & Talk",
     "stream": "https://unlimited3-cl.dps.live/cooperativafm/mp3/icecast.audio",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "co-radio-nacional-de-colombia",
@@ -492,7 +492,7 @@
     "genre": "Culture & World",
     "stream": "https://streaming.rtvc.gov.co/Radio_Radionacional/Radionacional.stream/playlist.m3u8",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "gh-happy-fm-ghana",
@@ -503,7 +503,7 @@
     "genre": "Community & Talk",
     "stream": "https://atunwadigital.streamguys1.com/happyfm989accra",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "ke-capital-fm-kenya",
@@ -514,7 +514,7 @@
     "genre": "Contemporary Hits",
     "stream": "https://atunwadigital.streamguys1.com/capitalfm",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "ma-hit-radio-morocco",
@@ -525,7 +525,7 @@
     "genre": "Contemporary Hits",
     "stream": "https://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "ng-cool-fm-lagos",
@@ -536,7 +536,7 @@
     "genre": "Pop & Culture",
     "stream": "https://coolfmlagos969-atunwadigital.streamguys1.com/coolfmlagos969",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "ng-nigeria-info-lagos",
@@ -547,7 +547,7 @@
     "genre": "News & Talk",
     "stream": "https://nigeriainfofmlagos993-atunwadigital.streamguys1.com/nigeriainfofmlagos993",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "za-5fm",
@@ -558,7 +558,7 @@
     "genre": "Pop & Youth",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/5FMAAC.aac",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "za-kaya-fm",
@@ -569,7 +569,7 @@
     "genre": "Soul & Talk",
     "stream": "https://edge.iono.fm/xice/82_medium.aac",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "hk-rthk-radio-3",
@@ -580,7 +580,7 @@
     "genre": "News & Culture",
     "stream": "https://rthkradio3-live.akamaized.net/hls/live/2040079/radio3/master.m3u8",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "in-radio-mirchi-hindi",
@@ -591,7 +591,7 @@
     "genre": "Hindi Pop & Bollywood",
     "stream": "https://eu8.fastcast4u.com/proxy/clyedupq/stream",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "id-rri-voice-of-indonesia",
@@ -602,7 +602,7 @@
     "genre": "International & World",
     "stream": "https://stream-node0.rri.co.id/streaming/25/9125/voi.mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "iq-kurdistan-24-radio",
@@ -613,7 +613,7 @@
     "genre": "News & Talk",
     "stream": "https://audio-edge-3mayu.fra.h.radiomast.io/04b1ce4c-24f2-4172-b756-065832ef78bf",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "jp-gensokyo-radio",
@@ -624,7 +624,7 @@
     "genre": "Japanese Game & Anime",
     "stream": "https://stream.gensokyoradio.net/1",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "jp-nhk-world-radio",
@@ -635,7 +635,7 @@
     "genre": "International News",
     "stream": "https://nhkworld-radio.nhkworld.jp/hls/live/nhkworld-radio-media2/index.m3u8",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "lb-radio-liban",
@@ -646,7 +646,7 @@
     "genre": "Culture & World",
     "stream": "https://media2.streambrothers.com:2020/stream/8194",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "ps-radio-alhara",
@@ -657,7 +657,7 @@
     "genre": "Independent & Eclectic",
     "stream": "https://stream.radioalhara.net/ra",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "ph-easy-rock-manila",
@@ -668,7 +668,7 @@
     "genre": "Easy Listening",
     "stream": "https://azura.easyrock.com.ph/listen/easy_rock_manila/radio.mp3",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "sg-cna938",
@@ -679,7 +679,7 @@
     "genre": "News & Talk",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/938NOW_PREM.aac",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "tw-icrt",
@@ -690,7 +690,7 @@
     "genre": "English Pop & Talk",
     "stream": "https://n27a-eu.rcs.revma.com/nkdfurztxp3vv",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "th-bangkok-community-radio",
@@ -701,7 +701,7 @@
     "genre": "Electronic & Discovery",
     "stream": "https://bcr.radiocult.fm/stream",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "tr-radyo-eksen",
@@ -712,7 +712,7 @@
     "genre": "Rock & Alternative",
     "stream": "https://dygedge.radyotvonline.net/radyoeksen/playlist.m3u8",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "tr-trt-fm",
@@ -723,7 +723,7 @@
     "genre": "Pop & Culture",
     "stream": "https://trt.radyotvonline.net/trtfm",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "ae-sharjah-quran-radio",
@@ -734,7 +734,7 @@
     "genre": "Culture & Religious",
     "stream": "https://l3.itworkscdn.net/smcquranlive/quranradiolive/icecast.audio",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "au-4zzz",
@@ -745,7 +745,7 @@
     "genre": "Independent & Community",
     "stream": "https://iheart.4zzz.org.au/4zzz",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "au-abc-jazz",
@@ -756,7 +756,7 @@
     "genre": "Jazz",
     "stream": "https://mediaserviceslive.akamaized.net/hls/live/2038319/abcjazz/index.m3u8",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "au-triple-j",
@@ -767,7 +767,7 @@
     "genre": "Alternative & Youth",
     "stream": "https://mediaserviceslive.akamaized.net/hls/live/2038308/triplejnsw/master.m3u8",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "nz-95bfm",
@@ -778,7 +778,7 @@
     "genre": "Independent & Alternative",
     "stream": "https://streams.95bfm.com/stream95",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   },
   {
     "id": "nz-george-fm",
@@ -789,6 +789,6 @@
     "genre": "Electronic & Dance",
     "stream": "https://mediaworks.streamguys1.com/george_net_icy",
     "logo": "",
-    "verification": "Pending independent playback audit"
+    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
   }
 ]
