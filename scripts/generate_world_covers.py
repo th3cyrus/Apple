@@ -143,6 +143,27 @@ def verify(stations, root=WORLD):
     print(f"Verified {count} world station covers", flush=True)
 
 
+def directory_cover(root=ROOT):
+    """Make one consistent, locally hosted fallback for directory station artwork."""
+    filename = Path(root) / "us-directory" / "directory-cover.png"
+    if not filename.exists():
+        filename.parent.mkdir(parents=True, exist_ok=True)
+        tile = cover({"id": "us-directory-cover", "name": "USA Radio Directory",
+                      "country_code": "US"})
+        temp = filename.with_name("." + filename.name + ".tmp")
+        try:
+            tile.save(temp, format="PNG", optimize=True)
+            temp.replace(filename)
+        finally:
+            temp.unlink(missing_ok=True)
+        print("Created directory fallback artwork", flush=True)
+    with Image.open(filename) as image:
+        if image.size != (SIZE, SIZE) or image.format != "PNG":
+            raise ValueError("Directory cover must be a 512x512 PNG")
+        image.verify()
+    return filename
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--force", action="store_true", help="Overwrite generated tiles")
@@ -152,9 +173,11 @@ def main():
     stations = json.loads((WORLD / "stations.json").read_text(encoding="utf-8"))
     if args.verify:
         verify(stations, args.directory)
+        directory_cover()
     else:
         generate(stations, args.directory, force=args.force)
         verify(stations, args.directory)
+        directory_cover()
 
 
 if __name__ == "__main__":

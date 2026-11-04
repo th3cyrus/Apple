@@ -34,6 +34,7 @@ MIN_RESULTS = 500
 MAX_HEALTH_AGE_DAYS = 30
 MAX_DIRECTORY_SHRINK_RATIO = 0.65
 BLOCKED_AUTH_PARAMS = {'token', 'zt', 'signature', 'policy', 'expires', 'key'}
+FALLBACK_ARTWORK = "https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png"
 ATTR_CLEAN = re.compile(r'[\x00-\x1f\x7f-\x9f\u200b-\u200f\u202a-\u202e\u2066-\u2069"<>]')
 BAD_AUDIO_PLAYLIST = re.compile(
     r'\.(?:mp3|aac|m4a|ogg|opus|flac|wav)\.(?:m3u|m3u8|pls)$', re.I)
@@ -115,7 +116,7 @@ def normalize(record):
         return None
     logo = record.get("favicon")
     if not public_https(logo):
-        logo = ""
+        logo = FALLBACK_ARTWORK
     station_id = clean_text(record.get("stationuuid"), 80) or hashlib.sha256(stream.encode()).hexdigest()
     try:
         votes = max(0, int(record.get("votes") or 0))
@@ -239,6 +240,7 @@ def build(session, output=OUTPUT, curated_path=ROOT / "stations.json"):
         "Only HTTPS entries with acceptable URL structure and no signed/token query "
         f"parameters, last checked within {MAX_HEALTH_AGE_DAYS} days, are included. "
         "Streams reporting SSL errors, broken health or misleading playlists are excluded. "
+        "Missing/unsafe station favicons use the project's own shared fallback cover. "
         "This is not proof of audible media or international accessibility.",
         "",
         "| Subscription | Stations |",

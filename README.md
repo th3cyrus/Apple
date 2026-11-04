@@ -57,9 +57,9 @@ contains a smaller, directory-derived selection.
 
 The directory lists **candidates**, not individually playback-tested stations.
 Some streams may be offline, silent, incompatible, region-restricted or duplicated
-under different directory identities. The expanded lists do not have the
-collection-wide original cover design: artwork, when present, comes from the
-station directory or broadcasters.
+under different directory identities. The expanded lists use station favicons when safe HTTPS artwork is provided;
+otherwise they use a project-owned fallback cover in the same visual style.
+These directory covers are not verified official broadcaster trademarks.
 
 ### Option C — World Radio Select (72 stations)
 
