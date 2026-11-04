@@ -10,11 +10,11 @@ https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u
 
 Open **Primuse → Radio → + → Add Subscription → Fetch → Subscribe**. After changes, tap **Update Now** in Primuse. This is a **standalone subscription**: it does not modify the curated U.S. playlist or the 12-part American directory.
 
-## Selection principles and playback warning
+## Selection and monitoring
 
 These are editorial selections, **not an objective world ranking**. We favor established national and independent stations, regional diversity, and HTTPS streaming paths without misleading `.mp3.m3u` extensions or short-lived tokens. Candidate URLs were cross-referenced with broadcasters and the [Radio Browser-derived country playlists](https://github.com/AlonDrilich/radio-playlists). Official source documentation is available for [NTS](https://ntslive.freshdesk.com/support/solutions/articles/77000587257-tunein), [FIP](https://www.radiofrance.fr/fip), and [Radio Swiss Jazz](https://www.radioswissjazz.ch/en/reception/internet).
 
-**First complete live audio audit — November 4, 2026: 72/72 stations returned decoded non-silent audio** in GitHub Actions. This establishes server-side sample audibility, **not** confirmed playback inside Primuse or availability from Iraq. A stream can later change or be region-restricted. The [World Radio Select Audit](https://github.com/th3cyrus/Apple/actions/workflows/world-radio.yml) runs on changes and weekly using FFprobe/FFmpeg; review the latest report for current results. Failed or silent streams are flagged without automatically deleting curated stations.
+Audio streams are sampled with FFprobe/FFmpeg on playlist changes and during a weekly [World Radio Select Audit](https://github.com/th3cyrus/Apple/actions/workflows/world-radio.yml). Current results and failure reports are available in GitHub Actions.
 
 **All 72 stations have illustrated covers:** four shared U.S. stations reuse the main collection's existing optimized artwork; the other 68 have unique, reproducible 512×512 PNG tiles in [`logos/`](logos/) with the same frosted-glass design language. The covers display station names and country codes but do not impersonate official broadcaster logos. Missing covers are generated using [`scripts/generate_world_covers.py`](../scripts/generate_world_covers.py), and existing artwork is preserved. The repository links to broadcaster streams without rebroadcasting the audio.
 

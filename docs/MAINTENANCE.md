@@ -69,8 +69,8 @@ report. An audit failure must not automatically remove radio stations.
 Directory generation rejects reported SSL errors, tokenized/signed URLs and
 stale Radio Browser health dates, and blocks publication when the number of
 surviving streams unexpectedly drops. Directory links remain less thoroughly
-verified than the curated and world playlists; GitHub Actions cannot establish
-playback availability from Iraq.
+verified than the curated and world playlists; CI observations describe the
+runner environment only.
 
 For current visual coverage and administrative limitations, also read
 [Repository Settings](REPOSITORY_SETTINGS.md).

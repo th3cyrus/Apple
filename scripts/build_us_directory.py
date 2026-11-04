@@ -2,7 +2,7 @@
 """Build optional, sharded U.S. radio directory subscriptions for Primuse.
 
 The 36-station curated catalog is deliberately independent. Radio Browser
-lastcheckok is directory metadata, NOT evidence of playback in Iraq.
+Radio Browser health metadata is separate from decoded-audio testing.
 """
 import argparse
 from datetime import datetime, timezone
@@ -256,22 +256,16 @@ def build(session, output=OUTPUT, curated_path=ROOT / "stations.json"):
     intro = [
         "# U.S. Radio Directory for Primuse",
         "",
-        f"{len(items):,} distinct U.S. stations from Radio Browser, split into "
-        f"{SHARDS} independent subscriptions. Import each desired M3U URL into Primuse.",
+        f"{len(items):,} U.S. stream entries across {SHARDS} M3U subscriptions. "
+        "Import each selected playlist into Primuse.",
         "",
-        "**Important:** These are crowd-sourced directory links and NOT individually "
-        "verified audio streams. Radio Browser's check is not a playback test from "
-        "Iraq or a guarantee against geo-blocking. The original 36-station "
-        "[curated playlist](../radio.m3u) remains separate.",
+        "Sources include Radio Browser and selected broadcaster streams. "
+        "Directory entries are not individually audio-decoded. "
+        "The [curated U.S. playlist](../radio.m3u) is maintained separately.",
         "",
-        "Explicitly Islamic or Quran-oriented radio streams are excluded by station metadata "
-        "and stream identity; two nonreligious broadcaster links are pinned as replacements. "
-        "Only HTTPS entries with acceptable URL structure and no signed/token query "
-        f"parameters, last checked within {MAX_HEALTH_AGE_DAYS} days, are normally included. "
-        "Streams reporting SSL errors, broken health or misleading playlists are excluded. "
-        "Missing/unsafe favicons use the project's own shared fallback cover. "
-        "The two pinned replacements use broadcaster-published direct URLs, rather than "
-        "Radio Browser's recent-check metadata. No worldwide playback guarantee.",
+        "Quranic and Islamic religious programming is excluded. "
+        "The generator filters signed links, stale health records, reported SSL errors "
+        "and invalid playlists. Missing station artwork uses a shared fallback cover.",
         "",
         "| Subscription | Stations |",
         "|---|---:|",

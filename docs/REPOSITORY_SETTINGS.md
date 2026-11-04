@@ -18,10 +18,9 @@
   optimized custom covers, and publishes complete 512×512 station-specific
   files. All 72 world stations have cover references.
 
-For playback on your own network and device, use Primuse **Update Now** and
-verify a few stations from each playlist. CI from a cloud runner cannot
-guarantee access from every country. A red audio audit can also represent a
-temporary station outage; inspect the report before changing an identity or URL.
+To verify playback in Primuse, refresh the relevant subscription and test sample
+stations. A failed CI audio audit may indicate a transient outage; inspect the
+report before changing a station identity or stream URL.
 
 ## Concurrency and publication
 
@@ -30,19 +29,15 @@ before publishing and retry safe fast-forward pushes. Rebases involving
 conflicting edits stop visibly rather than force-pushing or overwriting manual
 edits. The artwork workflow uses the same policy for its branch.
 
-## GitHub About — manual repository setting
+## Repository settings
 
-The connected GitHub integration cannot edit repository metadata or the
-active ruleset. The following owner-only changes **have not been applied**:
+Repository administrators can configure the About section and branch rules:
 
-- GitHub repository → About (gear icon) → Description:
+- Repository → About → Description (suggested):
   `Live radio for Primuse: 36 curated U.S. stations, a refreshed U.S. directory, and 72 handpicked world stations in 44 countries.`
-- Repository Settings → Rules → Rulesets: the active main-branch ruleset
-  currently prevents deletion and non-fast-forward updates. It does not
-  require PR reviews or passing CI. Enforcing PR-only changes without
-  accounting for data-publishing GitHub Actions would block the scheduled
-  playlist bot. Separate bot-generated data publishing from protected code
-  changes (e.g. use bot PRs) before enabling those rules.
+- Repository Settings → Rules → Rulesets: reviewed PRs and passing CI can be
+  required for code changes after scheduled workflows are adapted to publish
+  generated data (for example, through bot-created PRs).
 
 Never publish a user token or remove the active non-fast-forward/deletion
 rules just to make a workflow green.
