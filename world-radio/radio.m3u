@@ -114,7 +114,7 @@ https://audio-edge-3mayu.fra.h.radiomast.io/04b1ce4c-24f2-4172-b756-065832ef78bf
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="JP" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/jp-gensokyo-radio.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/jp-gensokyo-radio.png",Gensokyo Radio (JP)
 https://stream.gensokyoradio.net/1
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="JP" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/jp-nhk-world-radio.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/jp-nhk-world-radio.png",NHK World Radio (JP)
-https://nhkworld-radio.nhkworld.jp/hls/live/nhkworld-radio-media2/index.m3u8
+https://masterpl.hls.nhkworld.jp/hls/r1/live/master.m3u8
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="LB" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/lb-radio-liban.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/lb-radio-liban.png",Radio Liban (LB)
 https://media2.streambrothers.com:2020/stream/8194
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="PS" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ps-radio-alhara.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ps-radio-alhara.png",Radio alHara (PS)
@@ -134,7 +134,7 @@ https://trt.radyotvonline.net/trtfm
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="AE" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ae-sharjah-quran-radio.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ae-sharjah-quran-radio.png",Sharjah Quran Radio (AE)
 https://l3.itworkscdn.net/smcquranlive/quranradiolive/icecast.audio
 #EXTINF:-1 group-title="Oceania" tvg-country="AU" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-4zzz.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-4zzz.png",4ZZZ (AU)
-https://iheart.4zzz.org.au/4zzz
+https://iheart.4zzz.org.au/live
 #EXTINF:-1 group-title="Oceania" tvg-country="AU" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-abc-jazz.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-abc-jazz.png",ABC Jazz (AU)
 https://mediaserviceslive.akamaized.net/hls/live/2038319/abcjazz/index.m3u8
 #EXTINF:-1 group-title="Oceania" tvg-country="AU" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-triple-j.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-triple-j.png",triple j (AU)

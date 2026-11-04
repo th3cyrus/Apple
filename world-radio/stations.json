@@ -633,9 +633,9 @@
     "country_code": "JP",
     "region": "Asia & Middle East",
     "genre": "International News",
-    "stream": "https://nhkworld-radio.nhkworld.jp/hls/live/nhkworld-radio-media2/index.m3u8",
+    "stream": "https://masterpl.hls.nhkworld.jp/hls/r1/live/master.m3u8",
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/jp-nhk-world-radio.png",
-    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
+    "verification": "Retest pending after 2026-11-04 source fail; alternate broadcaster stream"
   },
   {
     "id": "lb-radio-liban",
@@ -743,9 +743,9 @@
     "country_code": "AU",
     "region": "Oceania",
     "genre": "Independent & Community",
-    "stream": "https://iheart.4zzz.org.au/4zzz",
+    "stream": "https://iheart.4zzz.org.au/live",
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-4zzz.png",
-    "verification": "2026-11-04: non-silent audio decoded in GitHub Actions; not independently tested from Iraq"
+    "verification": "Retest pending after 2026-11-04 source fail; alternate broadcaster stream"
   },
   {
     "id": "au-abc-jazz",
