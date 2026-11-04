@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Validate World Radio Select and optionally audit real decoded live audio.
 
-Audit results are evidence from a GitHub runner, not proof of playability
-in Primuse or in every country. Never automatically delete a station.
+Audit reports are stored separately from station metadata.
+Never remove stations solely because of an intermittent check failure.
 """
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -40,6 +40,8 @@ def load_and_validate(root=WORLD):
     for position, station in enumerate(catalog, start=1):
         if not isinstance(station, dict) or not FIELDS.issubset(station):
             raise ValueError(f"Entry {position} is incomplete")
+        if "verification" in station:
+            raise ValueError("Station audit status belongs in workflow reports, not stations.json")
         if any(not isinstance(station[key], str) or not station[key].strip()
                for key in ("id", "name", "country", "country_code", "region", "genre", "stream")):
             raise ValueError(f"Entry {position} contains blank/invalid fields")
@@ -117,7 +119,7 @@ def audit(catalog, output, workers=12):
     passed = sum(result["ok"] for result in results)
     document = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "scope": "Server-side decoded audio; NOT a Primuse or country-wide playback guarantee",
+        "scope": "CI runner: decoded-audio sample",
         "total": len(results), "passed": passed, "needs_review": len(results)-passed,
         "stations": results,
     }
@@ -125,12 +127,12 @@ def audit(catalog, output, workers=12):
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(document, ensure_ascii=False, indent=2)+"\n",encoding="utf-8")
     summary = (f"World Radio Select: {passed}/{len(results)} decoded non-silent audio; "
-               f"{len(results)-passed} require review. Not validated from Iraq.")
+               f"{len(results)-passed} require review.")
     print(summary, flush=True)
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"],"a",encoding="utf-8") as file:
             file.write("### World Radio Select live audit\n\n"+summary+"\n\n")
-            file.write("Source URL response and audio decoding cannot guarantee Primuse playback.\n")
+            file.write("Results reflect a bounded audio sample from the CI runner.\n")
     return document
 
 

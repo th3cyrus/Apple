@@ -15,6 +15,18 @@ class WorldRadioTests(unittest.TestCase):
         self.assertGreaterEqual(len(stations), 25)
         self.assertGreaterEqual(len({s["country_code"] for s in stations}), 15)
 
+    def test_catalog_excludes_transient_audit_metadata(self):
+        stations = world.load_and_validate()
+        self.assertTrue(all("verification" not in s for s in stations))
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder)
+            modified = [dict(station) for station in stations]
+            modified[0]["verification"] = "old health result"
+            (path / "stations.json").write_text(json.dumps(modified))
+            (path / "radio.m3u").write_text((world.WORLD / "radio.m3u").read_text())
+            with self.assertRaisesRegex(ValueError, "workflow reports"):
+                world.load_and_validate(path)
+
     def test_double_extension_is_rejected(self):
         original = world.load_and_validate()
         with tempfile.TemporaryDirectory() as folder:
