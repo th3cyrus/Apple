@@ -107,6 +107,8 @@ class DirectoryTests(unittest.TestCase):
         examples = [
             record("Gospel Worship FM", "https://music.example.net/gospel"),
             record("Christian Bible Radio", "https://music.example.net/bible"),
+            record("Ancient Faith Music", "https://ancientfaith.streamguys1.com/music"),
+            record("Sufi Spiritual Radio", "https://music.example.net/sufi"),
             record("Diyanet Radyo", "https://radio.example.net/stream"),
             record("Православное Радио", "https://ru.example.net/live"),
             record("رادیو مسیحی", "https://ir.example.net/live"),
