@@ -11,7 +11,7 @@ _EXCLUDED = re.compile(
     r"hadith|sunnah|adhan|azaan|azan|nasheed|naat|allah|al[- ]?quran|"
     r"makkah|mecca|medina|madinah|hajj|shariah|salaat|salah[- ]?radio|"
     r"christian[a-z]*|christus|gospel|bible|biblical|church|catholic|evangelical|"
-    r"cbn|sacred|christmas|xmas|saint[ -]?rose|santa[ -]?teresita|"
+    r"cbnradio\.com|sacred|christmas|xmas|saint[ -]?rose|santa[ -]?teresita|"
     r"orthodox[- ]?faith|jesus|christ[- ]?radio|religious|religion|"
     r"worship|scripture|prayer|hymns?|faith|sufi(?:sm)?|god|holy|praise|"
     r"orthodox|temple|hinduism?|buddhis[mt]|"
