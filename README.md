@@ -7,7 +7,7 @@ Choose from **three separate M3U collections**: a carefully maintained U.S. sele
 | Collection | Stations / Streams | What makes it different | Subscription |
 | --- | ---: | --- | --- |
 | **[U.S. Curated Radio](stations.json)** | **36 stations** | Handpicked broadcasters, matching custom covers, and decoded-audio health checks | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u)** |
-| **[U.S. Radio Directory](us-directory/README.md)** | **4,534 entries** | Broad American coverage via Radio Browser, split into **12 M3U playlists** to respect Primuse's per-subscription limit | **[Choose playlists](us-directory/README.md)** |
+| **[U.S. Radio Directory](us-directory/README.md)** | **[Live station count](us-directory/index.json)** | Broad American coverage via Radio Browser, split into **12 M3U playlists** to respect Primuse's per-subscription limit | **[Choose playlists](us-directory/README.md)** |
 | **[World Radio Select](world-radio/README.md)** | **72 stations · 44 countries/regions** | International music, news and cultural picks; each stream passed a decoded, non-silent audio sample test on **November 4, 2026** | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u)** |
 
 **How to add a collection:** In Primuse, go to **Radio → + → Add Subscription → Fetch → Subscribe**. Choose **Update Now** to see changes made to an existing subscription.
@@ -44,7 +44,7 @@ and all 36 manually maintained station identities.
 https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u
 ```
 
-### Option B — Expanded U.S. directory (4,534 entries in 12 playlists)
+### Option B — Expanded U.S. directory (12 playlists; [live count](us-directory/index.json))
 
 Open **[U.S. Directory — 12 subscription URLs](us-directory/README.md)** and
 subscribe to the parts you want **one at a time**. These lists are separate from
@@ -82,8 +82,8 @@ https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u
 
 **Expanded U.S. directory**
 
-- 4,534 directory-listed U.S. HTTPS streams in 12 independent M3U playlists
-  (snapshot: November 4, 2026).
+- Thousands of U.S. HTTPS streams in 12 independent M3U playlists; the
+  [live index](us-directory/index.json) has the current station count.
 - Radio Browser-based discovery, filtering of known-bad entries and unsafe
   or misleading URL patterns, plus de-duplication by exact stream URL.
 - Automatic weekly rebuilding, a JSON index of counts, and a smaller

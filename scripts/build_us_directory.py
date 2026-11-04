@@ -5,13 +5,14 @@ The 36-station curated catalog is deliberately independent. Radio Browser
 lastcheckok is directory metadata, NOT evidence of playback in Iraq.
 """
 import argparse
+from datetime import datetime, timezone
 import hashlib
 import ipaddress
 import json
 import re
 import sys
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import parse_qsl, urlsplit
 
 import requests
 
@@ -30,6 +31,9 @@ MAX_PAGES = 8
 SHARDS = 12
 SHARD_MAX = 900  # Primuse hard limit is 1000 entries per subscription.
 MIN_RESULTS = 500
+MAX_HEALTH_AGE_DAYS = 30
+MAX_DIRECTORY_SHRINK_RATIO = 0.65
+BLOCKED_AUTH_PARAMS = {'token', 'zt', 'signature', 'policy', 'expires', 'key'}
 ATTR_CLEAN = re.compile(r'[\x00-\x1f\x7f-\x9f\u200b-\u200f\u202a-\u202e\u2066-\u2069"<>]')
 BAD_AUDIO_PLAYLIST = re.compile(
     r'\.(?:mp3|aac|m4a|ogg|opus|flac|wav)\.(?:m3u|m3u8|pls)$', re.I)
@@ -65,6 +69,9 @@ def public_https(value):
             return False
     except ValueError:
         pass
+    if any(key.lower() in BLOCKED_AUTH_PARAMS for key, _ in parse_qsl(parts.query,
+                                                                    keep_blank_values=True)):
+        return False
     return not unsupported_stream_suffix(value) and not BAD_AUDIO_PLAYLIST.search(parts.path)
 
 
@@ -80,6 +87,17 @@ def normalize(record):
     if not isinstance(record, dict) or str(record.get("countrycode", "")).upper() != "US":
         return None
     if record.get("lastcheckok") not in (True, 1, "1"):
+        return None
+    if record.get("ssl_error", 0) not in (False, 0, "0"):
+        return None
+    try:
+        checked = datetime.fromisoformat(record["lastchecktime_iso8601"].replace("Z", "+00:00"))
+        if checked.tzinfo is None:
+            return None
+        age = (datetime.now(timezone.utc) - checked.astimezone(timezone.utc)).total_seconds()
+        if not -12 * 3600 <= age <= MAX_HEALTH_AGE_DAYS * 86400:
+            return None
+    except (KeyError, ValueError, TypeError, AttributeError):
         return None
     name = clean_text(record.get("name"), 100)
     if len(name) < 2:
@@ -99,10 +117,14 @@ def normalize(record):
     if not public_https(logo):
         logo = ""
     station_id = clean_text(record.get("stationuuid"), 80) or hashlib.sha256(stream.encode()).hexdigest()
+    try:
+        votes = max(0, int(record.get("votes") or 0))
+    except (ValueError, TypeError, OverflowError):
+        votes = 0
     return {
         "id": station_id, "name": name, "url": stream,
         "logo": logo, "group": genre(record.get("tags", "")),
-        "votes": int(record.get("votes") or 0),
+        "votes": votes,
     }
 
 
@@ -178,6 +200,15 @@ def build(session, output=OUTPUT, curated_path=ROOT / "stations.json"):
     items = catalog(get_records(session), existing)
     if len(items) < MIN_RESULTS:
         raise ValueError("Not enough compatible U.S. streams; existing lists unchanged")
+    existing_index = Path(output) / "index.json"
+    if existing_index.is_file():
+        try:
+            previous_count = json.loads(existing_index.read_text(encoding="utf-8"))["station_count"]
+        except (KeyError, ValueError, TypeError) as exc:
+            raise ValueError("Existing index corrupted; refuse to overwrite playlists") from exc
+        if (type(previous_count) is not int or previous_count < MIN_RESULTS
+                or len(items) < previous_count * MAX_DIRECTORY_SHRINK_RATIO):
+            raise ValueError("U.S. directory shrank unexpectedly; manual review required")
     shards = split(items)
     # Prepare everything before publishing a single file.
     files = {}
@@ -188,6 +219,8 @@ def build(session, output=OUTPUT, curated_path=ROOT / "stations.json"):
         "scope": "Directory candidates, not individual audio playback verified",
         "transport": "HTTPS only",
         "station_count": len(items),
+        "health_policy": f"checked within {MAX_HEALTH_AGE_DAYS} days, no reported SSL error; unsigned HTTPS",
+        "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "shard_count": SHARDS,
         "shards": [{"file": f"us-{i:02d}.m3u", "stations": len(stations)}
                    for i, stations in enumerate(shards, 1)],
@@ -203,9 +236,10 @@ def build(session, output=OUTPUT, curated_path=ROOT / "stations.json"):
         "Iraq or a guarantee against geo-blocking. The original 36-station "
         "[curated playlist](../radio.m3u) remains separate.",
         "",
-        "Only HTTPS entries with acceptable URL structure are included. No broken, "
-        "HTTP-only, mismatched double-extension, or known-bad directory entries are "
-        "intentionally imported. This cannot cover every U.S. broadcast station.",
+        "Only HTTPS entries with acceptable URL structure and no signed/token query "
+        f"parameters, last checked within {MAX_HEALTH_AGE_DAYS} days, are included. "
+        "Streams reporting SSL errors, broken health or misleading playlists are excluded. "
+        "This is not proof of audible media or international accessibility.",
         "",
         "| Subscription | Stations |",
         "|---|---:|",
