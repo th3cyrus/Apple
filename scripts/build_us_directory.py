@@ -36,15 +36,23 @@ FEATURED_MAX = 100
 MAX_HEALTH_AGE_DAYS = 30
 MAX_DIRECTORY_SHRINK_RATIO = 0.65
 FALLBACK_ARTWORK = "https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png"
+GENRE_ARTWORK_ROOT = "https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/"
+
+
+def directory_genre_logo(label):
+    """Self-hosted unified frosted-glass cover shared by a genre."""
+    token = re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
+    return GENRE_ARTWORK_ROOT + token + ".png"
+
 # Editorial nonreligious additions replacing identified religious directory streams.
 # These come from public broadcaster direct-stream listings, not Radio Browser votes.
 PINNED_NONRELIGIOUS = (
     {"id": "us-radio-paradise-beyond", "name": "Radio Paradise Beyond Mix",
      "url": "https://stream.radioparadise.com/beyond-192", "group": "Rock & Alternative",
-     "logo": FALLBACK_ARTWORK, "votes": 0},
+     "logo": directory_genre_logo("Rock & Alternative"), "votes": 0},
     {"id": "us-somafm-boot-liquor", "name": "SomaFM Boot Liquor (128k MP3)",
      "url": "https://ice5.somafm.com/bootliquor-128-mp3", "group": "Country",
-     "logo": FALLBACK_ARTWORK, "votes": 0},
+     "logo": directory_genre_logo("Country"), "votes": 0},
 )
 ATTR_CLEAN = re.compile(r'[\x00-\x1f\x7f-\x9f\u200b-\u200f\u202a-\u202e\u2066-\u2069"<>]')
 BAD_AUDIO_PLAYLIST = re.compile(
@@ -126,9 +134,10 @@ def normalize(record):
     path = urlsplit(stream).path.lower()
     if path.endswith((".m3u", ".pls")):
         return None
-    logo = record.get("favicon")
-    if not public_https(logo):
-        logo = FALLBACK_ARTWORK
+    # Ignore inconsistent third-party favicons; all directory artwork is
+    # intentionally self-hosted and visually matched to the other playlists.
+    station_group = genre(record.get("tags", ""))
+    logo = directory_genre_logo(station_group)
     station_id = clean_text(record.get("stationuuid"), 80) or hashlib.sha256(stream.encode()).hexdigest()
     try:
         votes = max(0, int(record.get("votes") or 0))
@@ -136,7 +145,7 @@ def normalize(record):
         votes = 0
     return {
         "id": station_id, "name": name, "url": stream,
-        "logo": logo, "group": genre(record.get("tags", "")),
+        "logo": logo, "group": station_group,
         "votes": votes,
     }
 
