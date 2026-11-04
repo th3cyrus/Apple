@@ -27,7 +27,7 @@ or that every entry is playable internationally.*
 
 No official Google Play release has been verified.
 
-The M3U playlist may also work with other compatible radio players.
+These M3U subscriptions may also work with other compatible radio players.
 
 ---
 
@@ -225,11 +225,11 @@ isolation, atomic writes and partial/fatal reports. They do not require public
 radio services. CI runs on relevant pushes and pull requests with read-only
 permissions, and validates the catalog, all covers and playlist ordering.
 
-Both workflows use `ubuntu-26.04`, Python `3.12.16`, exact Python dependency
-versions and verified commit SHAs for Actions (checkout v5, setup-python v6,
-upload-artifact v7). Refresh publication uses credentials only in its final step;
-concurrent runs are serialized and a conflicting push fails instead of overwriting
-someone else's changes.
+The project workflows use `ubuntu-26.04`, Python `3.12.16`, pinned Python
+dependencies and commit-pinned GitHub Actions. Curated and directory refreshes
+run as separate jobs; publication credentials are used only for publishing.
+The directory publisher fetches and rebases on the current main branch before
+pushing, while the curated refresh aborts on conflicting remote changes.
 
 ### Manual Stream Repair
 
