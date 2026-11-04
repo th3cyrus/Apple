@@ -7,7 +7,7 @@
     "region": "Europe",
     "genre": "Alternative & Electronic",
     "stream": "https://orf-live.ors-shoutcast.at/fm4-q2a",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/at-fm4.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/at-fm4.png?v=2"
   },
   {
     "id": "be-rtbf-classic-21",
@@ -17,7 +17,7 @@
     "region": "Europe",
     "genre": "Classic Rock",
     "stream": "https://radios.rtbf.be/classic21-128.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/be-rtbf-classic-21.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/be-rtbf-classic-21.png?v=2"
   },
   {
     "id": "be-rtbf-musiq3",
@@ -27,7 +27,7 @@
     "region": "Europe",
     "genre": "Classical & Culture",
     "stream": "https://radios.rtbf.be/musiq3-128.aac",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/be-rtbf-musiq3.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/be-rtbf-musiq3.png?v=2"
   },
   {
     "id": "dk-nova-fm-denmark",
@@ -37,7 +37,7 @@
     "region": "Europe",
     "genre": "Pop & Contemporary",
     "stream": "https://live-bauerdk.sharp-stream.com/nova_dk_mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/dk-nova-fm-denmark.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/dk-nova-fm-denmark.png?v=2"
   },
   {
     "id": "fr-fip",
@@ -47,7 +47,7 @@
     "region": "Europe",
     "genre": "Eclectic & Jazz",
     "stream": "https://icecast.radiofrance.fr/fip-midfi.mp3?id=radiofrance",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/fr-fip.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/fr-fip.png?v=2"
   },
   {
     "id": "fr-fip-jazz",
@@ -57,7 +57,7 @@
     "region": "Europe",
     "genre": "Jazz",
     "stream": "https://stream.radiofrance.fr/fipjazz/fipjazz_hifi.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/fr-fip-jazz.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/fr-fip-jazz.png?v=2"
   },
   {
     "id": "fr-france-inter",
@@ -67,7 +67,7 @@
     "region": "Europe",
     "genre": "News & Culture",
     "stream": "https://stream.radiofrance.fr/franceinter/franceinter_hifi.m3u8?id=radiofrance",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/fr-france-inter.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/fr-france-inter.png?v=2"
   },
   {
     "id": "de-bytefm",
@@ -77,7 +77,7 @@
     "region": "Europe",
     "genre": "Music Discovery",
     "stream": "https://bytefm.cast.addradio.de/bytefm/main/high/stream",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/de-bytefm.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/de-bytefm.png?v=2"
   },
   {
     "id": "de-deutschlandfunk",
@@ -87,7 +87,7 @@
     "region": "Europe",
     "genre": "News & Culture",
     "stream": "https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/de-deutschlandfunk.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/de-deutschlandfunk.png?v=2"
   },
   {
     "id": "de-deutschlandfunk-kultur",
@@ -97,7 +97,7 @@
     "region": "Europe",
     "genre": "Culture & Talk",
     "stream": "https://st02.sslstream.dlf.de/dlf/02/128/mp3/stream.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/de-deutschlandfunk-kultur.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/de-deutschlandfunk-kultur.png?v=2"
   },
   {
     "id": "de-jazzradio-berlin",
@@ -107,7 +107,7 @@
     "region": "Europe",
     "genre": "Jazz",
     "stream": "https://streaming.radio.co/s774887f7b/listen",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/de-jazzradio-berlin.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/de-jazzradio-berlin.png?v=2"
   },
   {
     "id": "gr-pepper-96-6",
@@ -117,7 +117,7 @@
     "region": "Europe",
     "genre": "Eclectic & Chill",
     "stream": "https://stream.radiojar.com/pepper",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/gr-pepper-96-6.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/gr-pepper-96-6.png?v=2"
   },
   {
     "id": "ie-rte-radio-1",
@@ -127,7 +127,7 @@
     "region": "Europe",
     "genre": "News & Culture",
     "stream": "https://liveaudio.rte.ie/hls-radio/radio1/chunklist.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ie-rte-radio-1.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ie-rte-radio-1.png?v=2"
   },
   {
     "id": "it-radio-capital",
@@ -137,7 +137,7 @@
     "region": "Europe",
     "genre": "Classic Hits",
     "stream": "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiocapital/radiocapital/master_ma.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/it-radio-capital.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/it-radio-capital.png?v=2"
   },
   {
     "id": "it-radio-deejay",
@@ -147,7 +147,7 @@
     "region": "Europe",
     "genre": "Pop & Entertainment",
     "stream": "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiodeejay/radiodeejay/master_ma.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/it-radio-deejay.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/it-radio-deejay.png?v=2"
   },
   {
     "id": "nl-npo-3fm",
@@ -157,7 +157,7 @@
     "region": "Europe",
     "genre": "Alternative & Pop",
     "stream": "https://icecast.omroep.nl/3fm-bb-mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/nl-npo-3fm.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/nl-npo-3fm.png?v=2"
   },
   {
     "id": "nl-npo-radio-2",
@@ -167,7 +167,7 @@
     "region": "Europe",
     "genre": "Pop & Culture",
     "stream": "https://icecast.omroep.nl/radio2-bb-aac",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/nl-npo-radio-2.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/nl-npo-radio-2.png?v=2"
   },
   {
     "id": "nl-sublime",
@@ -177,7 +177,7 @@
     "region": "Europe",
     "genre": "Soul & Jazz",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/SUBLIME.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/nl-sublime.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/nl-sublime.png?v=2"
   },
   {
     "id": "no-nrk-klassisk",
@@ -187,7 +187,7 @@
     "region": "Europe",
     "genre": "Classical",
     "stream": "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/klassisk_mp3_h",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/no-nrk-klassisk.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/no-nrk-klassisk.png?v=2"
   },
   {
     "id": "no-nrk-p3",
@@ -197,7 +197,7 @@
     "region": "Europe",
     "genre": "Pop & Culture",
     "stream": "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/p3_mp3_h",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/no-nrk-p3.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/no-nrk-p3.png?v=2"
   },
   {
     "id": "pl-radio-nowy-swiat",
@@ -207,7 +207,7 @@
     "region": "Europe",
     "genre": "Independent & Talk",
     "stream": "https://go-audio.toya.net.pl/63214",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/pl-radio-nowy-swiat.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/pl-radio-nowy-swiat.png?v=2"
   },
   {
     "id": "pt-rtp-antena-3",
@@ -217,7 +217,7 @@
     "region": "Europe",
     "genre": "Alternative & Pop",
     "stream": "https://radiocast.rtp.pt/antena380a.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/pt-rtp-antena-3.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/pt-rtp-antena-3.png?v=2"
   },
   {
     "id": "pt-tsf-radio-noticias",
@@ -227,7 +227,7 @@
     "region": "Europe",
     "genre": "News & Talk",
     "stream": "https://directo.tsf.pt/tsfdirecto.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/pt-tsf-radio-noticias.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/pt-tsf-radio-noticias.png?v=2"
   },
   {
     "id": "es-los40-classic",
@@ -237,7 +237,7 @@
     "region": "Europe",
     "genre": "Classic Hits",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CLASSIC.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/es-los40-classic.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/es-los40-classic.png?v=2"
   },
   {
     "id": "es-rne-radio-3",
@@ -247,7 +247,7 @@
     "region": "Europe",
     "genre": "Alternative & Culture",
     "stream": "https://rtvelivestream.rtve.es/rtvesec/rne/rne_r3_main.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/es-rne-radio-3.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/es-rne-radio-3.png?v=2"
   },
   {
     "id": "se-sveriges-radio-p3",
@@ -257,7 +257,7 @@
     "region": "Europe",
     "genre": "Pop & Culture",
     "stream": "https://edge1.sr.se/p3-aac-320",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/se-sveriges-radio-p3.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/se-sveriges-radio-p3.png?v=2"
   },
   {
     "id": "ch-radio-swiss-jazz",
@@ -267,7 +267,7 @@
     "region": "Europe",
     "genre": "Jazz & Blues",
     "stream": "https://stream.srg-ssr.ch/srgssr/rsj/mp3/128",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ch-radio-swiss-jazz.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ch-radio-swiss-jazz.png?v=2"
   },
   {
     "id": "gb-bbc-radio-6-music",
@@ -277,7 +277,7 @@
     "region": "Europe",
     "genre": "Alternative & Discovery",
     "stream": "https://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d128000.norewind.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/gb-bbc-radio-6-music.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/gb-bbc-radio-6-music.png?v=2"
   },
   {
     "id": "gb-bbc-world-service",
@@ -287,7 +287,7 @@
     "region": "Europe",
     "genre": "International News",
     "stream": "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/gb-bbc-world-service.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/gb-bbc-world-service.png?v=2"
   },
   {
     "id": "gb-nts-radio-1",
@@ -297,7 +297,7 @@
     "region": "Europe",
     "genre": "Underground & Eclectic",
     "stream": "https://stream-relay-geo.ntslive.net/stream?client=direct",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/gb-nts-radio-1.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/gb-nts-radio-1.png?v=2"
   },
   {
     "id": "gb-nts-radio-2",
@@ -307,7 +307,7 @@
     "region": "Europe",
     "genre": "Underground & Eclectic",
     "stream": "https://stream-relay-geo.ntslive.net/stream2?client=direct",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/gb-nts-radio-2.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/gb-nts-radio-2.png?v=2"
   },
   {
     "id": "ca-cbc-music",
@@ -317,7 +317,7 @@
     "region": "North America",
     "genre": "Music & Culture",
     "stream": "https://22983.live.streamtheworld.com/CBLFM_CBC_SC",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ca-cbc-music.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ca-cbc-music.png?v=2"
   },
   {
     "id": "ca-ckua",
@@ -327,7 +327,7 @@
     "region": "North America",
     "genre": "Music Discovery",
     "stream": "https://ais-sa1.streamon.fm/7000_48k.aac",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ca-ckua.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ca-ckua.png?v=2"
   },
   {
     "id": "mx-horizonte-107-9",
@@ -337,7 +337,7 @@
     "region": "North America",
     "genre": "Jazz & Culture",
     "stream": "https://s2.mexside.net/8014/stream",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/mx-horizonte-107-9.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/mx-horizonte-107-9.png?v=2"
   },
   {
     "id": "us-kcrw",
@@ -367,7 +367,7 @@
     "region": "North America",
     "genre": "Eclectic & Rock",
     "stream": "https://stream.radioparadise.com/mp3-192",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/us-radio-paradise-main-mix.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/us-radio-paradise-main-mix.png?v=2"
   },
   {
     "id": "us-somafm-groove-salad",
@@ -377,7 +377,7 @@
     "region": "North America",
     "genre": "Downtempo & Chill",
     "stream": "https://ice2.somafm.com/groovesalad-128-mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/us-somafm-groove-salad.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/us-somafm-groove-salad.png?v=2"
   },
   {
     "id": "us-wfmu",
@@ -407,7 +407,7 @@
     "region": "Caribbean",
     "genre": "Reggae",
     "stream": "https://stream.iriefm.net:8008/stream",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/jm-irie-fm.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/jm-irie-fm.png?v=2"
   },
   {
     "id": "ar-rock-pop-95-9",
@@ -417,7 +417,7 @@
     "region": "South America",
     "genre": "Rock & Alternative",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOP.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ar-rock-pop-95-9.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ar-rock-pop-95-9.png?v=2"
   },
   {
     "id": "br-cbn-sao-paulo",
@@ -427,7 +427,7 @@
     "region": "South America",
     "genre": "News & Talk",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/CBN_SPAAC.aac",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/br-cbn-sao-paulo.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/br-cbn-sao-paulo.png?v=2"
   },
   {
     "id": "cl-radio-cooperativa",
@@ -437,7 +437,7 @@
     "region": "South America",
     "genre": "News & Talk",
     "stream": "https://unlimited3-cl.dps.live/cooperativafm/mp3/icecast.audio",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/cl-radio-cooperativa.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/cl-radio-cooperativa.png?v=2"
   },
   {
     "id": "co-radio-nacional-de-colombia",
@@ -447,7 +447,7 @@
     "region": "South America",
     "genre": "Culture & World",
     "stream": "https://streaming.rtvc.gov.co/Radio_Radionacional/Radionacional.stream/playlist.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/co-radio-nacional-de-colombia.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/co-radio-nacional-de-colombia.png?v=2"
   },
   {
     "id": "gh-happy-fm-ghana",
@@ -457,7 +457,7 @@
     "region": "Africa",
     "genre": "Community & Talk",
     "stream": "https://atunwadigital.streamguys1.com/happyfm989accra",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/gh-happy-fm-ghana.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/gh-happy-fm-ghana.png?v=2"
   },
   {
     "id": "ke-capital-fm-kenya",
@@ -467,7 +467,7 @@
     "region": "Africa",
     "genre": "Contemporary Hits",
     "stream": "https://atunwadigital.streamguys1.com/capitalfm",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ke-capital-fm-kenya.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ke-capital-fm-kenya.png?v=2"
   },
   {
     "id": "ma-hit-radio-morocco",
@@ -477,7 +477,7 @@
     "region": "Africa",
     "genre": "Contemporary Hits",
     "stream": "https://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ma-hit-radio-morocco.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ma-hit-radio-morocco.png?v=2"
   },
   {
     "id": "ng-cool-fm-lagos",
@@ -487,7 +487,7 @@
     "region": "Africa",
     "genre": "Pop & Culture",
     "stream": "https://coolfmlagos969-atunwadigital.streamguys1.com/coolfmlagos969",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ng-cool-fm-lagos.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ng-cool-fm-lagos.png?v=2"
   },
   {
     "id": "ng-nigeria-info-lagos",
@@ -497,7 +497,7 @@
     "region": "Africa",
     "genre": "News & Talk",
     "stream": "https://nigeriainfofmlagos993-atunwadigital.streamguys1.com/nigeriainfofmlagos993",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ng-nigeria-info-lagos.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ng-nigeria-info-lagos.png?v=2"
   },
   {
     "id": "za-5fm",
@@ -507,7 +507,7 @@
     "region": "Africa",
     "genre": "Pop & Youth",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/5FMAAC.aac",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/za-5fm.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/za-5fm.png?v=2"
   },
   {
     "id": "za-kaya-fm",
@@ -517,7 +517,7 @@
     "region": "Africa",
     "genre": "Soul & Talk",
     "stream": "https://edge.iono.fm/xice/82_medium.aac",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/za-kaya-fm.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/za-kaya-fm.png?v=2"
   },
   {
     "id": "hk-rthk-radio-3",
@@ -527,7 +527,7 @@
     "region": "Asia & Middle East",
     "genre": "News & Culture",
     "stream": "https://rthkradio3-live.akamaized.net/hls/live/2040079/radio3/master.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/hk-rthk-radio-3.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/hk-rthk-radio-3.png?v=2"
   },
   {
     "id": "in-radio-mirchi-hindi",
@@ -537,7 +537,7 @@
     "region": "Asia & Middle East",
     "genre": "Hindi Pop & Bollywood",
     "stream": "https://eu8.fastcast4u.com/proxy/clyedupq/stream",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/in-radio-mirchi-hindi.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/in-radio-mirchi-hindi.png?v=2"
   },
   {
     "id": "id-rri-voice-of-indonesia",
@@ -547,7 +547,7 @@
     "region": "Asia & Middle East",
     "genre": "International & World",
     "stream": "https://stream-node0.rri.co.id/streaming/25/9125/voi.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/id-rri-voice-of-indonesia.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/id-rri-voice-of-indonesia.png?v=2"
   },
   {
     "id": "iq-kurdistan-24-radio",
@@ -557,7 +557,7 @@
     "region": "Asia & Middle East",
     "genre": "News & Talk",
     "stream": "https://audio-edge-3mayu.fra.h.radiomast.io/04b1ce4c-24f2-4172-b756-065832ef78bf",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/iq-kurdistan-24-radio.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/iq-kurdistan-24-radio.png?v=2"
   },
   {
     "id": "jp-gensokyo-radio",
@@ -567,7 +567,7 @@
     "region": "Asia & Middle East",
     "genre": "Japanese Game & Anime",
     "stream": "https://stream.gensokyoradio.net/1",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/jp-gensokyo-radio.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/jp-gensokyo-radio.png?v=2"
   },
   {
     "id": "jp-nhk-world-radio",
@@ -577,7 +577,7 @@
     "region": "Asia & Middle East",
     "genre": "International News",
     "stream": "https://masterpl.hls.nhkworld.jp/hls/r1/live/master.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/jp-nhk-world-radio.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/jp-nhk-world-radio.png?v=2"
   },
   {
     "id": "lb-radio-liban",
@@ -587,7 +587,7 @@
     "region": "Asia & Middle East",
     "genre": "Culture & World",
     "stream": "https://media2.streambrothers.com:2020/stream/8194",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/lb-radio-liban.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/lb-radio-liban.png?v=2"
   },
   {
     "id": "ps-radio-alhara",
@@ -597,7 +597,7 @@
     "region": "Asia & Middle East",
     "genre": "Independent & Eclectic",
     "stream": "https://stream.radioalhara.net/ra",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ps-radio-alhara.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ps-radio-alhara.png?v=2"
   },
   {
     "id": "ph-easy-rock-manila",
@@ -607,7 +607,7 @@
     "region": "Asia & Middle East",
     "genre": "Easy Listening",
     "stream": "https://azura.easyrock.com.ph/listen/easy_rock_manila/radio.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ph-easy-rock-manila.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ph-easy-rock-manila.png?v=2"
   },
   {
     "id": "sg-cna938",
@@ -617,7 +617,7 @@
     "region": "Asia & Middle East",
     "genre": "News & Talk",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/938NOW_PREM.aac",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/sg-cna938.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/sg-cna938.png?v=2"
   },
   {
     "id": "tw-icrt",
@@ -627,7 +627,7 @@
     "region": "Asia & Middle East",
     "genre": "English Pop & Talk",
     "stream": "https://n27a-eu.rcs.revma.com/nkdfurztxp3vv",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tw-icrt.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tw-icrt.png?v=2"
   },
   {
     "id": "th-bangkok-community-radio",
@@ -637,7 +637,7 @@
     "region": "Asia & Middle East",
     "genre": "Electronic & Discovery",
     "stream": "https://bcr.radiocult.fm/stream",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/th-bangkok-community-radio.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/th-bangkok-community-radio.png?v=2"
   },
   {
     "id": "tr-radyo-eksen",
@@ -647,7 +647,7 @@
     "region": "Asia & Middle East",
     "genre": "Rock & Alternative",
     "stream": "https://dygedge.radyotvonline.net/radyoeksen/playlist.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tr-radyo-eksen.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tr-radyo-eksen.png?v=2"
   },
   {
     "id": "tr-trt-fm",
@@ -657,7 +657,7 @@
     "region": "Asia & Middle East",
     "genre": "Pop & Culture",
     "stream": "https://trt.radyotvonline.net/trtfm",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tr-trt-fm.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/tr-trt-fm.png?v=2"
   },
   {
     "id": "ae-dubai-eye-103-8",
@@ -667,7 +667,7 @@
     "region": "Asia & Middle East",
     "genre": "News, Talk & Sports",
     "stream": "https://gbradio.cdn.tibus.net/U105?aw_0_1st.playerId=wireless-website&_=477645",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ae-dubai-eye-103-8.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ae-dubai-eye-103-8.png?v=2"
   },
   {
     "id": "au-4zzz",
@@ -677,7 +677,7 @@
     "region": "Oceania",
     "genre": "Independent & Community",
     "stream": "https://iheart.4zzz.org.au/live",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-4zzz.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-4zzz.png?v=2"
   },
   {
     "id": "au-abc-jazz",
@@ -687,7 +687,7 @@
     "region": "Oceania",
     "genre": "Jazz",
     "stream": "https://mediaserviceslive.akamaized.net/hls/live/2038319/abcjazz/index.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-abc-jazz.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-abc-jazz.png?v=2"
   },
   {
     "id": "au-triple-j",
@@ -697,7 +697,7 @@
     "region": "Oceania",
     "genre": "Alternative & Youth",
     "stream": "https://mediaserviceslive.akamaized.net/hls/live/2038308/triplejnsw/master.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-triple-j.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/au-triple-j.png?v=2"
   },
   {
     "id": "nz-95bfm",
@@ -707,7 +707,7 @@
     "region": "Oceania",
     "genre": "Independent & Alternative",
     "stream": "https://streams.95bfm.com/stream95",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/nz-95bfm.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/nz-95bfm.png?v=2"
   },
   {
     "id": "nz-george-fm",
@@ -717,6 +717,6 @@
     "region": "Oceania",
     "genre": "Electronic & Dance",
     "stream": "https://mediaworks.streamguys1.com/george_net_icy",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/nz-george-fm.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/nz-george-fm.png?v=2"
   }
 ]
