@@ -19,7 +19,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: primuse-radio-refresh
+  group: primuse-us-directory
   cancel-in-progress: false
 
 jobs:
