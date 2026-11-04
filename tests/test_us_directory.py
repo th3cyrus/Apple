@@ -103,6 +103,18 @@ class DirectoryTests(unittest.TestCase):
         self.assertTrue(all(not directory.is_excluded_program(s["name"], s["url"])
                             for s in entries))
 
+    def test_other_religious_stations_are_excluded(self):
+        examples = [
+            record("Gospel Worship FM", "https://music.example.net/gospel"),
+            record("Christian Bible Radio", "https://music.example.net/bible"),
+            record("Diyanet Radyo", "https://radio.example.net/stream"),
+            record("Православное Радио", "https://ru.example.net/live"),
+            record("رادیو مسیحی", "https://ir.example.net/live"),
+            record("Arabic Jazz Radio", "https://jazz.example.net/stream"),
+        ]
+        self.assertEqual([x["name"] for x in directory.catalog(examples)],
+                         ["Arabic Jazz Radio"])
+
     def test_dedupe_curated_stream(self):
         records = [record("A", "https://radio.example.org/live")]
         self.assertEqual(directory.catalog(records, ["https://radio.example.org/live"]), [])
