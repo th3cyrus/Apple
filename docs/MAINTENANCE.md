@@ -50,7 +50,27 @@ those checks for every direct push would block the current refresh bot. Stronger
 code-review policies need a separate design for generated-data publication, such
 as bot PRs, rather than a broad privileged-app bypass.
 
-Publication stages only `stations.json`, `radio.m3u`, `logos/` and the health history.
-The checkout stores no credentials. A short-lived askpass helper reads the job
-token only during the final push and is removed afterward. Concurrent refreshes
-are serialized; a non-fast-forward push fails visibly and should be rerun.
+The curated refresh publishes only `stations.json`, `radio.m3u`,
+`logos/` and the bounded health history. The U.S. directory publishes
+`us-directory/` independently; world artwork generation fills only missing
+`world-radio/logos/` images and the directory's shared cover. These workflows
+use distinct concurrency groups to avoid cancelling one another. Before
+publishing, they fetch and rebase against the latest target branch and retry
+fast-forward pushes. A real content conflict still fails visibly and requires
+review; force pushes are never used. Checkouts do not persist Git credentials:
+short-lived askpass helpers access the job token only during publication.
+
+The last step of curated refresh is a strict live-health gate: if any station
+needs review, the workflow status is red **after** saving the audio diagnostic
+artifact and preserving the state required for future repair. The weekly world
+audit uses the same strict failure signaling and always uploads its detailed
+report. An audit failure must not automatically remove radio stations.
+
+Directory generation rejects reported SSL errors, tokenized/signed URLs and
+stale Radio Browser health dates, and blocks publication when the number of
+surviving streams unexpectedly drops. Directory links remain less thoroughly
+verified than the curated and world playlists; GitHub Actions cannot establish
+playback availability from Iraq.
+
+For current visual coverage and administrative limitations, also read
+[Repository Settings](REPOSITORY_SETTINGS.md).
