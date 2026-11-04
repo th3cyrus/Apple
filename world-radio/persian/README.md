@@ -1,6 +1,6 @@
 # Persian Radio
 
-An independent, language-based selection of **9 nonreligious radio stations** from multiple countries and streaming platforms.
+An independent, language-based selection of **10 nonreligious radio stations** from multiple countries and streaming platforms.
 
 **Primuse subscription:**
 
@@ -21,5 +21,6 @@ Station country codes identify broadcaster listings; they do not restrict langua
 | Radio ZZA | IR | Independent Talk |
 | Radio Srood | AF | Dari Music |
 | Anghamy Persian | LB | Persian Music |
+| Radio NIC | IR | Political Documentaries |
 
 Catalog: [stations.json](stations.json) · Playlist: [radio.m3u](radio.m3u). Current decoded-audio audit results are maintained in GitHub Actions.

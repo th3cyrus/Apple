@@ -25,7 +25,7 @@ Language-based subscriptions are separate from the 72-station international sele
 | Language | Stations | Subscription |
 | --- | ---: | --- |
 | [Kurdish](kurdish/README.md) | 7 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/radio.m3u) |
-| [Persian](persian/README.md) | 9 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/radio.m3u) |
+| [Persian](persian/README.md) | 10 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/radio.m3u) |
 | [Arabic](arabic/README.md) | 14 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/radio.m3u) |
 | [Turkish](turkish/README.md) | 14 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/radio.m3u) |
 | [Russian](russian/README.md) | 13 | [Direct M3U](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/radio.m3u) |

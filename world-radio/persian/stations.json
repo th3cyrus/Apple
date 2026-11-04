@@ -79,5 +79,14 @@
     "genre": "Persian Music",
     "stream": "https://radio.avazfarsi.com:8010/radio.mp3",
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/lb-anghamy-persian.png"
+  },
+  {
+    "id": "ir-radio-nic",
+    "name": "Radio NIC",
+    "language": "Persian",
+    "country_code": "IR",
+    "genre": "Political Documentaries",
+    "stream": "https://stream.zeno.fm/kbt00r580feuv",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-nic.png"
   }
 ]

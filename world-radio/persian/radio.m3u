@@ -17,3 +17,5 @@ https://listen.radioking.com/radio/526993/stream/585379
 https://stream.radiosrood.com/
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/lb-anghamy-persian.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/lb-anghamy-persian.png" group-title="Persian Radio",Anghamy Persian (LB)
 https://radio.avazfarsi.com:8010/radio.mp3
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-nic.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-nic.png" group-title="Persian Radio",Radio NIC (IR)
+https://stream.zeno.fm/kbt00r580feuv
