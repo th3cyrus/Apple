@@ -555,7 +555,7 @@
     "homepage": "https://www.wwoz.org/",
     "search": "WWOZ",
     "manual_lock": false,
-    "fail_count": 0,
+    "fail_count": 1,
     "logo": "logos/wwoz-90-7.png",
     "identity": {
       "aliases": [
@@ -568,7 +568,8 @@
       "channel": "main",
       "search_term": "WWOZ",
       "frequency": "90.7"
-    }
+    },
+    "last_failure_counted_at": "2026-11-07T10:12:02+00:00"
   },
   {
     "id": "kjazz-88-1",
