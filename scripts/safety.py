@@ -1,4 +1,5 @@
 """Shared validation, redaction and atomic file writes."""
+import ipaddress
 import json
 import os
 from pathlib import Path
@@ -22,6 +23,39 @@ def valid_url(value):
                     and (parts.port is None or 0 < parts.port < 65536))
     except (ValueError, TypeError, AttributeError):
         return False
+
+
+
+def public_media_url(value):
+    """Reject obvious internal destinations before fetching untrusted radio URLs.
+
+    DNS can change after this syntactic check; network-level egress restrictions
+    are still advisable on infrastructure processing third-party streams.
+    """
+    if not valid_url(value):
+        return False
+    host = urlsplit(value).hostname.rstrip(".").lower()
+    if (host in {"localhost", "localhost.localdomain"}
+            or host.endswith((".localhost", ".local", ".internal", ".lan",
+                              ".test", ".invalid", ".onion", ".home.arpa"))):
+        return False
+    try:
+        return ipaddress.ip_address(host).is_global
+    except ValueError:
+        pass
+    try:
+        ascii_host = host.encode("idna").decode("ascii")
+    except UnicodeError:
+        return False
+    labels = ascii_host.split(".")
+    if len(labels) < 2 or any(
+            not re.fullmatch(r"[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?", label)
+            for label in labels):
+        return False
+    # Reject noncanonical numeric IPv4 encodings, e.g. 127.1 or 2130706433.
+    if all(re.fullmatch(r"(?:0x[0-9a-f]+|[0-9]+)", label) for label in labels):
+        return False
+    return True
 
 
 def has_expiring_query(value):
