@@ -2,7 +2,7 @@
 from datetime import datetime
 import re
 
-from safety import unsupported_stream_suffix, valid_url
+from safety import public_media_url, unsupported_stream_suffix, valid_url
 
 
 def validate_catalog(stations):
@@ -25,6 +25,8 @@ def validate_catalog(stations):
         for key in ('stream', 'homepage'):
             if not valid_url(station.get(key)):
                 raise ValueError(f'Invalid {key} URL for {sid}')
+        if not public_media_url(station['stream']):
+            raise ValueError(f'Nonpublic stream destination for {sid}')
         if unsupported_stream_suffix(station['stream']):
             raise ValueError(f'Misleading audio/playlist double extension for {sid}')
         if station.get('logo') != f'logos/{sid}.png':
