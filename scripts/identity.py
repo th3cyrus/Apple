@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 import re
 from urllib.parse import urlsplit
 
-from safety import has_expiring_query, unsupported_stream_suffix, valid_url
+from safety import has_expiring_query, public_media_url, unsupported_stream_suffix, valid_url
 
 
 def hostname(url):
@@ -100,7 +100,7 @@ def candidate_rejection_reasons(station, candidate, score, now=None):
     url = candidate.get('url_resolved', '')
     if unsupported_stream_suffix(url):
         reasons.append('misleading_stream_suffix')
-    if not valid_url(url):
+    if not public_media_url(url):
         reasons.append('invalid_candidate_url')
     elif has_expiring_query(url):
         reasons.append('expiring_candidate_url')
