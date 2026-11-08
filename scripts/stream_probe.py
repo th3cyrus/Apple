@@ -100,7 +100,9 @@ def check_audio(sample, remaining=10):
     peak_dbfs = 20 * math.log10(max(peak, 1e-12))
     if rms_dbfs < MIN_RMS_DBFS or peak_dbfs < MIN_PEAK_DBFS:
         # A quiet window needs manual review, not automatic replacement.
-        raise ProbeError('SilentAudio', 'Audio decoded but sample is effectively silent')
+        # Retry a fresh sample: a short quiet programme transition is inconclusive.
+        # Keep persistent silence unhealthy and ineligible for automatic repair.
+        raise ProbeError('SilentAudio', 'Audio decoded but sample is effectively silent', retryable=True)
     return {'codec': codec, 'audio_packets': int(audio['nb_read_packets']),
             'decoded_seconds': round(len(pcm) / 8000, 2),
             'rms_dbfs': round(rms_dbfs, 1), 'peak_dbfs': round(peak_dbfs, 1)}
