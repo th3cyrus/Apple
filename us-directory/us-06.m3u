@@ -10,7 +10,7 @@ https://wgbh-hls.streamguys1.com/wcrb_hls/playlist.m3u8
 #EXTINF:-1 group-title="Classical" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/classical.png",IPR Classical
 https://classical-stream.iowapublicradio.org/Classical.mp3
 #EXTINF:-1 group-title="Classical" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/classical.png",KDFC Glissando
-https://19273.live.streamtheworld.com/CC9_S01AAC_96_SC
+https://18193.live.streamtheworld.com/CC9_S01AAC_96_SC
 #EXTINF:-1 group-title="Classical" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/classical.png",Smooth Jazz
 https://smoothjazz.cdnstream1.com/2585_320.mp3
 #EXTINF:-1 group-title="Classical" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/classical.png",WFMT Classical AAC 64
@@ -47,6 +47,8 @@ https://streaming.radiostreamlive.com/radiocountrylive_devices
 https://ice64.securenetsystems.net:80/WCKA
 #EXTINF:-1 group-title="Electronic & Dance" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/electronic-dance.png",Deep Space Radio
 https://ais-edge102-live365-dal02.cdnstream.com/a71161
+#EXTINF:-1 group-title="Electronic & Dance" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/electronic-dance.png",Dubstep.fm
+https://stream.dubstep.fm/256mp3
 #EXTINF:-1 group-title="Electronic & Dance" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/electronic-dance.png",Jake Signal Stream
 https://s3.radio.co/s8159ac666/listen
 #EXTINF:-1 group-title="Electronic & Dance" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/electronic-dance.png",KGAY 106.5 Radio Palm Springs, Pride of the Valley
@@ -64,9 +66,9 @@ https://signalcity.tv/jeyem.mp3
 #EXTINF:-1 group-title="Electronic & Dance" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/electronic-dance.png",SomaFM Lush (128k AAC)
 https://ice2.somafm.com/lush-128-aac
 #EXTINF:-1 group-title="Electronic & Dance" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/electronic-dance.png",SomaFM Lush (128k MP3)
-https://ice2.somafm.com/lush-128-mp3
+https://ice5.somafm.com/lush-128-mp3
 #EXTINF:-1 group-title="Electronic & Dance" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/electronic-dance.png",SomaFM Space Station Soma (64k AAC)
-https://ice5.somafm.com/spacestation-64-aac
+https://ice6.somafm.com/spacestation-64-aac
 #EXTINF:-1 group-title="Electronic & Dance" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/electronic-dance.png",Spiral Radio
 https://radiospiral.radio:8000/stream.mp3
 #EXTINF:-1 group-title="Electronic & Dance" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/electronic-dance.png",The Indie Beat Radio - Ambient Channel
@@ -93,6 +95,8 @@ https://broadcast.miami/proxy/concord?mp=/stream/;
 https://s6.autopo.st/proxy/simply8?mp=/stream
 #EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/hip-hop-r-b.png",SomaFM Fluid (128k MP3)
 https://ice6.somafm.com/fluid-128-mp3
+#EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/hip-hop-r-b.png",t spigot radio
+https://radio.tspigot.net/radio/radio.mp3
 #EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/hip-hop-r-b.png",Uptown Philly 100 Radio
 https://stream.radio.co/sc5a080f37/listen
 #EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/hip-hop-r-b.png",W.D.O.P.E. Dopetrackz Radio
@@ -101,14 +105,12 @@ https://fr1-play.adtonos.com/8102/dopetrackz-radio-3
 https://wxpn.xpn.org/xpn2mp3hi
 #EXTINF:-1 group-title="Hip-Hop & R&B" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/hip-hop-r-b.png",WZMB 91.3 FM
 https://ice41.securenetsystems.net/WZMB?playSessionID=B72E276A-B1EE-4169-AA8061255FB81B29
-#EXTINF:-1 group-title="Jazz & Blues" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/jazz-blues.png",181.FM - Fusion Jazz
-https://listen.181fm.com/181-fusionjazz_128k.mp3
 #EXTINF:-1 group-title="Jazz & Blues" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/jazz-blues.png",90.5 WICN Public Radio - Jazz+ for New England
 https://wicn-ice.streamguys1.com/live-mp3
 #EXTINF:-1 group-title="Jazz & Blues" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/jazz-blues.png",KABF
 https://cast.acornradio.org/kabf
 #EXTINF:-1 group-title="Jazz & Blues" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/jazz-blues.png",SomaFM Sonic Universe (128k MP3)
-https://ice5.somafm.com/sonicuniverse-128-mp3
+https://ice6.somafm.com/sonicuniverse-128-mp3
 #EXTINF:-1 group-title="Jazz & Blues" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/jazz-blues.png",WLMX Sunshine 96.7 St. Petersburg, Florida
 https://stream.radio.co/seb6b71a0f/listen
 #EXTINF:-1 group-title="Jazz & Blues" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/jazz-blues.png",WVIA-HD3 Chiaroscuro Channel Scranton, PA
@@ -149,8 +151,10 @@ https://c23.radioboss.fm/stream/204
 https://ice9.securenetsystems.net/KBLA
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.png",KCRW News 24 (AAC)
 https://streams.kcrw.com/news24_aac
-#EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.png",KNBR 1050
-https://playerservices.streamtheworld.com/api/livestream-redirect/KTCTAMAAC.aac
+#EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.png",KLBP-LP 99.1 Long Beach, California
+https://ice5.securenetsystems.net/KLBP
+#EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.png",KODX-LP 96.9 Earth On The Air Seattle, Washington
+https://stream.pacificaservice.org:9000/kodx
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.png",KRDO
 https://ice6.securenetsystems.net/KRDO
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.png",KSQD Community Radio
@@ -185,6 +189,8 @@ https://radio.universalhealthradio.org/uhr-en.mp3
 https://vsin-sgrewind.streamguys1.com/sgrewind/live/chunks.m3u8
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.png",WABE Classics
 https://playerservices.streamtheworld.com/api/livestream-redirect/WABE_HD2_CLASSICAL.mp3
+#EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.png",WBSC-LP 102.3 Bamberg, South Carolina
+https://ice9.securenetsystems.net/WBSCLP
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.png",WDUN
 https://ice42.securenetsystems.net/WDUN?playSessionID=93D84410-B7F0-FF8C-0BA876AE142B1E36
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.png",WJOB 1230 AM - 104.7 FM Hammond, IN
@@ -205,6 +211,8 @@ https://stream.revma.ihrhls.com/zc2453
 https://oom-signalmedia.streamguys1.com/signalmedia/kabz-aac?aw_0_req.gdpr=true
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",109jamz The Throwback Station 24/7
 https://streamingcenter.myautodj.com:8030/
+#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",181.FM - The Heart (Love Songs)
+https://listen.181fm.com/181-heart_128k.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",1RADIO.SPACE 24/7
 https://c22.radioboss.fm:8118/1RADIO.SPACE
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",90.7 K-LOVE
@@ -316,7 +324,7 @@ https://stream.rcs.revma.com/a4dwa9qw57uvv
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",KJBM Just Beautiful Music
 https://streaming.live365.com/a72786
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",KLAC LA Sports
-https://n3ab-e2.revma.ihrhls.com/zc189
+https://n20b-e2.revma.ihrhls.com/zc189
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",KLCC 89.7
 https://tektite.streamguys1.com:5025/klcc.aac?uuid=h2p3si9r
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",KNES Texas 99.1
@@ -353,6 +361,8 @@ https://www.mawalkingradio.app/listen/mawalking_radio/mawalkingRhumba
 https://mayaclars.com/radio?nocache=1769522251638
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",ME-RADIO.COM
 https://centova.rockhost.com/proxy/medjsmer?mp=/live
+#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",Metabolic Studio's Fault Line Radio
+https://metabolicstudio.streamguys1.com/playback2
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",Metaverse Radio Chicago
 https://s2.radio.co/s351675523/listen
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",morseops.com Radio · Channel 1 · 15 WPM
@@ -429,20 +439,18 @@ https://stream.willstare.com:8860/;
 https://s4.radio.co/sc9c14d315/low
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",SLS Digital Music
 https://slsdigitalradio.com:8000/radio.mp3
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",SoftRockRadio.net
-https://gold.streamguys1.com/softrock.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",Soma FM Synphaera
 https://ice6.somafm.com/synphaera-256-mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",Soma FM: Vaporwaves
-https://ice5.somafm.com/vaporwaves-128-mp3
+https://ice2.somafm.com/vaporwaves-128-mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",SomaFM Drone Zone (64k AAC)
-https://ice5.somafm.com/dronezone-64-aac
+https://ice6.somafm.com/dronezone-64-aac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",SomaFM Groove Salad (128k MP3)
 https://ice2.somafm.com/groovesalad-128-mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",SomaFM Groove Salad (256k MP3)
-https://ice5.somafm.com/groovesalad-256-mp3
+https://ice2.somafm.com/groovesalad-256-mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",SomaFM Heavyweight Reggae (128k MP3)
-https://ice5.somafm.com/reggae-128-mp3
+https://ice6.somafm.com/reggae-128-mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",SomaFM ThistleRadio (32k AAC)
 https://ice6.somafm.com/thistle-32-aac
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",Songwriters Island Radio
@@ -452,11 +460,9 @@ https://usa10.fastcast4u.com:8960/
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",SpeakupFM
 https://r.bgp.rodeo:8020/radio.mp3
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",SpriteLayer Video Game Radio
-https://radio.spritelayerradio.com/hls/spritelayer_video_game_radio/live.m3u8
+https://radio.spritelayerradio.com:8010/all
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",Static Shift Radio
 https://stream.zeno.fm/q0p9ht9kxlttv
-#EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",Sunny 105 WTMR-DB and 103.9 WSOR-FM - Yacht Rock and Classic Hits
-https://cast5.asurahosting.com/proxy/sunny105/stream
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",The Adventures of Superman (radio) | Stupid Potato
 https://stupidpotato.com/superman/live
 #EXTINF:-1 group-title="Other U.S. Radio" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/other-u-s-radio.png",The Big 80's Station
@@ -603,6 +609,8 @@ https://ice8.securenetsystems.net/KMYZ?play
 https://stream.revma.ihrhls.com/zc17
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/rock-alternative.png",113.FM - Indie Nation
 https://113fm-atunwadigital.streamguys1.com/1047
+#EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/rock-alternative.png",181.FM - Kickin' Country
+https://listen.181fm.com/181-kickincountry_128k.mp3
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/rock-alternative.png",22 West Media Radio (California State University)
 https://playerservices.streamtheworld.com/api/livestream-redirect/22WESTRADIOONLINEAAC.aac
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/rock-alternative.png",80's Rock Ride IHR
@@ -667,16 +675,18 @@ https://usa10.fastcast4u.com:8770/;?type=http&nocache=1700019220
 https://dbc.streamguys1.com/wxqr-fm.aac
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/rock-alternative.png",Rock 94 And A Half (KHTQ-FM)
 https://playerservices.streamtheworld.com/api/livestream-redirect/KHTQFMAAC.aac
+#EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/rock-alternative.png",SoftRock Radio
+https://gold.streamguys1.com/softrock.mp3
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/rock-alternative.png",SomaFM Digitalis (256k MP3)
 https://ice2.somafm.com/digitalis-256-mp3
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/rock-alternative.png",SomaFM Folk Forward (128k AAC)
-https://ice2.somafm.com/folkfwd-128-aac
+https://ice5.somafm.com/folkfwd-128-aac
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/rock-alternative.png",SomaFM Heavyweight Reggae (32k AAC)
-https://ice5.somafm.com/reggae-32-aac
+https://ice6.somafm.com/reggae-32-aac
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/rock-alternative.png",SomaFM Left Coast 70s (320k MP3)
 https://ice2.somafm.com/seventies-320-mp3
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/rock-alternative.png",SomaFM PopTron (32k AAC)
-https://ice6.somafm.com/poptron-32-aac
+https://ice2.somafm.com/poptron-32-aac
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/rock-alternative.png",Third Rock Radio
 https://rfcm.streamguys1.com/thirdrock-mp3
 #EXTINF:-1 group-title="Rock & Alternative" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/rock-alternative.png",Time Machine Radio
