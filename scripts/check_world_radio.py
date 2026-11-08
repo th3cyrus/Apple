@@ -6,7 +6,7 @@ Never remove stations solely because of an intermittent check failure.
 """
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import datetime, time as local_time, timezone
 import json
 import os
 from pathlib import Path
@@ -14,6 +14,7 @@ import re
 import sys
 import time
 from urllib.parse import urlsplit
+from zoneinfo import ZoneInfo
 
 import requests
 
@@ -30,6 +31,25 @@ REGIONS = {"Europe", "North America", "Caribbean", "South America",
 MAX_ENTRIES = 900
 BAD_TEXT_EXT = (".m3u", ".pls")
 FIELDS = {"id", "name", "country", "country_code", "region", "genre", "stream", "logo"}
+
+# Explicitly published broadcast windows; never infer availability from timezone.
+# Chula Radio Plus: https://curadio.car.chula.ac.th/contact (daily 06:00–21:00).
+BROADCAST_HOURS = {
+    "th-chula-radio-plus": ("Asia/Bangkok", local_time(6), local_time(21)),
+}
+
+
+def scheduled_off_air(station, moment=None):
+    """True only for a station with verified hours, outside its local broadcast."""
+    hours = BROADCAST_HOURS.get(station["id"])
+    if hours is None:
+        return False
+    zone, opening, closing = hours
+    instant = moment if moment is not None else datetime.now(timezone.utc)
+    if instant.tzinfo is None:
+        raise ValueError("Broadcast window checks require timezone-aware datetimes")
+    clock = instant.astimezone(ZoneInfo(zone)).time()
+    return not opening <= clock < closing
 
 
 def load_and_validate(root=WORLD):
@@ -89,6 +109,18 @@ def load_and_validate(root=WORLD):
 
 def probe_one(station):
     began = time.monotonic()
+    if scheduled_off_air(station):
+        # Preserve an explicit "not tested" result: off-air is not a pass.
+        return {
+            "id": station["id"], "name": station["name"],
+            "country_code": station["country_code"], "ok": False,
+            "skipped": True, "status": "scheduled_off_air",
+            "reason": "Outside published daily 06:00–21:00 Asia/Bangkok broadcast",
+            "codec": None, "decoded_seconds": None, "rms_dbfs": None,
+            "http_status": None, "error_type": None, "error": None,
+            "probe": None,
+            "elapsed_seconds": round(time.monotonic() - began, 2),
+        }
     try:
         with requests.Session() as session:
             result = stream_check(session, station["stream"])
@@ -115,22 +147,28 @@ def audit(catalog, output, workers=12):
         for future in as_completed(jobs):
             item = future.result()
             results.append(item)
-            print(("PASS" if item["ok"] else "FAIL"), item["name"],
-                  item.get("codec") or item.get("error_type") or "Unknown",
-                  flush=True)
+            label = "SKIP" if item.get("skipped") else ("PASS" if item["ok"] else "FAIL")
+            print(label, item["name"],
+                  item.get("codec") or item.get("status")
+                  or item.get("error_type") or "Unknown", flush=True)
     order = {s["id"]: idx for idx, s in enumerate(catalog)}
     results.sort(key=lambda result: order[result["id"]])
     passed = sum(result["ok"] for result in results)
+    skipped = sum(bool(result.get("skipped")) for result in results)
+    checked = len(results) - skipped
+    needs_review = checked - passed
     document = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "scope": "CI runner: decoded-audio sample",
-        "total": len(results), "passed": passed, "needs_review": len(results)-passed,
-        "stations": results,
+        "total": len(results), "checked": checked,
+        "passed": passed, "skipped_off_air": skipped,
+        "needs_review": needs_review, "stations": results,
     }
     output = Path(output)
     atomic_json(output, document)
-    summary = (f"World Radio Select: {passed}/{len(results)} decoded non-silent audio; "
-               f"{len(results)-passed} require review.")
+    summary = (f"World Radio Select: {passed}/{checked} scheduled-on-air streams "
+               f"decoded non-silent audio; {skipped} scheduled off-air (not tested); "
+               f"{needs_review} require review.")
     print(summary, flush=True)
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"],"a",encoding="utf-8") as file:
@@ -142,7 +180,8 @@ def audit(catalog, output, workers=12):
 def require_audible(document):
     """Raise only after the audit report is persisted for troubleshooting."""
     if document['needs_review']:
-        failed = [entry['id'] for entry in document['stations'] if not entry['ok']]
+        failed = [entry['id'] for entry in document['stations']
+                  if not entry['ok'] and not entry.get('skipped')]
         raise ValueError(f'World radio audio degraded: {len(failed)} failed: '
                          + ', '.join(failed[:12]))
 
