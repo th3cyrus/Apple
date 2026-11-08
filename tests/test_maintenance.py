@@ -40,6 +40,33 @@ def candidate(**changes):
 
 
 class MediaTests(unittest.TestCase):
+    def test_internal_media_addresses_are_rejected_without_a_request(self):
+        for url in (
+            'http://127.0.0.1:8080/private',
+            'http://10.0.0.1/admin',
+            'http://169.254.169.254/latest/meta-data',
+            'http://[::1]/private',
+            'http://2130706433/private',
+            'http://0177.0.0.1/private',
+            'https://localhost/media',
+            'https://radio.internal/stream',
+        ):
+            with self.subTest(url=url):
+                session = Session([])
+                result = update.stream_check(session, url)
+                self.assertFalse(result['ok'])
+                self.assertEqual(result['error_type'], 'InvalidURL')
+                self.assertEqual(session.urls, [])
+
+    def test_media_redirect_to_internal_address_is_rejected(self):
+        redirect = Response(status=302, mime='audio/mpeg')
+        redirect.headers['Location'] = 'http://169.254.169.254/latest/meta-data'
+        session = Session([redirect])
+        result = update.stream_check(session, 'https://radio.example.org/live')
+        self.assertFalse(result['ok'])
+        self.assertEqual(result['error_type'], 'InvalidURL')
+        self.assertEqual(session.urls, ['https://radio.example.org/live'])
+
     def test_empty_audio_body_is_not_healthy(self):
         response = Response(mime='audio/mpeg')
         response.raw = io.BytesIO(b'')
@@ -166,7 +193,9 @@ class PlaylistServerTests(unittest.TestCase):
         import requests
         with requests.Session() as session:
             session.trust_env = False
-            return update.stream_check(session, self.base + path)
+            # The local HTTP fixture is intentionally not a public radio host.
+            with patch.object(stream_probe, 'public_media_url', side_effect=safety.valid_url):
+                return update.stream_check(session, self.base + path)
 
     def test_plain_m3u_and_pls_resolve_media(self):
         for path in ('/simple.m3u', '/radio.pls'):

@@ -144,6 +144,22 @@ class DirectoryPublicationTests(unittest.TestCase):
 
 
 class MediaIsolationTests(unittest.TestCase):
+    def test_directory_and_repair_reject_internal_hosts(self):
+        for url in (
+            'https://127.0.0.1/private',
+            'http://169.254.169.254/latest/meta-data',
+            'https://radio.local/live',
+            'https://2130706433/live',
+            'https://[::1]/live',
+        ):
+            with self.subTest(url=url):
+                self.assertFalse(safety.public_media_url(url))
+                reasons = identity.candidate_rejection_reasons(
+                    station(), candidate(url_resolved=url), 100, NOW)
+                self.assertIn('invalid_candidate_url', reasons)
+                self.assertFalse(directory.public_https(url))
+        self.assertTrue(safety.public_media_url('https://radio.example.org/live'))
+
     def test_auto_repair_does_not_publish_temporary_signed_candidates(self):
         for query in ('token=', 'signature=temporary', 'X-Amz-Signature=temporary'):
             replacement = candidate(url_resolved='https://radio.example.org/live?' + query)

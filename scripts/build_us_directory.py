@@ -17,7 +17,7 @@ from urllib.parse import urlsplit
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from safety import atomic_write, has_expiring_query, valid_url, unsupported_stream_suffix
+from safety import atomic_write, has_expiring_query, public_media_url, valid_url, unsupported_stream_suffix
 from content_filters import is_excluded_program
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -78,7 +78,7 @@ def clean_text(value, max_chars=100):
 
 
 def public_https(value):
-    if not valid_url(value) or urlsplit(value).scheme != "https":
+    if not public_media_url(value) or urlsplit(value).scheme != "https":
         return False
     parts = urlsplit(value)
     host = (parts.hostname or "").lower().rstrip(".")

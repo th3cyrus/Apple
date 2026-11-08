@@ -20,7 +20,7 @@ import requests
 ROOT = Path(__file__).resolve().parents[1]
 WORLD = ROOT / "world-radio"
 sys.path.insert(0, str(ROOT / "scripts"))
-from safety import (atomic_json, has_expiring_query, valid_url,
+from safety import (atomic_json, has_expiring_query, public_media_url, valid_url,
                     unsupported_stream_suffix, safe_message)
 from content_filters import is_excluded_program
 from stream_probe import stream_check
@@ -59,7 +59,7 @@ def load_and_validate(root=WORLD):
         if is_excluded_program(station["name"], station.get("genre"), url):
             raise ValueError("Religious radio station excluded: " + station["id"])
         parts = urlsplit(url)
-        if (not valid_url(url) or parts.scheme != "https"
+        if (not public_media_url(url) or parts.scheme != "https"
                 or unsupported_stream_suffix(url)
                 or parts.path.lower().endswith(BAD_TEXT_EXT)):
             raise ValueError("Invalid or misleading station stream for " + station["id"])
