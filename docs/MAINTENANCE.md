@@ -66,6 +66,14 @@ artifact and preserving the state required for future repair. The weekly world
 audit uses the same strict failure signaling and always uploads its detailed
 report. An audit failure must not automatically remove radio stations.
 
+World stations with documented broadcast hours are marked `scheduled_off_air`
+outside their published local schedule. These stations are explicitly *not tested*,
+not counted as healthy, and excluded from the failure count only during that
+window; an on-air silent/undecodable stream still fails the strict gate. Chula
+Radio Plus broadcasts daily 06:00–21:00 Asia/Bangkok per the broadcaster's
+[contact page](https://curadio.car.chula.ac.th/contact). The scheduled weekly
+world audit runs within that window; push/PR audits can run after sign-off.
+
 Untrusted audio URLs are screened against loopback/private IP literals,
 noncanonical numeric IPv4 hosts and local/internal hostnames. This applies to
 catalog ingestion, replacement candidates, playlist traversal and HTTP redirects.
