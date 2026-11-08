@@ -97,5 +97,14 @@
     "genre": "Political Documentaries",
     "stream": "https://stream.zeno.fm/kbt00r580feuv",
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-nic.png"
+  },
+  {
+    "id": "gb-bbc-persian-tv",
+    "name": "BBC Persian TV (Video)",
+    "language": "Persian",
+    "country_code": "GB",
+    "genre": "News & Talk (TV stream)",
+    "stream": "https://vs-hls-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/mobile_wifi_main_hd_abr_v2.m3u8",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/gb-bbc-persian-tv.png"
   }
 ]

@@ -21,3 +21,5 @@ https://stream.radiosrood.com/
 https://radio.avazfarsi.com:8010/radio.mp3
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-nic.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-nic.png" group-title="Persian Radio",Radio NIC (IR)
 https://stream.zeno.fm/kbt00r580feuv
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/gb-bbc-persian-tv.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/gb-bbc-persian-tv.png" group-title="Persian Radio",BBC Persian TV (Video) (GB)
+https://vs-hls-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/mobile_wifi_main_hd_abr_v2.m3u8
