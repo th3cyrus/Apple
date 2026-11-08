@@ -194,11 +194,37 @@ class PlaylistServerTests(unittest.TestCase):
             handle.setsampwidth(2)
             handle.setframerate(8000)
             handle.writeframes(b'\x00\x00' * 8000)
-        response = Response(mime='audio/wav')
-        response.raw = io.BytesIO(buf.getvalue())
-        result = update.stream_check(Session([response]), 'https://example.org/silent.wav')
+        replies = [Response(mime='audio/wav') for _ in range(stream_probe.MAX_ATTEMPTS)]
+        for response in replies:
+            response.raw = io.BytesIO(buf.getvalue())
+        with patch.object(stream_probe, 'sleep') as sleep:
+            result = update.stream_check(Session(replies), 'https://example.org/silent.wav')
         self.assertFalse(result['ok'])
         self.assertEqual(result['error_type'], 'SilentAudio')
+        self.assertEqual(len(result['attempts']), stream_probe.MAX_ATTEMPTS)
+        self.assertTrue(all(a['error_type'] == 'SilentAudio' for a in result['attempts']))
+        self.assertFalse(result['repairable'])
+        self.assertEqual(sleep.call_count, stream_probe.MAX_ATTEMPTS - 1)
+
+    def test_transient_silent_audio_recovers_on_fresh_sample(self):
+        import wave
+        buf = io.BytesIO()
+        with wave.open(buf, 'wb') as handle:
+            handle.setnchannels(1)
+            handle.setsampwidth(2)
+            handle.setframerate(8000)
+            handle.writeframes(b'\x00\x00' * 8000)
+        first = Response(mime='audio/wav')
+        first.raw = io.BytesIO(buf.getvalue())
+        with patch.object(stream_probe, 'sleep') as sleep:
+            result = update.stream_check(
+                Session([first, Response(mime='audio/wav')]),
+                'https://example.org/brief-silence.wav')
+        self.assertTrue(result['ok'], result)
+        self.assertEqual(len(result['attempts']), 2)
+        self.assertEqual(result['attempts'][0]['error_type'], 'SilentAudio')
+        self.assertNotIn('error_type', result)
+        sleep.assert_called_once_with(1)
 
     def test_catalog_disallows_double_extension(self):
         with self.assertRaisesRegex(ValueError, 'Misleading audio/playlist'):
