@@ -17,7 +17,7 @@ from urllib.parse import urljoin, urlsplit
 
 from requests.exceptions import ConnectionError, SSLError, Timeout
 from urllib3.exceptions import ProtocolError, ReadTimeoutError, SSLError as TransportSSLError
-from safety import safe_message, safe_url, unsupported_stream_suffix, valid_url
+from safety import public_media_url, safe_message, safe_url, unsupported_stream_suffix
 
 CONNECT_TIMEOUT = 5
 READ_TIMEOUT = 12
@@ -172,7 +172,7 @@ def _fetch(session, url, attempt, deadline, visited, depth=0, *, initialization=
     if unsupported_stream_suffix(url):
         raise ProbeError('MisleadingStreamSuffix', 'Audio/playlist double extension is prohibited',
                          repairable=True)
-    if not valid_url(url):
+    if not public_media_url(url):
         raise ProbeError('InvalidURL', 'Invalid HTTP or HTTPS media URL', repairable=True)
     if url in visited:
         raise ProbeError('PlaylistLoop', 'Playlist or redirect loop detected')
@@ -180,7 +180,7 @@ def _fetch(session, url, attempt, deadline, visited, depth=0, *, initialization=
     response = None
     current = url
     for redirect in range(MAX_REDIRECTS + 1):
-        if not valid_url(current):
+        if not public_media_url(current):
             raise ProbeError('InvalidURL', 'Unsafe media redirect URL')
         if unsupported_stream_suffix(current):
             raise ProbeError('MisleadingStreamSuffix', 'Audio/playlist double extension is prohibited',
@@ -266,8 +266,8 @@ def stream_check(session, url):
     started = time.monotonic()
     info = {'ok': False, 'url': safe_url(url), 'attempts': [], 'http_used': False,
             'repairable': False}
-    if not valid_url(url):
-        info.update(error_type='InvalidURL', error='Stream URL must be a valid HTTP or HTTPS address',
+    if not public_media_url(url):
+        info.update(error_type='InvalidURL', error='Stream URL must be a public HTTP or HTTPS address',
                     elapsed_ms=0, repairable=True)
         return info
     info['protocol'] = urlsplit(url).scheme.upper()
