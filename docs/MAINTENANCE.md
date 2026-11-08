@@ -66,6 +66,12 @@ artifact and preserving the state required for future repair. The weekly world
 audit uses the same strict failure signaling and always uploads its detailed
 report. An audit failure must not automatically remove radio stations.
 
+Untrusted audio URLs are screened against loopback/private IP literals,
+noncanonical numeric IPv4 hosts and local/internal hostnames. This applies to
+catalog ingestion, replacement candidates, playlist traversal and HTTP redirects.
+The check is not a complete defense against DNS rebinding: use runner/network
+egress controls that also prevent connections to internal address ranges.
+
 Directory generation rejects reported SSL errors, tokenized/signed URLs and
 stale Radio Browser health dates, and blocks publication when the number of
 surviving streams unexpectedly drops. Directory links remain less thoroughly
