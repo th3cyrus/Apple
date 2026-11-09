@@ -166,6 +166,8 @@ def cover_jpg(station):
 def verify_jpg(path):
     """Validate the real JPEG encoding, full dimensions and readable contents."""
     from PIL import Image
+    if not Path(path).is_file():
+        raise ValueError("Missing radio artwork: " + str(path))
     try:
         with Image.open(path) as image:
             if image.format != "JPEG" or image.size != (SIZE, SIZE):
