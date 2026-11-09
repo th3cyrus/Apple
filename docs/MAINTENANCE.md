@@ -53,7 +53,7 @@ as bot PRs, rather than a broad privileged-app bypass.
 The curated refresh publishes only `stations.json`, `radio.m3u`,
 `logos/` and the bounded health history. The U.S. directory publishes
 `us-directory/` independently; world artwork generation fills only missing
-`world-radio/logos/` images and the directory's shared cover. These workflows
+`world-radio/logos/` SVG images, language SVG images and the directory's vector covers. These workflows
 use distinct concurrency groups to avoid cancelling one another. Before
 publishing, they fetch and rebase against the latest target branch and retry
 fast-forward pushes. A real content conflict still fails visibly and requires
@@ -93,7 +93,9 @@ changes trigger the offline integrity workflow; shared probe, filter and depende
 changes also trigger the relevant live audits. World/language reports preserve the
 full probe diagnostics, including redirect hops, transport and decoded audio levels.
 
-Scheduled artwork generation fills missing covers without restyling existing ones.
+All active playlist and catalog artwork links now end in `.svg`; PNG originals are preserved as legacy fallbacks. The curated list uses SVG covers in `logos/`, while World, language, and directory covers are generated through `scripts/generate_world_covers.py`.
+
+Scheduled artwork generation fills missing SVG covers without restyling existing ones.
 Use `--restyle` only for an intentional visual update. `--verify` is read-only;
 `--directory` selects both the input world catalog and its output artwork directory.
 

@@ -5,7 +5,6 @@ Both local and published playlists reference the custom covers in logos/.
 Refresh mode may repair radio streams but never replaces custom artwork.
 """
 import argparse
-import hashlib
 import json
 import os
 from pathlib import Path
@@ -17,7 +16,7 @@ import time
 from datetime import datetime, timezone
 from urllib.parse import urlsplit
 
-from PIL import Image, ImageDraw, ImageFont
+from radio_artwork import cover_svg, verify_svg
 from radio_browser import RadioBrowserClient
 from catalog import validate_catalog
 from health_report import HealthReporter
@@ -35,33 +34,11 @@ FAILURE_INTERVAL_SECONDS = 24 * 3600
 MAX_CANDIDATE_CHECKS = 3
 REFRESH_BUDGET_SECONDS = 15 * 60
 DEFAULT_REPO = 'th3cyrus/Apple'
-FONT = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
-
-def font(size):
-    try:
-        return ImageFont.truetype(FONT, size)
-    except OSError:
-        return ImageFont.load_default()
-
 def artwork_placeholder(station):
-    """Own artwork tile: clearly a station-title placeholder, not an official logo."""
-    seed = int(hashlib.sha256(station['id'].encode()).hexdigest()[:8],16)
-    hues = [(27,44,79),(35,65,81),(54,46,78),(57,63,72),(39,68,60),(72,47,54)]
-    bg = hues[seed % len(hues)]
-    image = Image.new('RGB', (512,512), bg)
-    draw = ImageDraw.Draw(image)
-    draw.rounded_rectangle((26,25,486,487),radius=64,outline=(130,149,159),width=4)
-    draw.rounded_rectangle((46,42,466,112),radius=22,fill=(234,232,218))
-    draw.text((256,77),'USA  /  LIVE RADIO',font=font(23),fill=(30,45,61),anchor='mm')
-    title = station['name']
-    size = 76 if len(title)<9 else 59 if len(title)<14 else 47
-    while size>26 and draw.textbbox((0,0),title,font=font(size))[2]>424:
-        size-=2
-    draw.text((256,256),title,font=font(size),fill='white',anchor='mm')
-    desc = station.get('description','')[:28]
-    while draw.textbbox((0,0),desc,font=font(21))[2]>425: desc=desc[:-1]
-    draw.text((256,388),desc,font=font(21),fill=(214,224,232),anchor='mm')
-    return image
+    """Provide new station-specific pure-vector cover art."""
+    return cover_svg({**station, "language": "USA", "country_code": "US",
+                      "genre": station.get("description") or "American Radio"})
+
 
 def escape_attr(value):
     return str(value).replace('"', '').replace('\n', ' ').replace('\r', ' ')
@@ -241,16 +218,14 @@ def main():
                     print('WARNING: Station processing failed for', original['name'], safe_message(exc))
                 reporter.checkpoint()
             if not args.report_only:
-                path = LOGOS / (station['id'] + '.png')
+                path = LOGOS / (station['id'] + '.svg')
                 if not path.exists():
                     LOGOS.mkdir(parents=True, exist_ok=True)
-                    # Generate only missing covers; never overwrite curated artwork.
-                    import io
-                    output = io.BytesIO()
-                    artwork_placeholder(station).save(output, 'PNG', optimize=True)
-                    temporary = path.with_suffix('.tmp.png')
+                    # Keep original PNG fallbacks; generate SVG only when missing.
+                    temporary = path.with_suffix('.tmp.svg')
                     try:
-                        temporary.write_bytes(output.getvalue())
+                        temporary.write_text(artwork_placeholder(station), encoding='utf-8')
+                        verify_svg(temporary)
                         os.replace(temporary, path)
                     finally:
                         temporary.unlink(missing_ok=True)

@@ -1,73 +1,73 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/93-5-kday.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/93-5-kday.png" group-title="Hip-Hop & R&B",93.5 KDAY
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/93-5-kday.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/93-5-kday.svg" group-title="Hip-Hop & R&B",93.5 KDAY
 https://playerservices.streamtheworld.com/api/livestream-redirect/KDAYFMAAC.aac
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/power-106.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/power-106.png" group-title="Hip-Hop & R&B",Power 106
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/power-106.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/power-106.svg" group-title="Hip-Hop & R&B",Power 106
 https://playerservices.streamtheworld.com/api/livestream-redirect/KPWRAAC_SC
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/hot-97.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/hot-97.png" group-title="Hip-Hop & R&B",HOT 97
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/hot-97.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/hot-97.svg" group-title="Hip-Hop & R&B",HOT 97
 https://playerservices.streamtheworld.com/api/livestream-redirect/WQHTAAC.aac
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/107-5-wbls.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/107-5-wbls.png" group-title="Hip-Hop & R&B",107.5 WBLS
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/107-5-wbls.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/107-5-wbls.svg" group-title="Hip-Hop & R&B",107.5 WBLS
 https://playerservices.streamtheworld.com/api/livestream-redirect/WBLSFMAAC.aac
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/hyfin.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/hyfin.png" group-title="Hip-Hop & R&B",HYFIN
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/hyfin.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/hyfin.svg" group-title="Hip-Hop & R&B",HYFIN
 https://wyms.streamguys1.com/hyfin
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kroq-106-7.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kroq-106-7.png" group-title="Rock & Alternative",KROQ 106.7
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kroq-106-7.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kroq-106-7.svg" group-title="Rock & Alternative",KROQ 106.7
 https://live.amperwave.net/direct/audacy-kroqfmaac-imc
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/klos-95-5.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/klos-95-5.png" group-title="Rock & Alternative",KLOS 95.5
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/klos-95-5.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/klos-95-5.svg" group-title="Rock & Alternative",KLOS 95.5
 https://playerservices.streamtheworld.com/api/livestream-redirect/KLOSFMAAC.aac
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wmmr-93-3.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wmmr-93-3.png" group-title="Rock & Alternative",WMMR 93.3 (US Only)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wmmr-93-3.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wmmr-93-3.svg" group-title="Rock & Alternative",WMMR 93.3 (US Only)
 https://playerservices.streamtheworld.com/api/livestream-redirect/WMMRFMAACIHR.aac
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/radio-paradise-rock-mix.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/radio-paradise-rock-mix.png" group-title="Rock & Alternative",Radio Paradise Rock Mix
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/radio-paradise-rock-mix.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/radio-paradise-rock-mix.svg" group-title="Rock & Alternative",Radio Paradise Rock Mix
 https://stream.radioparadise.com/rock-192
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kisw-99-9.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kisw-99-9.png" group-title="Rock & Alternative",KISW 99.9
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kisw-99-9.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kisw-99-9.svg" group-title="Rock & Alternative",KISW 99.9
 https://live.amperwave.net/manifest/audacy-kiswfmaac-hlsc.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/88-5-the-socal-sound.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/88-5-the-socal-sound.png" group-title="Rock & Alternative",88.5 The SoCal Sound
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/88-5-the-socal-sound.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/88-5-the-socal-sound.svg" group-title="Rock & Alternative",88.5 The SoCal Sound
 https://stream.revma.ihrhls.com/zc5523
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wxpn-88-5.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wxpn-88-5.png" group-title="Rock & Alternative",WXPN 88.5
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wxpn-88-5.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wxpn-88-5.svg" group-title="Rock & Alternative",WXPN 88.5
 https://wxpn.xpn.org/xpnmp3hi
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kexp-90-3.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kexp-90-3.png" group-title="Independent & Eclectic",KEXP 90.3
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kexp-90-3.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kexp-90-3.svg" group-title="Independent & Eclectic",KEXP 90.3
 https://kexp.streamguys1.com/kexp160.aac
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kcrw-89-9.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kcrw-89-9.png" group-title="Independent & Eclectic",KCRW 89.9
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kcrw-89-9.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kcrw-89-9.svg" group-title="Independent & Eclectic",KCRW 89.9
 https://streams.kcrw.com/kcrw_mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kutx-98-9.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kutx-98-9.png" group-title="Independent & Eclectic",KUTX 98.9
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kutx-98-9.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kutx-98-9.svg" group-title="Independent & Eclectic",KUTX 98.9
 https://streams.kut.org/4428_192.mp3?aw_0_1st.playerid=kutx-free
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kalx-90-7.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kalx-90-7.png" group-title="Independent & Eclectic",KALX 90.7
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kalx-90-7.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kalx-90-7.svg" group-title="Independent & Eclectic",KALX 90.7
 https://stream.kalx.berkeley.edu:8443/kalx-320.aac
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wfuv-90-7.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wfuv-90-7.png" group-title="Independent & Eclectic",WFUV 90.7
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wfuv-90-7.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wfuv-90-7.svg" group-title="Independent & Eclectic",WFUV 90.7
 https://onair.wfuv.org/onair-hi
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wfmu-91-1.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wfmu-91-1.png" group-title="Independent & Eclectic",WFMU 91.1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wfmu-91-1.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wfmu-91-1.svg" group-title="Independent & Eclectic",WFMU 91.1
 https://stream0.wfmu.org/freeform-128k.mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kxt-91-7.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kxt-91-7.png" group-title="Independent & Eclectic",KXT 91.7
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kxt-91-7.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kxt-91-7.svg" group-title="Independent & Eclectic",KXT 91.7
 https://kera-ice.streamguys1.com/kxtlive128
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wnxp-91-1.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wnxp-91-1.png" group-title="Independent & Eclectic",WNXP 91.1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wnxp-91-1.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wnxp-91-1.svg" group-title="Independent & Eclectic",WNXP 91.1
 https://wpln.streamguys1.com/wnxpfm.mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/the-current-89-3.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/the-current-89-3.png" group-title="Independent & Eclectic",The Current 89.3
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/the-current-89-3.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/the-current-89-3.svg" group-title="Independent & Eclectic",The Current 89.3
 https://current.stream.publicradio.org/current.aac?srcid=iheart
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/88nine-radio-milwaukee.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/88nine-radio-milwaukee.png" group-title="Independent & Eclectic",88Nine Radio Milwaukee
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/88nine-radio-milwaukee.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/88nine-radio-milwaukee.svg" group-title="Independent & Eclectic",88Nine Radio Milwaukee
 https://wyms.streamguys1.com/live?platform=88nine
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wkcr-89-9.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wkcr-89-9.png" group-title="Independent & Eclectic",WKCR 89.9
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wkcr-89-9.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wkcr-89-9.svg" group-title="Independent & Eclectic",WKCR 89.9
 https://wkcr.streamguys1.com/live
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wwoz-90-7.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wwoz-90-7.png" group-title="Jazz & Blues",WWOZ 90.7
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wwoz-90-7.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wwoz-90-7.svg" group-title="Jazz & Blues",WWOZ 90.7
 https://wwoz-sc.streamguys1.com/wwoz-hi.mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kjazz-88-1.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kjazz-88-1.png" group-title="Jazz & Blues",KJazz 88.1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kjazz-88-1.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kjazz-88-1.svg" group-title="Jazz & Blues",KJazz 88.1
 https://streaming.live365.com/a49833
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wbgo-88-3.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wbgo-88-3.png" group-title="Jazz & Blues",WBGO 88.3
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wbgo-88-3.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wbgo-88-3.svg" group-title="Jazz & Blues",WBGO 88.3
 https://ais-sa8.cdnstream1.com/3629_128.mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/knkx-88-5.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/knkx-88-5.png" group-title="Jazz & Blues",KNKX 88.5
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/knkx-88-5.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/knkx-88-5.svg" group-title="Jazz & Blues",KNKX 88.5
 https://knkx-live-a.edge.audiocdn.com/6284_256k
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wrti-jazz.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wrti-jazz.png" group-title="Jazz & Blues",WRTI Jazz
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wrti-jazz.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wrti-jazz.svg" group-title="Jazz & Blues",WRTI Jazz
 https://wrti-live.streamguys1.com/jazz-mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kcsm-jazz-91-1.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kcsm-jazz-91-1.png" group-title="Jazz & Blues",KCSM Jazz 91.1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kcsm-jazz-91-1.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kcsm-jazz-91-1.svg" group-title="Jazz & Blues",KCSM Jazz 91.1
 https://ice7.securenetsystems.net/KCSM2
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wrti-classical.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wrti-classical.png" group-title="Classical",WRTI Classical
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wrti-classical.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wrti-classical.svg" group-title="Classical",WRTI Classical
 https://wrti-live.streamguys1.com/classical-mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/classical-kc-91-9.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/classical-kc-91-9.png" group-title="Classical",Classical KC 91.9
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/classical-kc-91-9.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/classical-kc-91-9.svg" group-title="Classical",Classical KC 91.9
 https://kcur.streamguys1.com/classicalkc-website-icy
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kusc-91-5.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kusc-91-5.png" group-title="Classical",KUSC 91.5
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kusc-91-5.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kusc-91-5.svg" group-title="Classical",KUSC 91.5
 https://playerservices.streamtheworld.com/api/livestream-redirect/KUSCMP128.mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wqxr-105-9.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wqxr-105-9.png" group-title="Classical",WQXR 105.9
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wqxr-105-9.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wqxr-105-9.svg" group-title="Classical",WQXR 105.9
 https://stream.wqxr.org/wqxr
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wnyc-93-9.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wnyc-93-9.png" group-title="News & Talk",WNYC 93.9
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wnyc-93-9.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/wnyc-93-9.svg" group-title="News & Talk",WNYC 93.9
 https://fm939.wnyc.org/wnycfm
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/laist-89-3.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/laist-89-3.png" group-title="News & Talk",LAist 89.3
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/laist-89-3.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/laist-89-3.svg" group-title="News & Talk",LAist 89.3
 https://laist.streamguys1.com/kpcc-icy?aw_0_1st.playerId=iheart
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kut-90-5.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kut-90-5.png" group-title="News & Talk",KUT 90.5
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kut-90-5.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/logos/kut-90-5.svg" group-title="News & Talk",KUT 90.5
 https://streams.kut.org/4426_128.mp3?aw_0_1st.playerid=kut-free

@@ -60,3 +60,7 @@ published. Gensokyo's [official endpoint list](https://stream.gensokyoradio.net/
 still lists the existing public MP3 stream; its public mobile/enhanced alternatives
 also returned 401 in this check. A future successful bounded sample may resolve a
 transient failure; current Actions artifacts remain the source for later runs.
+
+## 2026-11-09 artwork format update
+
+The 2026-11-04 numbers above are historical test results, not current counts. All active curated, world, language and U.S. directory cover references were migrated from PNG to self-hosted native SVG on 2026-11-09. Original PNG files remain available as archives or player fallbacks. This artwork change does not modify broadcaster streams or audio health observations.

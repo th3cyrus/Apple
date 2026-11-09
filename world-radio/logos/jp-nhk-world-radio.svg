@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 512 512" role="img" aria-label="NHK World Radio radio cover">
+ <defs>
+  <linearGradient id="background" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#050e2a"/><stop offset=".55" stop-color="#233e88"/><stop offset="1" stop-color="#2a89ff"/></linearGradient>
+  <radialGradient id="leftGlow" cx="0" cy="1" r=".82"><stop offset="0" stop-color="#ee3c94" stop-opacity=".78"/><stop offset=".74" stop-color="#ee3c94" stop-opacity=".11"/><stop offset="1" stop-color="#ee3c94" stop-opacity="0"/></radialGradient>
+  <radialGradient id="rightGlow" cx="1" cy="0" r=".91"><stop offset="0" stop-color="#2a89ff" stop-opacity=".64"/><stop offset="1" stop-color="#2a89ff" stop-opacity="0"/></radialGradient>
+  <linearGradient id="rim" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ee3c94"/><stop offset=".45" stop-color="#a5b7fc"/><stop offset="1" stop-color="#e6f4ff"/></linearGradient>
+  <linearGradient id="pane" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#09142e" stop-opacity=".94"/><stop offset="1" stop-color="#091b40" stop-opacity=".92"/></linearGradient>
+ </defs>
+ <rect width="512" height="512" fill="url(#background)"/>
+ <rect width="512" height="512" fill="url(#leftGlow)"/>
+ <rect width="512" height="512" fill="url(#rightGlow)"/>
+ <rect x="34" y="43" width="444" height="430" rx="61" fill="#040819" opacity=".34"/>
+ <rect x="39" y="39" width="434" height="434" rx="56" fill="url(#pane)" stroke="url(#rim)" stroke-width="2.5"/>
+ <rect x="49" y="49" width="414" height="414" rx="48" fill="none" stroke="#d0deff" stroke-opacity=".12"/>
+ <text x="256" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" letter-spacing="2.0" fill="#ebf2ff">WORLD · LIVE RADIO</text>
+ <path d="M205 150H307" fill="none" stroke="#adc9ee" stroke-opacity=".38" stroke-width="1.5"/>
+  <text x="256" y="162" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="70" font-weight="750" letter-spacing="-0.7" fill="#ffffff">NHK</text>
+  <text x="256" y="246" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="70" font-weight="750" letter-spacing="-0.7" fill="#ffffff">World</text>
+  <text x="256" y="330" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="70" font-weight="750" letter-spacing="-0.7" fill="#ffffff">Radio</text>
+ <text x="256" y="366" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#dce6f9">International News</text>
+ <path d="M194 417H230 M282 417H318" fill="none" stroke="#cedcf9" stroke-width="2" stroke-linecap="round"/>
+ <text x="256" y="425" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" letter-spacing="1" fill="#f5f8ff">JP</text>
+</svg>

@@ -1,56 +1,75 @@
-"""Deterministic, independent station-specific World Radio artwork tests."""
+"""Regression tests for deterministic, station-specific SVG radio covers."""
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+import xml.etree.ElementTree as ET
 
-from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import generate_world_covers as covers
-from radio_artwork import fitted_title, font
+from radio_artwork import cover_svg, fitted_title, verify_svg
 
 
 class WorldCoverTests(unittest.TestCase):
-    def test_generated_cover_is_square_and_depends_on_station(self):
+    def test_generated_covers_are_vector_and_station_specific(self):
         first = {"id": "fr-fip", "name": "FIP", "country_code": "FR",
-                 "logo": covers.PREFIX + "fr-fip.png"}
+                 "logo": covers.PREFIX + "fr-fip.svg"}
         second = {"id": "fr-fip-jazz", "name": "FIP Jazz", "country_code": "FR",
-                  "logo": covers.PREFIX + "fr-fip-jazz.png"}
+                  "logo": covers.PREFIX + "fr-fip-jazz.svg"}
         with tempfile.TemporaryDirectory() as temp:
-            location = Path(temp)
-            self.assertEqual(covers.generate([first, second], location), 2)
-            with Image.open(location / "logos" / "fr-fip.png") as a:
-                self.assertEqual(a.size, (512, 512))
-                self.assertEqual(a.format, "PNG")
-                first_pixels = a.tobytes()
-            with Image.open(location / "logos" / "fr-fip-jazz.png") as b:
-                self.assertEqual(b.size, (512, 512))
-                self.assertNotEqual(first_pixels, b.tobytes())
-            self.assertEqual(covers.generate([first, second], location), 0)
+            root = Path(temp)
+            self.assertEqual(covers.generate([first, second], root), 2)
+            a = root / "logos" / "fr-fip.svg"
+            b = root / "logos" / "fr-fip-jazz.svg"
+            self.assertTrue(verify_svg(a))
+            self.assertTrue(verify_svg(b))
+            self.assertNotEqual(a.read_text(), b.read_text())
+            self.assertEqual(covers.generate([first, second], root), 0)
 
-    def test_radio_nic_custom_cover_is_not_restyled(self):
+    def test_owner_supplied_png_remains_untouched_while_svg_is_generated(self):
         with tempfile.TemporaryDirectory() as temp:
-            path = Path(temp) / "ir-radio-nic.png"
-            Image.new("RGB", (1254, 1254), "#162248").save(path)
-            before = path.read_bytes()
-            station = {"id": "ir-radio-nic", "name": "Radio NIC"}
-            self.assertFalse(covers.write_cover(station, path, force=True))
-            self.assertEqual(path.read_bytes(), before)
-            covers.verify_png(path)
+            png = Path(temp) / "ir-radio-nic.png"
+            svg = Path(temp) / "ir-radio-nic.svg"
+            original = b"owner supplied artwork archive"
+            png.write_bytes(original)
+            station = {"id": "ir-radio-nic", "name": "Radio NIC",
+                       "country_code": "IR", "genre": "Talk"}
+            self.assertTrue(covers.write_cover(station, svg, force=True))
+            self.assertEqual(png.read_bytes(), original)
+            self.assertTrue(verify_svg(svg))
 
-    def test_text_appears_on_dark_glass_not_opaque_white(self):
+    def test_text_is_accessible_and_native_vector_without_embedded_raster(self):
         sample = {"id": "test-contrast", "name": "Radio Mirchi Hindi",
                   "country_code": "IN", "genre": "Hindi Pop & Bollywood"}
-        tile = covers.cover(sample)
-        # The center pane MUST be dark enough to contrast with white titles.
-        px = tile.getpixel((425, 245))
-        self.assertLess(sum(px) / 3, 120)
+        tile = cover_svg(sample)
+        self.assertIn('width="1254"', tile)
+        self.assertIn('viewBox="0 0 512 512"', tile)
+        self.assertIn("Radio Mirchi Hindi", tile)
+        self.assertIn('fill="#ffffff"', tile)
+        self.assertNotIn("<image", tile)
+        root = ET.fromstring(tile)
+        self.assertEqual(root.tag, "{http://www.w3.org/2000/svg}svg")
 
-    def test_title_can_wrap_without_failing(self):
-        station = {"id": "test-long", "name": "Very Long International National Radio Broadcasting Service",
-                   "country_code": "GB"}
-        img = covers.cover(station)
-        self.assertEqual(img.size, (512, 512))
+    def test_long_names_wrap_and_xml_metacharacters_are_escaped(self):
+        lines, size = fitted_title("Very Long International National Radio Broadcasting Service")
+        self.assertLessEqual(len(lines), 3)
+        self.assertGreaterEqual(size, 17)
+        tile = cover_svg({"id": "test-xml", "name": 'Jazz & Blues <Live>',
+                          "country_code": "US", "genre": "News & Culture"})
+        self.assertIn("Jazz &amp;", tile)
+        ET.fromstring(tile)
+
+    def test_rejects_external_images_or_broken_xml(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "bad.svg"
+            path.write_text("<svg", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "Invalid SVG"):
+                verify_svg(path)
+            bad = cover_svg({"id": "test-bad", "name": "Radio"})
+            bad = bad.replace("</svg>", '<image href="https://other.example/cover.png"/></svg>')
+            path.write_text(bad, encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "Non-vector"):
+                verify_svg(path)
 
 
 if __name__ == "__main__":

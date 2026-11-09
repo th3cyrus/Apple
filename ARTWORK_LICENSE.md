@@ -2,7 +2,7 @@
 
 ## Scope
 
-This notice applies to project-designed station covers in `logos/` and `world-radio/logos/` of the Apple · Radio Collections for Primuse project.
+This notice applies to project-designed vector SVG covers in `logos/`, `world-radio/logos/`, `world-radio/*/logos/`, and `us-directory/`, as well as their archived PNG counterparts, in the Apple · Radio Collections for Primuse project.
 
 ## License
 
@@ -20,7 +20,7 @@ Indicate whether modifications were made.
 
 ## AI-Assisted Artwork
 
-The cover designs were created with generative AI assistance and subsequently processed for use in this project.
+The cover designs include AI-assisted earlier raster artwork and code-generated SVG vector treatments. The new SVGs use native text, paths, and gradients rather than embedding raster image data.
 
 Copyright protection for AI-generated material may vary by jurisdiction. No exclusive rights are asserted over elements that are not eligible for protection.
 

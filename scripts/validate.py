@@ -4,7 +4,7 @@ import json
 import os
 from pathlib import Path
 
-from PIL import Image
+from radio_artwork import verify_svg
 from catalog import validate_catalog
 
 
@@ -34,8 +34,7 @@ def validate_outputs(root=ROOT, minimum=35):
             raise ValueError(f'Playlist metadata (name, group, cover) differs from catalog: {station["id"]}')
         if lines[2 + 2 * index] != station['stream']:
             raise ValueError(f'Playlist stream URL differs from catalog: {station["id"]}')
-        with Image.open(root / station['logo']) as image:
-            image.verify()
+        verify_svg(root / station['logo'])
     return stations
 
 

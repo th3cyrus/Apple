@@ -1,11 +1,11 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-bytefm.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-bytefm.png" group-title="German Radio",ByteFM (DE)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-bytefm.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-bytefm.svg" group-title="German Radio",ByteFM (DE)
 https://bytefm.cast.addradio.de/bytefm/main/high/stream
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-deutschlandfunk.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-deutschlandfunk.png" group-title="German Radio",Deutschlandfunk (DE)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-deutschlandfunk.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-deutschlandfunk.svg" group-title="German Radio",Deutschlandfunk (DE)
 https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-deutschlandfunk-kultur.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-deutschlandfunk-kultur.png" group-title="German Radio",Deutschlandfunk Kultur (DE)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-deutschlandfunk-kultur.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-deutschlandfunk-kultur.svg" group-title="German Radio",Deutschlandfunk Kultur (DE)
 https://st02.sslstream.dlf.de/dlf/02/128/mp3/stream.mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-jazzradio-berlin.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-jazzradio-berlin.png" group-title="German Radio",JazzRadio Berlin (DE)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-jazzradio-berlin.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/de-jazzradio-berlin.svg" group-title="German Radio",JazzRadio Berlin (DE)
 https://streaming.radio.co/s774887f7b/listen
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/at-fm4.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/at-fm4.png" group-title="German Radio",FM4 (AT)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/at-fm4.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/german/logos/at-fm4.svg" group-title="German Radio",FM4 (AT)
 https://orf-live.ors-shoutcast.at/fm4-q2a

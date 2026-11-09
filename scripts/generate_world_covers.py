@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
-"""Generate consistent dark-glass cover art for World Radio and language playlists.
+"""Generate and verify all World, language and U.S. directory SVG covers.
 
-Four shared original U.S. covers stay untouched. Existing artwork is preserved
-unless an explicit restyle is requested.
+The vector templates are deterministic, independent from local fonts and PIL.
+Legacy PNGs (including the owner-supplied Radio NIC art) are kept untouched.
 """
 import argparse
 import json
 from pathlib import Path
+import re
 from urllib.parse import urlsplit
 
-from PIL import Image
-
-from radio_artwork import SIZE, cover
+from radio_artwork import cover_svg, verify_svg
 
 ROOT = Path(__file__).resolve().parents[1]
 WORLD = ROOT / "world-radio"
@@ -21,89 +20,76 @@ LANGUAGE_PREFIX = "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-r
 
 def targets(stations, root=WORLD):
     for station in stations:
-        # Query fragments are allowed for versioned artwork in cached clients.
-        if urlsplit(station.get("logo", "")).path.endswith("/world-radio/logos/" + station["id"] + ".png"):
-            yield station, Path(root) / "logos" / (station["id"] + ".png")
+        if urlsplit(station.get("logo", "")).path.endswith(
+                "/world-radio/logos/" + station["id"] + ".svg"):
+            yield station, Path(root) / "logos" / (station["id"] + ".svg")
 
 
 def language_catalogs(root=WORLD):
     root = Path(root)
     for path in sorted(root.glob("*/stations.json")):
-        folder = path.parent
-        stations = json.loads(path.read_text(encoding="utf-8"))
-        yield folder.name, stations
+        yield path.parent.name, json.loads(path.read_text(encoding="utf-8"))
 
 
 def language_targets(root=WORLD):
     for language, stations in language_catalogs(root):
         for station in stations:
-            expected = f"/world-radio/{language}/logos/{station['id']}.png"
+            expected = f"/world-radio/{language}/logos/{station['id']}.svg"
             if not urlsplit(station.get("logo", "")).path.endswith(expected):
                 raise ValueError("Language artwork URL mismatch: " + station["id"])
-            yield station, Path(root) / language / "logos" / (station["id"] + ".png")
+            yield station, Path(root) / language / "logos" / (station["id"] + ".svg")
 
 
-# Radio NIC uses artwork supplied by its owner. Never re-render it.
+# Supplied Radio NIC PNG is retained as an archive/fallback. The SVG reference
+# is a separate accessible vector rendition, not a raster image embedded in SVG.
 PROTECTED_ARTWORK_IDS = frozenset({"ir-radio-nic"})
 
 
 def write_cover(station, path, force=False):
-    if path.is_file() and (not force or station["id"] in PROTECTED_ARTWORK_IDS):
+    path = Path(path)
+    if path.is_file() and not force:
         return False
     path.parent.mkdir(parents=True, exist_ok=True)
-    temp = path.with_name("." + path.name + ".tmp")
+    temporary = path.with_name("." + path.name + ".tmp")
     try:
-        cover(station).save(temp, "PNG", optimize=True)
-        temp.replace(path)
+        temporary.write_text(cover_svg(station), encoding="utf-8")
+        verify_svg(temporary)
+        temporary.replace(path)
     finally:
-        temp.unlink(missing_ok=True)
+        temporary.unlink(missing_ok=True)
     return True
 
 
 def generate(stations, root=WORLD, *, force=False):
-    made = sum(write_cover(station, path, force)
-               for station, path in targets(stations, root))
-    print(f"World radio covers generated: {made}", flush=True)
+    made = sum(write_cover(station, path, force) for station, path in targets(stations, root))
+    print(f"World radio SVG covers generated: {made}", flush=True)
     return made
 
 
 def generate_languages(root=WORLD, *, force=False):
-    made = sum(write_cover(station, path, force)
-               for station, path in language_targets(root))
-    print(f"Language radio covers generated: {made}", flush=True)
+    made = sum(write_cover(station, path, force) for station, path in language_targets(root))
+    print(f"Language radio SVG covers generated: {made}", flush=True)
     return made
-
-
-def verify_png(path):
-    if not path.is_file():
-        raise ValueError("Missing radio artwork: " + str(path))
-    with Image.open(path) as image:
-        # Preserve owner-supplied original artwork, including its native size.
-        protected = path.stem in PROTECTED_ARTWORK_IDS
-        valid_size = (image.width >= SIZE and image.height >= SIZE) if protected else image.size == (SIZE, SIZE)
-        if image.format != "PNG" or not valid_size:
-            raise ValueError("Invalid radio artwork: " + str(path))
-        image.verify()
 
 
 def verify(stations, root=WORLD):
     total = 0
     for _, path in targets(stations, root):
-        verify_png(path)
+        verify_svg(path)
         total += 1
     if total < 60:
         raise ValueError("Incomplete World Radio artwork set")
-    print(f"Verified {total} world station covers", flush=True)
+    print(f"Verified {total} world SVG covers", flush=True)
 
 
 def verify_languages(root=WORLD):
     counts = {}
     for station, path in language_targets(root):
-        verify_png(path)
+        verify_svg(path)
         counts[station["language"]] = counts.get(station["language"], 0) + 1
     if len(counts) < 5:
         raise ValueError("Too few language artwork collections")
-    print("Verified language radio covers:", counts, flush=True)
+    print("Verified language radio SVG covers:", counts, flush=True)
 
 
 DIRECTORY_GENRES = (
@@ -117,30 +103,29 @@ DIRECTORY_GENRES = (
 def directory_genre_covers(root=ROOT, *, force=False):
     directory = Path(root) / "us-directory" / "genre-logos"
     for genre in DIRECTORY_GENRES:
-        slug = "-".join(part.lower() for part in __import__("re").findall(r"[a-z0-9]+", genre.lower()))
-        filename = directory / (slug + ".png")
+        slug = "-".join(re.findall(r"[a-z0-9]+", genre.lower()))
+        filename = directory / (slug + ".svg")
         write_cover({"id": "us-directory-" + slug, "name": genre,
-                     "country_code": "US", "genre": "USA Radio Directory"},
-                    filename, force=force)
-        verify_png(filename)
+                     "country_code": "US", "genre": "USA RADIO DIRECTORY",
+                     "language": "USA"}, filename, force=force)
+        verify_svg(filename)
 
 
 def directory_cover(root=ROOT, *, force=False):
-    filename = Path(root) / "us-directory" / "directory-cover.png"
+    filename = Path(root) / "us-directory" / "directory-cover.svg"
     if not filename.is_file() or force:
         write_cover({"id": "us-directory-cover", "name": "USA Radio Directory",
-                     "country_code": "US", "genre": "American Radio"}, filename,
-                    force=force)
-    verify_png(filename)
+                     "country_code": "US", "genre": "American Radio",
+                     "language": "USA"}, filename, force=force)
+    verify_svg(filename)
     return filename
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--restyle", action="store_true",
-                        help="Rebuild generated world/language covers in the latest style")
-    parser.add_argument("--force", action="store_true",
-                        help="Alias for --restyle, used by local cover tooling")
+                        help="Rebuild existing World/Language SVG artwork")
+    parser.add_argument("--force", action="store_true", help="Alias for --restyle")
     parser.add_argument("--verify", action="store_true")
     parser.add_argument("--directory", type=Path, default=WORLD)
     args = parser.parse_args()
@@ -153,10 +138,10 @@ def main():
         directory_genre_covers(root=args.directory.parent, force=rebuild)
     verify(stations, args.directory)
     verify_languages(args.directory)
-    verify_png(args.directory.parent / "us-directory" / "directory-cover.png")
+    verify_svg(args.directory.parent / "us-directory" / "directory-cover.svg")
     for genre in DIRECTORY_GENRES:
-        slug = "-".join(part.lower() for part in __import__("re").findall(r"[a-z0-9]+", genre.lower()))
-        verify_png(args.directory.parent / "us-directory" / "genre-logos" / (slug + ".png"))
+        slug = "-".join(re.findall(r"[a-z0-9]+", genre.lower()))
+        verify_svg(args.directory.parent / "us-directory" / "genre-logos" / (slug + ".svg"))
 
 
 if __name__ == "__main__":

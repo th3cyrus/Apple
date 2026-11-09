@@ -6,7 +6,7 @@
     "country_code": "IQ",
     "genre": "Music & Culture",
     "stream": "https://l3.itworkscdn.net/itwaudio/9012/stream",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/iq-sumer-fm.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/iq-sumer-fm.svg"
   },
   {
     "id": "iq-shafaq-radio",
@@ -15,7 +15,7 @@
     "country_code": "IQ",
     "genre": "News & Talk",
     "stream": "https://radio.shafaq.com/radio",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/iq-shafaq-radio.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/iq-shafaq-radio.svg"
   },
   {
     "id": "iq-radio-shanasheel",
@@ -24,7 +24,7 @@
     "country_code": "IQ",
     "genre": "Iraqi Music",
     "stream": "https://stream-152.zeno.fm/a33ka0d94p8uv",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/iq-radio-shanasheel.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/iq-radio-shanasheel.svg"
   },
   {
     "id": "sy-asima-online-radio",
@@ -33,7 +33,7 @@
     "country_code": "SY",
     "genre": "Culture & Contemporary",
     "stream": "https://asima.out.airtime.pro/asima_a",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-asima-online-radio.png?v=2"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-asima-online-radio.svg?v=2"
   },
   {
     "id": "sy-radio-nasaem-syria",
@@ -42,7 +42,7 @@
     "country_code": "SY",
     "genre": "Music & Community",
     "stream": "https://stream.zeno.fm/u1wbm3k7gxquv",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-radio-nasaem-syria.png?v=2"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sy-radio-nasaem-syria.svg?v=2"
   },
   {
     "id": "lb-radio-liban",
@@ -51,7 +51,7 @@
     "country_code": "LB",
     "genre": "Culture & Talk",
     "stream": "https://media2.streambrothers.com:2020/stream/8194",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-radio-liban.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-radio-liban.svg"
   },
   {
     "id": "lb-beirut-nights",
@@ -60,7 +60,7 @@
     "country_code": "LB",
     "genre": "Arabic Music",
     "stream": "https://byblosnights.com:8443/relay",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-beirut-nights.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-beirut-nights.svg"
   },
   {
     "id": "lb-aghani-aghani",
@@ -69,7 +69,7 @@
     "country_code": "LB",
     "genre": "Arabic Pop",
     "stream": "https://streaming.nrjaudio.fm/ou6pfgxp336f",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-aghani-aghani.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-aghani-aghani.svg"
   },
   {
     "id": "eg-radio-9090",
@@ -78,7 +78,7 @@
     "country_code": "EG",
     "genre": "Pop & Talk",
     "stream": "https://9090streaming.mobtada.com/9090FMEGYPT",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/eg-radio-9090.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/eg-radio-9090.svg"
   },
   {
     "id": "eg-radio-hits-cairo",
@@ -87,7 +87,7 @@
     "country_code": "EG",
     "genre": "Arabic Hits",
     "stream": "https://radiohits882.radioca.st/;",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/eg-radio-hits-cairo.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/eg-radio-hits-cairo.svg"
   },
   {
     "id": "jo-mazaj-fm",
@@ -96,7 +96,7 @@
     "country_code": "JO",
     "genre": "Pop & Culture",
     "stream": "https://mazajfm.ice.infomaniak.ch/mazajfm-192.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/jo-mazaj-fm.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/jo-mazaj-fm.svg"
   },
   {
     "id": "jo-radio-dahab",
@@ -105,7 +105,7 @@
     "country_code": "JO",
     "genre": "Arabic Music",
     "stream": "https://dahab.ice.infomaniak.ch/dahab-192.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/jo-radio-dahab.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/jo-radio-dahab.svg"
   },
   {
     "id": "lb-voice-of-lebanon",
@@ -114,7 +114,7 @@
     "country_code": "LB",
     "genre": "News & Culture",
     "stream": "https://l3.itworkscdn.net/itwaudio/9054/stream",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-voice-of-lebanon.png?v=2"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/lb-voice-of-lebanon.svg?v=2"
   },
   {
     "id": "sa-al-arabiya-fm",
@@ -123,6 +123,6 @@
     "country_code": "SA",
     "genre": "News & Talk",
     "stream": "https://fm.alarabiya.net/fm/myStream/playlist.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sa-al-arabiya-fm.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/arabic/logos/sa-al-arabiya-fm.svg"
   }
 ]

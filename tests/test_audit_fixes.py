@@ -42,7 +42,7 @@ class WorldMetadataTests(unittest.TestCase):
     def test_wrong_artwork_in_playlist_is_rejected(self):
         with self.assertRaisesRegex(ValueError, 'mismatch'):
             self.check_modified(mutate_playlist=lambda text: text.replace(
-                '/world-radio/logos/at-fm4.png', '/world-radio/logos/wrong.png'))
+                '/world-radio/logos/at-fm4.svg', '/world-radio/logos/wrong.svg'))
 
     def test_expiring_and_blank_auth_parameters_are_rejected(self):
         for query in ('signature=temporary', 'expires=123', 'token=', 'X-Amz-Signature=x'):
@@ -137,7 +137,7 @@ class DirectoryPublicationTests(unittest.TestCase):
             self.check_published_mutation(mutate)
 
     def test_long_artwork_url_is_preserved_without_truncation(self):
-        logo = 'https://images.example.org/' + 'a' * 550 + '.png'
+        logo = 'https://images.example.org/' + 'a' * 550 + '.svg'
         text = directory.m3u([{'name': 'Long cover', 'group': 'Music',
                                'logo': logo, 'url': 'https://radio.example.org/live'}])
         self.assertIn('tvg-logo="' + logo + '"', text)
@@ -201,7 +201,7 @@ class ArtworkCommandTests(unittest.TestCase):
                     patch.object(covers, 'generate_languages'), \
                     patch.object(covers, 'verify'), \
                     patch.object(covers, 'verify_languages'), \
-                    patch.object(covers, 'verify_png'), \
+                    patch.object(covers, 'verify_svg'), \
                     patch.object(covers, 'directory_cover') as shared:
                 covers.main()
             generate.assert_called_once_with(stations, root, force=False)

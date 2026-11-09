@@ -6,9 +6,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from PIL import Image
-
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from radio_artwork import cover_svg, verify_svg
 from validate import expected_extinf, validate_outputs, validate_report
 from check_world_radio import require_audible
 
@@ -19,13 +18,13 @@ class PlaylistMetadataTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         (self.root / "logos").mkdir()
-        Image.new("RGB", (16, 16), (30, 40, 60)).save(
-            self.root / "logos" / "test-station.png", format="PNG")
+        (self.root / "logos" / "test-station.svg").write_text(
+            cover_svg({"id": "test-station", "name": "Test Station"}), encoding="utf-8")
         self.station = {
             "id": "test-station", "name": "Test Station", "group": "Rock & Alternative",
             "search": "Test Station", "homepage": "https://station.example.net/",
             "stream": "https://station.example.net/radio.mp3",
-            "logo": "logos/test-station.png",
+            "logo": "logos/test-station.svg",
         }
         (self.root / "stations.json").write_text(
             json.dumps([self.station]), encoding="utf-8")
@@ -48,7 +47,7 @@ class PlaylistMetadataTests(unittest.TestCase):
 
     def test_wrong_group_or_logo_is_rejected(self):
         for old, new in [("Rock & Alternative", "News & Talk"),
-                         ("logos/test-station.png", "logos/wrong.png")]:
+                         ("logos/test-station.svg", "logos/wrong.svg")]:
             with self.subTest(old=old):
                 self.write_playlist(self.extinf.replace(old, new))
                 with self.assertRaisesRegex(ValueError, "metadata"):
@@ -101,16 +100,14 @@ class WorldArtworkCoverageTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         stations = json.loads((root / "world-radio" / "stations.json").read_text(encoding="utf-8"))
         own = [s for s in stations if "/world-radio/logos/" in s["logo"]]
-        self.assertEqual(len(own), 68)
+        self.assertEqual(len(own), 67)
         self.assertTrue(all(s["logo"] for s in stations))
         for station in own:
-            path = root / "world-radio" / "logos" / (station["id"] + ".png")
+            path = root / "world-radio" / "logos" / (station["id"] + ".svg")
             with self.subTest(station=station["id"]):
                 self.assertTrue(path.is_file(), f"Missing artwork: {path}")
-                with Image.open(path) as image:
-                    self.assertEqual(image.size, (512, 512))
-                    self.assertEqual(image.format, "PNG")
-                    image.verify()
+                self.assertTrue(verify_svg(path))
+
 
 
 if __name__ == "__main__":

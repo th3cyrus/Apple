@@ -28,7 +28,7 @@ NOW = datetime(2026, 11, 3, 18, tzinfo=timezone.utc)
 
 def station(**changes):
     result = dict(STATION, id='kexp-90-3', group='Independent', stream='https://example.org/old',
-                  logo='logos/kexp-90-3.png', fail_count=0, manual_lock=False)
+                  logo='logos/kexp-90-3.svg', fail_count=0, manual_lock=False)
     result.update(changes)
     return result
 
@@ -499,7 +499,7 @@ class ReportingAndCatalogTests(unittest.TestCase):
         return root, json.loads(current.read_text())
 
     def test_station_error_does_not_stop_later_stations(self):
-        items = [station(), station(id='second', logo='logos/second.png')]
+        items = [station(), station(id='second', logo='logos/second.svg')]
         calls = iter([RuntimeError('unexpected'), {'ok': True}])
         def probe(*args):
             value = next(calls)

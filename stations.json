@@ -9,7 +9,7 @@
     "search": "KDAY",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/93-5-kday.png",
+    "logo": "logos/93-5-kday.svg",
     "identity": {
       "aliases": [
         "93.5 KDAY"
@@ -33,7 +33,7 @@
     "search": "Power 106 KPWR",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/power-106.png",
+    "logo": "logos/power-106.svg",
     "identity": {
       "aliases": [
         "Power 106"
@@ -56,7 +56,7 @@
     "search": "HOT 97 WQHT",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/hot-97.png",
+    "logo": "logos/hot-97.svg",
     "identity": {
       "aliases": [
         "HOT 97"
@@ -79,7 +79,7 @@
     "search": "WBLS",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/107-5-wbls.png",
+    "logo": "logos/107-5-wbls.svg",
     "identity": {
       "aliases": [
         "107.5 WBLS"
@@ -103,7 +103,7 @@
     "search": "HYFIN",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/hyfin.png",
+    "logo": "logos/hyfin.svg",
     "identity": {
       "aliases": [
         "HYFIN"
@@ -124,7 +124,7 @@
     "search": "KROQ",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kroq-106-7.png",
+    "logo": "logos/kroq-106-7.svg",
     "identity": {
       "aliases": [
         "KROQ 106.7"
@@ -148,7 +148,7 @@
     "search": "KLOS",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/klos-95-5.png",
+    "logo": "logos/klos-95-5.svg",
     "identity": {
       "aliases": [
         "KLOS 95.5"
@@ -172,7 +172,7 @@
     "search": "WMMR",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wmmr-93-3.png",
+    "logo": "logos/wmmr-93-3.svg",
     "identity": {
       "aliases": [
         "WMMR 93.3"
@@ -197,7 +197,7 @@
     "search": "Radio Paradise Rock Mix",
     "manual_lock": true,
     "fail_count": 0,
-    "logo": "logos/radio-paradise-rock-mix.png",
+    "logo": "logos/radio-paradise-rock-mix.svg",
     "identity": {
       "aliases": [
         "Radio Paradise Rock Mix",
@@ -220,7 +220,7 @@
     "search": "KISW",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kisw-99-9.png",
+    "logo": "logos/kisw-99-9.svg",
     "identity": {
       "aliases": [
         "KISW 99.9"
@@ -244,7 +244,7 @@
     "search": "The SoCal Sound",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/88-5-the-socal-sound.png",
+    "logo": "logos/88-5-the-socal-sound.svg",
     "identity": {
       "aliases": [
         "88.5 The SoCal Sound",
@@ -268,7 +268,7 @@
     "search": "WXPN",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wxpn-88-5.png",
+    "logo": "logos/wxpn-88-5.svg",
     "identity": {
       "aliases": [
         "WXPN 88.5"
@@ -292,7 +292,7 @@
     "search": "KEXP",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kexp-90-3.png",
+    "logo": "logos/kexp-90-3.svg",
     "identity": {
       "aliases": [
         "KEXP 90.3"
@@ -316,7 +316,7 @@
     "search": "KCRW",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kcrw-89-9.png",
+    "logo": "logos/kcrw-89-9.svg",
     "identity": {
       "aliases": [
         "KCRW 89.9"
@@ -340,7 +340,7 @@
     "search": "KUTX",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kutx-98-9.png",
+    "logo": "logos/kutx-98-9.svg",
     "identity": {
       "aliases": [
         "KUTX 98.9"
@@ -364,7 +364,7 @@
     "search": "KALX",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kalx-90-7.png",
+    "logo": "logos/kalx-90-7.svg",
     "identity": {
       "aliases": [
         "KALX 90.7"
@@ -388,7 +388,7 @@
     "search": "WFUV",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wfuv-90-7.png",
+    "logo": "logos/wfuv-90-7.svg",
     "identity": {
       "aliases": [
         "WFUV 90.7"
@@ -412,7 +412,7 @@
     "search": "WFMU",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wfmu-91-1.png",
+    "logo": "logos/wfmu-91-1.svg",
     "identity": {
       "aliases": [
         "WFMU 91.1"
@@ -436,7 +436,7 @@
     "search": "KXT",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kxt-91-7.png",
+    "logo": "logos/kxt-91-7.svg",
     "identity": {
       "aliases": [
         "KXT 91.7"
@@ -460,7 +460,7 @@
     "search": "WNXP",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wnxp-91-1.png",
+    "logo": "logos/wnxp-91-1.svg",
     "identity": {
       "aliases": [
         "WNXP 91.1"
@@ -484,7 +484,7 @@
     "search": "The Current KCMP",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/the-current-89-3.png",
+    "logo": "logos/the-current-89-3.svg",
     "identity": {
       "aliases": [
         "The Current 89.3",
@@ -510,7 +510,7 @@
     "search": "88Nine Radio Milwaukee",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/88nine-radio-milwaukee.png",
+    "logo": "logos/88nine-radio-milwaukee.svg",
     "identity": {
       "aliases": [
         "88Nine Radio Milwaukee",
@@ -532,7 +532,7 @@
     "search": "WKCR",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wkcr-89-9.png",
+    "logo": "logos/wkcr-89-9.svg",
     "identity": {
       "aliases": [
         "WKCR 89.9"
@@ -556,7 +556,7 @@
     "search": "WWOZ",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wwoz-90-7.png",
+    "logo": "logos/wwoz-90-7.svg",
     "identity": {
       "aliases": [
         "WWOZ 90.7"
@@ -580,7 +580,7 @@
     "search": "KJazz KKJZ",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kjazz-88-1.png",
+    "logo": "logos/kjazz-88-1.svg",
     "identity": {
       "aliases": [
         "KJazz 88.1",
@@ -606,7 +606,7 @@
     "search": "WBGO",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wbgo-88-3.png",
+    "logo": "logos/wbgo-88-3.svg",
     "identity": {
       "aliases": [
         "WBGO 88.3"
@@ -630,7 +630,7 @@
     "search": "KNKX",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/knkx-88-5.png",
+    "logo": "logos/knkx-88-5.svg",
     "identity": {
       "aliases": [
         "KNKX 88.5"
@@ -654,7 +654,7 @@
     "search": "WRTI Jazz",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wrti-jazz.png",
+    "logo": "logos/wrti-jazz.svg",
     "identity": {
       "aliases": [
         "WRTI Jazz"
@@ -677,7 +677,7 @@
     "search": "KCSM",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kcsm-jazz-91-1.png",
+    "logo": "logos/kcsm-jazz-91-1.svg",
     "identity": {
       "aliases": [
         "KCSM Jazz 91.1",
@@ -702,7 +702,7 @@
     "search": "WRTI Classical",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wrti-classical.png",
+    "logo": "logos/wrti-classical.svg",
     "identity": {
       "aliases": [
         "WRTI Classical"
@@ -725,7 +725,7 @@
     "search": "Classical KC",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/classical-kc-91-9.png",
+    "logo": "logos/classical-kc-91-9.svg",
     "identity": {
       "aliases": [
         "Classical KC 91.9",
@@ -748,7 +748,7 @@
     "search": "KUSC",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kusc-91-5.png",
+    "logo": "logos/kusc-91-5.svg",
     "identity": {
       "aliases": [
         "KUSC 91.5"
@@ -772,7 +772,7 @@
     "search": "WQXR",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wqxr-105-9.png",
+    "logo": "logos/wqxr-105-9.svg",
     "identity": {
       "aliases": [
         "WQXR 105.9"
@@ -796,7 +796,7 @@
     "search": "WNYC",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/wnyc-93-9.png",
+    "logo": "logos/wnyc-93-9.svg",
     "identity": {
       "aliases": [
         "WNYC 93.9"
@@ -820,7 +820,7 @@
     "search": "LAist KPCC",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/laist-89-3.png",
+    "logo": "logos/laist-89-3.svg",
     "identity": {
       "aliases": [
         "LAist 89.3"
@@ -844,7 +844,7 @@
     "search": "KUT",
     "manual_lock": false,
     "fail_count": 0,
-    "logo": "logos/kut-90-5.png",
+    "logo": "logos/kut-90-5.svg",
     "identity": {
       "aliases": [
         "KUT 90.5"

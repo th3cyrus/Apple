@@ -35,14 +35,14 @@ MIN_RESULTS = 500
 FEATURED_MAX = 100
 MAX_HEALTH_AGE_DAYS = 30
 MAX_DIRECTORY_SHRINK_RATIO = 0.65
-FALLBACK_ARTWORK = "https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.png"
+FALLBACK_ARTWORK = "https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.svg"
 GENRE_ARTWORK_ROOT = "https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/"
 
 
 def directory_genre_logo(label):
     """Self-hosted unified frosted-glass cover shared by a genre."""
     token = re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
-    return GENRE_ARTWORK_ROOT + token + ".png"
+    return GENRE_ARTWORK_ROOT + token + ".svg"
 
 # Editorial nonreligious additions replacing identified religious directory streams.
 # These come from public broadcaster direct-stream listings, not Radio Browser votes.

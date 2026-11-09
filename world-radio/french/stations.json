@@ -6,7 +6,7 @@
     "country_code": "FR",
     "genre": "Eclectic & Jazz",
     "stream": "https://icecast.radiofrance.fr/fip-midfi.mp3?id=radiofrance",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-fip.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-fip.svg"
   },
   {
     "id": "fr-fip-jazz",
@@ -15,7 +15,7 @@
     "country_code": "FR",
     "genre": "Jazz",
     "stream": "https://stream.radiofrance.fr/fipjazz/fipjazz_hifi.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-fip-jazz.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-fip-jazz.svg"
   },
   {
     "id": "fr-france-inter",
@@ -24,7 +24,7 @@
     "country_code": "FR",
     "genre": "News & Culture",
     "stream": "https://stream.radiofrance.fr/franceinter/franceinter_hifi.m3u8?id=radiofrance",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-france-inter.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-france-inter.svg"
   },
   {
     "id": "be-rtbf-classic-21",
@@ -33,7 +33,7 @@
     "country_code": "BE",
     "genre": "Classic Rock",
     "stream": "https://radios.rtbf.be/classic21-128.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/be-rtbf-classic-21.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/be-rtbf-classic-21.svg"
   },
   {
     "id": "be-rtbf-musiq3",
@@ -42,6 +42,6 @@
     "country_code": "BE",
     "genre": "Classical & Culture",
     "stream": "https://radios.rtbf.be/musiq3-128.aac",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/be-rtbf-musiq3.png"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/be-rtbf-musiq3.svg"
   }
 ]
