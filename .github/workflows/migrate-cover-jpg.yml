@@ -1,4 +1,5 @@
 name: One-Time JPEG Artwork Migration
+# The artwork publishing workflow was updated separately due to app token permissions.
 
 on:
   push:
