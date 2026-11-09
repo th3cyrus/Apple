@@ -84,7 +84,7 @@ class WorldCoverTests(unittest.TestCase):
                 self.assertIn("LIVE RADIO", svg)
                 root = ET.fromstring(svg)
                 text_nodes = [node for node in root.iter() if node.tag.endswith("}text")]
-                rendered = [node for node in text_nodes if (node.text or "") in lines]
+                rendered = [node for node in text_nodes if node.get("font-weight") == "750"]
                 self.assertEqual(len(rendered), len(lines))
                 self.assertEqual(float(rendered[0].get("y")), round(first_baseline))
 
