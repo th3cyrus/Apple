@@ -60,6 +60,54 @@ class WorldCoverTests(unittest.TestCase):
         self.assertIn("Jazz &amp;", tile)
         ET.fromstring(tile)
 
+    def test_three_line_title_does_not_overlap_header_or_subtitle(self):
+        from radio_artwork import (TITLE_TOP, TITLE_BOTTOM, TITLE_MAX_WIDTH,
+                                   TITLE_ASCENT, TITLE_DESCENT, _width, title_layout)
+        for name in (
+            "88Nine Radio Milwaukee",
+            "Very Long International National Radio Broadcasting Service",
+            "BBC Radio 6 Music",
+            "Jazz & Blues Live Radio",
+            "United Kingdom Alternative Rock",
+            "Classical Music Community Radio Station",
+        ):
+            with self.subTest(station=name):
+                lines, fontsize, first_baseline, advance = title_layout(name)
+                self.assertTrue(1 <= len(lines) <= 3)
+                self.assertLessEqual(max(_width(line, fontsize) for line in lines),
+                                     TITLE_MAX_WIDTH)
+                self.assertGreaterEqual(first_baseline - fontsize * TITLE_ASCENT,
+                                        TITLE_TOP - 1)
+                self.assertLessEqual(first_baseline + (len(lines) - 1) * advance
+                                     + fontsize * TITLE_DESCENT, TITLE_BOTTOM + 1)
+                svg = cover_svg({"id": "test-overlap", "name": name, "language": "USA"})
+                self.assertIn("LIVE RADIO", svg)
+                root = ET.fromstring(svg)
+                text_nodes = [node for node in root.iter() if node.tag.endswith("}text")]
+                rendered = [node for node in text_nodes if (node.text or "") in lines]
+                self.assertEqual(len(rendered), len(lines))
+                self.assertEqual(float(rendered[0].get("y")), round(first_baseline))
+
+    def test_all_curated_station_titles_fit_reserved_zone(self):
+        import json
+        root = Path(__file__).resolve().parents[1]
+        from radio_artwork import (TITLE_TOP, TITLE_BOTTOM, TITLE_MAX_WIDTH,
+                                   TITLE_ASCENT, TITLE_DESCENT, _width, title_layout)
+        catalogs = [root / "stations.json", root / "world-radio" / "stations.json"]
+        catalogs.extend(sorted((root / "world-radio").glob("*/stations.json")))
+        for catalog in catalogs:
+            for station in json.loads(catalog.read_text(encoding="utf-8")):
+                name = station.get("artwork_title") or station["name"]
+                with self.subTest(catalog=str(catalog), name=name):
+                    lines, size, baseline, advance = title_layout(name)
+                    self.assertLessEqual(len(lines), 3)
+                    self.assertLessEqual(max(_width(x, size) for x in lines),
+                                         TITLE_MAX_WIDTH + .1)
+                    self.assertGreaterEqual(baseline - TITLE_ASCENT * size,
+                                            TITLE_TOP - 1)
+                    self.assertLessEqual(baseline + (len(lines) - 1) * advance
+                                         + TITLE_DESCENT * size, TITLE_BOTTOM + 1)
+
     def test_rejects_external_images_or_broken_xml(self):
         with tempfile.TemporaryDirectory() as temp:
             path = Path(temp) / "bad.svg"

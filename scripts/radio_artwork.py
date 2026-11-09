@@ -4,6 +4,7 @@ All imagery is native vector (gradients, paths and text), not a PNG wrapped
 in SVG. Legacy PNG originals remain as optional archived fallbacks.
 """
 import html
+from itertools import combinations
 from pathlib import Path
 import re
 import xml.etree.ElementTree as ET
@@ -47,22 +48,62 @@ def _width(text, size):
     return total * size * 1.06
 
 
+# Reserve genuinely separate areas for the header, title and subtitle.
+# Measured in the 512-unit SVG viewBox, not in output image pixels.
+TITLE_TOP = 172
+TITLE_BOTTOM = 324
+TITLE_MAX_WIDTH = 346
+TITLE_ASCENT = 0.86
+TITLE_DESCENT = 0.21
+TITLE_LINE_SPACING = 1.14
+
+
 def fitted_title(text):
-    words = str(text).strip().split() or ["Live", "Radio"]
-    for size in range(72, 25, -2):
-        lines = []
-        for word in words:
-            if _width(word, size) > 388:
-                lines = []
-                break
-            if lines and _width(lines[-1] + " " + word, size) <= 382:
-                lines[-1] += " " + word
-            else:
-                lines.append(word)
-        if 1 <= len(lines) <= 3:
+    """Choose the largest readable, balanced 1–3 line arrangement that fits.
+
+    Enforce *vertical* limits while choosing font sizes, not afterwards: a title
+    that fits horizontally can still overlap the fixed LIVE RADIO heading.
+    """
+    words = str(text).split() or ["Live", "Radio"]
+    available_height = TITLE_BOTTOM - TITLE_TOP
+    for size in range(70, 17, -1):
+        choices = []
+        for count in range(1, min(3, len(words)) + 1):
+            advance = round(size * TITLE_LINE_SPACING)
+            visible_height = size * (TITLE_ASCENT + TITLE_DESCENT)
+            block_height = visible_height + (count - 1) * advance
+            if block_height > available_height:
+                continue
+            for breaks in combinations(range(1, len(words)), count - 1):
+                points = (0, *breaks, len(words))
+                lines = [" ".join(words[points[i]:points[i + 1]])
+                         for i in range(count)]
+                widths = [_width(line, size) for line in lines]
+                if max(widths) <= TITLE_MAX_WIDTH:
+                    # Favor shorter/balanced lines within the maximum font size.
+                    imbalance = max(widths) - min(widths)
+                    choices.append((count, imbalance, lines))
+        if choices:
+            count, _, lines = min(choices, key=lambda item: (item[0], item[1]))
             return lines, size
-    whole = " ".join(words)
-    return [whole], max(17, min(26, int(380 / max(_width(whole, 1), 1))))
+
+    # Exceptionally long unbroken titles still fit in the title area, rather
+    # than escaping the frame or sitting over the header.
+    full = " ".join(words)
+    size = min(17, max(6, int(TITLE_MAX_WIDTH / max(_width(full, 1), 0.01))))
+    while size > 6 and _width(full, size) > TITLE_MAX_WIDTH:
+        size -= 1
+    return [full], size
+
+
+def title_layout(text):
+    """Return title lines, font size, first baseline and line advance."""
+    lines, size = fitted_title(text)
+    advance = round(size * TITLE_LINE_SPACING)
+    height = size * (TITLE_ASCENT + TITLE_DESCENT) + (len(lines) - 1) * advance
+    first_baseline = (TITLE_TOP + (TITLE_BOTTOM - TITLE_TOP - height) / 2
+                      + size * TITLE_ASCENT)
+    return lines, size, first_baseline, advance
 
 
 def _subtitle(text):
@@ -80,10 +121,7 @@ def cover_svg(station):
     description = _subtitle(station.get("genre") or station.get("description") or "Live Radio")
     label = str(station.get("language") or station.get("collection") or "World")
     background, intermediate, blue, pink = _palette(identifier)
-    lines, fontsize = fitted_title(title)
-    line_height = round(fontsize * 1.16)
-    start_y = 246 - ((len(lines) - 1) * line_height) / 2
-    show_font = fontsize - 2 if len(lines) == 3 and fontsize >= 50 else fontsize
+    lines, show_font, start_y, line_height = title_layout(title)
 
     def escape(value):
         return html.escape(str(value).replace("\r", " ").replace("\n", " "), quote=True)

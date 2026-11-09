@@ -13,9 +13,8 @@
  <rect x="39" y="39" width="434" height="434" rx="56" fill="url(#pane)" stroke="url(#rim)" stroke-width="2.5"/>
  <rect x="49" y="49" width="414" height="414" rx="48" fill="none" stroke="#d0deff" stroke-opacity=".12"/>
  <text x="256" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" letter-spacing="2.0" fill="#ebf2ff">PERSIAN · LIVE RADIO</text>
-  <text x="256" y="162" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="70" font-weight="750" letter-spacing="-0.7" fill="#ffffff">Radio</text>
-  <text x="256" y="246" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="70" font-weight="750" letter-spacing="-0.7" fill="#ffffff">Melodie</text>
-  <text x="256" y="330" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="70" font-weight="750" letter-spacing="-0.7" fill="#ffffff">Iran</text>
+ <text x="256" y="235" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="53" font-weight="750" letter-spacing="-0.7" fill="#ffffff">Radio</text>
+ <text x="256" y="295" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="53" font-weight="750" letter-spacing="-0.7" fill="#ffffff">Melodie Iran</text>
  <text x="256" y="366" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#dce6f9">Community &amp; Talk</text>
  <path d="M194 417H230 M282 417H318" fill="none" stroke="#cedcf9" stroke-width="2" stroke-linecap="round"/>
  <text x="256" y="425" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" letter-spacing="1" fill="#f5f8ff">US</text>
