@@ -1,7 +1,7 @@
 """Dependency-free, scalable, station-specific SVG radio cover artwork.
 
-All artwork is native vector (gradients, paths and text), with no embedded
-raster files. SVG is the sole published artwork format.
+Vector templates are rendered to 1254x1254 JPEG cover files; no SVG
+assets are published in the repository.
 """
 import html
 from itertools import combinations
@@ -181,4 +181,37 @@ def verify_svg(path):
                 raise ValueError("External SVG reference or script: " + str(path))
             if "url(http" in value.lower() or "javascript:" in value.lower():
                 raise ValueError("External SVG resource: " + str(path))
+    return True
+
+
+
+def cover_jpg(station):
+    """Render a native RGB JPEG from a station-specific internal vector template."""
+    from io import BytesIO
+    import cairosvg
+    from PIL import Image
+
+    png = cairosvg.svg2png(bytestring=cover_svg(station).encode("utf-8"),
+                           output_width=SIZE, output_height=SIZE)
+    with Image.open(BytesIO(png)) as src:
+        rgba = src.convert("RGBA")
+        canvas = Image.new("RGB", rgba.size, (255, 255, 255))
+        canvas.paste(rgba, mask=rgba.getchannel("A"))
+        data = BytesIO()
+        canvas.save(data, format="JPEG", quality=90, subsampling=0, optimize=True)
+        return data.getvalue()
+
+
+def verify_jpg(path):
+    """Validate the real JPEG encoding, full dimensions and readable contents."""
+    from PIL import Image
+    if not Path(path).is_file():
+        raise ValueError("Missing radio artwork: " + str(path))
+    try:
+        with Image.open(path) as image:
+            if image.format != "JPEG" or image.size != (SIZE, SIZE):
+                raise ValueError("Wrong JPEG cover dimensions or format")
+            image.verify()
+    except (OSError, ValueError) as exc:
+        raise ValueError("Invalid JPEG cover: " + str(path)) from exc
     return True

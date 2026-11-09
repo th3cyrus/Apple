@@ -6,7 +6,7 @@
     "country_code": "RU",
     "genre": "Russian Pop",
     "stream": "https://rusradio.hostingradio.ru/rusradio128.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-russkoe-radio.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-russkoe-radio.jpg"
   },
   {
     "id": "ru-russian-rock",
@@ -15,7 +15,7 @@
     "country_code": "RU",
     "genre": "Rock & Alternative",
     "stream": "https://rr-russkijrok.hostingradio.ru/russkijrok96.aacp",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-russian-rock.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-russian-rock.jpg"
   },
   {
     "id": "ru-radio-record-russian-mix",
@@ -24,7 +24,7 @@
     "country_code": "RU",
     "genre": "Electronic & Dance",
     "stream": "https://radiorecord.hostingradio.ru/rus96.aacp",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-radio-record-russian-mix.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-radio-record-russian-mix.jpg"
   },
   {
     "id": "ru-radio-record-russian-gold",
@@ -33,7 +33,7 @@
     "country_code": "RU",
     "genre": "Russian Classics",
     "stream": "https://radiorecord.hostingradio.ru/russiangold96.aacp",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-radio-record-russian-gold.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-radio-record-russian-gold.jpg"
   },
   {
     "id": "ru-dfm-russian-dance",
@@ -42,7 +42,7 @@
     "country_code": "RU",
     "genre": "Dance & Pop",
     "stream": "https://dfm-dfmrusdance.hostingradio.ru/dfmrusdance96.aacp",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-dfm-russian-dance.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-dfm-russian-dance.jpg"
   },
   {
     "id": "ru-radio-maximum",
@@ -51,7 +51,7 @@
     "country_code": "RU",
     "genre": "Rock & Alternative",
     "stream": "https://maximum.hostingradio.ru/maximum128.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-radio-maximum.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-radio-maximum.jpg"
   },
   {
     "id": "ru-business-fm-russia",
@@ -60,7 +60,7 @@
     "country_code": "RU",
     "genre": "News & Business",
     "stream": "https://bfm.hostingradio.ru:9075/fm",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-business-fm-russia.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-business-fm-russia.jpg"
   },
   {
     "id": "ru-radio-mayak",
@@ -69,7 +69,7 @@
     "country_code": "RU",
     "genre": "Culture & Talk",
     "stream": "https://icecast-vgtrk.cdnvideo.ru/mayakfm",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-radio-mayak.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-radio-mayak.jpg"
   },
   {
     "id": "ru-radio-monte-carlo-russia",
@@ -78,7 +78,7 @@
     "country_code": "RU",
     "genre": "Contemporary Hits",
     "stream": "https://montecarlo.hostingradio.ru/montecarlo128.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-radio-monte-carlo-russia.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-radio-monte-carlo-russia.jpg"
   },
   {
     "id": "ru-marusya-fm",
@@ -87,7 +87,7 @@
     "country_code": "RU",
     "genre": "Russian Pop",
     "stream": "https://listen.vdfm.ru:8000/marusya",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-marusya-fm.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/ru-marusya-fm.jpg"
   },
   {
     "id": "by-novoe-radio-belarus",
@@ -96,7 +96,7 @@
     "country_code": "BY",
     "genre": "Contemporary Hits",
     "stream": "https://live.novoeradio.by:444/live/novoeradio_aac128/icecast.audio",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/by-novoe-radio-belarus.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/by-novoe-radio-belarus.jpg"
   },
   {
     "id": "by-russkoe-radio-minsk",
@@ -105,7 +105,7 @@
     "country_code": "BY",
     "genre": "Russian Pop",
     "stream": "https://stream.rusradio.by:8443/live128",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/by-russkoe-radio-minsk.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/by-russkoe-radio-minsk.jpg"
   },
   {
     "id": "kz-russian-dance-radio-kazakhstan",
@@ -114,6 +114,6 @@
     "country_code": "KZ",
     "genre": "Russian Dance",
     "stream": "https://lux-radio.com:8015/stream",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/kz-russian-dance-radio-kazakhstan.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/russian/Covers/kz-russian-dance-radio-kazakhstan.jpg"
   }
 ]

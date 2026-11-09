@@ -68,3 +68,7 @@ The 2026-11-04 numbers above are historical test results, not current counts. Al
 ## 2026-11-09 SVG cover directory consolidation
 
 All active SVG cover folders were renamed to `Covers/`, including the U.S. directory. The former logo directories and all 210 PNG files were deleted; JSON/M3U links, generators, tests, GitHub workflows and active documentation were updated. The 2026-11-04 checks above remain historical and should not be interpreted as results for the current tree.
+
+## 2026-11-10 JPG migration
+
+Earlier SVG references in dated historical notes describe the previous format. All 211 SVG assets were converted to real 1254×1254 JPEG images; catalogs, M3U playlists, generators, tests and current documentation use JPG. The internal drawing template still uses SVG markup solely to render JPEGs. No station audio streams were changed.

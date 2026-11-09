@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Generate and verify all World, language and U.S. directory SVG covers.
+"""Generate and verify all World, language and U.S. directory JPEG covers.
 
 The vector templates are deterministic, independent from local fonts and PIL.
-All original PNG assets have been removed; only SVG files are generated.
+All original PNG assets have been removed; only JPEG files are generated.
 """
 import argparse
 import json
@@ -10,7 +10,7 @@ from pathlib import Path
 import re
 from urllib.parse import urlsplit
 
-from radio_artwork import cover_svg, verify_svg
+from radio_artwork import cover_jpg, verify_jpg
 
 ROOT = Path(__file__).resolve().parents[1]
 WORLD = ROOT / "world-radio"
@@ -21,8 +21,8 @@ LANGUAGE_PREFIX = "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-r
 def targets(stations, root=WORLD):
     for station in stations:
         if urlsplit(station.get("logo", "")).path.endswith(
-                "/world-radio/Covers/" + station["id"] + ".svg"):
-            yield station, Path(root) / "Covers" / (station["id"] + ".svg")
+                "/world-radio/Covers/" + station["id"] + ".jpg"):
+            yield station, Path(root) / "Covers" / (station["id"] + ".jpg")
 
 
 def language_catalogs(root=WORLD):
@@ -34,10 +34,10 @@ def language_catalogs(root=WORLD):
 def language_targets(root=WORLD):
     for language, stations in language_catalogs(root):
         for station in stations:
-            expected = f"/world-radio/{language}/Covers/{station['id']}.svg"
+            expected = f"/world-radio/{language}/Covers/{station['id']}.jpg"
             if not urlsplit(station.get("logo", "")).path.endswith(expected):
                 raise ValueError("Language artwork URL mismatch: " + station["id"])
-            yield station, Path(root) / language / "Covers" / (station["id"] + ".svg")
+            yield station, Path(root) / language / "Covers" / (station["id"] + ".jpg")
 
 
 def write_cover(station, path, force=False):
@@ -47,8 +47,8 @@ def write_cover(station, path, force=False):
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_name("." + path.name + ".tmp")
     try:
-        temporary.write_text(cover_svg(station), encoding="utf-8")
-        verify_svg(temporary)
+        temporary.write_bytes(cover_jpg(station))
+        verify_jpg(temporary)
         temporary.replace(path)
     finally:
         temporary.unlink(missing_ok=True)
@@ -57,34 +57,34 @@ def write_cover(station, path, force=False):
 
 def generate(stations, root=WORLD, *, force=False):
     made = sum(write_cover(station, path, force) for station, path in targets(stations, root))
-    print(f"World radio SVG covers generated: {made}", flush=True)
+    print(f"World radio JPEG covers generated: {made}", flush=True)
     return made
 
 
 def generate_languages(root=WORLD, *, force=False):
     made = sum(write_cover(station, path, force) for station, path in language_targets(root))
-    print(f"Language radio SVG covers generated: {made}", flush=True)
+    print(f"Language radio JPEG covers generated: {made}", flush=True)
     return made
 
 
 def verify(stations, root=WORLD):
     total = 0
     for _, path in targets(stations, root):
-        verify_svg(path)
+        verify_jpg(path)
         total += 1
     if total < 60:
         raise ValueError("Incomplete World Radio artwork set")
-    print(f"Verified {total} world SVG covers", flush=True)
+    print(f"Verified {total} world JPEG covers", flush=True)
 
 
 def verify_languages(root=WORLD):
     counts = {}
     for station, path in language_targets(root):
-        verify_svg(path)
+        verify_jpg(path)
         counts[station["language"]] = counts.get(station["language"], 0) + 1
     if len(counts) < 5:
         raise ValueError("Too few language artwork collections")
-    print("Verified language radio SVG covers:", counts, flush=True)
+    print("Verified language radio JPEG covers:", counts, flush=True)
 
 
 DIRECTORY_GENRES = (
@@ -99,20 +99,20 @@ def directory_genre_covers(root=ROOT, *, force=False):
     directory = Path(root) / "us-directory" / "Covers"
     for genre in DIRECTORY_GENRES:
         slug = "-".join(re.findall(r"[a-z0-9]+", genre.lower()))
-        filename = directory / (slug + ".svg")
+        filename = directory / (slug + ".jpg")
         write_cover({"id": "us-directory-" + slug, "name": genre,
                      "country_code": "US", "genre": "USA RADIO DIRECTORY",
                      "language": "USA"}, filename, force=force)
-        verify_svg(filename)
+        verify_jpg(filename)
 
 
 def directory_cover(root=ROOT, *, force=False):
-    filename = Path(root) / "us-directory" / "Covers" / "directory-cover.svg"
+    filename = Path(root) / "us-directory" / "Covers" / "directory-cover.jpg"
     if not filename.is_file() or force:
         write_cover({"id": "us-directory-cover", "name": "USA Radio Directory",
                      "country_code": "US", "genre": "American Radio",
                      "language": "USA"}, filename, force=force)
-    verify_svg(filename)
+    verify_jpg(filename)
     return filename
 
 
@@ -133,10 +133,10 @@ def main():
         directory_genre_covers(root=args.directory.parent, force=rebuild)
     verify(stations, args.directory)
     verify_languages(args.directory)
-    verify_svg(args.directory.parent / "us-directory" / "Covers" / "directory-cover.svg")
+    verify_jpg(args.directory.parent / "us-directory" / "Covers" / "directory-cover.jpg")
     for genre in DIRECTORY_GENRES:
         slug = "-".join(re.findall(r"[a-z0-9]+", genre.lower()))
-        verify_svg(args.directory.parent / "us-directory" / "Covers" / (slug + ".svg"))
+        verify_jpg(args.directory.parent / "us-directory" / "Covers" / (slug + ".jpg"))
 
 
 if __name__ == "__main__":

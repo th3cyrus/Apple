@@ -4,7 +4,7 @@
 
 Sources include Radio Browser and selected broadcaster streams. Directory entries are not individually audio-decoded. The [curated U.S. playlist](../radio.m3u) is maintained separately.
 
-Dedicated religious programming is excluded across all faiths. The generator filters signed links, stale health records, reported SSL errors and invalid playlists. Directory covers are stored in [`Covers/`](Covers/) as SVG vectors. Station entries use genre-level artwork and a shared SVG fallback for unmatched genres; no PNG files are distributed.
+Dedicated religious programming is excluded across all faiths. The generator filters signed links, stale health records, reported SSL errors and invalid playlists. Directory covers are stored in [`Covers/`](Covers/) as JPGs. Station entries use genre-level artwork and a shared JPG fallback for unmatched genres; no PNG files are distributed.
 
 | Subscription | Stations |
 |---|---:|

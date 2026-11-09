@@ -1,6 +1,6 @@
 # Apple · Radio Collections for Primuse 📻
 
-**Curated U.S. and world radio, nine language playlists, a 12-part U.S. directory, and crisp SVG-only covers — ready for [Primuse](https://github.com/chenqi92/primuse).**
+**Curated U.S. and world radio, nine language playlists, a 12-part U.S. directory, and crisp JPG-only covers — ready for [Primuse](https://github.com/chenqi92/primuse).**
 
 Choose from **three principal M3U collections plus language-based subscriptions**: a carefully maintained U.S. selection with matching artwork, a large searchable-by-list U.S. directory, and an editorially selected international playlist. Subscribe to each collection independently; updating one does not import the others.
 
@@ -267,16 +267,16 @@ If a station stops working:
 | `stations.json` | Editable catalog of 36 radio stations |
 | `radio.m3u` | Main curated M3U subscription (36 stations) |
 | `world-radio/` | Standalone world playlist, country catalog and station covers |
-| `scripts/generate_world_covers.py` | Deterministic vector-cover generation for world, language and directory stations |
-| `scripts/radio_artwork.py` | Dependency-free 1254-pixel SVG template and safe XML validation |
-| `.github/workflows/world-artwork.yml` | Automatically fill in missing SVG station covers |
+| `scripts/generate_world_covers.py` | Deterministic JPG-cover generation for world, language and directory stations |
+| `scripts/radio_artwork.py` | Dependency-free 1254-pixel JPG template and safe XML validation |
+| `.github/workflows/world-artwork.yml` | Automatically fill in missing JPG station covers |
 | `us-directory/us-01.m3u` … `us-12.m3u` | Twelve expanded U.S. directory subscriptions |
 | `us-directory/index.json` | Current directory totals and per-playlist counts |
 | `us-directory/README.md` | All expanded directory subscription URLs |
 | `us-directory/featured.m3u` | Small featured HTTPS directory preview |
 | `scripts/build_us_directory.py` | Filter, deduplicate and split the expanded U.S. directory |
 | `.github/workflows/us-directory.yml` | Weekly/manual directory regeneration and publishing |
-| `Covers/` | Curated U.S. radio artwork in native SVG |
+| `Covers/` | Curated U.S. radio artwork in native JPG |
 | `scripts/update.py` | Maintenance orchestration and atomic playlist generation |
 | `scripts/stream_probe.py` | Decoded audio, silence detection, playlist handling, retries and HTTP diagnostics |
 | `scripts/identity.py` | Broadcaster and program-channel matching |
@@ -305,11 +305,11 @@ The **expanded directory** uses self-hosted genre-based covers in the same visua
 language; these thousands of listings share artwork by genre rather than getting
 individual, station-specific covers.
 
-All active cover links in the curated U.S., World Radio, language-based and 12-shard U.S. directory playlists use native **SVG vector artwork**, stored exclusively in `Covers/` folders. The scalable 1254×1254 assets are hosted directly in this repository; all PNG files have been removed. SVG is the only cover format in the repository.
+All active cover links in the curated U.S., World Radio, language-based and 12-shard U.S. directory playlists use native **JPG artwork**, stored exclusively in `Covers/` folders. The high-resolution 1254×1254 assets are hosted directly in this repository; all PNG files have been removed. JPG is the only cover format in the repository.
 
 Station names are used for identification. They do not imply affiliation with or endorsement by the broadcasters.
 
-Scheduled playlist refreshes preserve existing SVG artwork. Run `python scripts/generate_world_covers.py --restyle` only when you intentionally want to restyle generated vector covers.
+Scheduled playlist refreshes preserve existing JPG artwork. Run `python scripts/generate_world_covers.py --restyle` only when you intentionally want to restyle generated JPG covers.
 
 ---
 

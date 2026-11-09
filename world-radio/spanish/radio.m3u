@@ -1,13 +1,13 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/es-rne-radio-3.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/es-rne-radio-3.svg" group-title="Spanish Radio",RNE Radio 3 (ES)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/es-rne-radio-3.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/es-rne-radio-3.jpg" group-title="Spanish Radio",RNE Radio 3 (ES)
 https://rtvelivestream.rtve.es/rtvesec/rne/rne_r3_main.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/es-los40-classic.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/es-los40-classic.svg" group-title="Spanish Radio",LOS40 Classic (ES)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/es-los40-classic.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/es-los40-classic.jpg" group-title="Spanish Radio",LOS40 Classic (ES)
 https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CLASSIC.mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/mx-horizonte-107-9.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/mx-horizonte-107-9.svg" group-title="Spanish Radio",Horizonte 107.9 (MX)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/mx-horizonte-107-9.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/mx-horizonte-107-9.jpg" group-title="Spanish Radio",Horizonte 107.9 (MX)
 https://s2.mexside.net/8014/stream
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/co-radio-nacional-de-colombia.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/co-radio-nacional-de-colombia.svg" group-title="Spanish Radio",Radio Nacional de Colombia (CO)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/co-radio-nacional-de-colombia.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/co-radio-nacional-de-colombia.jpg" group-title="Spanish Radio",Radio Nacional de Colombia (CO)
 https://streaming.rtvc.gov.co/Radio_Radionacional/Radionacional.stream/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/cl-radio-cooperativa.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/cl-radio-cooperativa.svg" group-title="Spanish Radio",Radio Cooperativa (CL)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/cl-radio-cooperativa.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/cl-radio-cooperativa.jpg" group-title="Spanish Radio",Radio Cooperativa (CL)
 https://unlimited3-cl.dps.live/cooperativafm/mp3/icecast.audio
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/ar-rock-pop-95-9.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/ar-rock-pop-95-9.svg" group-title="Spanish Radio",Rock & Pop 95.9 (AR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/ar-rock-pop-95-9.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/ar-rock-pop-95-9.jpg" group-title="Spanish Radio",Rock & Pop 95.9 (AR)
 https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOP.mp3

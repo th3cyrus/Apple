@@ -6,7 +6,7 @@
     "country_code": "IQ",
     "genre": "Kurdish News",
     "stream": "https://audio-edge-3mayu.fra.h.radiomast.io/04b1ce4c-24f2-4172-b756-065832ef78bf",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-kurdistan-24-radio.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-kurdistan-24-radio.jpg"
   },
   {
     "id": "iq-radio-duhok-fm",
@@ -15,7 +15,7 @@
     "country_code": "IQ",
     "genre": "Regional & Culture",
     "stream": "https://stream-149.zeno.fm/unwq3jdyhmbuv",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-radio-duhok-fm.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-radio-duhok-fm.jpg"
   },
   {
     "id": "tr-trt-radyo-kurdi",
@@ -24,7 +24,7 @@
     "country_code": "TR",
     "genre": "Kurdish Public Radio",
     "stream": "https://radio-trtradyo6.medya.trt.com.tr/master.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-trt-radyo-kurdi.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-trt-radyo-kurdi.jpg"
   },
   {
     "id": "tr-kurd1-fm",
@@ -33,7 +33,7 @@
     "country_code": "TR",
     "genre": "Kurdish Music",
     "stream": "https://listen.radioking.com/radio/119251/stream/158701",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-kurd1-fm.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-kurd1-fm.jpg"
   },
   {
     "id": "tr-axa-rojava",
@@ -42,7 +42,7 @@
     "country_code": "TR",
     "genre": "Kurdish Music & Culture",
     "stream": "https://stream.zeno.fm/h6mn2c8ha8zuv",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-axa-rojava.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-axa-rojava.jpg"
   },
   {
     "id": "sy-denge-qamishlo",
@@ -51,7 +51,7 @@
     "country_code": "SY",
     "genre": "Kurdish Community Radio",
     "stream": "https://dengeqamishlo.stream.laut.fm/dengeqamishlo",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/sy-denge-qamishlo.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/sy-denge-qamishlo.jpg"
   },
   {
     "id": "sy-denge-cudi",
@@ -60,7 +60,7 @@
     "country_code": "SY",
     "genre": "Kurdish Music & Community",
     "stream": "https://denge-cudi.stream.laut.fm/denge-cudi?pl=m3u",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/sy-denge-cudi.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/sy-denge-cudi.jpg"
   },
   {
     "id": "iq-speda-radio",
@@ -69,7 +69,7 @@
     "country_code": "IQ",
     "genre": "News & Talk",
     "stream": "https://radio.host247.net/spedafm",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-speda-radio.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-speda-radio.jpg"
   },
   {
     "id": "iq-radyo-sirvan-perwer",
@@ -78,7 +78,7 @@
     "country_code": "IQ",
     "genre": "Kurdish Folk Music",
     "stream": "https://stream.zeno.fm/x0xhw6c6g2zuv",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-radyo-sirvan-perwer.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-radyo-sirvan-perwer.jpg"
   },
   {
     "id": "tr-azadi-fm",
@@ -87,7 +87,7 @@
     "country_code": "TR",
     "genre": "Kurdish Music",
     "stream": "https://amed.ozelip.com/8040/;",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-azadi-fm.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-azadi-fm.jpg"
   },
   {
     "id": "se-zergan-radyo",
@@ -96,6 +96,6 @@
     "country_code": "SE",
     "genre": "Kurdish & Turkish Music",
     "stream": "https://sslyayin.netyayin.net/radyozergan/;",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/se-zergan-radyo.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/se-zergan-radyo.jpg"
   }
 ]

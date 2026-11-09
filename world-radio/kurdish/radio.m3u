@@ -1,23 +1,23 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-kurdistan-24-radio.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-kurdistan-24-radio.svg" group-title="Kurdish Radio",Kurdistan 24 Radio (IQ)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-kurdistan-24-radio.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-kurdistan-24-radio.jpg" group-title="Kurdish Radio",Kurdistan 24 Radio (IQ)
 https://audio-edge-3mayu.fra.h.radiomast.io/04b1ce4c-24f2-4172-b756-065832ef78bf
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-radio-duhok-fm.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-radio-duhok-fm.svg" group-title="Kurdish Radio",Radio Duhok FM (IQ)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-radio-duhok-fm.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-radio-duhok-fm.jpg" group-title="Kurdish Radio",Radio Duhok FM (IQ)
 https://stream-149.zeno.fm/unwq3jdyhmbuv
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-trt-radyo-kurdi.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-trt-radyo-kurdi.svg" group-title="Kurdish Radio",TRT Radyo Kurdî (TR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-trt-radyo-kurdi.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-trt-radyo-kurdi.jpg" group-title="Kurdish Radio",TRT Radyo Kurdî (TR)
 https://radio-trtradyo6.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-kurd1-fm.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-kurd1-fm.svg" group-title="Kurdish Radio",Kurd1 FM (TR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-kurd1-fm.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-kurd1-fm.jpg" group-title="Kurdish Radio",Kurd1 FM (TR)
 https://listen.radioking.com/radio/119251/stream/158701
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-axa-rojava.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-axa-rojava.svg" group-title="Kurdish Radio",Axa Rojava (TR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-axa-rojava.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-axa-rojava.jpg" group-title="Kurdish Radio",Axa Rojava (TR)
 https://stream.zeno.fm/h6mn2c8ha8zuv
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/sy-denge-qamishlo.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/sy-denge-qamishlo.svg" group-title="Kurdish Radio",Denge Qamishlo (SY)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/sy-denge-qamishlo.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/sy-denge-qamishlo.jpg" group-title="Kurdish Radio",Denge Qamishlo (SY)
 https://dengeqamishlo.stream.laut.fm/dengeqamishlo
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/sy-denge-cudi.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/sy-denge-cudi.svg" group-title="Kurdish Radio",Denge Cudi (SY)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/sy-denge-cudi.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/sy-denge-cudi.jpg" group-title="Kurdish Radio",Denge Cudi (SY)
 https://denge-cudi.stream.laut.fm/denge-cudi?pl=m3u
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-speda-radio.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-speda-radio.svg" group-title="Kurdish Radio",Speda Radio (IQ)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-speda-radio.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-speda-radio.jpg" group-title="Kurdish Radio",Speda Radio (IQ)
 https://radio.host247.net/spedafm
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-radyo-sirvan-perwer.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-radyo-sirvan-perwer.svg" group-title="Kurdish Radio",Radyo Şirvan Perwer (IQ)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-radyo-sirvan-perwer.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/iq-radyo-sirvan-perwer.jpg" group-title="Kurdish Radio",Radyo Şirvan Perwer (IQ)
 https://stream.zeno.fm/x0xhw6c6g2zuv
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-azadi-fm.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-azadi-fm.svg" group-title="Kurdish Radio",Azadi FM (TR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-azadi-fm.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/tr-azadi-fm.jpg" group-title="Kurdish Radio",Azadi FM (TR)
 https://amed.ozelip.com/8040/;
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/se-zergan-radyo.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/se-zergan-radyo.svg" group-title="Kurdish Radio",Zergan Radyo (SE)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/se-zergan-radyo.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/Covers/se-zergan-radyo.jpg" group-title="Kurdish Radio",Zergan Radyo (SE)
 https://sslyayin.netyayin.net/radyozergan/;

@@ -66,7 +66,7 @@ def check_language(path, entry):
         station_ids.add(station["id"])
         logo_parts = urlsplit(station["logo"])
         if not valid_url(station["logo"]) or logo_parts.scheme != "https" or not logo_parts.path.endswith(
-                "/world-radio/" + path.name + "/Covers/" + station["id"] + ".svg"):
+                "/world-radio/" + path.name + "/Covers/" + station["id"] + ".jpg"):
             raise ValueError("Incorrect station artwork URL: " + station["id"])
 
         safe_name = station["name"].replace('"', " ").replace("<", " ").replace(">", " ")

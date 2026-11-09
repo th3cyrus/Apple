@@ -29,7 +29,7 @@ def validate_catalog(stations):
             raise ValueError(f'Nonpublic stream destination for {sid}')
         if unsupported_stream_suffix(station['stream']):
             raise ValueError(f'Misleading audio/playlist double extension for {sid}')
-        if station.get('logo') != f'Covers/{sid}.svg':
+        if station.get('logo') != f'Covers/{sid}.jpg':
             raise ValueError(f'Invalid custom artwork path for {sid}')
         if not isinstance(station.get('manual_lock', False), bool):
             raise ValueError(f'Invalid manual_lock for {sid}')

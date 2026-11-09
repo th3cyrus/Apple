@@ -16,7 +16,7 @@ These are editorial selections, **not an objective world ranking**. We favor est
 
 Audio streams are sampled with FFprobe/FFmpeg on playlist changes and during a weekly [World Radio Select Audit](https://github.com/th3cyrus/Apple/actions/workflows/world-radio.yml). Current results and failure reports are available in GitHub Actions.
 
-**All 71 stations have illustrated covers:** four shared U.S. stations reuse the main collection's existing optimized artwork; the other 67 have unique, reproducible, scalable 1254×1254 SVG covers in [`Covers/`](Covers/) with the same frosted-glass design language. The covers display station names and country codes but do not impersonate official broadcaster logos. Missing covers are generated using [`scripts/generate_world_covers.py`](../scripts/generate_world_covers.py), and existing SVG artwork is preserved. The repository now ships SVG-only covers, with no PNG assets. The repository links to broadcaster streams without rebroadcasting the audio.
+**All 71 stations have illustrated covers:** four shared U.S. stations reuse the main collection's existing optimized artwork; the other 67 have unique, reproducible, high-resolution 1254×1254 JPG covers in [`Covers/`](Covers/) with the same frosted-glass design language. The covers display station names and country codes but do not impersonate official broadcaster logos. Missing covers are generated using [`scripts/generate_world_covers.py`](../scripts/generate_world_covers.py), and existing JPG artwork is preserved. The repository now ships JPG-only covers, with no PNG assets. The repository links to broadcaster streams without rebroadcasting the audio.
 
 ## Radio by language
 

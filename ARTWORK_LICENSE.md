@@ -2,7 +2,7 @@
 
 ## Scope
 
-This notice applies to project-designed SVG cover artwork in `Covers/`, `world-radio/Covers/`, `world-radio/*/Covers/`, and `us-directory/Covers/` within the Apple · Radio Collections for Primuse project. All PNG copies were deleted; the repository publishes only scalable SVG covers.
+This notice applies to project-designed JPG cover artwork in `Covers/`, `world-radio/Covers/`, `world-radio/*/Covers/`, and `us-directory/Covers/` within the Apple · Radio Collections for Primuse project. The repository publishes 1254x1254 JPG covers; no PNG or SVG artwork files.
 
 ## License
 
@@ -20,7 +20,7 @@ Indicate whether modifications were made.
 
 ## AI-Assisted Artwork
 
-Earlier designs used AI-assisted artwork; the current SVG covers are code-generated vector treatments using text, paths and gradients. No raster images are embedded or distributed in the project.
+Earlier designs used AI assistance; current JPG images are rasterized from code-generated layouts with text, paths and gradients. Only finished JPEG files are published in the Covers folders.
 
 Copyright protection for AI-generated material may vary by jurisdiction. No exclusive rights are asserted over elements that are not eligible for protection.
 

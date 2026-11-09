@@ -7,35 +7,35 @@ import xml.etree.ElementTree as ET
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import generate_world_covers as covers
-from radio_artwork import cover_svg, fitted_title, verify_svg
+from radio_artwork import cover_svg, fitted_title, verify_svg, verify_jpg
 
 
 class WorldCoverTests(unittest.TestCase):
     def test_generated_covers_are_vector_and_station_specific(self):
         first = {"id": "fr-fip", "name": "FIP", "country_code": "FR",
-                 "logo": covers.PREFIX + "fr-fip.svg"}
+                 "logo": covers.PREFIX + "fr-fip.jpg"}
         second = {"id": "fr-fip-jazz", "name": "FIP Jazz", "country_code": "FR",
-                  "logo": covers.PREFIX + "fr-fip-jazz.svg"}
+                  "logo": covers.PREFIX + "fr-fip-jazz.jpg"}
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             self.assertEqual(covers.generate([first, second], root), 2)
-            a = root / "Covers" / "fr-fip.svg"
-            b = root / "Covers" / "fr-fip-jazz.svg"
-            self.assertTrue(verify_svg(a))
-            self.assertTrue(verify_svg(b))
-            self.assertNotEqual(a.read_text(), b.read_text())
+            a = root / "Covers" / "fr-fip.jpg"
+            b = root / "Covers" / "fr-fip-jazz.jpg"
+            self.assertTrue(verify_jpg(a))
+            self.assertTrue(verify_jpg(b))
+            self.assertNotEqual(a.read_bytes(), b.read_bytes())
             self.assertEqual(covers.generate([first, second], root), 0)
 
     def test_existing_svg_is_preserved_unless_force_requested(self):
         with tempfile.TemporaryDirectory() as temp:
-            svg = Path(temp) / "ir-radio-nic.svg"
+            svg = Path(temp) / "ir-radio-nic.jpg"
             station = {"id": "ir-radio-nic", "name": "Radio NIC",
                        "country_code": "IR", "genre": "Talk"}
             self.assertTrue(covers.write_cover(station, svg))
             original = svg.read_bytes()
             self.assertFalse(covers.write_cover(station, svg))
             self.assertEqual(svg.read_bytes(), original)
-            self.assertTrue(verify_svg(svg))
+            self.assertTrue(verify_jpg(svg))
 
 
     def test_text_is_accessible_and_native_vector_without_embedded_raster(self):

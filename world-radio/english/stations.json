@@ -6,7 +6,7 @@
     "country_code": "GB",
     "genre": "International News",
     "stream": "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/gb-bbc-world-service.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/gb-bbc-world-service.jpg"
   },
   {
     "id": "gb-bbc-radio-6-music",
@@ -15,7 +15,7 @@
     "country_code": "GB",
     "genre": "Alternative & Discovery",
     "stream": "https://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d128000.norewind.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/gb-bbc-radio-6-music.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/gb-bbc-radio-6-music.jpg"
   },
   {
     "id": "gb-nts-radio-1",
@@ -24,7 +24,7 @@
     "country_code": "GB",
     "genre": "Underground & Eclectic",
     "stream": "https://stream-relay-geo.ntslive.net/stream?client=direct",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/gb-nts-radio-1.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/gb-nts-radio-1.jpg"
   },
   {
     "id": "gb-nts-radio-2",
@@ -33,7 +33,7 @@
     "country_code": "GB",
     "genre": "Underground & Eclectic",
     "stream": "https://stream-relay-geo.ntslive.net/stream2?client=direct",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/gb-nts-radio-2.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/gb-nts-radio-2.jpg"
   },
   {
     "id": "us-kexp",
@@ -42,7 +42,7 @@
     "country_code": "US",
     "genre": "Alternative & Discovery",
     "stream": "https://kexp.streamguys1.com/kexp160.aac",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/us-kexp.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/us-kexp.jpg"
   },
   {
     "id": "us-kcrw",
@@ -51,7 +51,7 @@
     "country_code": "US",
     "genre": "Eclectic & Culture",
     "stream": "https://streams.kcrw.com/kcrw_mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/us-kcrw.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/us-kcrw.jpg"
   },
   {
     "id": "ca-cbc-music",
@@ -60,7 +60,7 @@
     "country_code": "CA",
     "genre": "Music & Culture",
     "stream": "https://22983.live.streamtheworld.com/CBLFM_CBC_SC",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/ca-cbc-music.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/ca-cbc-music.jpg"
   },
   {
     "id": "au-triple-j",
@@ -69,7 +69,7 @@
     "country_code": "AU",
     "genre": "Alternative & Youth",
     "stream": "https://mediaserviceslive.akamaized.net/hls/live/2038308/triplejnsw/master.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/au-triple-j.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/au-triple-j.jpg"
   },
   {
     "id": "au-4zzz",
@@ -78,7 +78,7 @@
     "country_code": "AU",
     "genre": "Independent & Community",
     "stream": "https://iheart.4zzz.org.au/live",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/au-4zzz.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/au-4zzz.jpg"
   },
   {
     "id": "nz-95bfm",
@@ -87,6 +87,6 @@
     "country_code": "NZ",
     "genre": "Independent & Alternative",
     "stream": "https://streams.95bfm.com/stream95",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/nz-95bfm.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/english/Covers/nz-95bfm.jpg"
   }
 ]

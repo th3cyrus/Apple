@@ -16,7 +16,7 @@ import time
 from datetime import datetime, timezone
 from urllib.parse import urlsplit
 
-from radio_artwork import cover_svg, verify_svg
+from radio_artwork import cover_jpg, verify_jpg
 from radio_browser import RadioBrowserClient
 from catalog import validate_catalog
 from health_report import HealthReporter
@@ -36,7 +36,7 @@ REFRESH_BUDGET_SECONDS = 15 * 60
 DEFAULT_REPO = 'th3cyrus/Apple'
 def artwork_placeholder(station):
     """Provide new station-specific pure-vector cover art."""
-    return cover_svg({**station, "language": "USA", "country_code": "US",
+    return cover_jpg({**station, "language": "USA", "country_code": "US",
                       "genre": station.get("description") or "American Radio"})
 
 
@@ -218,14 +218,14 @@ def main():
                     print('WARNING: Station processing failed for', original['name'], safe_message(exc))
                 reporter.checkpoint()
             if not args.report_only:
-                path = COVERS / (station['id'] + '.svg')
+                path = COVERS / (station['id'] + '.jpg')
                 if not path.exists():
                     COVERS.mkdir(parents=True, exist_ok=True)
-                    # Generate self-hosted SVG only when missing.
-                    temporary = path.with_suffix('.tmp.svg')
+                    # Generate self-hosted JPG only when missing.
+                    temporary = path.with_suffix('.tmp.jpg')
                     try:
-                        temporary.write_text(artwork_placeholder(station), encoding='utf-8')
-                        verify_svg(temporary)
+                        temporary.write_bytes(artwork_placeholder(station))
+                        verify_jpg(temporary)
                         os.replace(temporary, path)
                     finally:
                         temporary.unlink(missing_ok=True)
