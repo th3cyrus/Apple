@@ -46,6 +46,7 @@ class WorldCoverTests(unittest.TestCase):
         self.assertIn('viewBox="0 0 512 512"', tile)
         self.assertIn("Radio Mirchi Hindi", tile)
         self.assertIn('fill="#ffffff"', tile)
+        self.assertNotIn('d="M205 150H307"', tile)
         self.assertNotIn("<image", tile)
         root = ET.fromstring(tile)
         self.assertEqual(root.tag, "{http://www.w3.org/2000/svg}svg")
