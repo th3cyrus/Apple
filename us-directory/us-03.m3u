@@ -50,7 +50,7 @@ https://ice42.securenetsystems.net/WBBV
 #EXTINF:-1 group-title="Country" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/country.svg",WCHI-HD2 Big 95.5 FM - Chicago, IL
 https://stream.revma.ihrhls.com/zc8731
 #EXTINF:-1 group-title="Country" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/country.svg",WDXB 102.5 The Bull - Birmingham, Alabama
-https://n36b-e2.revma.ihrhls.com/zc3089
+https://n3eb-e2.revma.ihrhls.com/zc3089
 #EXTINF:-1 group-title="Electronic & Dance" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/electronic-dance.svg",181.FM Classic Energy
 https://listen.181fm.com/181-classicenergy_64k.aac
 #EXTINF:-1 group-title="Electronic & Dance" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/electronic-dance.svg",AItocha Radio - Pop & Latin (AI music)
@@ -145,6 +145,8 @@ https://stream.wbez.org/wbez64-web.aac
 https://crystalout.surfernetwork.com:8001/WWSR-FM_MP3
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.svg",AM 800 KXIC
 https://stream.revma.ihrhls.com/zc5262
+#EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.svg",BTT Radio
+https://radio.bttstudios.tv/listen/btt_radio/radio.mp3
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.svg",Fox Sports 1360
 https://stream.revma.ihrhls.com/zc4688
 #EXTINF:-1 group-title="News & Talk" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/news-talk.svg",KBBI 890 Homer, AK
