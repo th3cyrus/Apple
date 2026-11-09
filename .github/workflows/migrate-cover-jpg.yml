@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/scripts/migrate_svg_to_jpg.py'
+      - '.github/workflows/migrate-cover-jpg.yml'
   workflow_dispatch:
 
 permissions:
@@ -54,7 +55,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A Covers/ world-radio/ us-directory/ scripts/ tests/ README.md ARTWORK_LICENSE.md docs/ requirements.txt .github/workflows/world-artwork.yml
+          git add -A
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Migrate all radio artwork and references from SVG to JPG'
           git fetch origin main
