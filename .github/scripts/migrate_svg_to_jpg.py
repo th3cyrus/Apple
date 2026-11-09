@@ -3,6 +3,7 @@
 from io import BytesIO
 import json
 from pathlib import Path
+from urllib.parse import urlsplit
 
 import cairosvg
 from PIL import Image
@@ -71,10 +72,10 @@ def convert_catalogs_and_playlists():
             stations = json.loads(updated)
             for item in stations:
                 logo = item.get("logo", "")
-                if not logo.endswith(".jpg"):
+                if not urlsplit(logo).path.endswith(".jpg"):
                     raise RuntimeError("Non-JPEG cover " + item["id"])
                 local = ROOT / (logo if logo.startswith("Covers/")
-                                else logo.split("/main/", 1)[-1])
+                                else urlsplit(logo).path.split("/main/", 1)[-1])
                 with Image.open(local) as image:
                     if image.format != "JPEG":
                         raise RuntimeError("Not a JPEG " + str(local))
