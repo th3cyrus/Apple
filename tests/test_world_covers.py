@@ -19,24 +19,24 @@ class WorldCoverTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             self.assertEqual(covers.generate([first, second], root), 2)
-            a = root / "logos" / "fr-fip.svg"
-            b = root / "logos" / "fr-fip-jazz.svg"
+            a = root / "Covers" / "fr-fip.svg"
+            b = root / "Covers" / "fr-fip-jazz.svg"
             self.assertTrue(verify_svg(a))
             self.assertTrue(verify_svg(b))
             self.assertNotEqual(a.read_text(), b.read_text())
             self.assertEqual(covers.generate([first, second], root), 0)
 
-    def test_owner_supplied_png_remains_untouched_while_svg_is_generated(self):
+    def test_existing_svg_is_preserved_unless_force_requested(self):
         with tempfile.TemporaryDirectory() as temp:
-            png = Path(temp) / "ir-radio-nic.png"
             svg = Path(temp) / "ir-radio-nic.svg"
-            original = b"owner supplied artwork archive"
-            png.write_bytes(original)
             station = {"id": "ir-radio-nic", "name": "Radio NIC",
                        "country_code": "IR", "genre": "Talk"}
-            self.assertTrue(covers.write_cover(station, svg, force=True))
-            self.assertEqual(png.read_bytes(), original)
+            self.assertTrue(covers.write_cover(station, svg))
+            original = svg.read_bytes()
+            self.assertFalse(covers.write_cover(station, svg))
+            self.assertEqual(svg.read_bytes(), original)
             self.assertTrue(verify_svg(svg))
+
 
     def test_text_is_accessible_and_native_vector_without_embedded_raster(self):
         sample = {"id": "test-contrast", "name": "Radio Mirchi Hindi",
@@ -115,7 +115,7 @@ class WorldCoverTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "Invalid SVG"):
                 verify_svg(path)
             bad = cover_svg({"id": "test-bad", "name": "Radio"})
-            bad = bad.replace("</svg>", '<image href="https://other.example/cover.png"/></svg>')
+            bad = bad.replace("</svg>", '<image href="https://other.example/cover.svg"/></svg>')
             path.write_text(bad, encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "Non-vector"):
                 verify_svg(path)

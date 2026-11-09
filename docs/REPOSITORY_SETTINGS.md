@@ -14,8 +14,8 @@
   transport, acceptable URL structures, and no recognized token/expiry query
   parameters. An abnormal drop compared to the previous index stops
   publication instead of deleting thousands of entries.
-- **World artwork:** the cover workflow generates only missing native SVGs, keeping
-  optimized legacy PNGs as optional fallbacks. All 71 world stations have scalable
+- **World artwork:** the cover workflow generates only missing native SVG files.
+  No raster fallback files are distributed. All 71 world stations have scalable
   1254×1254 vector-cover references.
 
 To verify playback in Primuse, refresh the relevant subscription and test sample
@@ -34,7 +34,7 @@ edits. The artwork workflow uses the same policy for its branch.
 Repository administrators can configure the About section and branch rules:
 
 - Repository → About → Description (suggested):
-  `Live radio for Primuse: 36 curated U.S. stations, a refreshed U.S. directory, and 71 handpicked world stations in 43 countries.`
+  `Live radio for Primuse: curated U.S. & world stations, 9 language playlists, 12 U.S. directory lists, and scalable SVG covers.`
 - Repository Settings → Rules → Rulesets: reviewed PRs and passing CI can be
   required for code changes after scheduled workflows are adapted to publish
   generated data (for example, through bot-created PRs).

@@ -6,7 +6,7 @@
     "country_code": "IR",
     "genre": "News & Talk",
     "stream": "https://stream.radiojar.com/iintl_c",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-iran-international.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-iran-international.svg"
   },
   {
     "id": "ir-radio-farda",
@@ -15,7 +15,7 @@
     "country_code": "IR",
     "genre": "News & Culture",
     "stream": "https://stream.radiojar.com/cp13r2cpn3quv",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-farda.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-farda.svg"
   },
   {
     "id": "us-voa-persian",
@@ -24,7 +24,7 @@
     "country_code": "US",
     "genre": "News & Talk",
     "stream": "https://voa-ingest.akamaized.net/hls/live/2035210/152_135L/playlist.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-voa-persian.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/us-voa-persian.svg"
   },
   {
     "id": "ir-radio-simorgh",
@@ -33,7 +33,7 @@
     "country_code": "IR",
     "genre": "Persian Music",
     "stream": "https://stream.zeno.fm/9svfnobkrxrvv",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-simorgh.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-simorgh.svg"
   },
   {
     "id": "ir-radio-faaz",
@@ -42,7 +42,7 @@
     "country_code": "IR",
     "genre": "Persian Music & Culture",
     "stream": "https://free.rcast.net/230792",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-faaz.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-faaz.svg"
   },
   {
     "id": "ir-radio-yar",
@@ -51,7 +51,7 @@
     "country_code": "IR",
     "genre": "Persian Music",
     "stream": "https://shoutcast.glwiz.com/RadioYAR.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-yar.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-yar.svg"
   },
   {
     "id": "ir-radio-gachsaran",
@@ -60,7 +60,7 @@
     "country_code": "IR",
     "genre": "Local & Music",
     "stream": "https://radio.gachsaran.org/gach",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-gachsaran.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-gachsaran.svg"
   },
   {
     "id": "ir-radio-zza",
@@ -69,7 +69,7 @@
     "country_code": "IR",
     "genre": "Independent Talk",
     "stream": "https://listen.radioking.com/radio/526993/stream/585379",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-zza.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-zza.svg"
   },
   {
     "id": "af-radio-srood",
@@ -78,7 +78,7 @@
     "country_code": "AF",
     "genre": "Dari Music",
     "stream": "https://stream.radiosrood.com/",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/af-radio-srood.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/af-radio-srood.svg"
   },
   {
     "id": "lb-anghamy-persian",
@@ -87,7 +87,7 @@
     "country_code": "LB",
     "genre": "Persian Music",
     "stream": "https://radio.avazfarsi.com:8010/radio.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/lb-anghamy-persian.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/lb-anghamy-persian.svg"
   },
   {
     "id": "ir-radio-nic",
@@ -96,7 +96,7 @@
     "country_code": "IR",
     "genre": "Political Documentaries",
     "stream": "https://stream.zeno.fm/kbt00r580feuv",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-nic.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-nic.svg"
   },
   {
     "id": "gb-bbc-persian-tv",
@@ -105,7 +105,7 @@
     "country_code": "GB",
     "genre": "News & Talk (TV stream)",
     "stream": "https://vs-hls-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/mobile_wifi_main_hd_abr_v2.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/gb-bbc-persian-tv.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/gb-bbc-persian-tv.svg"
   },
   {
     "id": "ir-radio-navahang",
@@ -114,7 +114,7 @@
     "country_code": "IR",
     "genre": "Persian Pop & Traditional",
     "stream": "https://navairan.com/;stream.nsv",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-navahang.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-navahang.svg"
   },
   {
     "id": "us-radio-hamrah",
@@ -123,7 +123,7 @@
     "country_code": "US",
     "genre": "News & Talk",
     "stream": "https://stream.zeno.fm/8p9trg4dkg0uv",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-hamrah.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/us-radio-hamrah.svg"
   },
   {
     "id": "us-radio-donya",
@@ -132,7 +132,7 @@
     "country_code": "US",
     "genre": "Persian Hits",
     "stream": "https://stream.zeno.fm/v5kxmagseg0uv",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-donya.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/us-radio-donya.svg"
   },
   {
     "id": "ca-radio-shemroon",
@@ -141,7 +141,7 @@
     "country_code": "CA",
     "genre": "Comedy & Entertainment",
     "stream": "https://usa7.fastcast4u.com/proxy/pghola05?mp=/1",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ca-radio-shemroon.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ca-radio-shemroon.svg"
   },
   {
     "id": "us-radio-melodie-iran",
@@ -150,6 +150,6 @@
     "country_code": "US",
     "genre": "Community & Talk",
     "stream": "https://global.citrus3.com:8234/stream",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-melodie-iran.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/us-radio-melodie-iran.svg"
   }
 ]

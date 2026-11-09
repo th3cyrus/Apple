@@ -6,7 +6,7 @@
     "country_code": "ES",
     "genre": "Alternative & Culture",
     "stream": "https://rtvelivestream.rtve.es/rtvesec/rne/rne_r3_main.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/logos/es-rne-radio-3.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/es-rne-radio-3.svg"
   },
   {
     "id": "es-los40-classic",
@@ -15,7 +15,7 @@
     "country_code": "ES",
     "genre": "Classic Hits",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CLASSIC.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/logos/es-los40-classic.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/es-los40-classic.svg"
   },
   {
     "id": "mx-horizonte-107-9",
@@ -24,7 +24,7 @@
     "country_code": "MX",
     "genre": "Jazz & Culture",
     "stream": "https://s2.mexside.net/8014/stream",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/logos/mx-horizonte-107-9.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/mx-horizonte-107-9.svg"
   },
   {
     "id": "co-radio-nacional-de-colombia",
@@ -33,7 +33,7 @@
     "country_code": "CO",
     "genre": "Culture & World",
     "stream": "https://streaming.rtvc.gov.co/Radio_Radionacional/Radionacional.stream/playlist.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/logos/co-radio-nacional-de-colombia.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/co-radio-nacional-de-colombia.svg"
   },
   {
     "id": "cl-radio-cooperativa",
@@ -42,7 +42,7 @@
     "country_code": "CL",
     "genre": "News & Talk",
     "stream": "https://unlimited3-cl.dps.live/cooperativafm/mp3/icecast.audio",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/logos/cl-radio-cooperativa.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/cl-radio-cooperativa.svg"
   },
   {
     "id": "ar-rock-pop-95-9",
@@ -51,6 +51,6 @@
     "country_code": "AR",
     "genre": "Rock & Alternative",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOP.mp3",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/logos/ar-rock-pop-95-9.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/spanish/Covers/ar-rock-pop-95-9.svg"
   }
 ]

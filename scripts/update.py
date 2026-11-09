@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regenerate Primuse radio playlists using custom, self-hosted artwork.
 
-Both local and published playlists reference the custom covers in logos/.
+Both local and published playlists reference the custom covers in Covers/.
 Refresh mode may repair radio streams but never replaces custom artwork.
 """
 import argparse
@@ -26,7 +26,7 @@ from stream_probe import stream_check
 
 ROOT = Path(__file__).resolve().parent.parent
 CATALOG = ROOT / 'stations.json'
-LOGOS = ROOT / 'logos'
+COVERS = ROOT / 'Covers'
 M3U = ROOT / 'radio.m3u'
 HEALTH_LOG = ROOT / 'logs' / 'stream-health.jsonl'
 CURRENT_REPORT = ROOT / 'logs' / 'current-run.json'
@@ -218,10 +218,10 @@ def main():
                     print('WARNING: Station processing failed for', original['name'], safe_message(exc))
                 reporter.checkpoint()
             if not args.report_only:
-                path = LOGOS / (station['id'] + '.svg')
+                path = COVERS / (station['id'] + '.svg')
                 if not path.exists():
-                    LOGOS.mkdir(parents=True, exist_ok=True)
-                    # Keep original PNG fallbacks; generate SVG only when missing.
+                    COVERS.mkdir(parents=True, exist_ok=True)
+                    # Generate self-hosted SVG only when missing.
                     temporary = path.with_suffix('.tmp.svg')
                     try:
                         temporary.write_text(artwork_placeholder(station), encoding='utf-8')

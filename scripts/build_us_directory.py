@@ -35,8 +35,8 @@ MIN_RESULTS = 500
 FEATURED_MAX = 100
 MAX_HEALTH_AGE_DAYS = 30
 MAX_DIRECTORY_SHRINK_RATIO = 0.65
-FALLBACK_ARTWORK = "https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/directory-cover.svg"
-GENRE_ARTWORK_ROOT = "https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/genre-logos/"
+FALLBACK_ARTWORK = "https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/Covers/directory-cover.svg"
+GENRE_ARTWORK_ROOT = "https://raw.githubusercontent.com/th3cyrus/Apple/main/us-directory/Covers/"
 
 
 def directory_genre_logo(label):

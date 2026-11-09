@@ -6,7 +6,7 @@ on:
     paths:
       - 'world-radio/stations.json'
       - 'world-radio/radio.m3u'
-      - 'world-radio/logos/**'
+      - 'world-radio/Covers/**'
       - 'scripts/check_world_radio.py'
       - 'scripts/content_filters.py'
       - 'scripts/stream_probe.py'

@@ -42,7 +42,7 @@ class WorldMetadataTests(unittest.TestCase):
     def test_wrong_artwork_in_playlist_is_rejected(self):
         with self.assertRaisesRegex(ValueError, 'mismatch'):
             self.check_modified(mutate_playlist=lambda text: text.replace(
-                '/world-radio/logos/at-fm4.svg', '/world-radio/logos/wrong.svg'))
+                '/world-radio/Covers/at-fm4.svg', '/world-radio/Covers/wrong.svg'))
 
     def test_expiring_and_blank_auth_parameters_are_rejected(self):
         for query in ('signature=temporary', 'expires=123', 'token=', 'X-Amz-Signature=x'):

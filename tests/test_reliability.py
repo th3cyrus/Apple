@@ -17,14 +17,14 @@ class PlaylistMetadataTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        (self.root / "logos").mkdir()
-        (self.root / "logos" / "test-station.svg").write_text(
+        (self.root / "Covers").mkdir()
+        (self.root / "Covers" / "test-station.svg").write_text(
             cover_svg({"id": "test-station", "name": "Test Station"}), encoding="utf-8")
         self.station = {
             "id": "test-station", "name": "Test Station", "group": "Rock & Alternative",
             "search": "Test Station", "homepage": "https://station.example.net/",
             "stream": "https://station.example.net/radio.mp3",
-            "logo": "logos/test-station.svg",
+            "logo": "Covers/test-station.svg",
         }
         (self.root / "stations.json").write_text(
             json.dumps([self.station]), encoding="utf-8")
@@ -47,7 +47,7 @@ class PlaylistMetadataTests(unittest.TestCase):
 
     def test_wrong_group_or_logo_is_rejected(self):
         for old, new in [("Rock & Alternative", "News & Talk"),
-                         ("logos/test-station.svg", "logos/wrong.svg")]:
+                         ("Covers/test-station.svg", "Covers/wrong.svg")]:
             with self.subTest(old=old):
                 self.write_playlist(self.extinf.replace(old, new))
                 with self.assertRaisesRegex(ValueError, "metadata"):
@@ -99,11 +99,11 @@ class WorldArtworkCoverageTests(unittest.TestCase):
     def test_world_station_artwork_files_exist_and_are_valid(self):
         root = Path(__file__).resolve().parents[1]
         stations = json.loads((root / "world-radio" / "stations.json").read_text(encoding="utf-8"))
-        own = [s for s in stations if "/world-radio/logos/" in s["logo"]]
+        own = [s for s in stations if "/world-radio/Covers/" in s["logo"]]
         self.assertEqual(len(own), 67)
         self.assertTrue(all(s["logo"] for s in stations))
         for station in own:
-            path = root / "world-radio" / "logos" / (station["id"] + ".svg")
+            path = root / "world-radio" / "Covers" / (station["id"] + ".svg")
             with self.subTest(station=station["id"]):
                 self.assertTrue(path.is_file(), f"Missing artwork: {path}")
                 self.assertTrue(verify_svg(path))

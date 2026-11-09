@@ -6,7 +6,7 @@
     "country_code": "TR",
     "genre": "Turkish Pop & Culture",
     "stream": "https://trt.radyotvonline.net/trtfm",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-trt-fm.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/tr-trt-fm.svg"
   },
   {
     "id": "tr-trt-turku",
@@ -15,7 +15,7 @@
     "country_code": "TR",
     "genre": "Turkish Folk",
     "stream": "https://rd-trtturku.medya.trt.com.tr/master_128.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-trt-turku.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/tr-trt-turku.svg"
   },
   {
     "id": "tr-powerturk",
@@ -24,7 +24,7 @@
     "country_code": "TR",
     "genre": "Turkish Pop",
     "stream": "https://live.powerapp.com.tr/powerturk/abr/playlist.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-powerturk.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/tr-powerturk.svg"
   },
   {
     "id": "tr-fenomen-turk",
@@ -33,7 +33,7 @@
     "country_code": "TR",
     "genre": "Turkish Hits",
     "stream": "https://live.radyofenomen.com/fenomenturk/256/chunks.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-fenomen-turk.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/tr-fenomen-turk.svg"
   },
   {
     "id": "tr-slow-turk",
@@ -42,7 +42,7 @@
     "country_code": "TR",
     "genre": "Turkish Slow Pop",
     "stream": "https://radyo.duhnet.tv/ak_dtvh_slowturk",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-slow-turk.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/tr-slow-turk.svg"
   },
   {
     "id": "tr-kafa-radyo",
@@ -51,7 +51,7 @@
     "country_code": "TR",
     "genre": "Culture & Talk",
     "stream": "https://moondigitalmaster.radyotvonline.net/kafaradyo/playlist.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-kafa-radyo.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/tr-kafa-radyo.svg"
   },
   {
     "id": "tr-radyo-fenomen",
@@ -60,7 +60,7 @@
     "country_code": "TR",
     "genre": "Pop & Dance",
     "stream": "https://live.radyofenomen.com/fenomen/128/icecast.audio",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-radyo-fenomen.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/tr-radyo-fenomen.svg"
   },
   {
     "id": "tr-haberturk-radyo",
@@ -69,7 +69,7 @@
     "country_code": "TR",
     "genre": "News & Talk",
     "stream": "https://haberturkradyo.radyotvonline.net/haberturkradyo",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-haberturk-radyo.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/tr-haberturk-radyo.svg"
   },
   {
     "id": "tr-radyo-alaturka",
@@ -78,7 +78,7 @@
     "country_code": "TR",
     "genre": "Turkish Classical & Oldies",
     "stream": "https://yayin.jumboserver.net:9100/stream",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-radyo-alaturka.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/tr-radyo-alaturka.svg"
   },
   {
     "id": "tr-alem-fm",
@@ -87,7 +87,7 @@
     "country_code": "TR",
     "genre": "Turkish Pop",
     "stream": "https://turkmedya.radyotvonline.net/alemfmaac",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-alem-fm.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/tr-alem-fm.svg"
   },
   {
     "id": "tr-radyo-seymen",
@@ -96,7 +96,7 @@
     "country_code": "TR",
     "genre": "Turkish Folk",
     "stream": "https://yayin.radyoseymen.com.tr:1070/stream",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-radyo-seymen.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/tr-radyo-seymen.svg"
   },
   {
     "id": "tr-metro-fm-turkiye",
@@ -105,7 +105,7 @@
     "country_code": "TR",
     "genre": "Contemporary Hits",
     "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/METRO_FM_SC",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/tr-metro-fm-turkiye.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/tr-metro-fm-turkiye.svg"
   },
   {
     "id": "iq-turkmen-fm",
@@ -114,7 +114,7 @@
     "country_code": "IQ",
     "genre": "Turkmen/Turkish Music",
     "stream": "https://radyo1.radyo-dinle.tc/8284/stream;",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/iq-turkmen-fm.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/iq-turkmen-fm.svg"
   },
   {
     "id": "ae-turkish-love-radio",
@@ -123,6 +123,6 @@
     "country_code": "AE",
     "genre": "Turkish Love Songs",
     "stream": "https://drive.uber.radio/uber/lrturkish/icecast.audio",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/logos/ae-turkish-love-radio.svg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/turkish/Covers/ae-turkish-love-radio.svg"
   }
 ]

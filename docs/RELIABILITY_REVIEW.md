@@ -63,4 +63,8 @@ transient failure; current Actions artifacts remain the source for later runs.
 
 ## 2026-11-09 artwork format update
 
-The 2026-11-04 numbers above are historical test results, not current counts. All active curated, world, language and U.S. directory cover references were migrated from PNG to self-hosted native SVG on 2026-11-09. Original PNG files remain available as archives or player fallbacks. This artwork change does not modify broadcaster streams or audio health observations.
+The 2026-11-04 numbers above are historical test results, not current counts. All active curated, world, language and U.S. directory cover references were migrated from PNG to self-hosted native SVG on 2026-11-09. All original PNG files were deleted on 2026-11-09; SVG is the sole published artwork format. This artwork change does not modify broadcaster streams or audio health observations.
+
+## 2026-11-09 SVG cover directory consolidation
+
+All active SVG cover folders were renamed to `Covers/`, including the U.S. directory. The former logo directories and all 210 PNG files were deleted; JSON/M3U links, generators, tests, GitHub workflows and active documentation were updated. The 2026-11-04 checks above remain historical and should not be interpreted as results for the current tree.

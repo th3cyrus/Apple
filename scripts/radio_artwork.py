@@ -1,7 +1,7 @@
 """Dependency-free, scalable, station-specific SVG radio cover artwork.
 
-All imagery is native vector (gradients, paths and text), not a PNG wrapped
-in SVG. Legacy PNG originals remain as optional archived fallbacks.
+All artwork is native vector (gradients, paths and text), with no embedded
+raster files. SVG is the sole published artwork format.
 """
 import html
 from itertools import combinations

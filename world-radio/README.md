@@ -16,7 +16,7 @@ These are editorial selections, **not an objective world ranking**. We favor est
 
 Audio streams are sampled with FFprobe/FFmpeg on playlist changes and during a weekly [World Radio Select Audit](https://github.com/th3cyrus/Apple/actions/workflows/world-radio.yml). Current results and failure reports are available in GitHub Actions.
 
-**All 71 stations have illustrated covers:** four shared U.S. stations reuse the main collection's existing optimized artwork; the other 67 have unique, reproducible, scalable 1254×1254 SVG covers in [`logos/`](logos/) with the same frosted-glass design language. The covers display station names and country codes but do not impersonate official broadcaster logos. Missing covers are generated using [`scripts/generate_world_covers.py`](../scripts/generate_world_covers.py), and existing SVG artwork is preserved. Original PNGs remain available as fallback archives. The repository links to broadcaster streams without rebroadcasting the audio.
+**All 71 stations have illustrated covers:** four shared U.S. stations reuse the main collection's existing optimized artwork; the other 67 have unique, reproducible, scalable 1254×1254 SVG covers in [`Covers/`](Covers/) with the same frosted-glass design language. The covers display station names and country codes but do not impersonate official broadcaster logos. Missing covers are generated using [`scripts/generate_world_covers.py`](../scripts/generate_world_covers.py), and existing SVG artwork is preserved. The repository now ships SVG-only covers, with no PNG assets. The repository links to broadcaster streams without rebroadcasting the audio.
 
 ## Radio by language
 
@@ -145,7 +145,7 @@ Language-based subscriptions are separate from the 71-station international sele
 ## Files
 
 - [`radio.m3u`](radio.m3u): standalone Primuse-compatible M3U subscription.
-- [`logos/`](logos/): 67 project-style custom station covers (other four are shared with the main collection).
+- [`Covers/`](Covers/): 67 project-style custom station covers (other four are shared with the main collection).
 - [`stations.json`](stations.json): editable titles, streams, countries, regions and genres.
 - [World radio health checker](../scripts/check_world_radio.py): validates the independent playlist and can audit decoded audio.
 - [Main curated U.S. collection](../radio.m3u) and [expanded U.S. directory](../us-directory/README.md) remain independent.

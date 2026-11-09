@@ -6,7 +6,7 @@ on:
     paths:
       - 'world-radio/*/stations.json'
       - 'world-radio/*/radio.m3u'
-      - 'world-radio/*/logos/**'
+      - 'world-radio/*/Covers/**'
       - 'world-radio/languages.json'
       - 'scripts/check_language_radio.py'
       - 'scripts/content_filters.py'
@@ -20,7 +20,7 @@ on:
     paths:
       - 'world-radio/*/stations.json'
       - 'world-radio/*/radio.m3u'
-      - 'world-radio/*/logos/**'
+      - 'world-radio/*/Covers/**'
       - 'world-radio/languages.json'
       - 'scripts/check_language_radio.py'
       - 'scripts/content_filters.py'

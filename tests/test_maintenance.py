@@ -28,7 +28,7 @@ NOW = datetime(2026, 11, 3, 18, tzinfo=timezone.utc)
 
 def station(**changes):
     result = dict(STATION, id='kexp-90-3', group='Independent', stream='https://example.org/old',
-                  logo='logos/kexp-90-3.svg', fail_count=0, manual_lock=False)
+                  logo='Covers/kexp-90-3.svg', fail_count=0, manual_lock=False)
     result.update(changes)
     return result
 
@@ -477,7 +477,7 @@ class ReportingAndCatalogTests(unittest.TestCase):
     def run_main(self, stations, probe=None, generation_error=False, report_only=False):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        root = Path(temporary.name); (root / 'logos').mkdir()
+        root = Path(temporary.name); (root / 'Covers').mkdir()
         cp = root / 'stations.json'; cp.write_text(json.dumps(stations))
         for item in stations:
             (root / item['logo']).write_bytes(b'preserved artwork')
@@ -485,7 +485,7 @@ class ReportingAndCatalogTests(unittest.TestCase):
         current = root / 'current.json'
         session = Session([]); session.close = lambda: None
         arguments = ['update.py', '--refresh'] + (['--report-only'] if report_only else [])
-        with patch.multiple(update, ROOT=root, CATALOG=cp, M3U=m3u, LOGOS=root / 'logos',
+        with patch.multiple(update, ROOT=root, CATALOG=cp, M3U=m3u, COVERS=root / 'Covers',
                             CURRENT_REPORT=current, HEALTH_LOG=root / 'history.jsonl'), \
                 patch('requests.Session', return_value=session), \
                 patch.object(update, 'stream_check', side_effect=probe or (lambda *a: {'ok': True})), \
@@ -499,7 +499,7 @@ class ReportingAndCatalogTests(unittest.TestCase):
         return root, json.loads(current.read_text())
 
     def test_station_error_does_not_stop_later_stations(self):
-        items = [station(), station(id='second', logo='logos/second.svg')]
+        items = [station(), station(id='second', logo='Covers/second.svg')]
         calls = iter([RuntimeError('unexpected'), {'ok': True}])
         def probe(*args):
             value = next(calls)

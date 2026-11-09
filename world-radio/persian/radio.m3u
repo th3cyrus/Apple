@@ -1,35 +1,35 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-iran-international.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-iran-international.svg" group-title="Persian Radio",Iran International (IR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-iran-international.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-iran-international.svg" group-title="Persian Radio",Iran International (IR)
 https://stream.radiojar.com/iintl_c
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-farda.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-farda.svg" group-title="Persian Radio",Radio Farda (IR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-farda.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-farda.svg" group-title="Persian Radio",Radio Farda (IR)
 https://stream.radiojar.com/cp13r2cpn3quv
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-voa-persian.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-voa-persian.svg" group-title="Persian Radio",Voice of America Persian (US)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/us-voa-persian.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/us-voa-persian.svg" group-title="Persian Radio",Voice of America Persian (US)
 https://voa-ingest.akamaized.net/hls/live/2035210/152_135L/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-simorgh.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-simorgh.svg" group-title="Persian Radio",Radio Simorgh (IR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-simorgh.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-simorgh.svg" group-title="Persian Radio",Radio Simorgh (IR)
 https://stream.zeno.fm/9svfnobkrxrvv
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-faaz.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-faaz.svg" group-title="Persian Radio",Radio Faaz (IR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-faaz.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-faaz.svg" group-title="Persian Radio",Radio Faaz (IR)
 https://free.rcast.net/230792
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-yar.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-yar.svg" group-title="Persian Radio",Radio Yar (IR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-yar.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-yar.svg" group-title="Persian Radio",Radio Yar (IR)
 https://shoutcast.glwiz.com/RadioYAR.mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-gachsaran.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-gachsaran.svg" group-title="Persian Radio",Radio Gachsaran (IR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-gachsaran.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-gachsaran.svg" group-title="Persian Radio",Radio Gachsaran (IR)
 https://radio.gachsaran.org/gach
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-zza.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-zza.svg" group-title="Persian Radio",Radio ZZA (IR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-zza.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-zza.svg" group-title="Persian Radio",Radio ZZA (IR)
 https://listen.radioking.com/radio/526993/stream/585379
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/af-radio-srood.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/af-radio-srood.svg" group-title="Persian Radio",Radio Srood (AF)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/af-radio-srood.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/af-radio-srood.svg" group-title="Persian Radio",Radio Srood (AF)
 https://stream.radiosrood.com/
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/lb-anghamy-persian.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/lb-anghamy-persian.svg" group-title="Persian Radio",Anghamy Persian (LB)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/lb-anghamy-persian.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/lb-anghamy-persian.svg" group-title="Persian Radio",Anghamy Persian (LB)
 https://radio.avazfarsi.com:8010/radio.mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-nic.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-nic.svg" group-title="Persian Radio",Radio NIC (IR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-nic.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-nic.svg" group-title="Persian Radio",Radio NIC (IR)
 https://stream.zeno.fm/kbt00r580feuv
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/gb-bbc-persian-tv.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/gb-bbc-persian-tv.svg" group-title="Persian Radio",BBC Persian TV (Video) (GB)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/gb-bbc-persian-tv.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/gb-bbc-persian-tv.svg" group-title="Persian Radio",BBC Persian TV (Video) (GB)
 https://vs-hls-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/mobile_wifi_main_hd_abr_v2.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-navahang.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-navahang.svg" group-title="Persian Radio",Radio Navahang (IR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-navahang.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-navahang.svg" group-title="Persian Radio",Radio Navahang (IR)
 https://navairan.com/;stream.nsv
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-hamrah.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-hamrah.svg" group-title="Persian Radio",Radio Hamrah (US)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/us-radio-hamrah.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/us-radio-hamrah.svg" group-title="Persian Radio",Radio Hamrah (US)
 https://stream.zeno.fm/8p9trg4dkg0uv
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-donya.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-donya.svg" group-title="Persian Radio",Radio Donya (US)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/us-radio-donya.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/us-radio-donya.svg" group-title="Persian Radio",Radio Donya (US)
 https://stream.zeno.fm/v5kxmagseg0uv
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ca-radio-shemroon.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ca-radio-shemroon.svg" group-title="Persian Radio",Radio Shemroon (CA)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ca-radio-shemroon.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ca-radio-shemroon.svg" group-title="Persian Radio",Radio Shemroon (CA)
 https://usa7.fastcast4u.com/proxy/pghola05?mp=/1
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-melodie-iran.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-melodie-iran.svg" group-title="Persian Radio",Radio Melodie Iran (US)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/us-radio-melodie-iran.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/us-radio-melodie-iran.svg" group-title="Persian Radio",Radio Melodie Iran (US)
 https://global.citrus3.com:8234/stream

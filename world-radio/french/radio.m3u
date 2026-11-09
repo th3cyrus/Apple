@@ -1,11 +1,11 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-fip.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-fip.svg" group-title="French Radio",FIP (FR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/Covers/fr-fip.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/Covers/fr-fip.svg" group-title="French Radio",FIP (FR)
 https://icecast.radiofrance.fr/fip-midfi.mp3?id=radiofrance
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-fip-jazz.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-fip-jazz.svg" group-title="French Radio",FIP Jazz (FR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/Covers/fr-fip-jazz.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/Covers/fr-fip-jazz.svg" group-title="French Radio",FIP Jazz (FR)
 https://stream.radiofrance.fr/fipjazz/fipjazz_hifi.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-france-inter.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/fr-france-inter.svg" group-title="French Radio",France Inter (FR)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/Covers/fr-france-inter.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/Covers/fr-france-inter.svg" group-title="French Radio",France Inter (FR)
 https://stream.radiofrance.fr/franceinter/franceinter_hifi.m3u8?id=radiofrance
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/be-rtbf-classic-21.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/be-rtbf-classic-21.svg" group-title="French Radio",RTBF Classic 21 (BE)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/Covers/be-rtbf-classic-21.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/Covers/be-rtbf-classic-21.svg" group-title="French Radio",RTBF Classic 21 (BE)
 https://radios.rtbf.be/classic21-128.mp3
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/be-rtbf-musiq3.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/logos/be-rtbf-musiq3.svg" group-title="French Radio",RTBF Musiq3 (BE)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/Covers/be-rtbf-musiq3.svg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/french/Covers/be-rtbf-musiq3.svg" group-title="French Radio",RTBF Musiq3 (BE)
 https://radios.rtbf.be/musiq3-128.aac
