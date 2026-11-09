@@ -1,6 +1,6 @@
 # World Radio Select
 
-A handpicked international collection of **72 stations in 44 countries/regions**, spanning independent music discovery, rock, jazz, classical, electronic, pop, news, local cultures, and community radio.
+A handpicked international collection of **71 stations in 43 countries/regions**, spanning independent music discovery, rock, jazz, classical, electronic, pop, news, local cultures, and community radio.
 
 **[Subscribe in Primuse — World Radio Select](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u)**
 
@@ -16,11 +16,11 @@ These are editorial selections, **not an objective world ranking**. We favor est
 
 Audio streams are sampled with FFprobe/FFmpeg on playlist changes and during a weekly [World Radio Select Audit](https://github.com/th3cyrus/Apple/actions/workflows/world-radio.yml). Current results and failure reports are available in GitHub Actions.
 
-**All 72 stations have illustrated covers:** four shared U.S. stations reuse the main collection's existing optimized artwork; the other 68 have unique, reproducible 512×512 PNG tiles in [`logos/`](logos/) with the same frosted-glass design language. The covers display station names and country codes but do not impersonate official broadcaster logos. Missing covers are generated using [`scripts/generate_world_covers.py`](../scripts/generate_world_covers.py), and existing artwork is preserved. The repository links to broadcaster streams without rebroadcasting the audio.
+**All 71 stations have illustrated covers:** four shared U.S. stations reuse the main collection's existing optimized artwork; the other 67 have unique, reproducible 512×512 PNG tiles in [`logos/`](logos/) with the same frosted-glass design language. The covers display station names and country codes but do not impersonate official broadcaster logos. Missing covers are generated using [`scripts/generate_world_covers.py`](../scripts/generate_world_covers.py), and existing artwork is preserved. The repository links to broadcaster streams without rebroadcasting the audio.
 
 ## Radio by language
 
-Language-based subscriptions are separate from the 72-station international selection. Each contains nonreligious broadcasters from relevant countries and services.
+Language-based subscriptions are separate from the 71-station international selection. Each contains nonreligious broadcasters from relevant countries and services.
 
 | Language | Stations | Subscription |
 | --- | ---: | --- |
@@ -113,7 +113,7 @@ Language-based subscriptions are separate from the 72-station international sele
 | 5FM | South Africa | Pop & Youth |
 | Kaya FM | South Africa | Soul & Talk |
 
-### Asia & Middle East (15)
+### Asia & Middle East (14)
 
 | Station | Country | Focus |
 | --- | --- | --- |
@@ -124,7 +124,6 @@ Language-based subscriptions are separate from the 72-station international sele
 | Gensokyo Radio | Japan | Japanese Game & Anime |
 | NHK World Radio | Japan | International News |
 | Radio Liban | Lebanon | Culture & World |
-| Radio alHara | Palestine | Independent & Eclectic |
 | Easy Rock Manila | Philippines | Easy Listening |
 | CNA938 | Singapore | News & Talk |
 | ICRT | Taiwan | English Pop & Talk |
@@ -146,7 +145,7 @@ Language-based subscriptions are separate from the 72-station international sele
 ## Files
 
 - [`radio.m3u`](radio.m3u): standalone Primuse-compatible M3U subscription.
-- [`logos/`](logos/): 68 project-style custom station covers (other four are shared with the main collection).
+- [`logos/`](logos/): 67 project-style custom station covers (other four are shared with the main collection).
 - [`stations.json`](stations.json): editable titles, streams, countries, regions and genres.
 - [World radio health checker](../scripts/check_world_radio.py): validates the independent playlist and can audit decoded audio.
 - [Main curated U.S. collection](../radio.m3u) and [expanded U.S. directory](../us-directory/README.md) remain independent.

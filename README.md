@@ -8,7 +8,7 @@ Choose from **three principal M3U collections plus language-based subscriptions*
 | --- | ---: | --- | --- |
 | **[U.S. Curated Radio](stations.json)** | **36 stations** | Handpicked broadcasters, matching custom covers, and decoded-audio health checks | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u)** |
 | **[U.S. Radio Directory](us-directory/README.md)** | **[Live station count](us-directory/index.json)** | Broad American coverage via Radio Browser, split into **12 M3U playlists** to respect Primuse's per-subscription limit | **[Choose playlists](us-directory/README.md)** |
-| **[World Radio Select](world-radio/README.md)** | **72 stations · 44 countries/regions** | International music, news and culture; matching station covers and automated audio checks | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u)** |
+| **[World Radio Select](world-radio/README.md)** | **71 stations · 43 countries/regions** | International music, news and culture; matching station covers and automated audio checks | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u)** |
 | **[World Languages](world-radio/README.md#radio-by-language)** | **9 independent lists** | Kurdish, Persian, Arabic, Turkish, Russian, English, French, German and Spanish broadcasts | **[Choose language](world-radio/README.md#radio-by-language)** |
 
 **How to add a collection:** In Primuse, go to **Radio → + → Add Subscription → Fetch → Subscribe**. Choose **Update Now** to see changes made to an existing subscription.
@@ -64,7 +64,7 @@ under different directory identities. The expanded lists use project-owned genre
 visual style; individual stations within a genre share a cover.
 These directory covers are not verified official broadcaster trademarks.
 
-### Option C — World Radio Select (72 stations)
+### Option C — World Radio Select (71 stations)
 
 Import [World Radio Select](world-radio/README.md) as a **separate subscription**. Every station has a matching cover; current audio-check reports are available in [GitHub Actions](https://github.com/th3cyrus/Apple/actions/workflows/world-radio.yml).
 

@@ -117,8 +117,6 @@ https://stream.gensokyoradio.net/1
 https://masterpl.hls.nhkworld.jp/hls/r1/live/master.m3u8
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="LB" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/lb-radio-liban.png?v=2" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/lb-radio-liban.png?v=2",Radio Liban (LB)
 https://media2.streambrothers.com:2020/stream/8194
-#EXTINF:-1 group-title="Asia & Middle East" tvg-country="PS" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ps-radio-alhara.png?v=2" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ps-radio-alhara.png?v=2",Radio alHara (PS)
-https://stream.radioalhara.net/ra
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="PH" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ph-easy-rock-manila.png?v=2" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ph-easy-rock-manila.png?v=2",Easy Rock Manila (PH)
 https://azura.easyrock.com.ph/listen/easy_rock_manila/radio.mp3
 #EXTINF:-1 group-title="Asia & Middle East" tvg-country="SG" tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/sg-cna938.png?v=2" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/sg-cna938.png?v=2",CNA938 (SG)

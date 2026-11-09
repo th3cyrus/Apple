@@ -590,16 +590,6 @@
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/lb-radio-liban.png?v=2"
   },
   {
-    "id": "ps-radio-alhara",
-    "name": "Radio alHara",
-    "country": "Palestine",
-    "country_code": "PS",
-    "region": "Asia & Middle East",
-    "genre": "Independent & Eclectic",
-    "stream": "https://stream.radioalhara.net/ra",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/logos/ps-radio-alhara.png?v=2"
-  },
-  {
     "id": "ph-easy-rock-manila",
     "name": "Easy Rock Manila",
     "country": "Philippines",
