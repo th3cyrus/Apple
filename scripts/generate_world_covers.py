@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate and verify all World, language and U.S. directory JPEG covers.
 
-The vector templates are deterministic, independent from local fonts and PIL.
+Deterministic vector layouts are rendered to JPEG using CairoSVG and Pillow.
 All original PNG assets have been removed; only JPEG files are generated.
 """
 import argparse
@@ -119,7 +119,7 @@ def directory_cover(root=ROOT, *, force=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--restyle", action="store_true",
-                        help="Rebuild existing World/Language SVG artwork")
+                        help="Rebuild existing World/Language JPEG covers")
     parser.add_argument("--force", action="store_true", help="Alias for --restyle")
     parser.add_argument("--verify", action="store_true")
     parser.add_argument("--directory", type=Path, default=WORLD)

@@ -1,4 +1,4 @@
-"""Dependency-free, scalable, station-specific SVG radio cover artwork.
+"""Station-specific cover rendering with high-quality 1254px JPEG outputs.
 
 Vector templates are rendered to 1254x1254 JPEG cover files; no SVG
 assets are published in the repository.

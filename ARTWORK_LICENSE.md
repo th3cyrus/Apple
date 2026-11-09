@@ -2,7 +2,7 @@
 
 ## Scope
 
-This notice applies to project-designed JPG cover artwork in `Covers/`, `world-radio/Covers/`, `world-radio/*/Covers/`, and `us-directory/Covers/` within the Apple · Radio Collections for Primuse project. The repository publishes 1254x1254 JPG covers; no PNG or SVG artwork files.
+This notice applies to project-designed JPG cover artwork in `Covers/`, `world-radio/Covers/`, `world-radio/*/Covers/`, and `us-directory/Covers/` within the Apple · Radio Collections for Primuse project. The repository publishes 1254×1254 JPEG cover files; no standalone SVG or PNG artwork files are distributed.
 
 ## License
 

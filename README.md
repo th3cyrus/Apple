@@ -268,7 +268,7 @@ If a station stops working:
 | `radio.m3u` | Main curated M3U subscription (36 stations) |
 | `world-radio/` | Standalone world playlist, country catalog and station covers |
 | `scripts/generate_world_covers.py` | Deterministic JPG-cover generation for world, language and directory stations |
-| `scripts/radio_artwork.py` | Dependency-free 1254-pixel JPG template and safe XML validation |
+| `scripts/radio_artwork.py` | Deterministic cover layout, high-quality JPEG rendering and image validation |
 | `.github/workflows/world-artwork.yml` | Automatically fill in missing JPG station covers |
 | `us-directory/us-01.m3u` … `us-12.m3u` | Twelve expanded U.S. directory subscriptions |
 | `us-directory/index.json` | Current directory totals and per-playlist counts |
