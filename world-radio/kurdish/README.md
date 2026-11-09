@@ -1,6 +1,6 @@
 # Kurdish Radio
 
-An independent, language-based selection of **7 nonreligious radio stations** from multiple countries and streaming platforms.
+An independent, language-based selection of **11 nonreligious radio stations** from multiple countries and streaming platforms.
 
 **Primuse subscription:**
 
@@ -19,5 +19,9 @@ Station country codes identify broadcaster listings; they do not restrict langua
 | Axa Rojava | TR | Kurdish Music & Culture |
 | Denge Qamishlo | SY | Kurdish Community Radio |
 | Denge Cudi | SY | Kurdish Music & Community |
+| Speda Radio | IQ | News & Talk |
+| Radyo Şirvan Perwer | IQ | Kurdish Folk Music |
+| Azadi FM | TR | Kurdish Music |
+| Zergan Radyo | SE | Kurdish & Turkish Music |
 
 Catalog: [stations.json](stations.json) · Playlist: [radio.m3u](radio.m3u). Current decoded-audio audit results are maintained in GitHub Actions.

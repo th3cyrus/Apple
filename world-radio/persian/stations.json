@@ -106,5 +106,50 @@
     "genre": "News & Talk (TV stream)",
     "stream": "https://vs-hls-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/mobile_wifi_main_hd_abr_v2.m3u8",
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/gb-bbc-persian-tv.png"
+  },
+  {
+    "id": "ir-radio-navahang",
+    "name": "Radio Navahang",
+    "language": "Persian",
+    "country_code": "IR",
+    "genre": "Persian Pop & Traditional",
+    "stream": "https://navairan.com/;stream.nsv",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-navahang.png"
+  },
+  {
+    "id": "us-radio-hamrah",
+    "name": "Radio Hamrah",
+    "language": "Persian",
+    "country_code": "US",
+    "genre": "News & Talk",
+    "stream": "https://stream.zeno.fm/8p9trg4dkg0uv",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-hamrah.png"
+  },
+  {
+    "id": "us-radio-donya",
+    "name": "Radio Donya",
+    "language": "Persian",
+    "country_code": "US",
+    "genre": "Persian Hits",
+    "stream": "https://stream.zeno.fm/v5kxmagseg0uv",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-donya.png"
+  },
+  {
+    "id": "ca-radio-shemroon",
+    "name": "Radio Shemroon",
+    "language": "Persian",
+    "country_code": "CA",
+    "genre": "Comedy & Entertainment",
+    "stream": "https://usa7.fastcast4u.com/proxy/pghola05?mp=/1",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ca-radio-shemroon.png"
+  },
+  {
+    "id": "us-radio-melodie-iran",
+    "name": "Radio Melodie Iran",
+    "language": "Persian",
+    "country_code": "US",
+    "genre": "Community & Talk",
+    "stream": "https://global.citrus3.com:8234/stream",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-melodie-iran.png"
   }
 ]

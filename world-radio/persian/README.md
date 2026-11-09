@@ -1,6 +1,6 @@
 # Persian Radio
 
-An independent, language-based selection of **12 nonreligious radio and TV streams** from multiple countries and streaming platforms.
+An independent, language-based selection of **17 nonreligious radio and TV streams** from multiple countries and streaming platforms.
 
 **Primuse subscription:**
 
@@ -24,6 +24,11 @@ Station country codes identify broadcaster listings; they do not restrict langua
 | Anghamy Persian | LB | Persian Music |
 | Radio NIC | IR | Political Documentaries |
 | BBC Persian TV (Video) | GB | News & Talk (TV stream) |
+| Radio Navahang | IR | Persian Pop & Traditional |
+| Radio Hamrah | US | News & Talk |
+| Radio Donya | US | Persian Hits |
+| Radio Shemroon | CA | Comedy & Entertainment |
+| Radio Melodie Iran | US | Community & Talk |
 
 **Compatibility note:** BBC Persian TV is an HLS video stream, not an audio-only radio feed. Audio-only players such as Primuse may not support playback.
 

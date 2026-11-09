@@ -2,13 +2,13 @@
   {
     "id": "kurdish",
     "name": "Kurdish",
-    "count": 7,
+    "count": 11,
     "playlist": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/radio.m3u"
   },
   {
     "id": "persian",
     "name": "Persian",
-    "count": 12,
+    "count": 17,
     "playlist": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/radio.m3u"
   },
   {

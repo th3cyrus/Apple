@@ -61,5 +61,41 @@
     "genre": "Kurdish Music & Community",
     "stream": "https://denge-cudi.stream.laut.fm/denge-cudi?pl=m3u",
     "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/sy-denge-cudi.png"
+  },
+  {
+    "id": "iq-speda-radio",
+    "name": "Speda Radio",
+    "language": "Kurdish",
+    "country_code": "IQ",
+    "genre": "News & Talk",
+    "stream": "https://radio.host247.net/spedafm",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/iq-speda-radio.png"
+  },
+  {
+    "id": "iq-radyo-sirvan-perwer",
+    "name": "Radyo Şirvan Perwer",
+    "language": "Kurdish",
+    "country_code": "IQ",
+    "genre": "Kurdish Folk Music",
+    "stream": "https://stream.zeno.fm/x0xhw6c6g2zuv",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/iq-radyo-sirvan-perwer.png"
+  },
+  {
+    "id": "tr-azadi-fm",
+    "name": "Azadi FM",
+    "language": "Kurdish",
+    "country_code": "TR",
+    "genre": "Kurdish Music",
+    "stream": "https://amed.ozelip.com/8040/;",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/tr-azadi-fm.png"
+  },
+  {
+    "id": "se-zergan-radyo",
+    "name": "Zergan Radyo",
+    "language": "Kurdish",
+    "country_code": "SE",
+    "genre": "Kurdish & Turkish Music",
+    "stream": "https://sslyayin.netyayin.net/radyozergan/;",
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/kurdish/logos/se-zergan-radyo.png"
   }
 ]

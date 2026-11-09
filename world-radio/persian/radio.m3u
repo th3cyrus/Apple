@@ -23,3 +23,13 @@ https://radio.avazfarsi.com:8010/radio.mp3
 https://stream.zeno.fm/kbt00r580feuv
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/gb-bbc-persian-tv.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/gb-bbc-persian-tv.png" group-title="Persian Radio",BBC Persian TV (Video) (GB)
 https://vs-hls-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/mobile_wifi_main_hd_abr_v2.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-navahang.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ir-radio-navahang.png" group-title="Persian Radio",Radio Navahang (IR)
+https://navairan.com/;stream.nsv
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-hamrah.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-hamrah.png" group-title="Persian Radio",Radio Hamrah (US)
+https://stream.zeno.fm/8p9trg4dkg0uv
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-donya.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-donya.png" group-title="Persian Radio",Radio Donya (US)
+https://stream.zeno.fm/v5kxmagseg0uv
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ca-radio-shemroon.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/ca-radio-shemroon.png" group-title="Persian Radio",Radio Shemroon (CA)
+https://usa7.fastcast4u.com/proxy/pghola05?mp=/1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-melodie-iran.png" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/logos/us-radio-melodie-iran.png" group-title="Persian Radio",Radio Melodie Iran (US)
+https://global.citrus3.com:8234/stream
