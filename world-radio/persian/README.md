@@ -30,6 +30,4 @@ Station country codes identify broadcaster listings; they do not restrict langua
 | Radio Shemroon | CA | Comedy & Entertainment |
 | Radio Melodie Iran | US | Community & Talk |
 
-**Compatibility note:** BBC Persian TV is an HLS video stream, not an audio-only radio feed. Audio-only players such as Primuse may not support playback.
-
 Catalog: [stations.json](stations.json) · Playlist: [radio.m3u](radio.m3u). Current decoded-audio audit results are maintained in GitHub Actions.
