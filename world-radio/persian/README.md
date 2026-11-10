@@ -1,6 +1,6 @@
 # Persian Radio
 
-An independent, language-based selection of **17 nonreligious radio and TV streams** from multiple countries and streaming platforms.
+An independent, language-based selection of **17 nonreligious audio streams** from multiple countries and streaming platforms.
 
 **Primuse subscription:**
 
@@ -23,7 +23,7 @@ Station country codes identify broadcaster listings; they do not restrict langua
 | Radio Srood | AF | Dari Music |
 | Anghamy Persian | LB | Persian Music |
 | Radio NIC | IR | Political Documentaries |
-| BBC Persian TV (Video) | GB | News & Talk (TV stream) |
+| BBC Persian TV Audio | GB | News & Talk |
 | Radio Navahang | IR | Persian Pop & Traditional |
 | Radio Hamrah | US | News & Talk |
 | Radio Donya | US | Persian Hits |

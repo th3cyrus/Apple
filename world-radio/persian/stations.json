@@ -100,12 +100,13 @@
   },
   {
     "id": "gb-bbc-persian-tv",
-    "name": "BBC Persian TV (Video)",
+    "name": "BBC Persian TV Audio",
     "language": "Persian",
     "country_code": "GB",
-    "genre": "News & Talk (TV stream)",
+    "genre": "News & Talk",
     "stream": "https://vs-hls-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/mobile_wifi_main_hd_abr_v2.m3u8",
-    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/gb-bbc-persian-tv.jpg"
+    "logo": "https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/gb-bbc-persian-tv.jpg",
+    "show_country_suffix": false
   },
   {
     "id": "ir-radio-navahang",

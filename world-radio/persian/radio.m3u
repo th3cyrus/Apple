@@ -21,7 +21,7 @@ https://stream.radiosrood.com/
 https://radio.avazfarsi.com:8010/radio.mp3
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-nic.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-nic.jpg" group-title="Persian Radio",Radio NIC (IR)
 https://stream.zeno.fm/kbt00r580feuv
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/gb-bbc-persian-tv.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/gb-bbc-persian-tv.jpg" group-title="Persian Radio",BBC Persian TV (Video) (GB)
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/gb-bbc-persian-tv.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/gb-bbc-persian-tv.jpg" group-title="Persian Radio",BBC Persian TV Audio
 https://vs-hls-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/mobile_wifi_main_hd_abr_v2.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-navahang.jpg" logo="https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/persian/Covers/ir-radio-navahang.jpg" group-title="Persian Radio",Radio Navahang (IR)
 https://navairan.com/;stream.nsv

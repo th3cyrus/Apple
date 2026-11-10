@@ -72,9 +72,13 @@ def check_language(path, entry):
         safe_name = station["name"].replace('"', " ").replace("<", " ").replace(">", " ")
         if "\n" in safe_name or "\r" in safe_name:
             raise ValueError("Station name contains newline")
+        show_suffix = station.get("show_country_suffix", True)
+        if not isinstance(show_suffix, bool):
+            raise ValueError("Invalid station country suffix setting: " + station["id"])
+        display_title = safe_name + (f' ({station["country_code"]})' if show_suffix else "")
         m3u.append(
             f'#EXTINF:-1 tvg-logo="{station["logo"]}" logo="{station["logo"]}" '
-            f'group-title="{entry["name"]} Radio",{safe_name} ({station["country_code"]})'
+            f'group-title="{entry["name"]} Radio",{display_title}'
         )
         m3u.append(url)
     expected = "\n".join(m3u) + "\n"

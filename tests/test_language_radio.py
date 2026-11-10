@@ -47,6 +47,20 @@ class LanguageRadioTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "M3U differs"):
                 load_all(root)
 
+    def test_bbc_persian_audio_display_title_omits_parentheses(self):
+        source = Path(__file__).resolve().parents[1] / "world-radio" / "persian"
+        stations = json.loads((source / "stations.json").read_text(encoding="utf-8"))
+        bbc = next(s for s in stations if s["id"] == "gb-bbc-persian-tv")
+        self.assertEqual(bbc["name"], "BBC Persian TV Audio")
+        self.assertEqual(bbc["genre"], "News & Talk")
+        self.assertIs(bbc["show_country_suffix"], False)
+        playlist = (source / "radio.m3u").read_text(encoding="utf-8")
+        entry = next(line for line in playlist.splitlines()
+                     if "gb-bbc-persian-tv.jpg" in line)
+        self.assertTrue(entry.endswith(",BBC Persian TV Audio"))
+        self.assertNotIn("(Video)", entry)
+        self.assertNotIn("(GB)", entry)
+
     def test_multilingual_religious_programs_are_excluded(self):
         phrases = (
             "إذاعة القرآن الكريم", "Quran Talk", "Christian Gospel FM",
