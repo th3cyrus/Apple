@@ -1,10 +1,12 @@
 # U.S. Radio Directory for Primuse
 
-3,954 U.S. stream entries across 12 M3U subscriptions. Import each selected playlist into Primuse.
+The [latest directory index](index.json) contains the authoritative station and shard counts. At the **2026-11-09 UTC** snapshot, it listed **3,954 U.S. stream entries** across **12 M3U subscriptions**. Import each selected playlist into Primuse.
 
 Sources include Radio Browser and selected broadcaster streams. Directory entries are not individually audio-decoded. The [curated U.S. playlist](../radio.m3u) is maintained separately.
 
 Dedicated religious programming is excluded across all faiths. The generator filters signed links, stale health records, reported SSL errors and invalid playlists. Directory covers are stored in [`Covers/`](Covers/) as JPGs. Station entries use genre-level artwork and a shared JPG fallback for unmatched genres; no PNG files are distributed.
+
+The shard counts below reflect the **2026-11-09 snapshot** and can change during weekly refreshes. Consult [index.json](index.json) for current totals.
 
 | Subscription | Stations |
 |---|---:|

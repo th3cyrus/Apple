@@ -19,4 +19,4 @@ Station country codes identify broadcaster listings; they do not restrict langua
 | Radio Cooperativa | CL | News & Talk |
 | Rock & Pop 95.9 | AR | Rock & Alternative |
 
-Catalog: [stations.json](stations.json) · Playlist: [radio.m3u](radio.m3u). Current decoded-audio audit results are maintained in GitHub Actions.
+Catalog: [stations.json](stations.json) · Playlist: [radio.m3u](radio.m3u). Decoded-audio audit results are available in [GitHub Actions](https://github.com/th3cyrus/Apple/actions/workflows/language-radio.yml).

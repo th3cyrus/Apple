@@ -27,4 +27,4 @@ Station country codes identify broadcaster listings; they do not restrict langua
 | Voice of Lebanon | LB | News & Culture |
 | Al Arabiya FM | SA | News & Talk |
 
-Catalog: [stations.json](stations.json) · Playlist: [radio.m3u](radio.m3u). Current decoded-audio audit results are maintained in GitHub Actions.
+Catalog: [stations.json](stations.json) · Playlist: [radio.m3u](radio.m3u). Decoded-audio audit results are available in [GitHub Actions](https://github.com/th3cyrus/Apple/actions/workflows/language-radio.yml).

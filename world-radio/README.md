@@ -20,7 +20,7 @@ Audio streams are sampled with FFprobe/FFmpeg on playlist changes and during a w
 
 ## Radio by language
 
-Language-based subscriptions are separate from the 71-station international selection. Each contains nonreligious broadcasters from relevant countries and services.
+Language-based subscriptions are separate from the 71-station international selection. Together, these nine subscriptions currently contain **95 catalog entries**. Each contains nonreligious broadcasters from relevant countries and services. A broadcaster can appear in both a language subscription and the separate World Radio Select collection.
 
 | Language | Stations | Subscription |
 | --- | ---: | --- |

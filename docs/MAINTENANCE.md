@@ -95,6 +95,8 @@ full probe diagnostics, including redirect hops, transport and decoded audio lev
 
 All active playlist and catalog artwork links use native `.jpg` files under `Covers/` directories. No PNG files remain in the repository. The curated list uses JPG covers in `Covers/`, while World, language, and directory covers are generated through `scripts/generate_world_covers.py`.
 
+Artwork is published exclusively as JPG in the `Covers/` directories. When an app retains a cached image after the playlist is refreshed, update the subscription or re-add it; versioned artwork URLs may also help clients fetch a changed image. The [directory index](../us-directory/index.json) is authoritative for current directory counts, whereas its README shows a dated snapshot.
+
 Scheduled artwork generation fills missing JPG covers without restyling existing ones.
 Use `--restyle` only for an intentional visual update. `--verify` is read-only;
 `--directory` selects both the input world catalog and its output artwork directory.

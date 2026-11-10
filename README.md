@@ -9,7 +9,7 @@ Choose from **three principal M3U collections plus language-based subscriptions*
 | **[U.S. Curated Radio](stations.json)** | **36 stations** | Handpicked broadcasters, matching custom covers, and decoded-audio health checks | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/radio.m3u)** |
 | **[U.S. Radio Directory](us-directory/README.md)** | **[Live station count](us-directory/index.json)** | Broad American coverage via Radio Browser, split into **12 M3U playlists** to respect Primuse's per-subscription limit | **[Choose playlists](us-directory/README.md)** |
 | **[World Radio Select](world-radio/README.md)** | **71 stations · 43 countries/regions** | International music, news and culture; matching station covers and automated audio checks | **[Subscribe](https://raw.githubusercontent.com/th3cyrus/Apple/main/world-radio/radio.m3u)** |
-| **[World Languages](world-radio/README.md#radio-by-language)** | **9 independent lists** | Kurdish, Persian, Arabic, Turkish, Russian, English, French, German and Spanish broadcasts | **[Choose language](world-radio/README.md#radio-by-language)** |
+| **[World Languages](world-radio/README.md#radio-by-language)** | **9 lists · 95 entries** | Kurdish, Persian, Arabic, Turkish, Russian, English, French, German and Spanish broadcasts | **[Choose language](world-radio/README.md#radio-by-language)** |
 
 **How to add a collection:** In Primuse, go to **Radio → + → Add Subscription → Fetch → Subscribe**. Choose **Update Now** to see changes made to an existing subscription.
 
@@ -26,8 +26,6 @@ Choose from **three principal M3U collections plus language-based subscriptions*
 - [Download Primuse on the App Store](https://apps.apple.com/us/app/primuse/id6761675450)
 - [Primuse on GitHub](https://github.com/chenqi92/primuse)
 
-No official Google Play release has been verified.
-
 These M3U subscriptions may also work with other compatible radio players.
 
 ---
@@ -37,6 +35,8 @@ These M3U subscriptions may also work with other compatible radio players.
 Open **Primuse → Radio → + → Add Subscription**, paste an M3U URL, tap **Fetch**
 and **Subscribe**. You can enable **Update Automatically**, or choose
 **Update Now** when changes in the GitHub files do not appear immediately in the app.
+
+**Cover refresh tip:** Some players cache artwork separately from playlists. If a changed cover still appears outdated after **Update Now**, refresh the subscription again or remove and re-add that subscription. Playlist changes do not always clear the image cache.
 
 ### Option A — Curated collection (36 stations)
 
@@ -305,7 +305,7 @@ The **expanded directory** uses self-hosted genre-based covers in the same visua
 language; these thousands of listings share artwork by genre rather than getting
 individual, station-specific covers.
 
-All active cover links in the curated U.S., World Radio, language-based and 12-shard U.S. directory playlists use native **JPG artwork**, stored exclusively in `Covers/` folders. The high-resolution 1254×1254 assets are hosted directly in this repository; all PNG files have been removed. JPG is the only cover format in the repository.
+All active cover links in the curated U.S., World Radio, language-based and 12-shard U.S. directory playlists use native **JPG artwork**, stored exclusively in `Covers/` folders. The high-resolution 1254×1254 assets are hosted directly in this repository; all PNG and SVG artwork files have been removed. JPG is the only published cover format in the repository.
 
 Station names are used for identification. They do not imply affiliation with or endorsement by the broadcasters.
 
@@ -356,7 +356,7 @@ It is not affiliated with, sponsored by, or endorsed by:
 - Any featured radio station or broadcaster
 
 This repository provides station metadata and links to broadcaster or third-party
-audio streams. It does not host or rebroadcast the audio, and does not promise
+live streams. It does not host or rebroadcast media, and does not promise
 that directory-listed streams are available in every country.
 
 ---

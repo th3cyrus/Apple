@@ -14,8 +14,8 @@
   transport, acceptable URL structures, and no recognized token/expiry query
   parameters. An abnormal drop compared to the previous index stops
   publication instead of deleting thousands of entries.
-- **World artwork:** the cover workflow generates only missing native JPG files.
-  No raster fallback files are distributed. All 71 world stations have high-resolution
+- **World artwork:** the cover workflow generates only missing JPG files.
+  No separate SVG or PNG fallback artwork is distributed. All 71 world stations have high-resolution
   1254×1254 JPG-cover references.
 
 To verify playback in Primuse, refresh the relevant subscription and test sample
@@ -31,10 +31,10 @@ edits. The artwork workflow uses the same policy for its branch.
 
 ## Repository settings
 
-Repository administrators can configure the About section and branch rules:
+Repository administrators can configure the About section and branch rules. The current GitHub About description still cites an older directory total; the suggested text below deliberately omits that changing figure:
 
 - Repository → About → Description (suggested):
-  `Live radio for Primuse: curated U.S. & world stations, 9 language playlists, 12 U.S. directory lists, and high-resolution JPG covers.`
+  `Live radio for Primuse: 36 curated U.S. stations, 71 world stations, 9 language playlists, a 12-part U.S. directory & custom JPG covers.`
 - Repository Settings → Rules → Rulesets: reviewed PRs and passing CI can be
   required for code changes after scheduled workflows are adapted to publish
   generated data (for example, through bot-created PRs).
