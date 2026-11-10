@@ -55,7 +55,6 @@ class LanguageRadioTests(unittest.TestCase):
         self.assertEqual(bbc["genre"], "News & Talk")
         self.assertIs(bbc["show_country_suffix"], False)
         from urllib.parse import urlsplit
-        from pathlib import Path
         logo_url = urlsplit(bbc["logo"])
         self.assertEqual(logo_url.query, "v=216211ab0a17")
         self.assertTrue(logo_url.path.endswith("/gb-bbc-persian-tv.jpg"))
