@@ -291,7 +291,7 @@ If a station stops working:
 | `.github/workflows/import.yml` | Scheduled and manual radio refresh workflow |
 | `README.md` | Project documentation |
 | `LICENSE` | MIT License for original project code |
-| `ARTWORK_LICENSE.md` | CC BY 4.0 terms and third-party rights for custom covers |
+| `ARTWORK_LICENSE.md` | CC0 1.0 public domain dedication for original cover artwork |
 
 ---
 
@@ -337,11 +337,11 @@ HTTPS certificate verification should remain enabled.
 
 Original project code and project-authored documentation are released under the [MIT License](LICENSE), subject to the terms in that file.
 
-The original creative elements of the custom station covers are made available under [CC BY 4.0](ARTWORK_LICENSE.md), to the extent that the maintainer controls the relevant rights. Attribution is required under that license. AI-generated elements may not qualify for copyright protection in every jurisdiction.
+All original custom cover artwork is released under [CC0 1.0 Universal](ARTWORK_LICENSE.md). You may copy, modify, and reuse it, including commercially, without permission or attribution.
 
 Station names, trademarks, broadcaster audio, and third-party content remain subject to their respective owners' rights.
 
-Neither license grants permission to use third-party trademarks or redistribute copyrighted broadcasts.
+The code license and artwork dedication do not grant rights to third-party trademarks or copyrighted broadcasts.
 
 ---
 
