@@ -54,6 +54,12 @@ class LanguageRadioTests(unittest.TestCase):
         self.assertEqual(bbc["name"], "BBC Persian TV Audio")
         self.assertEqual(bbc["genre"], "News & Talk")
         self.assertIs(bbc["show_country_suffix"], False)
+        from urllib.parse import urlsplit
+        from pathlib import Path
+        logo_url = urlsplit(bbc["logo"])
+        self.assertEqual(logo_url.query, "v=216211ab0a17")
+        self.assertTrue(logo_url.path.endswith("/gb-bbc-persian-tv.jpg"))
+        self.assertTrue((source / "Covers" / "gb-bbc-persian-tv.jpg").is_file())
         playlist = (source / "radio.m3u").read_text(encoding="utf-8")
         entry = next(line for line in playlist.splitlines()
                      if "gb-bbc-persian-tv.jpg" in line)
