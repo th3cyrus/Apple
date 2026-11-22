@@ -339,7 +339,7 @@
     "homepage": "https://kutx.org/",
     "search": "KUTX",
     "manual_lock": false,
-    "fail_count": 0,
+    "fail_count": 1,
     "logo": "Covers/kutx-98-9.jpg",
     "identity": {
       "aliases": [
@@ -352,7 +352,8 @@
       "channel": "main",
       "search_term": "KUTX",
       "frequency": "98.9"
-    }
+    },
+    "last_failure_counted_at": "2026-11-22T11:26:55+00:00"
   },
   {
     "id": "kalx-90-7",
